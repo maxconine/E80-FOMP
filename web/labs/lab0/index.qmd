@@ -1,0 +1,69 @@
+---
+title: "Lab 0: Optional Tutorial and Skills Review "
+---
+
+Team size: 1
+
+# Introduction
+
+In the first week of E80, we don't have regular labs scheduled, but do have open lab sessions (1:15 pm to 5:15 pm Tuesday, Wednesday) to provide students with an opportunity for refreshing their skills in soldering and learning how to breadboard. Attendance to these lab sessions is optional. Instructors will be present. Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
+
+To be 100% clear, this is not a graded lab, but an optional tutorial for the first week of class. 
+
+You may complete the following sections in any order.
+
+
+## Soldering
+
+A helpful video on how to solder can be found [here](https://www.youtube.com/watch?v=Qps9woUGkvI).
+Remember to: 
+
+1. Never leave your soldering iron unattended.
+2. Turn the iron off any time it isn't used for more than 30 seconds.  A good rule of thumb is "The iron is off unless you are holding it right now."
+3. Use recently soaked sponge. Use a spray bottle to moisten. Never use the sink or water fountain.
+4. Use fume extractor: fumes from rosin in solder is a respiratory irritant.
+5. Wash hands after handling solder – solder is 40% lead.  Skin contact is harmless, but ingestion can occur with unwashed hands when eating, drinking, or smoking.
+6. Always tin the tip of your iron before turning it off.
+
+
+## Breadboarding
+
+A few videos that may help explain how a breadboard works and how to use one can be found below. Note that internal connections of breadboards can break. 
+
+1. [Simple LED Lesson](https://www.youtube.com/watch?v=wCJKMFGEuuI):
+    The tutorial shows an LED circuit without a current limiting resistor.  LED’s resistance decreases quickly as the forward voltage (the ”on” voltage) is exceeded.  The LED then draws more and more current, overheats and eventually burns up.  Sometimes literally. Please use one.
+    
+    $$R=\frac{(V_s-V_F)}{I_F}$$
+
+    where $V_S$ is the supply voltage, and $V_F$ and $I_F$ are the foward voltage and current of the diode respectively and can be found on LED datasheet found [ here](https://www.aopled.com/AOP_PDFs/L513SRD-C.pdf).
+
+2. [Breadboard Internals](https://www.youtube.com/watch?v=S_a-qCy6Ekk)
+3. [How to build a 555 Timer circuit](https://www.youtube.com/watch?v=Vbz_MKT7KnI). Here is a [link with a circuit diagram](https://www.elprocus.com/blinking-led-using-555-timer-ic/). Here is a [video on how the 555 works](https://www.youtube.com/watch?time_continue=385&v=i0SNb__dkYI&feature=emb_logo)  (While we are not covering this topic in class, a 555 may make an excellent addition to a final project.)
+
+
+## Arduino
+
+You can install Arduino on your own computer using the instructions in [Section 3 of Lab 1]().  This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.  Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
+
+Run through a few more Arduino tutorials:  You will need to solder pins to the Teensy unless you find one that has been pre-soldered to the header pins.
+
+1. [Blinking lights on the Arduino board](https://www.pjrc.com/teensy/tutorial.html):  
+
+    Note: this tutorial uses Teensy 2.0.  and asks you to edit the LED pin # from 13 to 11.  You will be using Teensy 3.2 or 4.0.  Its LED pin # is 13 so you do not need to edit the file.  Also, the _Blink_ example code has been moved from _Digital_ to _Basics_ folder.
+
+2. [Hooking up an external LED](https://www.pjrc.com/teensy/tutorial2.html) 
+
+    This tutorial also uses Teensy 2.0.  Refer to 3.2 pinout diagram to make appropriate changes your circuit. Note that you should just use a single red LED instead of an RGB LED.  An instructor can help you figure out which pin is the ground pin.
+
+## Github Desktop Setup
+
+Next you need to configure Git on your machine. Git is a distributed version control system. This means you can download a local clone of a collection of source code files and easily track the changes that you make to your code. While we won't be using all the features of git in E80, we will introduce you to the main features that will enable you to interact with the code base for your robot.
+
+Navigate to the Github page with the [E80 codebase](https://github.com/HMC-E80/E80-SP2023#git-setup) and scroll down to the section titled "Git Setup." You can also follow the direct link [here](https://github.com/HMC-E80/E80-SP2023#git-setup).
+
+After completing these instructions you should have a folder on your computer with all the E80 starter source code for the semester and have the Arduino IDE set up to easily access and load the provided sketchbooks.
+
+
+## Oscilloscope
+
+You will be using an oscilloscope for most E80 labs. If you need a refresher on how to use an oscilloscope, refer to [Practicum 2B](https://sites.google.com/g.hmc.edu/e79-practicum/module-2/practicum-2b) from E79.

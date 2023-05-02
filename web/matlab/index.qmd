@@ -1,0 +1,23 @@
+---
+title: "MATLAB Programming Assignments"
+---
+
+All MATLAB assignments are submitted on Sakai.
+
+Assignment 1: [OnRamp](https://drive.google.com/open?id=1mV48E9k7_dT42HhyWkDiDx1woC-09vfP)
+(sample submission sheet [here](https://docs.google.com/document/d/1_AgIoLTGPWFWNxWyy-iz3fnKsiYnxzjv?rtpof=true)). 
+
+Assignment 2: [Line Fitting & Plotting](https://drive.google.com/open?id=1mlBRQ-5KjmHOhpX8F5vMAut9S-dXKn9E)
+(sample submission sheet [here](https://docs.google.com/document/d/1mvyn9q4Y2AmQdARITvgroVzvH-rzcWot?rtpof=true)) 
+
+Assignment 3: [Importing Data & Data Types](https://drive.google.com/file/d/1vGUqZr7f_fbf4FdLHqJtspXwb62gn0ZR/view?usp=share_link) (sample submission sheet [here](https://docs.google.com/document/d/1vNDzLUEJEoqJkyx1oxKXPpGWQZ_FE7bo/edit?usp=share_link&ouid=100910508618635337843&rtpof=true&sd=true))
+
+Assignment 4: [Functions & Scripts](https://drive.google.com/file/d/1vN2kr1J3i5JVFmp37nOunvxc7GAG4tFz/view?usp=share_link) (sample submission sheet [here](https://docs.google.com/document/d/1vKh5Hi8yLhzxKFoNyE8c2nqYmDI3T495/edit?usp=share_link&ouid=100910508618635337843&rtpof=true&sd=true))
+
+
+
+* All MATLAB assignments are due at 12 p.m. on the date listed in the left column.  Note that the first assignment is due the very first week of classes. 
+* You will turn assignments in by submitting a filled out submission sheet on Sakai.  
+* You may complete the assignments as far before the due date as you like, and completing them early may benefit some of your labs.
+* MATLAB assignments are individual work, and you may not share code when solving them.  You may discuss concepts with other students.
+* Please make sure you have the Curve Fitting Toolbox installed with your version of MATLAB.

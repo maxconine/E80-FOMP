@@ -1,0 +1,56 @@
+---
+title: "Lab Overview"
+---
+
+Lab manuals are linked here.
+
+* **Lab 0** in week 1 is optional but highly recommended for everyone.
+* Note that the project is sub-divided into six parts as described below.   
+* Deliverables for each lab and the project are detailed on their individual pages.
+* Note that in weeks 6 and 7, the order of Lectures/quiz/Lab are not the same for everyone. Odd numbered teams are in Group A and Even numbered teams are in Group B. **Please make sure prelab is done for the correct lab.**
+
+# Labs
+- [Lab 0: Optional Tutorial and Skill Review](/labs/lab0)
+- [Lab 1: Go Autonomous](/labs/lab1)
+- [Lab 2: Basic Electrical Measurements](/labs/lab2)
+- [Lab 3: Op Amps and Marine Sensors](/labs/lab3)
+- [Lab 4: Temperature Sensors](/labs/lab4)
+- [Lab 5: Underwater Acoustics](/labs/lab5)
+- [Lab 6: Fluid Mechanics](/labs/lab6)
+- [Lab 7: Autonomous Navigation](/labs/lab7)
+
+# Safety Rules in E80
+
+## General rules
+- No eating or drinking in lab. If necessary you may leave lab, wash your hands, eat and/or drink something outside the lab, wash your hands, return to lab.
+- Know the location of fire extinguisher, eye wash, safety shower and quickest escape route.
+- Notify instructor immediately after _any_ injury, fire, spills or breakage.
+- Clean lab bench and turn off equipment before leaving. Leave the bench power on.
+- Electricity and water DO NOT MIX –a lot of water is involved in E80 – be mindful at all times.
+
+## Proper attire
+- Closed-toe shoes
+- Short sleeves preferred, rolled-up long sleeves acceptable
+- Long pants
+- No dangling jewelry – no rings, bracelets, necklaces or earrings
+- Loose clothing must be secured away from work (including hoody draw strings)
+- Long hair pulled back and secured
+- For field experiences:
+  - Location-appropriate footwear and clothing
+  - Appropriate PPE (including floatation devices for boats)
+  - Sunscreen
+  - Hydration
+
+## Chemical safety: epoxies and CA (CyanoAcrylate or superglue)
+- Safety goggles
+- Gloves
+- If procedure emits fumes, then must be done in a fume hood or out of doors away from buildings
+
+## Soldering
+- Iron must be turned off when not in your hand.
+- Use recently soaked sponge. Use spray bottle to moisten. Never use sink or water fountain.
+- Use fume extractor: fume from rosin in solder is a respiratory irritant.
+- Wash hands after handling solder – solder is 40% lead.  Skin contact is harmless, but ingestion can occur with unwashed hands when eating, drinking, or smoking.
+
+
+HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need accommodations in order to fully participate in this class are encouraged to contact the Office of Accessible Education at [access@g.hmc.edu](mailto:access@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's Accessible Education officer.
