@@ -9,8 +9,6 @@ website:
         text: Home
       - href: lectures/
         text: Lectures
-      - href: matlab/
-        text: MATLAB Assignments
       - text: Labs
         menu:
         - href: labs/lab_overview
