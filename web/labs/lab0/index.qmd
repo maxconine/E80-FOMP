@@ -6,7 +6,7 @@ Team size: 1
 
 # Introduction
 
-In the first week of E80, we don't have regular labs scheduled, but do have open lab sessions (1:15 pm to 5:15 pm Tuesday, Wednesday) to provide students with an opportunity for refreshing their skills in soldering and learning how to breadboard. Attendance to these lab sessions is optional. Instructors will be present. Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
+In the first week of E80, we have a regular lab scheduled, but There is no submission sheet. do have open lab sessions (1:15 pm to 5:15 pm Tuesday, Wednesday) to provide students with an opportunity for refreshing their skills in soldering and learning how to breadboard. Attendance to these lab sessions is optional. Instructors will be present. Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
 
 To be 100% clear, this is not a graded lab, but an optional tutorial for the first week of class. 
 
