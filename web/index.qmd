@@ -14,22 +14,28 @@ In 2008 the course was revamped to change the field experience to flying fully-i
 
 
 # Faculty and Office Hours
-| Name            | Day       | Hours                | Location |
-|-----------------|-----------|----------------------|----------|
-| Josh Brake      | Monday    | 10:00 am to 11:00 am | E80 Lab  |
-| Victor Shia     | Monday    | 8:30 am to 10:30 am  | E80 Lab  |
-| Matthew Spencer | Friday    | 3:45 pm to 4:40pm    | E80 Lab  |
-| Whitney Fowler  | Wednesday | 10:00 am to 12:00 pm | E80 Lab  |
-| Dre Helmns      | Thursday  | 4:00 pm to 5:15 pm   | E80 Lab  |
+| Name                | Day                    | Hours                                          | Location |
+|---------------------|------------------------|-------------------------------------|----------|
+| Matthew Spencer     | Monday                 | 10:00 am to 11:00 am and<br>1:00 pm to 3:00 pm | ?         |
+| Ethan Ritz          | Monday/Wednesday       | 4:00 pm to 5:00 pm                             | ?	    	|
+| Qimin Yang          | Tuesday                | 9:00 am to 11:00 am                            | ?  		|
+| Josh Brake          | Tuesday                | 1:00 pm to 3:00 pm                             | ?  		|
+| Dre Helmns          | Wednesday              | 1:00 pm to 3:00 pm                             | ?  		|
 
 You may attend any office hours, not just your section professor's.
 
 
 # Meeting Times
 
-- Lab Section 1: 1:15 p.m. to 5:15 p.m. in Parsons B171 &  B181 		(Professors Brake and Helmns)
-- Lab Section 2:	Tuesday 		1:15 p.m. to 5:15 p.m. in Parsons B171 & B181 		(Professor Shia )
-- Lab Section 3: 	Wednesday 	1:15 p.m. to 5:15 p.m. in Parsons B171 & B181 		(Professors  Spencer and Fowler)
+- <u>Lab Section 1</u>:\
+  Tuesday 1:15 p.m. to 5:15 p.m. in Parsons B171 &  B181 		(Prof. Helmns)
+
+- <u>Lab Section 2</u>:\
+ Wednesday 1:15 p.m. to 5:15 p.m. in Parsons B171 & B181 		(Prof. Yang)
+
+- <u>Lab Section 3</u>:\
+ Thursday 1:15 p.m. to 5:15 p.m. in Parsons B171 & B181		(Prof. Ritz)
+
 
 ## Writing and Reflection for all sections - Friday 1:15 p.m. - 3:15 p.m 
 
@@ -45,17 +51,19 @@ Students may only work in the E80 labs when a professor, staff or a proctor open
 # Mask Policy
 Masks will be required for all E80 activities until further notice.
 
+# Github
+- This is where you will find updated E80 codes throughout the semester. Git is a distributed version control system where you can download a local clone of a collection of source code files and track changes to the code.
+- Lab 0 will walk you through the steps to configure Git on your computer
+- [https://github.com/HMC-E80/E80](https://github.com/HMC-E80/E80)
+
 # Team and Group Assignments
-Before your first laboratory meeting, your instructor will assign you to a team.
-These teams are designated using a 2 digit number where the first is your section number and the second is your team's number (e.g. section 1's team 1 is 11).
-Use this number on all assignments. These assignments will be made using whatever method your instructor desires, and the nominal team size is four members.
-Sometimes registration limits in a class will require teams of three or five members to be formed.
-For three of the labs (2, 3, and 5), you will need to split your team into 2 sub-teams.
-A different sub-team must be used for each of these Labs.
-Team assignments will be for the duration of the course.
-
-A link to the current team rosters can be found [here]().
-
+- Before your first laboratory meeting, your instructor will assign you to a team.
+- These teams are designated using a 2 digit number where the first is your section number and the second is your team's number (e.g. section 1's team 1 is 11).
+- Use this number on all assignments. These assignments will be made using whatever method your instructor desires, and the nominal team size is four members.
+- Sometimes registration limits in a class will require teams of three or five members to be formed.
+- For three of the labs (2, 3, and 5), you will need to split your team into 2 sub-teams.
+- A different sub-team must be used for each of these Labs.
+- Team assignments will be for the duration of the course.
 
 # Graded Submissions
 
@@ -65,78 +73,77 @@ A link to the current team rosters can be found [here]().
 | Item                           | Weight |
 |--------------------------------|:------:|
 | [Lecture Quizzes](#lecture-quizzes)                |   7%   |
-| [MATLAB Programming Assignments](#matlab-programming-assignments) |   7%   |
 | [Surveys and Team Check-Ins](#surveys-and-team-check-ins)     |   6%   |
 | [Laboratory Submission Sheets](#laboratory-submission-sheets)   |   21%  |
 | [Laboratory Writing Assignments](#laboratory-writing-assignments) |   18%  |
 | [Technical Memorandum](#technical-memorandum)           |   10%  |
 | [Final Presentation](#final-presentation)             |   10%  |
 | [Final Report](#final-report)                   |   15%  |
-| [Participation](#participation)                  |   6%   |
+| [Participation](#participation)                  |   13%  |
 :::
 
 ## Graded Submissions Details
 
 ### Lecture Quizzes
 
-There are seven video lecture sets that you are expected to watch. Each of these video sets has an associated online quiz. You must take each of these quizzes individually.  You may not talk to other people in order to take the quiz, but they are open book, notes and internet.  The one exception to the 'no people' rule is that you may speak with a professor to clarify ideas before you open the quiz associated with the lecture set.  
+- There are seven video lecture sets that you are expected to watch. Each of these video sets has an associated online quiz. You must take each of these quizzes individually.  You may not talk to other people in order to take the quiz, but they are open book, notes and internet.  The one exception to the 'no people' rule is that you may speak with a professor to clarify ideas before you open the quiz associated with the lecture set. 
 
-These quizzes are completed on Gradescope.
-
-### MATLAB Programming Assignments
-
-There are a series of four weekly MATLAB programming assignments due by Friday at noon for the first four weeks of class. They are to be individual (not team) work. A sample solution will be posted by Monday morning after the due date. Assignments can be found on the MATLAB Assignments page.
-
-These assignments are submitted on Sakai.
+- These quizzes are completed on Canvas.
 
 ### Surveys and Team Check-Ins
 
-You will be called upon to complete surveys at the beginning and end of the class, and each week you will be asked to complete a team check-in (a quick peer evaluation).  Completing each of the check-ins is worth 0.5% of your grade, and completing each of the longer surveys (including the final, extended check-in before the project) is worth 1% of your grade.  Weekly check-ins are due each Friday at 3:30 pm.
+- You will be called upon to complete surveys at the beginning and end of the class, and each week, you will be asked to complete a team check-in (a quick peer evaluation) for the lab done that week. Completing each of the check-ins is worth 0.5% of your grade, and completing each of the longer surveys (including the final, extended check-in before the project) is worth 1% of your grade.
 
-The Google Form for submitting your weekly check-in is located [here]().
+- There are a total of 6 weekly check-ins (from weeks 2 through 7) and they are due each Friday at 3:30 pm.
 
 ### Laboratory Submission Sheets
 
-For each of the seven labs in the class, you must submit a submission sheet (linked on the lab page) that contains the data you collected during the lab.  This submission sheet will be evaluated for correctness: it's a way of assessing whether your experimental procedure was correct during the lab.  Each submission sheet you provide will be worth 3% of your final grade, and you submit 7 submission sheets for a total of 21%.  
+- For each of the seven labs in the class, you must submit a submission sheet that contains the data you collected during the lab.  This submission sheet will be evaluated for correctness: it's a way of assessing whether your experimental procedure was correct during the lab.  Each submission sheet you provide will be worth 3% of your final grade, and you submit 7 submission sheets for a total of 21%.
 
-These assignments are submitted on Sakai.
+- These are group assignments are submitted on Canvas.
 
 ### Laboratory Writing Assignments
 
-For six of the seven labs in the class (Labs 1-5 and Lab 7) you will be required to complete a writing assignment that is about 1 page in length.   Prompts for the writing assignment are included on each lab page.  The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc.  You must complete a rough draft of each week's writing assignment by noon  on Friday, then you will review your peer's drafts and edit your own during the writing and reflection section.  The final draft must be submitted by the end of the writing and reflection section. Each writing assignment will be worth 3% of your final grade and you submit six assignments for a total of 18%.  
+- For six of the seven labs in the class (Labs 1-5 and Lab 7) you will be required to complete a writing assignment that is about 1 page in length.   Prompts for the writing assignment are included on each lab page.  The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc.  You must complete a rough draft of each week's writing assignment by noon  on Friday, then you will review your peer's drafts and edit your own during the writing and reflection section.  The final draft must be submitted by the end of the writing and reflection section. Each writing assignment will be worth 3% of your final grade and you submit six assignments for a total of 18%.  
 
-These assignments are submitted on Sakai.
+- These are individual assignments are submitted on Canvas
 
 ### Technical Memorandum
 
-Each student will write an individual technical memorandum on Lab 6. See the Lab 6 page for more information and due dates.  You must submit a tech memo to pass the class. 
+- Each student will write an individual technical memorandum on Lab 6. See the Lab 6 page for more information and due dates.  You must submit a tech memo to pass the class. 
 
-Tech memos are submitted on Sakai.
+- Tech memos are submitted on Canvas.
 
 ### Final Presentation
 
-Each team will make a final presentation during Presentation Days, on Wednesday, May 3rd, 2023. The detailed schedule will be posted ASAP. The presentation is 15-minutes long followed by a 10-minute Q&A session. The Final Presentation guidelines are found on the Final Project page. The rubric is available here.
+- Each team will make a final presentation during Presentation Days, on Wednesday, May 1st, 2024. A detailed schedule will be posted ASAP. The presentation is 15-minutes long followed by a 10-minute Q&A session. The Final Presentation guidelines and rubric are found on the Final Project page.
 
-Final presentations are submitted on Sakai.
+- Final presentations are submitted on Canvas
 
 ### Final Report
+- A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of technical English Links to an external site. (see also this article Links to an external site.). A rough draft of your final report is due at 11:59 PM on 4/26/24.  The final draft is due at 11:59 PM on 5/1/2024. The Final Report guidelines are found on the Final Project page.
 
-A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of technical English (see also this article). A rough draft of your final report is due at 11:59 PM on 4/28/23.  The final draft is due at 11:59 PM on 5/3/2023. The Final Report guidelines are found on the Final Project page.
-
-Final reports are submitted on Sakai.
+- Final reports are submitted on Canvas.
 
 ### Participation
-
-The instructors will assign you a participation grade which is determined by their in-lab observations, your peer evaluations, and your regular progress through the project checkoffs.
-
-# Course Calendar
-A Google Sheet with the key dates and assignments in E80 can be found here.
+- The instructors will assign you a participation grade which is determined by their in-lab observations, your peer evaluations, and your regular progress through the project checkoffs.
 
 # End-of-Semester Grades
 Grades will be awarded on a standard grading scale (93.3% is an A, 90% A-, 86.6% is a B+, etc ...) based on your total individual score.
 The professors reserve the right to award grades more leniently than this grading standard.  
 
-# Pre- and Post-Lab Work Policy
+## Course Policies
+
+### Attendance and Tardiness
+Attendance will not be taken. Due dates will not be moved. It is up to the group to determine if each member of the team contributed their fair share of the work. For example, if you have a planned absence for a particular lab, you and your teammates should discuss how to shift more prelab work to the person who will be absent for the lab.
+
+### Late Work Policy
+No late work is accepted.  You will receive no points for work submitted after deadlines. This is in keeping with good professional practice.
+
+### Incomplete Grade Policy
+Incomplete grades will be granted only in rare circumstances and require the approval of the instructor.
+
+### Pre- and Post-Lab Work Policy
 Each week of the course before the final project can be divided into two periods: a period of time before you go to lab, called the pre-lab period, and a period of time between the lab and the writing and reflection section, called the post-lab period. 
 The type of work you are allowed to pursue in these periods is restricted for three main reasons: 
 (1) to simulate demands that can arise in real-world engineering, 
@@ -162,12 +169,7 @@ After you have finished a lab, you may not alter or resubmit your submission she
 You may not alter your report after the writing and reflection period.
 When in doubt about whether an activity is acceptable outside of lab, ask.
 
-# Late Work Policy
-No late work is accepted.
-You will receive no points for work submitted after deadlines.
-This is in keeping with good professional practice.
-
-# Cooperation Between Teams
+### Cooperation Between Teams
 Cooperation between teams is limited.
 The rules for each period of the week (pre-lab, during lab, post-lab and writing and reflection) are below.
 In this section, the word group will refer to a full team of students during a normal week or a sub-team of students during weeks where teams are split into sub-teams.
@@ -183,14 +185,24 @@ In this section, the word group will refer to a full team of students during a n
 These work restrictions are relaxed during the final project (after lab 7).
 Groups may work on their robot at any time and may discuss any aspect of their robots with one another (as if the prelab policy always applies).  
 
-# Sharing Rubrics
+### Sharing Rubrics
 We will be returning/releasing graded lab report rubrics throughout the semester.
 It is an HONOR CODE VIOLATION to share these rubrics with other teams or with students enrolled in future versions of E80.
 
-# Access to Lab During the Final Project
-Students may work in the labs any time that it is open.
-Students may only work in the E80 lab when a professor, staff member or proctor opens the lab.
-Any team may use the equipment in the E80 and electronics labs during a lab section, but teams which are scheduled for a section have top priority for the equipment. 
+### Access to Lab During the Final Project
+- Students may work in the labs any time that it is open.
+- Students may only work in the E80 lab when a professor, staff member or proctor opens the lab.
+- Any team may use the equipment in the E80 and electronics labs during a lab section, but teams which are scheduled for a section have top priority for the equipment. 
 
-# Accessibility and Accommodations
-HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need accommodations in order to fully participate in this class are encouraged to contact the Office of Accessible Education at [access@g.hmc.edu](mailto:access@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's Accessible Education officer.
+### Accessibility and Accommodations
+**Each student will be responsible for observing HMC's Honor code and abiding by the Standards of Conduct:**\
+
+> “All members of ASHMC are responsible for maintaining their integrity and the integrity of the College community in all academic matters and in all affairs concerning the community.” --<cite>ASHMC Constitution</cite>
+
+
+1. Thoughtful respect for the rights of others;
+2. Honesty and integrity in both academic and personal matters;
+3. Responsible behavior both on and off campus;
+4. Appropriate use of campus buildings and equipment, and;
+5. Compliance with College regulations and policies.
+
