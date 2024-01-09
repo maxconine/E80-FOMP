@@ -1,5 +1,5 @@
 ---
-title: "Lab 0: Optional Tutorial and Skills Review "
+title: "Lab 0: Tutorial and Skills Review "
 ---
 
 Team size: 1
