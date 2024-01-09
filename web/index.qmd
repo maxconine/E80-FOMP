@@ -128,22 +128,22 @@ Masks will be required for all E80 activities until further notice.
 ### Participation
 - The instructors will assign you a participation grade which is determined by their in-lab observations, your peer evaluations, and your regular progress through the project checkoffs.
 
-# End-of-Semester Grades
+## End-of-Semester Grades
 Grades will be awarded on a standard grading scale (93.3% is an A, 90% A-, 86.6% is a B+, etc ...) based on your total individual score.
 The professors reserve the right to award grades more leniently than this grading standard.  
 
-## Course Policies
+# Course Policies
 
-### Attendance and Tardiness
+## Attendance and Tardiness
 Attendance will not be taken. Due dates will not be moved. It is up to the group to determine if each member of the team contributed their fair share of the work. For example, if you have a planned absence for a particular lab, you and your teammates should discuss how to shift more prelab work to the person who will be absent for the lab.
 
-### Late Work Policy
+## Late Work Policy
 No late work is accepted.  You will receive no points for work submitted after deadlines. This is in keeping with good professional practice.
 
-### Incomplete Grade Policy
+## Incomplete Grade Policy
 Incomplete grades will be granted only in rare circumstances and require the approval of the instructor.
 
-### Pre- and Post-Lab Work Policy
+## Pre- and Post-Lab Work Policy
 Each week of the course before the final project can be divided into two periods: a period of time before you go to lab, called the pre-lab period, and a period of time between the lab and the writing and reflection section, called the post-lab period. 
 The type of work you are allowed to pursue in these periods is restricted for three main reasons: 
 (1) to simulate demands that can arise in real-world engineering, 
@@ -169,7 +169,7 @@ After you have finished a lab, you may not alter or resubmit your submission she
 You may not alter your report after the writing and reflection period.
 When in doubt about whether an activity is acceptable outside of lab, ask.
 
-### Cooperation Between Teams
+## Cooperation Between Teams
 Cooperation between teams is limited.
 The rules for each period of the week (pre-lab, during lab, post-lab and writing and reflection) are below.
 In this section, the word group will refer to a full team of students during a normal week or a sub-team of students during weeks where teams are split into sub-teams.
@@ -185,20 +185,20 @@ In this section, the word group will refer to a full team of students during a n
 These work restrictions are relaxed during the final project (after lab 7).
 Groups may work on their robot at any time and may discuss any aspect of their robots with one another (as if the prelab policy always applies).  
 
-### Sharing Rubrics
+## Sharing Rubrics
 We will be returning/releasing graded lab report rubrics throughout the semester.
 It is an HONOR CODE VIOLATION to share these rubrics with other teams or with students enrolled in future versions of E80.
 
-### Access to Lab During the Final Project
+## Access to Lab During the Final Project
 - Students may work in the labs any time that it is open.
 - Students may only work in the E80 lab when a professor, staff member or proctor opens the lab.
 - Any team may use the equipment in the E80 and electronics labs during a lab section, but teams which are scheduled for a section have top priority for the equipment. 
 
-### Accessibility and Accommodations
+## Accessibility and Accommodations
 
 Harvey Mudd College strives to make all learning experiences as accessible as possible. If you anticipate or experience academic barriers based on your disability (including mental health, chronic or temporary medical conditions). If you have any questions, please contact the Office of Accessible Education at [access@g.hmc.edu](mailto:access@g.hmc.edu). Students from the other Claremont Colleges should contact their home college's disability officer. You also need to register with the [Office of Disability Resources](https://www.hmc.edu/student-life/disability-resources/). to establish reasonable accommodations.
 
-### Academic Honesty/Plagiarism
+## Academic Honesty/Plagiarism
 
 **Each student will be responsible for observing HMC's Honor code and abiding by the Standards of Conduct:**\
 
