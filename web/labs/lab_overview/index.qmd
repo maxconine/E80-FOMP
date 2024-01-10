@@ -59,7 +59,7 @@ __________
   - Sunscreen
   - Hydration
 
-## Chemical safety: epoxies and CA (CyanoAcrylate or superglue)
+## Chemical safety: epoxies and CA (CyanoAcrylate aka superglue)
 - Safety goggles
 - Gloves
 - If procedure emits fumes, then must be done in a fume hood or out of doors away from buildings
