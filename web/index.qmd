@@ -56,6 +56,12 @@ Masks will be required for all E80 activities until further notice.
 - Lab 0 will walk you through the steps to configure Git on your computer
 - [https://github.com/HMC-E80/E80](https://github.com/HMC-E80/E80)
 
+# Course kit fee
+- There is a $65 kit fee per student. This fee can be waived in cases of financial hardship. Course instructors will not know about waiver requests.
+- Kit payment can be made [here](https://docs.google.com/forms/d/e/1FAIpQLSfLGyW_zk6jB89jHjIme0mkHV_LVAtXeJSDNIf7njMEDN1t1w/viewform)
+- Kit waiver request can be made [here](https://docs.google.com/forms/d/e/1FAIpQLScM-5lYfwQAE_5v6WAz357C1cftwr4sNQRPj4dC_GaPD-ihvw/viewform)
+
+
 # Team and Group Assignments
 - Before your first laboratory meeting, your instructor will assign you to a team.
 - These teams are designated using a 2 digit number where the first is your section number and the second is your team's number (e.g. section 1's team 1 is 11).
