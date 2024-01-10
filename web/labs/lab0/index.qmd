@@ -2,13 +2,25 @@
 title: "Lab 0: Tutorial and Skills Review "
 ---
 
-Team size: 1
+Team size: 4
 
 # Introduction
 
-In the first week of E80, we have a regular lab scheduled, but There is no submission sheet. do have open lab sessions (1:15 pm to 5:15 pm Tuesday, Wednesday) to provide students with an opportunity for refreshing their skills in soldering and learning how to breadboard. Attendance to these lab sessions is optional. Instructors will be present. Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
+In the first week of E80, we have a regular lab scheduled, but there is no submission sheet. This is an opportunity for refreshing your skills and getting software and hardware setup for Labs 1 through 7.
 
-To be 100% clear, this is not a graded lab, but an optional tutorial for the first week of class. 
+By the end of this lab you should have:
+
+- [ ] reviewed soldering, breadboarding, and use of oscilloscope and power supply
+- [ ] set up Arduino IDE on your computer
+- [ ] download E80 source code
+- [ ] set up MATLAB
+- [ ] set up Github Desktop on your computer
+- [ ] choose and resize an E79 robot frame
+- [ ] choose/make 3 waterproof motors and test
+- [ ] charge your battery
+
+Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
+
 
 You may complete the following sections in any order.
 
@@ -43,7 +55,7 @@ A few videos that may help explain how a breadboard works and how to use one can
 
 ## Arduino
 
-You can install Arduino on your own computer using the instructions in [Section 3 of Lab 1]().  This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.  Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
+You should install Arduino on your own computer using the instructions in [Section 3 of Lab 1](/lab1).  This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.  Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
 
 Run through a few more Arduino tutorials:  You will need to solder pins to the Teensy unless you find one that has been pre-soldered to the header pins.
 
@@ -53,7 +65,7 @@ Run through a few more Arduino tutorials:  You will need to solder pins to the T
 
 2. [Hooking up an external LED](https://www.pjrc.com/teensy/tutorial2.html) 
 
-    This tutorial also uses Teensy 2.0.  Refer to 3.2 pinout diagram to make appropriate changes your circuit. Note that you should just use a single red LED instead of an RGB LED.  An instructor can help you figure out which pin is the ground pin.
+    This tutorial also uses Teensy 2.0.  Refer to 4.0 pinout diagram to make appropriate changes your circuit. Note that you should just use a single red LED instead of an RGB LED.  An instructor can help you figure out which pin is the ground pin.
 
 ## Github Desktop Setup
 
