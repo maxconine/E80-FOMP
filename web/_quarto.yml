@@ -37,7 +37,7 @@ website:
         text: History
     right:
       - icon: github
-        href: https://github.com/HMC-E80/E80-SP2024
+        href: https://github.com/HMC-E80/E80
         aria-label: GitHub
 
 format:
