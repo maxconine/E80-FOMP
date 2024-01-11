@@ -10,20 +10,34 @@ In the first week of E80, we have a regular lab scheduled, but there is no submi
 
 By the end of this lab you should have:
 
-- [ ] reviewed soldering, breadboarding, and use of oscilloscope and power supply
-- [ ] set up Arduino IDE on your computer
-- [ ] download E80 source code
-- [ ] set up MATLAB
-- [ ] set up Github Desktop on your computer
 - [ ] choose and resize an E79 robot frame
-- [ ] choose/make 3 waterproof motors and test
+- [ ] choose/make 3 waterproof motors, test, and attach to frame
 - [ ] charge your battery
+- [ ] check out and solder header pins to Teensy 4.0 **(Limited supply - Do not lose/break/eat)**
+- [ ] set up Github Desktop on your computer
+- [ ] download E80 source code
+- [ ] set up Arduino IDE on your computer
+- [ ] reviewed breadboarding and use of oscilloscope and power supply
+- [ ] set up MATLAB
 
 Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
 
 
-You may complete the following sections in any order.
+Although less critical for this introduction lab, **it will be imperative to get into the habit of distributing work across team members.** Identify dependencies and **work in parallel.**
 
+## Frame Assembly
+
+We will be reusing the frames from the ROV's you constructed during E79 but some modifications will need to be made in order to change your ROV(Remotely Controlled Vehicle) into an AUV(Autonomous Underwater Vehicle).
+In order to fit the waterproof box that will house the motherboard, microcontroller, battery, additional sensors, etc., you will need to increase the width of the frame.
+
+Obtain two additional 6.5'' PVC pieces to replace the 4.5'' ones. Don't forget to drill the mounting holes for your vertical motor. 
+
+![](img/rov.png)
+
+You will be mounting your AUV's motors in the same manner as the three motor assembly in [Practicum 1A Section 4.7](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a).
+For your two additional motors, ask an instructor if there are any spares that can be used. However, it is more than likely that you will need to construct at least one additional motor from scratch. Reference [Practicum 1A Section 4.2](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a) for assembly instructions.
+
+Make sure to test that all three of your motors pull less than 500mA before mounting them on the new frame.
 
 ## Soldering
 
@@ -55,7 +69,7 @@ A few videos that may help explain how a breadboard works and how to use one can
 
 ## Arduino
 
-You should install Arduino on your own computer using the instructions in [Section 3 of Lab 1](/lab1).  This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.  Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
+You should install Arduino on your own computer using the instructions in [Section 3 of Lab 1](/labs/lab1/#arduino-programming).  This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.  Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
 
 Run through a few more Arduino tutorials:  You will need to solder pins to the Teensy unless you find one that has been pre-soldered to the header pins.
 
