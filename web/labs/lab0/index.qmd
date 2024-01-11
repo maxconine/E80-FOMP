@@ -4,21 +4,21 @@ title: "Lab 0: Tutorial and Skills Review "
 
 Team size: 4
 
-# Introduction
+## Introduction
 
 In the first week of E80, we have a regular lab scheduled, but there is no submission sheet. This is an opportunity for refreshing your skills and getting software and hardware setup for Labs 1 through 7.
 
 By the end of this lab you should have:
 
-- [ ] choose and resize an E79 robot frame
-- [ ] choose/make 3 waterproof motors, test, and attach to frame
-- [ ] charge your battery
-- [ ] check out and solder header pins to Teensy 4.0 **(Limited supply - Do not lose/break/eat)**
-- [ ] set up Github Desktop on your computer
-- [ ] download E80 source code
-- [ ] set up Arduino IDE on your computer
-- [ ] reviewed breadboarding and use of oscilloscope and power supply
-- [ ] set up MATLAB
+- [ ] Chosen and resized an E79 robot frame
+- [ ] Prepared 3 waterproof motors, tested them, and attached them to the frame
+- [ ] Charged your battery
+- [ ] Checked out and soldered header pins to Teensy 4.0 **(Limited supply - Do not lose/break/eat)**
+- [ ] Set up Github Desktop on your computer
+- [ ] Downloaded E80 source code
+- [ ] Set up the Arduino IDE on your computer
+- [ ] Reviewed breadboarding and use of oscilloscope and power supply
+- [ ] Set up MATLAB
 
 Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
 
