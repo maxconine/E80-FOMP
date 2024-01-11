@@ -15,9 +15,9 @@ By the end of this lab you should have:
 - [ ] Charged your battery
 - [ ] Reviewed breadboarding and use of oscilloscope and power supply
 - [ ] Checked out and soldered header pins to Teensy 4.0 **(Limited supply - Do not lose/break/eat)**
+- [ ] Set up the Arduino IDE on your computer
 - [ ] Set up Github Desktop on your computer
 - [ ] Downloaded E80 source code
-- [ ] Set up the Arduino IDE on your computer
 - [ ] Set up MATLAB
 
 Ask your instructor for any guidance including where to find tools. Don't forget to clean up afterwards. 
@@ -51,13 +51,6 @@ Request a battery and a LiPo safe bag from an instructor and set up your battery
 **Note**: Make sure you plug the balancer cable into the balance lead socket (the black wire should align with the minus sign). **Failure to do this may cause the battery to explode!** Always use a LiPo-safe bag while charging.
 :::
 
-<br>
-
-::: {.note-box}
-**Note**: You can use the power supply on your work bench to power your board without your battery. However, the bench power supply can’t provide nearly as much current as the battery. Your board has a screw terminal labeled P.S. which can be connected to the power supply. The power supply switch must be set in the P.S. direction for this screw terminal to power the board. Be very careful to get power and ground connections to the P.S. screw terminal correct by following the silkscreen V+ and GND labels on the board.
-:::
-
-
 ## Breadboarding
 
 A few videos that may help explain how a breadboard works and how to use one can be found below. Note that internal connections of breadboards can break. 
@@ -81,7 +74,7 @@ You will be using an oscilloscope for most E80 labs. If you need a refresher on 
 
 ## Soldering
 
-You will need to checkout a Teensy from an instructor and solder header pins in order to easily interact with microcontroller on board. For the first half of this course you will only need to interact with the pins on either side of the Teensy; however, you may find that additional pins will need to be added during the project phase.
+You will need to checkout a Teensy from an instructor and solder header pins in order to easily interact with microcontroller on board. For the first half of this course you will only need to interact with the pins on either side of the Teensy; however, you may find that you will need to add additional pins during the project phase.
 
 **Teensys are in limited supply.** Practice boards are available if you need a refresher.
 
@@ -98,15 +91,6 @@ Remember to:
 ![](img/teensy.png)
 
 
-## Github Desktop Setup
-
-Next you need to configure Git on your machine. Git is a distributed version control system. This means you can download a local clone of a collection of source code files and easily track the changes that you make to your code. While we won't be using all the features of git in E80, we will introduce you to the main features that will enable you to interact with the code base for your robot.
-
-Navigate to the Github page with the [E80 codebase](https://github.com/HMC-E80/E80-SP2023#git-setup) and scroll down to the section titled "Git Setup." You can also follow the direct link [here](https://github.com/HMC-E80/E80-SP2023#git-setup).
-
-After completing these instructions you should have a folder on your computer with all the E80 starter source code for the semester and have the Arduino IDE set up to easily access and load the provided sketchbooks.
-
-
 ## Arduino
 
 You should install Arduino on your own computer using the instructions in [Section 3 of Lab 1](/labs/lab1/#arduino-programming).  This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.  Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
@@ -117,6 +101,16 @@ Run through a few more Arduino tutorials:  You will need to solder pins to the T
 
 
 2. [Hooking up an external LED](https://www.pjrc.com/teensy/tutorial2.html) 
+
+
+## Github Desktop Setup
+
+Next you need to configure Git on your machine. Git is a distributed version control system. This means you can download a local clone of a collection of source code files and easily track the changes that you make to your code. While we won't be using all the features of git in E80, we will introduce you to the main features that will enable you to interact with the code base for your robot.
+
+Navigate to the Github page with the [E80 codebase](https://github.com/HMC-E80/E80-SP2023#git-setup) and scroll down to the section titled "Git Setup." You can also follow the direct link [here](https://github.com/HMC-E80/E80-SP2023#git-setup).
+
+After completing these instructions you should have a folder on your computer with all the E80 starter source code for the semester and have the Arduino IDE set up to easily access and load the provided sketchbooks.
+
 
 ## Matlab Access
 
@@ -132,5 +126,3 @@ To acquire a local install of Matlab on your computer you can do the following:
 4. Select “Individual” license and complete the installation process.
 
 It is also possible to use an online copy of Matlab found [here](https://mathematica.wolframcloud.com/).
-
-
