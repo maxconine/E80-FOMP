@@ -61,11 +61,9 @@ Run through a few more Arduino tutorials:  You will need to solder pins to the T
 
 1. [Blinking lights on the Arduino board](https://www.pjrc.com/teensy/tutorial.html):  
 
-    Note: this tutorial uses Teensy 2.0.  and asks you to edit the LED pin # from 13 to 11.  You will be using Teensy 3.2 or 4.0.  Its LED pin # is 13 so you do not need to edit the file.  Also, the _Blink_ example code has been moved from _Digital_ to _Basics_ folder.
 
 2. [Hooking up an external LED](https://www.pjrc.com/teensy/tutorial2.html) 
 
-    This tutorial also uses Teensy 2.0.  Refer to 4.0 pinout diagram to make appropriate changes your circuit. Note that you should just use a single red LED instead of an RGB LED.  An instructor can help you figure out which pin is the ground pin.
 
 ## Github Desktop Setup
 
