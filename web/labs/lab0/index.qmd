@@ -39,6 +39,24 @@ For your two additional motors, ask an instructor if there are any spares that c
 
 Make sure to test that all three of your motors pull less than 500mA before mounting them on the new frame.
 
+## Battery
+
+Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. Determine the maximum, minimum and nominal voltage outputs of these battery packs. Determine how many cells are in the battery pack. To charge the batteries, we will use a [HiTec x1 Mini charger](https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf) or a [UP60AC multi charger](http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf). Read the manual on how to use the chargers.
+
+Request a battery and a LiPo safe bag from an instructor and set up your battery for charging. ASK AN INSTRUCTOR OR PROCTOR TO CHECK YOUR RECHARGE SETUP. Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP). Charge the battery up to its maximum voltage.
+
+::: {.note-box}
+**Note**: Make sure you plug the balancer cable into the balance lead socket (the black wire should align with the minus sign). **Failure to do this may cause the battery to explode!** Always use a LiPo-safe bag while charging.
+:::
+
+<br>
+
+::: {.note-box}
+**Note**: You can use the power supply on your work bench to power your board without your battery. However, the bench power supply can’t provide nearly as much current as the battery. Your board has a screw terminal labeled P.S. which can be connected to the power supply. The power supply switch must be set in the P.S. direction for this screw terminal to power the board. Be very careful to get power and ground connections to the P.S. screw terminal correct by following the silkscreen V+ and GND labels on the board.
+:::
+
+
+
 ## Soldering
 
 A helpful video on how to solder can be found [here](https://www.youtube.com/watch?v=Qps9woUGkvI).
