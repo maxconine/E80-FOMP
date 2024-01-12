@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "."
+  title: "E80 SP24"
   navbar:
     left:
       - href: index.qmd
@@ -14,7 +14,7 @@ website:
         - href: labs/lab_overview
           text: Lab Overview
         - href: labs/lab0
-          text: 'Lab 0: Optional Tutorial'
+          text: 'Lab 0: Tutorial & Skills Review'
         - href: labs/lab1
           text: 'Lab 1: Go Autonomous'
         - href: labs/lab2
