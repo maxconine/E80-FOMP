@@ -37,9 +37,9 @@ Obtain two additional 6.5'' PVC pieces to replace the 4.5'' ones. Don't forget t
 
 You will be mounting your AUV's motors in the same manner as the three motor assembly in [Practicum 1A Section 4.7](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a).
 
-For your two additional motors, ask an instructor if there are any spares that can be used. However, it is more than likely that you will need to construct at least one additional motor from scratch. Reference [Practicum 1A Section 4.2](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a) for assembly instructions.
+Each team will be provided with 2 used motors. You will need to construct at least one additional motor from scratch. Reference [Practicum 1A Section 4.2](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a) for assembly instructions.
 
-Make sure to test that all three of your motors pull less than 500mA before mounting them on the new frame.
+Make sure to test that all three of your motors pull less than 500mA before mounting them on the new frame. To do this, supply 6V to the motor using a power supply.
 
 ## Battery
 
