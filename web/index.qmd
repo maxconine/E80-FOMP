@@ -116,7 +116,7 @@ Masks will be required for all E80 activities until further notice.
 
 ### Technical Memorandum
 
-- Each student will write an individual technical memorandum on Lab 6. See the Lab 6 page for more information and due dates.  You must submit a tech memo to pass the class. 
+- Each student will write an individual technical memorandum on Lab 6. See the [Lab 6](labs/lab6) page for more information and due dates.  You must submit a tech memo to pass the class. 
 
 - Tech memos are submitted on Canvas.
 
@@ -127,7 +127,7 @@ Masks will be required for all E80 activities until further notice.
 - Final presentations are submitted on Canvas
 
 ### Final Report
-- A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of technical English Links to an external site. (see also this article Links to an external site.). A rough draft of your final report is due at 11:59 PM on 4/26/24. The final draft is due at 11:59 PM on 5/1/2024. The Final Report guidelines are found on the Final Project page.
+- A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of [technical English](https://www.mit.edu/course/21/21.guide/). (see also [this article](https://www.mit.edu/course/21/21.guide/).). A rough draft of your final report is due at 11:59 PM on 4/26/24. The final draft is due at 11:59 PM on 5/1/2024. The Final Report guidelines are found on the Final Project page.
 
 - Final reports are submitted on Canvas.
 
