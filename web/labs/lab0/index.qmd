@@ -27,7 +27,7 @@ Although less critical for this introduction lab, **it will be imperative to get
 
 ## Frame Assembly
 
-We will be reusing the frames from the ROV's you constructed during E79 but some modifications will need to be made in order to change your ROV(Remotely Controlled Vehicle) into an AUV(Autonomous Underwater Vehicle).
+We will be reusing the frames from the ROV's you constructed during E79 but some modifications will need to be made in order to change your ROV (Remotely Controlled Vehicle) into an AUV (Autonomous Underwater Vehicle).
 
 To fit the waterproof box that will house the motherboard, microcontroller, battery, additional sensors, etc., you will need to increase the width of the frame.
 
@@ -39,16 +39,24 @@ You will be mounting your AUV's motors in the same manner as the three motor ass
 
 Each team will be provided with 2 used motors. You will need to construct at least one additional motor from scratch. Reference [Practicum 1A Section 4.2](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a) for assembly instructions.
 
-Make sure to test that all three of your motors pull less than 500mA before mounting them on the new frame. To do this, supply 6V to the motor using a power supply.
+Make sure to test that all three of your motors pull less than 500 mA before mounting them on the new frame. To do this, supply 6 V to the motor using a power supply.
 
 ## Battery
 
-Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. Determine the maximum, minimum and nominal voltage outputs of these battery packs. Determine how many cells are in the battery pack. To charge the batteries, we will use a [HiTec x1 Mini charger](https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf) or a [UP60AC multi charger](http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf). Read the manual on how to use the chargers.
+Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. 
+Determine the maximum, minimum and nominal voltage outputs of these battery packs. 
+Determine how many cells are in the battery pack. To charge the batteries, we will use a [HiTec x1 Mini charger](https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf) or a [UP60AC multi charger](http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf). 
+Read the manual on how to use the chargers.
 
-Request a battery and a LiPo safe bag from an instructor and set up your battery for charging. ASK AN INSTRUCTOR OR PROCTOR TO CHECK YOUR RECHARGE SETUP. Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP). Charge the battery up to its maximum voltage.
+Request a battery and a LiPo safe bag from an instructor and set up your battery for charging. 
+ASK AN INSTRUCTOR OR PROCTOR TO CHECK YOUR RECHARGE SETUP. 
+Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP). 
+Charge the battery up to its maximum voltage.
 
 ::: {.note-box}
-**Note**: Make sure you plug the balancer cable into the balance lead socket (the black wire should align with the minus sign). **Failure to do this may cause the battery to explode!** Always use a LiPo-safe bag while charging.
+**Note**: Make sure you plug the balancer cable into the balance lead socket (the black wire should align with the minus sign). 
+**Failure to do this may cause the battery to explode!** 
+Always use a LiPo-safe bag while charging.
 :::
 
 ## Breadboarding
@@ -62,8 +70,8 @@ A few videos that may help explain how a breadboard works and how to use one can
 
     where $V_S$ is the supply voltage, and $V_F$ and $I_F$ are the foward voltage and current of the diode respectively and can be found on LED datasheet found [ here](https://www.aopled.com/AOP_PDFs/L513SRD-C.pdf).
 
-2. [Breadboard Internals](https://www.youtube.com/watch?v=S_a-qCy6Ekk)
-3. [How to build a 555 Timer circuit](https://www.youtube.com/watch?v=Vbz_MKT7KnI). Here is a [link with a circuit diagram](https://www.elprocus.com/blinking-led-using-555-timer-ic/). Here is a [video on how the 555 works.](https://www.youtube.com/watch?time_continue=385&v=i0SNb__dkYI&feature=emb_logo) 
+2. [Breadboard Internals](https://www.youtube.com/watch?v=S_a-qCy6Ekk){target="_blank"}.
+3. [How to build a 555 Timer circuit](https://www.youtube.com/watch?v=Vbz_MKT7KnI){target="_blank"}. Here is a [link with a circuit diagram](https://www.elprocus.com/blinking-led-using-555-timer-ic/). Here is a [video on how the 555 works.](https://www.youtube.com/watch?time_continue=385&v=i0SNb__dkYI&feature=emb_logo){target="_blank"} 
 
 
 ## Oscilloscope
@@ -71,14 +79,16 @@ A few videos that may help explain how a breadboard works and how to use one can
 You will be using an oscilloscope for most E80 labs. If you need a refresher on how to use an oscilloscope, refer to [Practicum 2B](https://sites.google.com/g.hmc.edu/e79-practicum/module-2/practicum-2b) from E79.
 
 
-
 ## Soldering
 
-You will need to checkout a Teensy from an instructor and solder header pins in order to easily interact with microcontroller on board. For the first half of this course you will only need to interact with the pins on either side of the Teensy; however, you may need to add additional pins during the project phase.
+You will need to checkout a Teensy from an instructor and solder header pins in order to easily interact with microcontroller on board.
+For the first half of this course you will only need to interact with the pins on either side of the Teensy; however, you may need to add additional pins during the project phase.
 
-**Teensys are in limited supply.** Practice boards are available if you need a refresher.
+**Teensys are in limited supply.**
+Practice boards are available if you need a refresher.
 
-A helpful video on how to solder can be found [here](https://www.youtube.com/watch?v=Qps9woUGkvI).
+A helpful video on how to solder can be found [here](https://www.youtube.com/watch?v=Qps9woUGkvI){target="_blank"}.
+
 Remember to: 
 
 1. Never leave your soldering iron unattended.
@@ -93,7 +103,9 @@ Remember to:
 
 ## Arduino
 
-You should install Arduino on your own computer using the instructions in [Section 3 of Lab 1](/labs/lab1/#arduino-programming).  This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.  Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
+You should install Arduino on your own computer using the instructions in [Section 3 of Lab 1](/labs/lab1/#arduino-programming).
+This kind of work, where you read a lab ahead of time and take preparatory actions that are in-keeping with the pre-lab policy on the home page, is called pre-lab work.
+Pre-lab work is extremely valuable, so setting up Arduino this way is a great first step into the course.
 
 Run through a few more Arduino tutorials:  You will need to solder pins to the Teensy.
 
@@ -116,7 +128,8 @@ After completing these instructions you should have a folder on your computer wi
 
 You will be using Matlab to help analyze and interact with data throughout this course.
 
-You will first need to [Visit the Matlab Portal](https://www.mathworks.com/academia/tah-portal/harvey-mudd-college-30622674.html) and log in using your Mathworks account. If you do not have an account, create one using your username@hmc.edu credentials.
+You will first need to [Visit the Matlab Portal](https://www.mathworks.com/academia/tah-portal/harvey-mudd-college-30622674.html) and log in using your Mathworks account.
+If you do not have an account, create one using your `username@hmc.edu` credentials.
 
 To acquire a local install of Matlab on your computer you can do the following:
 
