@@ -74,7 +74,7 @@ You will be using an oscilloscope for most E80 labs. If you need a refresher on 
 
 ## Soldering
 
-You will need to checkout a Teensy from an instructor and solder header pins in order to easily interact with microcontroller on board. For the first half of this course you will only need to interact with the pins on either side of the Teensy; however, you may find that you will need to add additional pins during the project phase.
+You will need to checkout a Teensy from an instructor and solder header pins in order to easily interact with microcontroller on board. For the first half of this course you will only need to interact with the pins on either side of the Teensy; however, you may need to add additional pins during the project phase.
 
 **Teensys are in limited supply.** Practice boards are available if you need a refresher.
 
