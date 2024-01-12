@@ -138,6 +138,10 @@ Masks will be required for all E80 activities until further notice.
 Grades will be awarded on a standard grading scale (93.3% is an A, 90% A-, 86.6% is a B+, etc ...) based on your total individual score.
 The professors reserve the right to award grades more leniently than this grading standard.  
 
+# Course Calendar
+
+A Google Sheet with the key dates and assignments in E80 can be found [here](https://docs.google.com/spreadsheets/d/1qR7HhVNWtqK8va9gGP6NGhX_NoIblt1x9VRRuFam1ng/edit?usp=sharing).
+
 # Course Policies
 
 ## Attendance and Tardiness
