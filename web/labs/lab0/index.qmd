@@ -1,5 +1,5 @@
 ---
-title: "Lab 0: Tutorial and Skills Review "
+title: "Lab 0: Tutorial and Skills Review"
 ---
 
 Team size: 4
@@ -124,18 +124,24 @@ Navigate to the Github page with the [E80 codebase](https://github.com/HMC-E80/E
 After completing these instructions you should have a folder on your computer with all the E80 starter source code for the semester and have the Arduino IDE set up to easily access and load the provided sketchbooks.
 
 
-## Matlab Access
+## MATLAB Access
 
-You will be using Matlab to help analyze and interact with data throughout this course.
+You will be using MATLAB to help analyze and interact with data throughout this course.
 
-You will first need to [Visit the Matlab Portal](https://www.mathworks.com/academia/tah-portal/harvey-mudd-college-30622674.html) and log in using your Mathworks account.
+You will first need to [Visit the MATLAB Portal](https://www.mathworks.com/academia/tah-portal/harvey-mudd-college-30622674.html) and log in using your Mathworks account.
 If you do not have an account, create one using your `username@hmc.edu` credentials.
 
-To acquire a local install of Matlab on your computer you can do the following:
+To acquire a local install of MATLAB on your computer you can do the following:
 
-1. [Visit the Matlab Portal](https://www.mathworks.com/academia/tah-portal/harvey-mudd-college-30622674.html).
+1. [Visit the MATLAB Portal](https://www.mathworks.com/academia/tah-portal/harvey-mudd-college-30622674.html).
 2. Choose to download the installer and select your operating system.
 3. Run the installer and log into your Mathworks account again.
 4. Select “Individual” license and complete the installation process.
 
-It is also possible to use an online copy of Matlab found [here](https://mathematica.wolframcloud.com/).
+It is also possible to use an online copy of MATLAB found [here](https://mathematica.wolframcloud.com/).
+
+## MATLAB On-ramp
+
+If you have extra time during Lab 0 you may get started on the MATLAB on-ramp tutorial.
+
+You can find the assignment [here](./matlab-startup.qmd).
