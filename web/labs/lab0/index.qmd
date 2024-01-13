@@ -138,10 +138,10 @@ To acquire a local install of MATLAB on your computer you can do the following:
 3. Run the installer and log into your Mathworks account again.
 4. Select “Individual” license and complete the installation process.
 
-It is also possible to use an online copy of MATLAB found [here](https://mathematica.wolframcloud.com/).
+It is also possible to use an online copy of MATLAB [here](https://matlab.mathworks.com).
 
 ## MATLAB On-ramp
 
-If you have extra time during Lab 0 you may get started on the MATLAB on-ramp tutorial.
+If you have extra time during Lab 0 you may work on the MATLAB on-ramp tutorial.
 
 You can find the assignment [here](./matlab-startup.qmd).
