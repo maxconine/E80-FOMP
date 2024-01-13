@@ -4,14 +4,16 @@ format:
   html: default
 ---
 
-Welcome to the E72+E80 MATLAB Tutorial! If you need more support, ask someone during office hours. Also, there are lots of resources online for using MATLAB.
+Welcome to the E72+E80 MATLAB Tutorial! 
+If you need more support, ask someone during E72 office hours. 
+Also, there are lots of resources online for using MATLAB.
 
 ## What to Submit
 
 At the end of this assignment you will submit pieces of information:
 
 1.  A screenshot showing you've completed the assigned sections of the [MATLAB On-ramp tutorial](#matlab-onramp).
-2.  A brief, 4-5 sentence reflection detailing something you learned from the [plotting question](#matlab-plotting-video).
+2.  A brief, 2-3 sentence reflection detailing something you learned from the [plotting question](#matlab-plotting-video).
 3.  A brief, 4-5 sentence reflection detailing something you learned from the [debugging practice](#practice-debugging-in-matlab).
 
 You should prepare these items in an MS Word document or Google Doc and then download it as a PDF to submit on Canvas.
@@ -77,7 +79,7 @@ Button to download individual file from the GitHub repository.
 
 ### 5. Practice Debugging in MATLAB {#practice-debugging-in-matlab}
 
-Practice your MATLAB debugging skills on this script [debugme.m](https://github.com/HMC-E80/E80/tree/main/MATLAB/debugme.m), which is supposed to create a matrix like the one below. The code has several errors in it that you'll need to fix. You do not need to turn in your final code for this class. The goal of this in-class assignment is to help prepare you for the work that you'll be doing in E72.
+Practice your MATLAB debugging skills on this script [debugme.m](https://github.com/HMC-E80/E80/tree/main/MATLAB/debugme.m), which is supposed to create a matrix like the one below.
 
 The code should be able to produce a matrix with a user-specified number of columns. In the diagram below, we show what the output matrix should look like if it has 10 columns. The number of rows in this case would need to be 32, since the matrix has three 10x10 blocks in the middle, sandwiched by the row of ones at the top and row of ones at the bottom.
 
@@ -86,7 +88,6 @@ The code should be able to produce a matrix with a user-specified number of colu
 ![](./img/matlab-matrix-example.png)
 
 Desired code output matrix.
-
 :::
 
 ::: hint-box
