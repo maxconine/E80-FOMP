@@ -2,6 +2,8 @@
 title: "Lab 4: Temperature Sensors"
 ---
 
+**UNDER CONSTRUCTION, DO NOT USE FOR PRELAB**
+
 Team size: 2
 
 ## Learning Objectives

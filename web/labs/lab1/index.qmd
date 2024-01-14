@@ -2,99 +2,146 @@
 title: "Lab 1: Go Autonomous"
 ---
 
-**Team size: 4**
+**UNDER CONSTRUCTION, DO NOT USE FOR PRELAB**
+
+Team size: 4
+[Submission Sheet](/labs/lab2/submission.qmd) [Word](/labs/lab2/submission.docx)
+[Writing](/labs/lab2/writing.qmd)
 
 ## Learning Objectives
 
 After successful completion of this lab, you will be able to...
 
-1. Explain the basic operation of your robot including details about the battery powering it. 
-2. Demonstrate how to autonomously navigate your robot through an obstacle course.
+1. Explain the basic operation of your robot, including details about the battery powering it. 
+2. Autonomously navigate your robot through an obstacle course.
 3. Explain the limitations and challenges of open loop control and articulate how a closed loop design addresses them
 
 
 ## 0. Introduction
 
-The objectives of this lab are to transform the ROV (remotely operated vehicle) used in E79 into an AUV (autonomous underwater vehicle). You might remember that cables ran between your control box and your E79 robot. The cables were cumbersome and limited the range of the robot. In E80, you will build an autonomous robot with an on-board microcontroller that controls its motors and collects data from its sensors. This lab should get you acquainted with the microcontroller, and in it you will build your first autonomous robot. In doing so you will come to understand your robot's limitations when only open-loop control is used.
+The objectives of this lab are to transform the ROV (remotely operated vehicle) used in E79 into an AUV (autonomous underwater vehicle). An ROV is controlled from the surface through long cables, but an AUV carries an autonomous controller on board. While most AUVs built in Lab 1 will look the same, students will modify these vehicles as the course progresses so that by end of semester, each will be configured and equipped for unique ocean-sampling experiments.
 
-While most AUVs built in Lab 1 will look the same, students will modify these vehicles as the course progresses so that by end of semester, each will be configured and equipped for unique ocean-sampling experiments.
+Lab 1 is completed in teams of 4. 
 
-Lab 1 is to be completed in teams of 4. Team members will be assigned by the instructor. It is up to the team to determine which parts of the lab are done by whom, and at what time during the four hours of lab time. A work breakdown showing what each team member intends to work on during the four-hour lab time is required for entry to the lab. The work breakdown will be submitted on paper to a lab instructor or proctor at the start of lab. Here is an [example work breakdown](https://drive.google.com/open?id=1UE9QmSXXGauzLUS0ZWm355lViUqZoC_F). No hardware can be used outside of lab hours and no real data can be processed outside of lab hours. However, writing software or processing simulated data sets is allowed and, in fact, encouraged during the pre-lab period.
-
-A submission sheet is due at the end of the 4-hour lab period. The submission sheet must be uploaded before the end of your lab session at 5:15 pm. Note that only **ONE** member of each team should access and submit the submission sheet. It is the responsibility of that team member to add the rest of the team’s names to the submission sheet. 
-
-**For pre-lab purposes**, a sample submission sheet that contains all of the questions and requirements on the submission sheet on can be found [here](https://docs.google.com/document/d/1IdCT00qJ_P5gtN7wcFKwaBd6rTRSuXSB/edit?usp=sharing&ouid=100121681850908143159&rtpof=true&sd=true). 
-
-You will work with some expensive hardware in this lab and in many future labs. This hardware needs to be explicitly checked out from a professor or proctor so that we can track where it is. If any hardware that you checked out breaks,  you will need to request a replacement from a professor. You make this request by filling out an [error report](https://drive.google.com/open?id=1FnHDzDSCuc3pAsEXzUg6BnTacfLF-ODs) (paper copies will be in lab). This report needs to be well thought out; professors will reject reports that don't represent sufficient testing or thought. You will keep this hardware with you throughout the semester in your storage box. 
+Be sure to read the [Lab Overview](../lab_overview/index.qmd) to learn about safety requirements, expensive equipment handling and prelab rules.  You must review all SAFETY QUESTION boxes below as part of prelab.  If you ever reach a safety question box and either can't answer it or feel unsure, grab an instructor.
 
 
 ## 1. Battery
 
-Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. Determine the maximum, minimum and nominal voltage outputs of these battery packs. Determine how many cells are in the battery pack. To charge the batteries, we will use a [HiTec x1 Mini charger](https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf) or a [UP60AC multi charger](http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf). Read the manual on how to use the chargers.
+Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. To charge the batteries, we will use a [HiTec x1 Mini charger](https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf) or a [UP60AC multi charger](http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf). Read the manual on how to use the chargers. Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP) showing correct charger use.
 
-Request a battery and a LiPo safe bag from an instructor. You will need to check out and set up your battery for charging as soon as you start the lab. ASK AN INSTRUCTOR OR PROCTOR TO CHECK YOUR RECHARGE SETUP. Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP). Charge the battery up to its nominal voltage, NOT its maximum voltage, which means that you will need to periodically monitor the voltage on the battery and stop the charging at the appropriate time. You will normally charge the battery to its maximum value, but for this lab, you don’t have the time.
+:::{.callout-warning collapse="true"}
+## SAFETY QUESTION: What is the maximum voltage output of these battery packs?
 
-
-::: {.note-box}
-**Note**: Make sure you plug the balancer cable into the balance lead socket (the black wire should align with the minus sign). **Failure to do this may cause the battery to explode!** Always use a LiPo-safe bag while charging.
+12.6V.  Don't charge above this level.  This is calculated by observing that there are 3 cells in your battery (i.e.: it is 3S), and that each cell maxes out at 4.2V.
 :::
 
-<br>
+:::{.callout-warning collapse="true"}
+## SAFETY QUESTION: What is the nominal voltage output of these battery packs?
 
-::: {.note-box}
-**Note**: You can use the power supply on your work bench to power your board without your battery. However, the bench power supply can’t provide nearly as much current as the battery. Your board has a screw terminal labeled P.S. which can be connected to the power supply. The power supply switch must be set in the P.S. direction for this screw terminal to power the board. Be very careful to get power and ground connections to the P.S. screw terminal correct by following the silkscreen V+ and GND labels on the board.
+11.1V.  Don't discharge below this level.  Li-ion batteries discharge quickly when their voltage sinks below the nominal level, so keep a close watch on this.  This is calculated by observing that there are 3 cells in your battery (i.e.: it is 3S), and that each cell has a nominal voltage of 3.7V.
 :::
+
+:::{.callout-warning collapse="true"}
+## SAFETY QUESTION: Should the balancer cable be plugged in during charging?
+
+Yes, with the black cable aligned with the minus sign.  **Failing to do this can cause the battery to light on fire.**
+:::
+
+:::{.callout-warning collapse="true"}
+## SAFETY QUESTION: Should I use a LiPo safe bag while charging?
+
+Yes, always.  This keeps you, other students, and the lab safe in case of battery fire.
+:::
+
+Request a battery and a LiPo safe bag from an instructor. You will need to check out and set up your battery for charging as soon as you start the lab. ASK AN INSTRUCTOR OR PROCTOR TO CHECK YOUR RECHARGE SETUP. Charge the battery up to its nominal voltage, NOT its maximum voltage, which means that you will need to periodically monitor the voltage on the battery and stop the charging at the appropriate time. 
 
 ## 2. Motherboard Assembly
 
-For E80, a motherboard has been designed to interface the major electrical components of your AUV. Familiarize yourself with the components on the motherboard by reading the [Introduction to the E80 Motherboard](https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing) document.  You will add some necessary components to the board in Lab 1. Use this [motherboard assembly document](https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&ouid=105511935419108795487&rtpof=true&sd=true) as a guide and add the components. Checkout your motherboard from a professor and find the other parts you need in the parts rack on the central table. For reference, the schematic for the motherboard is [here](https://drive.google.com/file/d/1pk_mORYsxhedKjjqzhMrxj9H5ZVH3zqp/view?usp=sharing) , the layout is [here](https://drive.google.com/file/d/1pmm8xwpyAHAL5YvwMIQma4W8DuV-MP31/view?usp=sharing) , and [KiCAD](https://www.kicad.org/) design files are  [here](https://drive.google.com/file/d/1pi9WNW7WoIx80xgb_0LWSUyA-LMfp94Z/view?usp=sharing).
+For E80, a motherboard has been designed to interface the major electrical components of your AUV. Familiarize yourself with the components on the motherboard by reading the [Introduction to the E80 Motherboard](https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing) document.  You will add some necessary components to the board in Lab 1. Use this [motherboard assembly document](https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&ouid=105511935419108795487&rtpof=true&sd=true) as a guide and add the components.  For reference, the schematic for the motherboard is [here](https://drive.google.com/file/d/1pk_mORYsxhedKjjqzhMrxj9H5ZVH3zqp/view?usp=sharing) , the layout is [here](https://drive.google.com/file/d/1pmm8xwpyAHAL5YvwMIQma4W8DuV-MP31/view?usp=sharing) , and [KiCAD](https://www.kicad.org/) design files are  [here](https://drive.google.com/file/d/1pi9WNW7WoIx80xgb_0LWSUyA-LMfp94Z/view?usp=sharing).
 
-Before you begin assembly, **write your section number and team number and board version on your board. ** This will be version 1 for all of you, you will increment your version if, for example, your board blows up and you have to make a new one.
 
-There are two ways that **you can damage your motherboard irreparably **during this process. One is soldering components in the wrong position or orientation (e.g., screw terminals facing inward or header on the back side of the board), which is very difficult to rework. Double check that you are using the correct header and try fitting all the pieces together before soldering. The other is attaching your battery or power supply leads backwards or soldering the red and black wires to the incorrect terminals on the motherboard. Have an instructor or proctor check your battery connector. Make sure to heed the warnings in the assembly guide.
+There are two ways that **you can damage your motherboard irreparably** during this process, and you should take precautions against each of them. One is soldering components in the wrong position or orientation (e.g., screw terminals facing inward or header on the back side of the board), which is very difficult to rework. Double check that you are using the correct header and try fitting all the pieces together before soldering. The other is flipping power and ground by attaching your battery or power supply leads backwards or soldering the red and black wires to the incorrect terminals on the motherboard. Have an instructor or proctor check your battery connector, and make sure to heed the warnings in the assembly guide.
 
-Cover the back of your motherboard with insulating foam sheet using these[ instructions](https://drive.google.com/open?id=1x0CMBDFia2uY5qxPkWFfg_pN3FcR7Pth) to prevent inadvertent short circuits when you set it down. Also, find a sharpie and color the GND side of your P.S. screw black, so that you don't forget the polarity of the connector.
+:::{.callout-warning collapse="true"}
+## SAFETY QUESTION: What are the two ways I can damage my board in this section?
+
+Soldering components in the wrong position or orientation, and attaching battery or power supply leads backwards.
+:::
+
+1. Checkout your motherboard from a professor and find the other parts you need in the parts rack on the central table.
+2. Label your board: Before you begin assembly, **write your section number, team number and board version on your board.** This will be version 1 for all of you, you will increment your version if, for example, your board blows up and you have to make a new one.
+3. Take precautions to keep everything working before soldering
+    i) Double check that you are using the correct header and try fitting all the pieces together before soldering. 
+    ii) Have an instructor or proctor check your battery connector and power supply connector polarity.
+4. Cover the back of your motherboard with insulating foam sheet using these[ instructions](https://drive.google.com/open?id=1x0CMBDFia2uY5qxPkWFfg_pN3FcR7Pth) to prevent inadvertent short circuits when you set it down. 
+5. Find a sharpie and color the GND side of your P.S. screw black, so that you don't forget the polarity of the connector.
 
 
 ## 3. Arduino Programming 
 
-You will use the Arduino language to program your microcontroller, the [Teensy 4.0](https://www.pjrc.com/store/teensy40.html). If your computer doesn't have Arduino software installed, go to [the Arduino download page](https://www.arduino.cc/en/software)  and download the latest version of the Arduino software (2.0.3 as of this writing). Since version 2.0.0, the Teensy is supported directly in the Arduino software. Follow the instructions [here](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/) to add the required board support packages to the Arduino IDE. The Teensy bootloader uploads Arduino programs (aka sketches) onto the Teensy.
-Note you must use a micro USB cable (see image [here](https://drive.google.com/file/d/0BwiB3SVueuOpd3VHSjZFczUwZ1E/view?usp=sharing&resourcekey=0-mdD6t8RsgB-2txW00XCDYw)) to connect the Teensy to your computer before you can upload sketches. 
+You will use the Arduino language to program your microcontroller, the [Teensy 4.0](https://www.pjrc.com/store/teensy40.html). 
 
-It is advisable to ensure that you can compile and upload the RGB LED example to the Teensy.
+Install the Arduino integrated development environment (IDE) software and download the E80 reference code.
 
+1. If your computer doesn't have Arduino software installed, go to [the Arduino download page](https://www.arduino.cc/en/software)  and download the latest version of the Arduino IDE (2.2.1 as of this writing). 
+2. Since version 2.0.0, the Teensy is supported directly in the Arduino software. Follow the instructions [here](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/) to add the required board support packages to the Arduino IDE. 
+3. If you have not done so yet, complete the Github Desktop Setup in [Lab 0](../lab0/index.qmd) and clone the [E80 codebase](https://github.com/HMC-E80/E80-SP2023).
 
+Test your connection to the Teensy by compiling and uploading the RGB LED example in the Arduino IDE.  Then ensure you can compile and uplaod the E80 code.
 
-* The RGB LED example can be found in File -> Examples -> 0.1 Basics -> Blink. 
-* Follow the instructions [here](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-uploading-a-sketch) to compile and upload to the Teensy
+1. Plug your Teensy into your laptop
+2. Open the RGB LED example by navigating to File -> Examples -> 0.1 Basics -> Blink. 
+3. Follow the instructions [here](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-uploading-a-sketch) to compile and upload to the Teensy
+4. Change the Arduino IDE Sketchbook location to the E80 Gitlab folder, which you downloaded earlier in the section, by using File->Preferences. 
+5. Open [E80_Lab_01.ino](https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_01/E80_Lab_01.ino). 
+6. Confirm that you can compile and upload the starter code to your Teensy.  Since your Teensy is not plugged into your motherboard here, this code will do little.  It is fully tested in Section 4.
 
+:::{.callout-note}
+You must use a micro USB cable (see image [here](https://drive.google.com/file/d/0BwiB3SVueuOpd3VHSjZFczUwZ1E/view?usp=sharing&resourcekey=0-mdD6t8RsgB-2txW00XCDYw)) to connect the Teensy to your computer before you can upload sketches.
+:::
+
+:::{.callout-note}
 Note: you will not have a Teensy for pre-lab, but you can download the necessary software, go through the tutorial and try modifying and compiling the code.
+:::
 
-If you have not done so yet, complete the Github Desktop Setup in Lab 0 and clone the [E80 codebase](https://github.com/HMC-E80/E80-SP2023).
+## 4.  Motherboard Validation, IMU Calibration, and IMU Error Measurement
 
-Make sure to change the Arduino IDE Sketchbook location to the folder you just downloaded under File->Preferences. Open [E80_Lab_01.ino](https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_01/E80_Lab_01.ino). This sketch will be used as starter code to send PWM signals to your motors and to log the output on the SD card. Confirm that you can compile and upload the starter code to your Teensy.
+Your motherboard has a circuit on it called an inertial measurement unit (IMU), specifically an [LSM303AGRTR](https://www.st.com/content/ccc/resource/technical/document/datasheet/74/c4/19/54/62/c5/46/13/DM00177685.pdf/files/DM00177685.pdf/jcr:content/translations/en.DM00177685.pdf) , which allows you to measure acceleration and magnetic fields. This is a useful sensor that we will explore more later in the course. We are just getting started with the sensor in this section by  calibrating the output and measuring its noise statistics.  This sensor is also useful because you can only measure its output if your motherboard is working correctly. The tests in this section will ensure that your Teensy can: listen to the IMU, write to the SD card, and drive the motors.
 
-The Teensy creates two files to save data every time it runs: an INF file which contains text and a BIN file which contains your measured data in a binary format. Special programs are required to decode the binary data, and those programs also depend on having a matching INF file. We provide a MATLAB script for reading SD card data: [logreader.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/logreader.m). These links provide [sample INF](https://drive.google.com/open?id=18-MICAN9QopCYHtpTnUVNme07YvaUmFD) and [sample BIN](https://drive.google.com/open?id=1h086niwvAh4C3Gs6r4vE12ZvaD1KYria) files. The sample file is very noisy, so it can't be used to find answers to the questions in Section 4.
+First, test your motherboard:
 
-Finally, find the loop() function in your sketch where you set the values of the PWM signals sent to motors. Modify the sketch to turn each motor on for 2 seconds in the following sequence: No motors on for 2 seconds, vertical motor on for 2 seconds, no motors on for 2 seconds, port motor on for two seconds, no motors on for 2 seconds, starboard motor on for 2 seconds, no motors on. Upload this code to your Teensy. You will test this code in section 4.
+1. Sign out an SD card from an instructor. 
+2. Put your Teensy and your SD card into your motherboard and program the Teensy with your code from Section 3. This sketch will turn on one motor for four seconds if it is working properly, so be sure your motors are clear of any obstructions (especially your hands!) when you run the code. 
+3. Provide power to the Teensy using either your battery or the power supply terminals (be careful with the polarity!). You can use the power supply terminals if your battery is still charging. Several lights should turn on, including PWR LED, the IMU LED, the SD LED, and a small blinking LED on top of the Teensy. 
+4. You have the option of plugging in your USB cable so you can use the serial monitor to watch the Teensy's serial output as it runs.
+5. Remove power from your board (you do not need to remove the USB cable if it's plugged in).
+6. Take out the SD card and put it into your computer. 
+7. Take the INF and BIN files off of the SD card and read them according to the following instructions. 
+    i) The Teensy creates two files to save data every time it runs: an INF file which contains text and a BIN file which contains your measured data in a binary format. 
+    ii) Special programs are required to decode the binary data, and those programs also depend on having a matching INF file. We provide a MATLAB script for reading SD card data: [logreader.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/logreader.m). 
+    iii) These links provide [sample INF](https://drive.google.com/open?id=18-MICAN9QopCYHtpTnUVNme07YvaUmFD) and [sample BIN](https://drive.google.com/open?id=1h086niwvAh4C3Gs6r4vE12ZvaD1KYria) files so you can test the MATLAB scripts during prelab. The sample file is very noisy, so it can't be used to find answers to the questions later in Section 4.
+8. Verify that you are saving the following data to your SD card: acceleration values from your accelerometer, magnetic field strengths from your magnetometer, roll, pitch and yaw angles calculated from your IMU measurements, and motor PWM values.
+9. Verify that your motherboard can drive motors by attaching motors to motor ports A, B and C and modifying your code to drive each of them. If your motors are not yet ready, you may measure the voltages at screw terminals A, B and C to observe whether they are being correctly applied by your software.
 
 
-## 4.  Motherboard Validation and IMU Calibration and Error Measurement
+:::{.callout-warning}
+Please be very careful when connecting or disconnecting the micro USB cable to the Teensy!! Pull or push laterally while holding down the connector with your other hand.  They are fragile and can be pulled off the board easily.
+:::
 
-Your motherboard has a circuit on it called an inertial measurement unit, specifically an [LSM303AGRTR](https://www.st.com/content/ccc/resource/technical/document/datasheet/74/c4/19/54/62/c5/46/13/DM00177685.pdf/files/DM00177685.pdf/jcr:content/translations/en.DM00177685.pdf) , which allows you to measure acceleration and magnetic fields. This is a very useful sensor that we will explore more later in the course. However, you need to understand the output units of the sensor and the error properties of the data it reports to use the accelerometer for this lab. You also need to be sure that your motherboard is working, and testing the accelerometer is a good way to check the motherboard.
+:::{.callout-note}
+You can put your Teensy into programmer mode manually by pressing the button on top of the Teensy. This button won't reset your program, but instead delete all the code on the Teensy so it can be reprogrammed. If you just want to rerun your current program, remove power from the Teensy (maybe using the black power rocker switch) and then restore power.
+:::
 
-Sign out an SD card from an instructor. Put your Teensy and your SD card into your motherboard and program the Teensy with your code from Section 3 if you have not already done so. Provide power to the Teensy using either your battery or the power supply terminals (be careful with the polarity!). Several lights should turn on, including PWR LED, the IMU LED, the SD LED, and a small blinking LED on top of the Teensy. You have the option of plugging in your USB cable so you can use the serial monitor to watch the Teensy's serial output as it runs. Please be very careful when connecting or disconnecting the micro USB cable to the Teensy!! Pull or push laterally while holding down the connector with your other hand.  They are fragile and can be pulled off the board easily. You can put your Teensy into programmer mode manually by pressing the button on top of the Teensy. Note that this is not a reset button but only a way to recover from bad code. The easiest way to reset your board is to power cycle it.
+Second, analyze the data from your accelerometer:
 
-Remove power from your board (you do not need to remove the USB cable if it's plugged in). Take out the SD card and put it into your computer. Take the INF and BIN files off of the SD card and read them. Verify that you are saving the following data to your SD card: acceleration values from your accelerometer, magnetic field strengths from your magnetometer, roll, pitch and yaw angles calculated from your IMU measurements, and motor PWM values.
-
-Use the acceleration due to gravity to figure out the size of one 'accelerometer unit' in your saved data: i.e.: if your accelerometer reports a value of 1, how many m/s^2 of acceleration is the accelerometer experiencing? Figure out the value the accelerometer reports when it is experiencing zero acceleration on each axis. Take ten seconds of accelerometer data and determine the mean, the standard deviation, the standard error, and the 95% confidence bounds for a static acceleration measurement in the z direction.
-
-Verify that your motherboard can drive motors by attaching motors to motor ports A, B and C. If your motors are not yet ready, you may measure the voltages at screw terminals A, B and C to observe whether they are being correctly applied by your software.
-
+1. Use the acceleration due to gravity to figure out the size of one 'accelerometer unit' in your saved data: i.e.: if your accelerometer reports a value of 1, how many m/s^2 of acceleration is the accelerometer experiencing? 
+2. Figure out the value the accelerometer reports when it is experiencing zero acceleration on each axis. You may need to run your program a few times while holding the board in different orientations to make each axis zero.
+3. Lay your board flat on its standoffs, then take ten seconds of accelerometer data. Determine the mean, the standard deviation, the standard error, and the 95% confidence bounds for a static acceleration measurement in the z direction.
 
 ## 5. Penetrator and Motor Assembly
 
-In E80 we use special bolts to make waterproof electrical connections across a robot, and we refer to them as penetrators.
+In E80 we use special bolts to make waterproof electrical connections across a robot (Figure @fig-penetrator-bolt), and we refer to them as penetrators.  Penetrators are combined with a nut and gasket (Figure @fig-nut-and-gasket) to make waterproof seals on project boxes (Figure @fig-project-box-with-penetrator-bolt).  This figure shows two important details about using penetrator bolts: the threads must point INTO the box and the washer must be OUTSIDE the box. 
 
 ::: {#fig-penetrators layout-ncol=3}
 
@@ -117,42 +164,63 @@ Project box with penetrator bolt assembly.
 Project box and penetrator bolt details
 :::
 
-Notice that it has three sets of twisted pair encased in epoxy in the center. The penetrator bolts are usually used with a [nut and rubber washer](https://drive.google.com/open?id=19zd7uGmDGzpwX9YdT5cwSuXPqOZ6DwqY) in order to make  [a waterproof seal on a project box](https://drive.google.com/open?id=1YuLADsJsaUKNrsQMq1pnMB8SvsLyND1p). This image shows two important details about using penetrator bolts: the threads must point INTO the box and the washer must be OUTSIDE the box. 
 
-These penetrators have six wires passing through them because your AUV will use three motors. Look through the stock of motors and select three motors. You may cut them off the used E79 umbilicals if the standalone motor box does not have any useful motors for you. If necessary, you can prep new motors as you did in E79. Instructions can be found [here](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a). Test your motors using a power supply to make sure they work:
+These penetrators have six wires passing through them because your AUV will use three motors, whcih you must prepare. 
 
-
-
-* If the current draw during this test is more than 500 mA, then the friction in your motor is likely to severely limit your top speed; consider debugging it.  
-* Selecting motors that have similar current draws may simplify your software because the motors will exert similar thrusts at the same level of applied PWM.
-* Make sure your motors still work when they are submerged in water.
-
-Solder the leads of your three motors to the twisted pair on the non-threaded side of your penetrator bolt (because the motors will be OUTSIDE of your box). Waterproof your solder joints with heat shrink tubing (do you need to put the heat shrink over your wires before or after you solder your motor?). Test that all three motors work when the waterproofed solder joints are underwater.
+1. Look through the stock of motors and select three motors. You may cut them off the used E79 umbilicals if the standalone motor box does not have any useful motors for you. If necessary, you can prep new motors as you did in E79, but your time will be very limited if you must build motors. Instructions can be found [here](https://sites.google.com/g.hmc.edu/e79-practicum/module-1/practicum-1a). 
+2. Test your motors using a power supply to make sure they work:
+    i) If the current draw during this test is more than 500 mA, then the friction in your motor is likely to severely limit your top speed; consider debugging it.  
+    ii) Selecting motors that have similar current draws may simplify your software because the motors will exert similar thrusts at the same level of applied PWM.
+    iii) Make sure your motors still work when they are submerged in water.
+3. Solder the leads of your three motors.  Your motors will be OUTSIDE of the box, so your solder joints will need to be waterproofed with heat shrink tuing. After putting heat shrink on your wires, solder the motor leads to the twisted pair on the non-threaded side of your penetrator bolt. Finish Waterproofing your solder joints with heat shrink tubing. 
+4. Test that all three motors work when the waterproofed solder joints are underwater.
 
 
 ## 6. AUV Assembly
 
-Find a waterproof box on the central table of the lab. Attach your penetrator and motor assembly to the box (remember threads are in and washer is on the outside). Hold your box and penetrator combination underwater to check for leaks. DON'T perform this test with any electronics or batteries in the box. If you find leaks, fix them before proceeding.
+First, assemble your project box: PICTURES
 
-Dry your box and place your battery, motherboard and Teensy into the box. Use Velcro to attach the box to a PVC robot frame. Make sure to select a frame that has a plastic mesh on the bottom for carrying payloads. If you need to add a plastic mesh, use zip ties to secure it to the robot frame.
+1. Find a waterproof box on the central table of the lab. 
+2. DRILL OUT YOUR PENETRATOR HOLES USING A STEP DRILL
+3. Attach your penetrator and motor assembly to the box (remember threads are in and washer is on the outside). 
+4. Hold your box and penetrator combination underwater to check for leaks. DON'T perform this test with any electronics or batteries in the box. 
+5. If you find leaks, fix them before proceeding.  Ask for help if you're stuck.
 
-You will need to add ballast to your robot to keep it close to neutrally buoyant. For now, you will add mass to the INSIDE of your waterproof box, and you must determine how much mass to add. To do this, it helps to know the mass of your robot, and that the robot (including motors and two 1.25'' foam blocks, but not including the watertight box) has a buoyancy force measured to be approximately 10 N. 
+Second, assemble your robot: PICTURES
 
-When selecting weights for ballasting be mindful that their distribution inside of your payload box could affect the resting pitch, yaw or roll of the robot. It may be useful to adjust the resting buoyancy, pitch, yaw, and roll of your robot with the waterproof box before attempting the obstacle course in section 7.
+1. Dry your box and place your battery, motherboard and Teensy into the box. 
+2. Use Velcro to attach the box to a PVC robot frame. Make sure to select a frame that has a plastic mesh on the bottom for carrying payloads. 
+3. If you need to add a plastic mesh, use zip ties to secure it to the robot frame.
 
-Many of the weights we use are metal, so they can short the back of your motherboard.  Make sure the back of your motherboard is covered with insulating foam or electrical tape before setting it on top of your ballast. We also recommend wrapping your ballast in plastic wrap.
+Third, ballast your robot so that it is close to neutrally buoyant. PICTURE OF BALLAST
+
+1. Determine how much mass to add. To do this, it helps to know the mass of your robot, and that the robot (including motors and two 1.25'' foam blocks, but not including the watertight box) has a buoyancy force measured to be approximately 10 N. You can do this approximately in prelab with a guess at your robot's mass.
+2. Select weights for ballasting. Pictures of some of the weights we have available are in FIGURE X. Be mindful that their distribution inside of your payload box could affect the resting pitch, yaw or roll of the robot. It may be useful to adjust the resting buoyancy, pitch, yaw, and roll of your robot with the waterproof box before attempting the obstacle course in section 7. 
+3. Protect against metal shorts. Many of the weights we use are metal, so they can short the back of your motherboard.  Make sure the back of your motherboard is covered with insulating foam or electrical tape before setting it on top of your ballast. We also recommend wrapping your ballast in plastic wrap. PICTURE
 
 
 ## 7. Open Loop Control Navigation
 
-A simple obstacle course will be set up in the test tank. The course will require your robot to navigate through 3 hoops as pictured [here](https://drive.google.com/file/d/1cPRYAAH8nNd4z_daR9zeMKnhbt3fVw_g/view?usp=sharing), [here](https://drive.google.com/file/d/1LSbtq-jKKMQwlefHNDO72OFRp0G_OosE/view?usp=sharing), and [here](https://drive.google.com/file/d/1OGl3oxe45qmDD3jOou5rWVhgW8yni4oq/view?usp=sharing).
+A simple obstacle course will be set up in the test tank. You must navigate your robot through 3 hoops IN FIGURE X as pictured [here](https://drive.google.com/file/d/1cPRYAAH8nNd4z_daR9zeMKnhbt3fVw_g/view?usp=sharing), [here](https://drive.google.com/file/d/1LSbtq-jKKMQwlefHNDO72OFRp0G_OosE/view?usp=sharing), and [here](https://drive.google.com/file/d/1OGl3oxe45qmDD3jOou5rWVhgW8yni4oq/view?usp=sharing).
 
-Modify the Arduino test program from step 3 to direct your robot to fly through the course so that it ends within the red hoop (3). You can assume your AUV can start in the middle of the yellow hoop (1). Since we don't have absolute measurements of the AUV position, no closed-loop control is used here. Instead, write a sequence of motor actions for the AUV to follow. Be sure to test your code with your robot ahead of time, in air, before you visit the test tank room. It is important to know how to control each motor, including which direction each motor turns. Make sure your code accounts for the time you will need to seal up the waterproof box, attach it to the robot frame, and position it in the water. You will only have 5 attempts in the test tank room. 
+1. Modify the Arduino test program from step 3 to direct your robot to traverse the course so that it ends within the red hoop (3). You can assume your AUV can start in the middle of the yellow hoop (1).  Make sure your code accounts for the time you will need to seal up the waterproof box, attach it to the robot frame, and position it in the water.
+2. Be sure to test your code with your robot ahead of time, in air and in a dunk tank, before you visit the test tank room. It is important to know how to control each motor, including which direction each motor turns. It is also important to verify that you are correctly logging data.
+3. Get your robot checked by an instructor, go to the tank room, and deploy your robot. You will only have 5 attempts in the test tank room. 
+
+:::{.callout-note}
+Our robots are navigating using open loop control, so traversing the obstacle course might be difficult because of motor behaviors, currents in the tanks, variations in the setup, or many other reasons.  Closed loop control can address some of these issues.
+:::
 
 
 ## 8. Acceleration and Orientation Data
 
-Plot the AUV acceleration data as a function of sample number from the experiment in step 7. On a different figure, plot the AUV orientation data as a function of sample number. Confirm that positive acceleration is in the correct direction.  Confirm qualitatively whether the measured acceleration data matches your expectations, and quantitatively compare the non-spurious peaks of your acceleration against an analytical model of the robot.  Use the analytical model of the E79 robot as a starting point.  The thrust curves linked [here](https://drive.google.com/file/d/0BwiB3SVueuOpY2hmODROVHdSU1k/view?usp=sharing&resourcekey=0-SZzOHYEO_CQ81gmm-ubhHg) may be helpful in your modeling effort.
+Plot the AUV acceleration data as a function of sample number from the experiment in step 7.  Confirm that positive acceleration is in the correct direction.  Confirm qualitatively whether the measured acceleration data matches your expectations, and retake data if needed.
+
+Finally, consider the E79 robot model BELOW adn the E79 motor thrust curve BELOW.  Use the model and the thrust curve to make predictions of your peak acceleration when your motors first turn on from rest.  Compare that prediction to your measured data.
+
+:::{.callout-note}
+This comparison is a good example of how E79 can be applied and a good example of how to compare experimental data to theory.  The comparison also can be affected by differences between your motors compared and this motor curve, and that variability makes another case for using closed loop control.
+:::
 
 
 ## 9. Deliverables

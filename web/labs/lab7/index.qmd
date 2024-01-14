@@ -2,6 +2,8 @@
 title: "Lab 7: Autonomous Navigation"
 ---
 
+**UNDER CONSTRUCTION, DO NOT USE FOR PRELAB**
+
 Team size: 4
 
 **In order to give everyone access to the tank, we will be running the lab as follows:**

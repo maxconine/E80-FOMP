@@ -2,6 +2,8 @@
 title: "Lab 3: Operational Amplifiers and Marine Sensors"
 ---
 
+**UNDER CONSTRUCTION, DO NOT USE FOR PRELAB**
+
 **Team size: 2**
 
 

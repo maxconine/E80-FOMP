@@ -70,5 +70,21 @@ __________
 - Use fume extractor: fume from rosin in solder is a respiratory irritant.
 - Wash hands after handling solder – solder is 40% lead.  Skin contact is harmless, but ingestion can occur with unwashed hands when eating, drinking, or smoking.
 
+# Lab Practices
 
-Harvey Mudd College strives to make all learning experiences as accessible as possible. If you anticipate or experience academic barriers based on your disability (including mental health, chronic or temporary medical conditions). If you have any questions, please contact the Office of Accessible Education at [access@g.hmc.edu](mailto:access@g.hmc.edu). Students from the other Claremont Colleges should contact their home college's disability officer. You also need to register with the [Office of Disability Resources](https://www.hmc.edu/student-life/disability-resources/). to establish reasonable accommodations.
+## Deliverables
+A submission sheet is due at the end of each 4-hour lab period. The submission sheet must be uploaded before the end of your lab session at 5:15 pm. Note that only **ONE** member of each team should access and submit the submission sheet. It is the responsibility of that team member to add the rest of the team’s names to the submission sheet. 
+
+## Hardware checkout
+You will work with some expensive hardware in this class. Expensive hardware like motherboards and batteries must be explicitly checked out from a professor or proctor so that we can track where it is. If any hardware that you checked out breaks,  you will need to request a replacement from a professor. You make this request by filling out an [error report](https://drive.google.com/open?id=1FnHDzDSCuc3pAsEXzUg6BnTacfLF-ODs) (paper copies will be in lab). This report needs to be well thought out; professors will reject reports that don't represent sufficient testing or thought. You will keep this hardware with you throughout the semester in your storage box. 
+
+
+## SAFETY QUESTIONs
+Labs will include callout boxes labeled "SAFETY QUESTION: the question text".  ALL group members must be able to answer these questions before the lab.  Failing to understand the SAFETY QUESTIONs can damage equipment or harm lab users.  You should always feel empowered to stop work and grab an instructor if you find a safety question that makes you unsure.
+
+## Work breakdown and prelab
+It is up to the team to determine which parts of the lab are done by whom, and at what time during the four hours of lab time. No hardware can be used outside of lab hours and no real data can be processed outside of lab hours. However, writing software or processing simulated data sets is allowed and, in fact, encouraged during the pre-lab period.
+
+
+# Inclusion
+HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need accommodations in order to fully participate in this class are encouraged to contact the Office of Accessible Education at [access@g.hmc.edu](mailto:access@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's Accessible Education officer.

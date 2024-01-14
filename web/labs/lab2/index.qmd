@@ -2,30 +2,30 @@
 title: 'Lab 2: Basic Electrical Measurements'
 ---
 
+**UNDER CONSTRUCTION, DO NOT USE FOR PRELAB**
+
 Team size: 2
+[Submission Sheet](/labs/lab2/submission.qmd) [Word](/labs/lab2/submission.docx)
+[Writing](/labs/lab2/writing.qmd)
 
 ## Learning Objectives
 
 After successful completion of this lab, you will be able to...
 
-1. Demonstrate how to use electrical test equipment such as a multimeter, function generator, and oscilloscope.
-2. Explain why oscilloscope probes have 1X and 10X settings and when each setting should be used.
-3. Demonstrate error analysis techniques using resistive voltage dividers and voltage measurements with electrical measurement equipment.
+1. Use a multimeter, function generator, power supply, and oscilloscope.
+2. Describe what "instrument loading" means and explain why it happens.
+3. Build operational amplifier buffers to reduce instrument loading.
+4. Explain how to relate RMS voltages and amplitudes of sinusoidal voltage signals.
+5. Apply error propagation techniques to resistive voltage dividers to make uncertainty predictions in voltage measurements.
 
 
 ## 0. Introduction
 
-In this lab you review the use of electrical test equipment, gain experience with advanced features of some equipment, calculate the uncertainty in a measurement based on its components, and apply equivalent circuit models (input/output impedance models) to a variety of circuits, drivers and loads: notably op-amp buffers and voltage dividers.    Goals of the lab are that you learn about non-idealities of your measurement equipment, especially source and load impedance effects, and how they affect your measurements.  Another goal of the lab is for you to practice error analysis.
+In this lab you review the use of electrical test equipment, calculate the uncertainty in a measurement based on its components, and apply equivalent circuit models to understand instrument loading and op-amp buffers.  Electrical instruments and op-amps are used in every lab in this course, so we are doing this lab to build your toolkit for making experimental measurements.   Another goal of the lab is for you to practice error analysis and propagation.
 
-This lab will be completed in sub-teams of two students.  Before the lab you must decide how you will split your team. Two other labs will also be completed as sub-teams, and you must use a different sub-team for each of these labs.  Each sub-team will be responsible for its own version of the lab's deliverables. Pre-lab work may still be carried out with your whole team, but be sure each sub-team is ready to tackle the in-lab work independently.  Between lab and Friday (the post-lab period) the two sub-teams in a team may discuss their experiences, but the sub-teams may not share data, code or text with one another.
+This lab will be completed in sub-teams of two students.  Before the lab you must decide how you will split your team. Two other labs (labs 3, 4 and 5) will also be completed as sub-teams, and you must use a different sub-team for each of these labs.  Each sub-team will be responsible for its own submission sheet. Pre-lab work may still be carried out with your whole team, but be sure each sub-team is ready to tackle the in-lab work independently.  Even though your team will be split into two sub-teams, you will only have access to one motherboard/Teensy assembly.  Plan your work carefully so that you share it equitably.
 
-Even though your team will be split into two sub-teams, you will only have access to one motherboard/Teensy assembly.  Plan your work carefully so that you share it equitably.
-
-A work breakdown showing what each sub-team member intends to work on during the four hour lab time is required for entry to the lab.  The work breakdown will be submitted on paper to the lab instructor or proctor at the start of lab.  Here is an [example work breakdown](https://drive.google.com/open?id=1UE9QmSXXGauzLUS0ZWm355lViUqZoC_F). No hardware can be used outside of lab hours and no real data can be processed outside of lab hours. However, writing software or processing simulated data sets is allowed and, in fact, encouraged during the pre-lab period.
-
-**For pre-lab purposes**, a sample submission sheet that contains all of the questions and requirements on the submission sheet is [here](https://docs.google.com/document/d/1i5vG08lq4HfAgMKqH7ONPxKtZEuw023A/edit?usp=sharing&ouid=100121681850908143159&rtpof=true&sd=true).
-
-There are a variety of references which might make your life easier.  Two documents from previous iterations of E80 [Auntie Spark's Guide to breadboards](http://www.eng.hmc.edu/NewE80/PDFs/AuntieSparksGuideToBreadboarding.pdf) and [Uncle Sparky's guide to Voltage, Current, and Resistance Measurements](http://www.eng.hmc.edu/NewE80/PDFs/Uncle%20Sparky's%20Guide%20to%20Voltage%20Current%20and%20Resistance%20Measurement.pdf) are recommended in particular.
+ **For pre-lab purposes**, a sample submission sheet that contains all of the questions and requirements on the submission sheet is [here](https://docs.google.com/document/d/1i5vG08lq4HfAgMKqH7ONPxKtZEuw023A/edit?usp=sharing&ouid=100121681850908143159&rtpof=true&sd=true).  Writing software and processing simulated data sets is allowed and, in fact, encouraged during the pre-lab period. Two documents from previous iterations of E80 [Auntie Spark's Guide to breadboards](http://www.eng.hmc.edu/NewE80/PDFs/AuntieSparksGuideToBreadboarding.pdf) and [Uncle Sparky's guide to Voltage, Current, and Resistance Measurements](http://www.eng.hmc.edu/NewE80/PDFs/Uncle%20Sparky's%20Guide%20to%20Voltage%20Current%20and%20Resistance%20Measurement.pdf) are helpful prelab reads.
 
 
 ## 1.  Logging Analog Data with the Teensy

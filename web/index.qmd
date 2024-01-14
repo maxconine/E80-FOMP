@@ -47,7 +47,6 @@ After spring break: There will be open lab hours in Parsons B171 & B181 during t
 
 Students may only work in the E80 labs when a professor, staff or a proctor opens the lab.  Any team may use the equipment in the labs during a lab section, but teams that are scheduled for the section have top priority for the equipment. 
 
-
 ## Mask Policy
 Masks will be required for all E80 activities until further notice.
 
@@ -55,6 +54,7 @@ Masks will be required for all E80 activities until further notice.
 - This is where you will find updated E80 code throughout the semester. Git is a distributed version control system where you can download a local clone of a collection of source code files and track changes to the code.
 - Lab 0 will walk you through the steps to configure Git on your computer
 - [https://github.com/HMC-E80/E80](https://github.com/HMC-E80/E80)
+
 
 ## Course kit fee
 - There is a $65 kit fee per student. This fee can be waived in cases of financial hardship. Course instructors will not know about waiver requests.
@@ -171,8 +171,6 @@ You may NOT collect data (for your experiment), manipulate or test hardware, pop
 You can spend as much or as little time desired on the pre-lab activities, but successful teams spend a lot of time and energy before the lab starts.
 You can often do all of the modeling and preparation for data manipulation prior to the lab. 
 Activities such as examining and/or writing MATLAB, Arduino, or other code, asking how equipment works, doing relevant calculations or asking professors about the important parts of lab are encouraged.
-The only required pre-lab activity is preparing a work breakdown showing how your team will spend their four hours in lab.
-An example is detailed in Lab 1.
 
 The only work that is allowed in the post-lab period is talking to your classmates and professors and individually preparing your draft for the writing and reflection period.  
 You may discuss concepts, results and the types of analysis you may still need to complete.
