@@ -2,7 +2,9 @@
 title: "Lab 1: Go Autonomous"
 ---
 
+::: {.callout-warning}
 **UNDER CONSTRUCTION, DO NOT USE FOR PRELAB**
+:::
 
 Team size: 4
 [Submission Sheet](/labs/lab2/submission.qmd) [Word](/labs/lab2/submission.docx)
@@ -23,38 +25,8 @@ The objectives of this lab are to transform the ROV (remotely operated vehicle) 
 
 Lab 1 is completed in teams of 4. 
 
-Be sure to read the [Lab Overview](../lab_overview/index.qmd) to learn about safety requirements, expensive equipment handling and prelab rules.  You must review all SAFETY QUESTION boxes below as part of prelab.  If you ever reach a safety question box and either can't answer it or feel unsure, grab an instructor.
+Be sure to read the [Lab Overview](../lab_overview/index.qmd) to learn about safety requirements, expensive equipment handling and other rules.  You must review all SAFETY QUESTION boxes below as part of prelab.  If you ever reach a safety question box and either can't answer it or feel unsure, grab an instructor.
 
-
-## 1. Battery
-
-Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. To charge the batteries, we will use a [HiTec x1 Mini charger](https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf) or a [UP60AC multi charger](http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf). Read the manual on how to use the chargers. Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP) showing correct charger use.
-
-:::{.callout-warning collapse="true"}
-## SAFETY QUESTION: What is the maximum voltage output of these battery packs?
-
-12.6V.  Don't charge above this level.  This is calculated by observing that there are 3 cells in your battery (i.e.: it is 3S), and that each cell maxes out at 4.2V.
-:::
-
-:::{.callout-warning collapse="true"}
-## SAFETY QUESTION: What is the nominal voltage output of these battery packs?
-
-11.1V.  Don't discharge below this level.  Li-ion batteries discharge quickly when their voltage sinks below the nominal level, so keep a close watch on this.  This is calculated by observing that there are 3 cells in your battery (i.e.: it is 3S), and that each cell has a nominal voltage of 3.7V.
-:::
-
-:::{.callout-warning collapse="true"}
-## SAFETY QUESTION: Should the balancer cable be plugged in during charging?
-
-Yes, with the black cable aligned with the minus sign.  **Failing to do this can cause the battery to light on fire.**
-:::
-
-:::{.callout-warning collapse="true"}
-## SAFETY QUESTION: Should I use a LiPo safe bag while charging?
-
-Yes, always.  This keeps you, other students, and the lab safe in case of battery fire.
-:::
-
-Request a battery and a LiPo safe bag from an instructor. You will need to check out and set up your battery for charging as soon as you start the lab. ASK AN INSTRUCTOR OR PROCTOR TO CHECK YOUR RECHARGE SETUP. Charge the battery up to its nominal voltage, NOT its maximum voltage, which means that you will need to periodically monitor the voltage on the battery and stop the charging at the appropriate time. 
 
 ## 2. Motherboard Assembly
 
@@ -77,33 +49,6 @@ Soldering components in the wrong position or orientation, and attaching battery
 4. Cover the back of your motherboard with insulating foam sheet using these[ instructions](https://drive.google.com/open?id=1x0CMBDFia2uY5qxPkWFfg_pN3FcR7Pth) to prevent inadvertent short circuits when you set it down. 
 5. Find a sharpie and color the GND side of your P.S. screw black, so that you don't forget the polarity of the connector.
 
-
-## 3. Arduino Programming 
-
-You will use the Arduino language to program your microcontroller, the [Teensy 4.0](https://www.pjrc.com/store/teensy40.html). 
-
-Install the Arduino integrated development environment (IDE) software and download the E80 reference code.
-
-1. If your computer doesn't have Arduino software installed, go to [the Arduino download page](https://www.arduino.cc/en/software)  and download the latest version of the Arduino IDE (2.2.1 as of this writing). 
-2. Since version 2.0.0, the Teensy is supported directly in the Arduino software. Follow the instructions [here](https://www.pjrc.com/arduino-ide-2-0-0-teensy-support/) to add the required board support packages to the Arduino IDE. 
-3. If you have not done so yet, complete the Github Desktop Setup in [Lab 0](../lab0/index.qmd) and clone the [E80 codebase](https://github.com/HMC-E80/E80-SP2023).
-
-Test your connection to the Teensy by compiling and uploading the RGB LED example in the Arduino IDE.  Then ensure you can compile and uplaod the E80 code.
-
-1. Plug your Teensy into your laptop
-2. Open the RGB LED example by navigating to File -> Examples -> 0.1 Basics -> Blink. 
-3. Follow the instructions [here](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-uploading-a-sketch) to compile and upload to the Teensy
-4. Change the Arduino IDE Sketchbook location to the E80 Gitlab folder, which you downloaded earlier in the section, by using File->Preferences. 
-5. Open [E80_Lab_01.ino](https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_01/E80_Lab_01.ino). 
-6. Confirm that you can compile and upload the starter code to your Teensy.  Since your Teensy is not plugged into your motherboard here, this code will do little.  It is fully tested in Section 4.
-
-:::{.callout-note}
-You must use a micro USB cable (see image [here](https://drive.google.com/file/d/0BwiB3SVueuOpd3VHSjZFczUwZ1E/view?usp=sharing&resourcekey=0-mdD6t8RsgB-2txW00XCDYw)) to connect the Teensy to your computer before you can upload sketches.
-:::
-
-:::{.callout-note}
-Note: you will not have a Teensy for pre-lab, but you can download the necessary software, go through the tutorial and try modifying and compiling the code.
-:::
 
 ## 4.  Motherboard Validation, IMU Calibration, and IMU Error Measurement
 

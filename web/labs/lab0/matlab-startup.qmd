@@ -63,7 +63,7 @@ Watch this 17-minute video [https://vimeo.com/57954461](https://vimeo.com/579544
 
 We strongly recommend that you don't watch the videos passively. Instead, pause frequently while watching the video so that you can try things out on your own in MATLAB.
 
-### 4. MATLAB Debugging Tips (optional, but strongly recommended)
+### 4. MATLAB Debugging Tips
 
 Watch this 17-minute video [https://vimeo.com/501103844](https://vimeo.com/501103844){target="_blank"} to learn how to find and fix errors in your MATLAB code. This skill will *greatly* aid you in all classes that require the use of MATLAB.
 

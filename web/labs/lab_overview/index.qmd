@@ -22,7 +22,7 @@ Lab manuals are linked here.
 | **7** (2/26-3/1)|  [Lab 6:<br>Fluid Mechanics](/labs/lab6)  |  [Lab 5:<br>Underwater Acoustics](/labs/lab5)  |
 | **8** (3/4-3/8)|  [Project week 1:](/project)    Propose and Design
 | **9** (3/11-3/15)|  **Spring Break**  |  
-| **10** (3/18-3/22)|  [Lab 7:<br>Project Boot Camp (ver 2)](/labs/lab7)  |  [Lab 7:<br>Project Boot Camp (ver 1)](/labs/lab7)  |
+| **10** (3/18-3/22)|  [Lab 7:<br>Project Jump Start (ver 1)](/labs/lab7)  |  [Lab 7:<br>Project Jump Start (ver 2)](/labs/lab7)  |
 | **11** (3/25-3/29)|  [Project week 2: ](/project)  Breadboard and Test
 | **12** (4/1-4/5)|  [Project week 3: ](/project)  PCB Solder and Test 
 | **13** (4/8-4/12)|  [Project week 4: ](/project) Launch at pHake Lake  
@@ -81,10 +81,3 @@ You will work with some expensive hardware in this class. Expensive hardware lik
 
 ## SAFETY QUESTIONs
 Labs will include callout boxes labeled "SAFETY QUESTION: the question text".  ALL group members must be able to answer these questions before the lab.  Failing to understand the SAFETY QUESTIONs can damage equipment or harm lab users.  You should always feel empowered to stop work and grab an instructor if you find a safety question that makes you unsure.
-
-## Work breakdown and prelab
-It is up to the team to determine which parts of the lab are done by whom, and at what time during the four hours of lab time. No hardware can be used outside of lab hours and no real data can be processed outside of lab hours. However, writing software or processing simulated data sets is allowed and, in fact, encouraged during the pre-lab period.
-
-
-# Inclusion
-HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need accommodations in order to fully participate in this class are encouraged to contact the Office of Accessible Education at [access@g.hmc.edu](mailto:access@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's Accessible Education officer.
