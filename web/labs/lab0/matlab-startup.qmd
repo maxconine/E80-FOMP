@@ -50,8 +50,8 @@ First, you will learn some basics of MATLAB using the MATLAB Academy tutorial ca
     -   Course Overview
     -   Commands
     -   Vectors and Matrices
-    -   Importing Data
-    -   Indexing into and Modifying Arrays
+    -   Array Indexing and Modification
+    -   Data Import
 
 Feel free to explore other parts of this too to build your confidence with MATLAB.
 
