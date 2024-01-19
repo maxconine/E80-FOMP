@@ -15,9 +15,12 @@ In this lab you will transform the ROV (remotely operated vehicle) used in E79 i
 
 After successful completion of this lab, you will be able to...
 
-- [ ] Explain the basic operation of your robot, including details about the battery powering it. 
-- [ ] Autonomously navigate your robot through an obstacle course.
-- [ ] Explain the limitations and challenges of open loop control and articulate how a closed loop design addresses them
+- [ ] Perform some steps of modifying an E79 robot to build an E80 robot.
+- [ ] Program your robot to traverse basic trajectories.
+- [ ] Extract data from your robot, import it into Matlab, and plot it.
+- [ ] Use statistical measures to analyze data gathered from your robot.
+- [ ] Explain the limitations and challenges of open loop control.
+- [ ] Relate your robot's behavior to governing equations from E79.
 
 Lab 1 is completed in teams of 4. 
 
