@@ -8,21 +8,22 @@ format:
 
 Keep answers as short as possible while still meeting specifications. Submit as a PDF.
 
-## Section 4: Acceleration Plots and Analysis
+## Acceleration Plots and Analysis
 
-This submission item will cover multiple questions from section 4:  
+This submission item will cover multiple questions from the "Motherboard Validation, IMU Calibration, and IMU Error Measurement" section:  
 
 - How many m/s^2 does one accelerometer unit represent?
 - What are the x, y and z axis zero acceleration measurements?
+- Are the x, y and z axis zero acceleration measurements statistically different from one another?
 - What are the mean, standard deviation, standard error and 95% confidence bounds for a static acceleration measurement in the z direction?
 
 Answering these questions requires data from your accelerometer, which you should include in this submission as three graphs depicting data from the same trial, one showing x acceleration, one showing y acceleration, and one depicting z acceleration.
 
 Effort Specification:
 
-- [ ] Includes three plots of data from the accelerometer that show x, y and z acceleration values. 
-- [ ] Plots are labeled (in title or caption) to indicate which is x, y and z.
-- [ ] z plot is different from x and y plots.
+- [ ] Includes four plots of data from the accelerometer that show zero acceleration x data, zero acceleration y data, zero acceleration z data, and z data that reflects acceleration due to gravity.
+- [ ] Plots are labeled (in title or caption) to indicate which is zero x, zero y, zero z and accelerated z.
+- [ ] Accelrated z plot has different mean from other plots.
 - [ ] Vertical scale is set to show variations in the data values.
 - [ ] Y-axis is set so we can easily read off values.
 - [ ] Includes some calculations for each question.
@@ -30,18 +31,21 @@ Effort Specification:
 Complete Specification:
 
 - [ ] Calcuations that relate acceleration due to gravity to one Teensy unit are correct.
-- [ ] Take the mean of data to calculate the resting offset values. Report them clearly.
-- [ ] Includes correct calculations of descriptive statistics.
+- [ ] Take the mean of data to calculate the resting zero acceleration values. Report them clearly.
+- [ ] Includes description of how to calculate descriptive statistics and correct values.
+- [ ] Includes description of how to calculate T tests and results of tests on data.
 
 {{< pagebreak >}}
-## Section 7: Paste the code used to navigate the obstacle course
+## Paste the code used to navigate the obstacle course
 
-Complete Specification:
+Effort Specification:
 
 - [ ] Present and reasonable.
 
+There is no complete specification for this deliverable.
+
 {{< pagebreak >}}
-## Section 8: Plot acceleration measurements vs. the sample number from a run in the obstacle course.  (No need to convert the x-axis to time.)
+## Plot acceleration measurements vs. the sample number from a run in the obstacle course.  (No need to convert the x-axis to time.)
 
 Effort Specification:
 
@@ -53,7 +57,7 @@ Complete Specification:
 - [ ] Scale is legible and data is cropped to just the run through the obstacle course, omitting getting the robot into the tank, fishing it out, etc.
 
 {{< pagebreak >}}
-## Section 8: Write a formula for peak acceleration of a robot from rest, calculate the predicted acceleration that formula makes, and compare that value to the peak acceleration observed in your measurements.
+## Write a formula for peak acceleration of a robot from rest, calculate the predicted acceleration that formula makes, and compare that value to the peak acceleration observed in your measurements.
 
 Effort Specification:
 
@@ -62,8 +66,9 @@ Effort Specification:
 
 Complete Specification:
 
+- [ ] Manipulated equation is fully correct and well explained.
 - [ ] Annotation of the obstacle course acceleration plots show the measured peak acceleration from rest.
-- [ ] Theoretical numbers for thrust extracted from E79 resources
+- [ ] Theoretical numbers for thrust extracted from E79 resources.
 - [ ] Thrust and mass are used to predict theoretical peak acceleration.
 - [ ] Comment on differences between theory and measurement.
 

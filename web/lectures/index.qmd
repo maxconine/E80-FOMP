@@ -24,39 +24,34 @@ The specific due dates for each group are listed below.
 
 ## Week 2: Statistics for Experiments
 
-- [Statistics for Experiments](https://www.youtube.com/playlist?list=PLDA3QBjykWVxDiGsN1Xpm2ynGekSvEC9E)
-- [ Slides](https://drive.google.com/file/d/1281KE-CBNBd1S_9K1VveNUs9GnaWCWOn/view?usp=sharing)
-
-### Basic Demos
-- [Basics Spreadsheet](https://docs.google.com/spreadsheets/d/1vX6A31pxA10KfnWXvVotVhlXlFhyXyB6btyzb5Xk4xo/edit?usp=sharing)
-- [Basics MATLAB](https://drive.google.com/open?id=1g59Dyz9PjarGOT66BUw4t11QvD0FXfd_)
-- [Linear Regression Spreadsheet](https://drive.google.com/open?id=1DUaiPw9Wgt_O8O7Mq5RMC3HpRIXVWgbr) 
-
-### Linear Regression in MATLAB
-- [Linear Regression MATLAB](https://drive.google.com/open?id=1eOS0lIQpyriTde-x_eN0lET-ya3I51Si)
-- [Steinhart-hart-fitting.m](https://drive.google.com/open?id=19N-lH7GH1XP0PHImxZM9N5_MRfb8FWuX)
-
-### Accelerometer Example
-- [Accelerometer Example](https://drive.google.com/open?id=1-jiIeGnTGc0ZuzfWS1xRK-mnt1NesF_Q)
-- [Num. Deriv. Stat. Demo.](https://drive.google.com/open?id=1uA-uhLO4cLXOAFCiALvTtgRjT2nDUVXY)
-
-### Summary
-- [Summary Document](https://drive.google.com/open?id=1vHS10FuGOs_IwQG8Uzs9UoeD4REUTOl4)
+- [Basic Statistics for Experiments Videos](/lectures/SLIDES_20180718_01_IntroAndBasics.pdf)
+- [Basic Statistics for Experiments Slides](https://drive.google.com/file/d/1281KE-CBNBd1S_9K1VveNUs9GnaWCWOn/view?usp=sharing)
+- [Basics Statistics Example Spreadsheet](https://docs.google.com/spreadsheets/d/1vX6A31pxA10KfnWXvVotVhlXlFhyXyB6btyzb5Xk4xo/edit?usp=sharing)
+- [Basics Statistics Example MATLAB](https://drive.google.com/open?id=1g59Dyz9PjarGOT66BUw4t11QvD0FXfd_)
+- [All Statistics Summary Document](https://drive.google.com/open?id=1vHS10FuGOs_IwQG8Uzs9UoeD4REUTOl4)
 - [Student's t Values Table](https://drive.google.com/open?id=1dIRZvSaYBFEqbXAem_nys0N5lmKA2c1V)
 
 ## Week 3: Basics of Electrical Measurements
-- [Basics of Electrical Measurements](https://www.youtube.com/playlist?list=PLDA3QBjykWVyDDmjCt-UFhZb8Ok0Ajfby)
-- [Slides](https://drive.google.com/file/d/1-4SoZdgNXmHkrtf45DcGWNuDbROOCEW9/view?usp=sharing)
+- [Basics of Electrical Measurements Videos](https://www.youtube.com/playlist?list=PLDA3QBjykWVyDDmjCt-UFhZb8Ok0Ajfby)
+- [Basics of Electrical Measurements Slides](https://drive.google.com/file/d/1-4SoZdgNXmHkrtf45DcGWNuDbROOCEW9/view?usp=sharing)
+- [Error Propagation Video](https://www.youtube.com/watch?v=DiOs64kzSQw)
+- [Error Propagation Slides](/lectures/SLIDES_20180718_01_ErrorPropagation.pdf)
 - [Additional Information on Calculating Error in Multimeter Measurements](https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/)
 
 ## Week 4: Operational Amplifiers
-- [Operational Amplifiers](https://www.youtube.com/playlist?list=PLDA3QBjykWVwctzkMzqvbLcZr3iyS85Hu)
-- [Slides](https://drive.google.com/drive/folders/1j97hAUQ1RnWEw6dwOQ7hg6TDK5-3Y0pe?usp=sharing)
+- [Operational Amplifiers Videos](https://www.youtube.com/playlist?list=PLDA3QBjykWVwctzkMzqvbLcZr3iyS85Hu)
+- [Operational Amplifiers Slides](https://drive.google.com/drive/folders/1j97hAUQ1RnWEw6dwOQ7hg6TDK5-3Y0pe?usp=sharing)
+- [Linear Regression Videos](https://www.youtube.com/watch?v=HsZhQyhg0tk&list=PLDA3QBjykWVxfuWGJPkS_O1xrhW9txOKt&index=1)
+- [Linear Regression Slides](/lectures/SLIDES_20180720_01_Linear_Regression.pdf)
+- [Linear Regression Example Spreadsheet](https://drive.google.com/open?id=1DUaiPw9Wgt_O8O7Mq5RMC3HpRIXVWgbr) 
+- [Linear Regression Example MATLAB](https://drive.google.com/open?id=1eOS0lIQpyriTde-x_eN0lET-ya3I51Si)
 - [Additional Information on Op Amp impedance](https://www.electronics-notes.com/articles/analogue_circuits/operational-amplifier-op-amp/input-impedance.php)
 
 ## Week 5: Temperature Measurements
-- [Temperature Measurements](https://www.youtube.com/playlist?list=PLDA3QBjykWVycTireTaEG8Fim4GnFEBpz)
-- [Slides](https://drive.google.com/drive/folders/1xC09jM35sX2pIvMsqE0E8lO8F7CKePlt?usp=sharing)
+- [Temperature Measurements Videos](https://www.youtube.com/playlist?list=PLDA3QBjykWVycTireTaEG8Fim4GnFEBpz)
+- [Temperature Measurements Slides](https://drive.google.com/drive/folders/1xC09jM35sX2pIvMsqE0E8lO8F7CKePlt?usp=sharing)
+- [Nonlinear Regresssion Video](https://www.youtube.com/watch?v=aE4W-JYnGgQ)
+- [Steinhart-hart-fitting.m](https://drive.google.com/open?id=19N-lH7GH1XP0PHImxZM9N5_MRfb8FWuX)
 
 
 ## Week 6: Underwater Acoustics (Group A) & Fluid Mechanics (Group B)
@@ -71,12 +66,20 @@ The specific due dates for each group are listed below.
 | [Fluid Mechanics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxFbfz1bAygXNHX5IJ4_vRi) | [Underwater Acoustics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxF4HfyhYxnD4eD31wZkSvq) | 
 | [Slides](https://drive.google.com/open?id=1FSzWEEap-6UiNJplJt5-_KHzOAAomzfk) | [Slides](https://drive.google.com/drive/folders/1wlyxBH7Qco0LvU1Riqz3nqfAVviCSh8Q?usp=sharing) |
 
-## Week 8: Autonomous Navigation
+## Project Jump Start: Autonomous Navigation
 - [Autonomous Navigation](https://www.youtube.com/playlist?list=PLDA3QBjykWVw9UDHYpLBnloHrAwpZyTbb)
-- [Slides](https://drive.google.com/drive/folders/1yCA0z3uEAt4LO61vuYCOluFFPgQTbqYP?usp=sharing)
+- [Autonomous Navigation Slides](https://drive.google.com/drive/folders/1yCA0z3uEAt4LO61vuYCOluFFPgQTbqYP?usp=sharing)
+- [Statistics of Integrals and Derivatives Video 1](https://www.youtube.com/watch?v=_0AcGK7asfM)
+- [Statistics of Integrals and Derivatives Video 2](https://www.youtube.com/watch?v=ej9O5ncO1iw)
+- [Statistics of Integrals and Derivatives Slides](/lectures/SLIDES20190117_01_TimeSeriesErrors.pdf)
+- [Statistics of Integrals and Derivatives Accelerometer MATLAB Example](https://drive.google.com/open?id=1-jiIeGnTGc0ZuzfWS1xRK-mnt1NesF_Q)
+- [Statistics of Integrals and Derivatives Numerical Derivation Statistics MATLAB Demo.](https://drive.google.com/open?id=1uA-uhLO4cLXOAFCiALvTtgRjT2nDUVXY)
+
 
 ## Project Kickoff Meeting
-
+- Slides
+- Proposal Template
+- Proposal Specifications
 
 # Supplementary Information
 We have also included slides from topics covered in previous versions of E80 for additional reading if you are interested:

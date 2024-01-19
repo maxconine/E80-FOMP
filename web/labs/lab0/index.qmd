@@ -6,7 +6,7 @@ Team size: 4
 
 ## Introduction
 
-In the first week of E80, we have a regular lab scheduled, but there is no submission sheet. This is an opportunity for refreshing your skills and getting software and hardware setup for Labs 1 through 6 and the project Jump Start.
+This lab is an opportunity for refreshing your skills and getting software and hardware setup for Labs 1 through 6 and the project Jump Start.
 
 By the end of this lab you should have:
 
