@@ -1,0 +1,80 @@
+---
+title: "Lab 2 Writing Assignment"
+subtitle: Methods, Results, Equations, and Tables
+format:
+  html: default
+  pdf: default
+permalink: writing/lab2/index.html
+---
+
+## Writing Assignment
+
+In this writing assignment you will learn to make high quality tables that follow the conventions of scientific writing
+In addition, you will write text to describe how you collected the data presented in the tables, describe the equations used to interpret the data, and make an argument based on the data presented in the table.
+
+To do this, you will write two sections of a technical memo: methods and results.
+The methods section describes how you collected the data presented in the results section and should include any diagrams or figures needed to explain the data collection process.
+In this lab, these figures must include an electrical schematic of the circuit used to make the resistance measurements.
+
+You will also write a section to describe the results of your experiment and present the data you collected.
+For this lab, the main portion of the results section will be a table presenting the measured and predicted resistance values.
+The predicted values should be calculated using the appropropriate model for the electrical measurement tools you used (i.e., your model should include the internal resistance of any measurement tool and the resultant loading effects.)
+
+## Learning Objectives
+
+By the end of this writing assignment you will...
+
+- Learn how to create a high quality table which presents collected data
+- Understand the information that should be included in a methods section
+- Write equations in methods section to explain the data collection procedure
+- Created clear circuit schematics for the methods section
+- Write text to describe how the data presented in the table was collected
+- Write text to explain what the data presented in the table means
+
+## Required Resources
+
+- [ ] Raw resistance measurement data from Lab 2
+- [ ] Schematics of measurement circuits
+
+## Specifications
+
+### Tables
+
+- [ ] Properly labeled column headers and/or row headers
+- [ ] Includes explanations of units of measurements representative of the data type, duration of the experiment, etc.
+- [ ] Appropriate fonts and font sizes (e.g., 11 or 12 point, professional font like Times New Roman, Arial, Calibri, or Cambria)
+- [ ] Line weights visible but not overly thick
+- [ ] Elements in table neatly aligned 
+- [ ] All the entries, including the headers, fit comfortably in the width or height of the columns or rows
+
+### Methods
+
+- [ ] Documents the experimental setup with schematics
+- [ ] Each schematic labeled as a figure with a figure number and caption
+- [ ] Figures properly referenced in the text (e.g., "Fig. 1 demonstrates...")
+
+### Results
+
+- [ ] States the main conclusion of the experiment
+- [ ] States any shortcomings or outlier data for future exploration along with suggested mechanisms.
+
+### Equations
+
+- [ ] Each equation is labeled
+- [ ] Each equation is referenced in the text
+- [ ] Variables of the equations are described in the text
+
+### Supporting Text
+
+- [ ] Refers to each table
+- [ ] Explains the contents of the table
+- [ ] Correct sentence mechanics like cohesion and coherence between sentences and no run-ons
+- [ ] Correct paragraph mechanics like topic sentences and placement at breaks between ideas
+- [ ] Language is not stilted and jargon is kept to a reasonable minimum.
+
+<!-- 
+# ToDo
+
+- Add table formatting examples
+- Describe specific equations to include
+- List tools for schematic creation -->

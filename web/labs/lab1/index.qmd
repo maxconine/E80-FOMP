@@ -9,6 +9,8 @@ Submission Sheet: [html](/labs/lab1/submission.qmd) [docx](/labs/lab1/submission
 
 Prelab Help Sheet: [html](/labs/lab1/prelab.qmd)
 
+Writing Assignment: [html](/labs/lab1/lab1-writing.qmd)
+
 ## Introduction
 
 In this lab you will transform the ROV (remotely operated vehicle) used in E79 into an AUV (autonomous underwater vehicle). An ROV is controlled from the surface through long cables, but an AUV carries an autonomous controller on board. While the AUVs you build in Lab 1 will all look the same, you will have a chance to modify these vehicles during the project. By end of semester, each robot will be configured and equipped for unique ocean-sampling experiments.

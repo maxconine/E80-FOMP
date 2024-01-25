@@ -1,0 +1,55 @@
+---
+title: "Lab 5 Writing Assignment"
+subtitle: Mathematical Derivations
+format:
+  html: default
+  pdf: default
+permalink: writing/lab5/index.html
+---
+
+## Writing Assignment
+
+In this writing assignment you will learn to write a rigorous mathematical derivation.
+You will present an FFT calculated using MATLAB of the square wave captured in lab and provide a derivation of the square wave FFT to justify the frequency components and power levels present in the signal.
+
+## Learning Objectives
+
+By the end of this writing assignment you will...
+
+- Format and present equations in text
+- Write text to support your derivation
+
+## Required Resources
+
+- [ ] Figure of an FFT of a square wave using data from the oscilloscope. You may not use the FFT calculated by the oscilloscope. Your FFT should be calculated in MATLAB from the time-domain trace of the square wave.
+
+## Specifications
+
+### Mathematical Derivations
+
+- [ ] Contain a label that numbers each equation in the derivation
+- [ ]	Each equation is referenced in the text
+- [ ]	Variables of the derivations are described in the text
+- [ ]	Derivations are written out explicitly to show a sequence of steps
+- [ ]	Steps in the derivation proceed logically from one another in an appropriate level of detail for the audience
+- [ ]	Refer to appropriate theorems covered in class where appropriate, don’t reinvent every wheel
+
+### Figures
+
+- [ ]	Include FFTs from your measurements for comparison to your theoretical analysis.
+- [ ]	Proper Axis Labels & Tick Size, Readable: appropriate fonts, line weights and data markers and not overly cluttered, follows other figure conventions from previous weeks.
+- [ ]	Correct Units on both X and Y Axis.
+- [ ]	Shows interesting features of frequency spectrum of the tested signal.
+
+### Text
+
+- [ ]	Refers to each derivation/figure.
+- [ ]	Correct sentence mechanics like cohesion and coherence between sentences and no run-ons.
+- [ ]	Correct paragraph mechanics like topic sentences and placement at breaks between ideas.
+- [ ]	Language is not stilted and jargon is kept to a reasonable minimum.
+
+
+### Technical Inferences in Text
+- [ ]	Verify the correctness of your theoretical results by referring to FFT Figure, which includes justifying both the power levels and frequency components of your measurement.
+- [ ]	Use continuous and discrete Fourier transforms and notation where appropriate to discuss the derivation of your transform and your MATLAB plot.
+- [ ]	Mathematically correct and insightful analysis of your input signal explains the output.

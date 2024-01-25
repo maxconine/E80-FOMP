@@ -1,0 +1,75 @@
+---
+title: "Lab 3 Writing Assignment"
+subtitle: Electrical Schematics and Mechanical Drawings
+format:
+  html: default
+  pdf: default
+permalink: writing/lab3/index.html
+---
+
+## Writing Assignment
+
+In this writing assignment you will learn to make high quality electrical schematics and mechanical drawings.
+You'll then write text to describe the operation of the electrical system and the key aspects of the mechanical design presented.
+
+## Learning Objectives
+
+By the end of this writing assignment you will...
+
+- Create a clear mechanical drawing with relevant details included
+- Draw a neat and complete electrical schematic
+
+## Required Resources
+
+- [ ] Reference schematic from the lab notebook of the op amp circuit used in lab.
+
+## Specifications
+
+### Electrical Schematics
+
+- [ ] Standard electrical schematic symbols are used whenever possible (i.e., don't make up new symbols for resistors, amplifiers, etc.)
+- [ ] All lines connecting elements are straight lines wherever possible (i.e., no curved lines)
+- [ ] All junctions indicated with a solid circle at the intersection point
+- [ ] No 4-way wire junctions
+- [ ] Use heavy line weights and large fonts
+- [ ] Reference designators and the values for parts are placed nearby the parts.
+- [ ] Draw pins according to function (i.e., not just according to the physical layout of the pins on the chip.)
+- [ ] All pins labeled with number
+- [ ] All pins labeled with name/description of function
+- [ ] Decoupling capacitors are placed nearby the part that they accompany.
+- [ ] If needed, notes are legible and well-placed
+
+### Mechanical Drawings
+
+- [ ] Clear depiction of components and how they fit into assembly
+- [ ] Drawings only include enough detail to make your point (i.e., you need only show the relevant dimensions in the drawing)
+- [ ] Follow mechanical schematic drawing conventions, such as the layout, flow and symbols
+- [ ] Use heavy line weights and large fonts
+- [ ] Part geometry is clear and well illustrated
+- [ ] Drawing is clear and fully labeled
+- [ ] If needed, notes are legible and well-placed
+- [ ] Clearly makes the point that is suggested in the text
+
+### Results
+
+- [ ] States the main conclusion of the experiment
+- [ ] States any shortcomings or outlier data for future exploration along with suggested mechanisms.
+
+### Equations
+
+- [ ] Each equation is labeled
+- [ ] Each equation is referenced in the text
+- [ ] Variables of the equations are described in the text
+
+### Supporting Text
+
+- [ ] Refers to each schematic/drawing.
+- [ ] Correct sentence mechanics like cohesion and coherence between sentences and no run-ons
+- [ ] Correct paragraph mechanics like topic sentences and placement at breaks between ideas
+- [ ] Language is not stilted and jargon is kept to a reasonable minimum.
+
+
+<!-- # ToDo
+
+- Determine whether schematics should go here or in Lab 2. Maybe just have the include the relevant schematic in Lab 2 and then draw their own here?
+- Revise to make sure it aligns with new lab goals. -->

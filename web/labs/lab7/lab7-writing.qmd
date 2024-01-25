@@ -1,0 +1,37 @@
+---
+title: "Lab 7 Writing Assignment"
+subtitle: Abstracts
+format:
+  html: default
+  pdf: default
+permalink: writing/lab7/index.html
+---
+
+## Writing Assignment
+
+In this writing assignment you will write an abstract for the work you did in lab 7. 
+Be sure to follow the conventions of an abstract carefully:
+
+- Don’t summarize more of your work than necessary
+- Do include quantitative results
+- Keep it short.
+
+## Learning Objectives
+
+By the end of this writing assignment you will...
+
+- Learn to write an abstract that follows the conventions of scientific writing. 
+
+<!-- ## Required Resources
+
+- [ ]  -->
+
+## Specifications
+
+### Lab Report Introduction 
+
+- [ ]	Concisely summarizes the gist of each section of the lab report.
+- [ ]	Arranges the sentences in the order the sections are presented in the lab report.
+- [ ]	Is self-sufficient and does not refer to the body of the report, such as specific results.
+- [ ]	Uses past tense to report what was done.
+- [ ]	Stays within the maximum words allowed (usually 100-200 words).
