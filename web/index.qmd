@@ -96,6 +96,18 @@ Team assignments can be found [here](https://docs.google.com/spreadsheets/d/1ybz
 | [Participation](#participation)                  |   5%  |
 :::
 
+### Specifications Grading
+
+The grading in E80 for submission sheets and writing assignments is based on whether or not your deliverables meet two different levels of specifications: **effort** and **completion**.
+The overall grade on an assignment is determined by how many of the sections meet either effort or completion.
+
+Effort specs describe **good-faith effort** whereas completion specs describe **correctness**.
+
+In most situations, completing all the effort specs is equivalent to a passing grade on the assignment.
+The remaining sections of completion specs raise your grade from a passing grade to full credit.
+
+If the initial version of a submitted assignment does not meet specs, it may be revised according to the stipulations of the course [resubmissions policy](#resubmission-policy).
+
 ### Graded Submissions Details
 
 #### Lecture Quizzes
@@ -157,17 +169,19 @@ You can also review the [syllabus on Cavnas](https://harveymuddcollege.instructu
 
 ## Course Policies
 
-## Attendance and Tardiness
+### Attendance and Tardiness
 Students sometimes have to miss E80 labs for an assortment of reasons.  The instructors don't record attendance because we assume that groups will work to equitably account for absences or tardiness. For example, if your group has a member with a planned absence for a particular lab, then you and your teammates should discuss how to shift more prelab work to the person who will be absent. If you don't feel like everyone is pulling their fair share, talk to your group and talk to an instructor so we can help you navigate the situation.
 
-## Late Work Policy
-No late work is accepted. You will receive no points for work submitted after deadlines. This is in keeping with good professional practice.  Some assignments may allow for multiple attempts and resubmission, but the first attempt always needs to be submitted by the appropriate deadline.
+### Late Work Policy
+No late work is accepted. You will receive no points for work submitted after deadlines. 
+This is in keeping with good professional practice.  Some assignments may allow for multiple attempts and resubmission, but the first attempt always needs to be submitted by the appropriate deadline.
 
-## Incomplete Grade Policy
+### Incomplete Grade Policy
 Incomplete grades will be granted only in rare circumstances and require the approval of the instructor.
 
-## Pre- and Post-Lab Work Policy
+### Pre- and Post-Lab Work Policy
 The amount of time that you are free to work in lab is restricted. We enforce these restrictions for three main reasons: 
+
 (1) to simulate demands that can arise in real-world engineering, 
 (2) to help students internalize the learning goals of the class, and 
 (3) to help keep E80 to a smaller time footprint.
@@ -177,16 +191,35 @@ You may NOT collect data (for your experiment), manipulate or test hardware, pop
 However, you may look at datasheets, write software, calculate expected results, prepare Excel sheets to do calculations in lab, ask how equipment works, run your preparations by professors, and pursue a variety of other activities.
 You can spend as much or as little time desired on the pre-lab activities, but successful teams spend a lot of time and energy before the lab starts.
 
-The post-lab period is for reflection, resubmission when it's allowed, and taking a break from E80. You may NOT collect data, manipulate or test hardware, populate a protoboard, or use the laboratory equipment outside of lab.
+The post-lab period is for reflection, resubmission when it's allowed, and taking a break from E80. 
+You may NOT collect data, manipulate or test hardware, populate a protoboard, or use the laboratory equipment outside of lab.
+However, you may freely reprocess any data that you have already collected during a lab section.
+This includes, but is not limited to, writing MATLAB code for processing and visualizing your data.
 
 When in doubt about whether an activity is acceptable outside of lab, ask.
+
+### Resubmission Policy
+
+Lab submission sheets and writing assignments in E80 are able to be resubmitted without penalty if they do not meet completion specs on the initial attempt.
+To be clear, this means that resubmitted assignments are worth the same amount as initial submission and full credit can be earned even if the initial submission does not fully meet the specifications.
+
+The resubmission policy is subject to the stipulations listed below:
+
+1.  You must submit **something** by the assignment deadline.
+    - Don't phone this in because there is limited time for resubmission.
+2.  After you receive feedback, you can revise your submissions until spring break.
+    -   Most of specs can be done outside of lab with data.
+    -   However, if you weren't able to get good data, there is one week before spring break where you can go back to collect more.
+3.  Resubmissions are checked off by an instructor during office hours.
+4.  For all submissions, you will need to self-assess **before** you submit. Every assignment you submit should be accompanied along with a checklist of specs that you believe the assignment meets or does not meet.
+5.  All resubmissions must be completed by spring break.
 
 ### Cooperation Between Teams
 Cooperation between teams is limited.
 The rules for each period of the week (pre-lab, during lab, post-lab and writing and reflection) are below.
 In this section, the word group will refer to a full team of students during a normal week or a sub-team of students during weeks where teams are split into sub-teams.
 
-1. Prelab: A group may discuss the lab with another group to make sure they are clear on concepts and understanding. Groups may not share code, writing, or documentation with other groups.
+1. Pre-lab: A group may discuss the lab with another group to make sure they are clear on concepts and understanding. Groups may not share code, writing, or documentation with other groups.
 
 2. During Lab: Groups cannot work together, discuss concepts or understanding, share data, share code, or share writing.  Groups may arrange to swap hardware to debug and test defective parts of an experiment or device, but they should strongly consider elevating their concerns to an instructor if part swaps are necessary or if parts are being destroyed.
 
@@ -196,20 +229,20 @@ In this section, the word group will refer to a full team of students during a n
 
 These work restrictions are relaxed during the final project (after spring break): Groups may work on their robot at any time and may discuss any aspect of their robots with one another (as if the prelab policy always applies).  
 
-## Sharing Rubrics
+### Sharing Rubrics
 We will be returning/releasing graded lab report rubrics throughout the semester.
 It is an HONOR CODE VIOLATION to share these rubrics with other teams or with students enrolled in future versions of E80.
 
-## Access to Lab During the Final Project
+### Access to Lab During the Final Project
 - Students may work in the labs any time that it is open.
 - Students may only work in the E80 lab when a professor, staff member or proctor opens the lab.
 - Any team may use the equipment in the E80 and electronics labs during a lab section, but teams which are scheduled for a section have top priority for the equipment. 
 
-## Accessibility and Accommodations
+### Accessibility and Accommodations
 
 Harvey Mudd College strives to make all learning experiences as accessible as possible. If you anticipate or experience academic barriers based on your disability (including mental health, chronic or temporary medical conditions). If you have any questions, please contact the Office of Accessible Education at [access@g.hmc.edu](mailto:access@g.hmc.edu). Students from the other Claremont Colleges should contact their home college's disability officer. You also need to register with the [Office of Disability Resources](https://www.hmc.edu/student-life/disability-resources/). to establish reasonable accommodations.
 
-## Academic Honesty/Plagiarism
+### Academic Honesty/Plagiarism
 
 **Each student will be responsible for observing HMC's Honor code and abiding by the Standards of Conduct:**\
 
