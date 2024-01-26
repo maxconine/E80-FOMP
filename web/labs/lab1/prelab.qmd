@@ -3,7 +3,7 @@ title: Lab 1 Prelab Help Sheet
 number-sections: true
 ---
 
-Here are some ideas of useful prelab activities.  There are a lot, so it makes sense to apportion them among your team.  However, some activities should be completed by everyone. Watching lecture videos is a good example.
+Here are some ideas of useful prelab activities.  There are a lot, so it makes sense to apportion them among your team.  However, some activities (watching lecture videos, reading) should be completed by everyone. Be careful not to break up work too strictly, because many of the topics covered by the lab stretch across these prelab divisions; it makes sense to read carefully and try to identify linked problems and work before breaking up the tasks, and it makes sense to share individual findings thoroughly with the group.  
 
 ## Reading and Reference
 
@@ -38,11 +38,11 @@ Here are some ideas of useful prelab activities.  There are a lot, so it makes s
 ## Mechanical
 
 - [ ] Read all the robot assembly instructions.  Verify that you understand:
-  1. Frame modifications, 
-  2. Box modifications, 
-  3. Drill hole locations
-  4. Drilling procedures.
-  5. Penetrator assembly (are you clear on the parts of the bolt, the gasket?)
+  1. Box modifications 
+  2. Drill hole locations
+  3. Drilling procedures
+  4. Penetrator assembly (are you clear on the parts of the bolt, the gasket?)
+  5. Mounting the box on the frame 
 - [ ] Make some sketches of how you expect the robot to look during various parts of the assembly process (and how it is changing relative to E79) to test your understanding.
 - [ ] What do you expect the buoyant force of your robot to be?
 - [ ] What ballast mass will make your robot neutrally buoyant?
@@ -52,7 +52,7 @@ Here are some ideas of useful prelab activities.  There are a lot, so it makes s
 ## Results and E79 Theory
 
 - [ ] Make a plan for how your team will split its time in lab.
-- [ ] How are you going to find the size of one Teensy unit?  Can you write software (or a spreadsheet) to do that?
+- [ ] How are you going to find the size of one accelerometer unit?  Can you write software (or a spreadsheet) to do that?
 - [ ] Manipulate the E79 equation so it predicts peak acceleration from rest.
 - [ ] What shape do you expect for an acceleration curve produced by the E79  governing equation after a step in thrust?  How might it get messed up in the real world?
 - [ ] Write up the math parts of your submission sheet so that you can just paste in results in lab.

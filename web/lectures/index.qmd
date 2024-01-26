@@ -2,28 +2,23 @@
 title: "Lectures"
 ---
 
-# Lectures and Quizzes
-
 Lecture content is delivered by videos.
 Each week you will be expected to watch a set of videos and then take a multiple-choice quiz on the material.
-Links to the videos, quizzes and supplemental material are provided below.
+Links to the videos and supplemental material are provided below.  All quizzes can be found on Canvas.
 The slides for the two whole-class meetings are also provided.
 
 Note that in weeks 6 and 7, the order of Lectures/quiz/Lab are not the same for everyone. Odd numbered teams are in Group A and Even numbered teams are in Group B.
 Please make sure prelab is done for the correct lab.
 
-Quizzes are due at noon (12 p.m.) on Mondays on Gradescope during the semester.
-The specific due dates for each group are listed below.
+Quizzes are due at noon (12 p.m.) on Mondays on Canvas during the first half of the semester.  See Canvas for the exact dates.
 
-# Schedule
-
-## Week 1: E80 Kickoff meeting
+# Week 1: E80 Kickoff meeting
 
 - [Kickoff Slides](../presentation/kickoff/kickoff-presentation.qmd)
 - [Team Contract Guidelines](../presentation/kickoff/team-contract-guidelines.qmd)
-  - [Team Contract Template](../presentation/kickoff/team-contract-template.qmd)
+- [Team Contract Template](../presentation/kickoff/team-contract-template.qmd)
 
-## Week 2: Statistics for Experiments
+# Week 2: Statistics for Experiments
 
 - [Basic Statistics for Experiments Videos](https://www.youtube.com/watch?v=ywIUp9uNmY8&list=PLDA3QBjykWVxlOIHkdFEiuaXp-02mt8VI)
 - [Basic Statistics for Experiments Slides](/lectures/SLIDES_20180718_01_IntroAndBasics.pdf)
@@ -32,14 +27,16 @@ The specific due dates for each group are listed below.
 - [All Statistics Summary Document](https://drive.google.com/open?id=1vHS10FuGOs_IwQG8Uzs9UoeD4REUTOl4)
 - [Student's t Values Table](https://drive.google.com/open?id=1dIRZvSaYBFEqbXAem_nys0N5lmKA2c1V)
 
-## Week 3: Basics of Electrical Measurements
+# Week 3: Basics of Electrical Measurements
 - [Basics of Electrical Measurements Videos](https://www.youtube.com/playlist?list=PLDA3QBjykWVyDDmjCt-UFhZb8Ok0Ajfby)
 - [Basics of Electrical Measurements Slides](https://drive.google.com/file/d/1-4SoZdgNXmHkrtf45DcGWNuDbROOCEW9/view?usp=sharing)
 - [Error Propagation Video](https://www.youtube.com/watch?v=DiOs64kzSQw)
 - [Error Propagation Slides](/lectures/SLIDES_20180718_01_ErrorPropagation.pdf)
 - [Additional Information on Calculating Error in Multimeter Measurements](https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/)
+- [Auntie Spark's Guide to breadboards](/lectures/AuntieSparksGuideToBreadboarding.pdf)
+- We also recommend watching videos 1 & 2 of next week's op-amp videos.
 
-## Week 4: Operational Amplifiers
+# Week 4: Operational Amplifiers
 - [Operational Amplifiers Videos](https://www.youtube.com/playlist?list=PLDA3QBjykWVwctzkMzqvbLcZr3iyS85Hu)
 - [Operational Amplifiers Slides](https://drive.google.com/drive/folders/1j97hAUQ1RnWEw6dwOQ7hg6TDK5-3Y0pe?usp=sharing)
 - [Linear Regression Videos](https://www.youtube.com/watch?v=HsZhQyhg0tk&list=PLDA3QBjykWVxfuWGJPkS_O1xrhW9txOKt&index=1)
@@ -48,26 +45,30 @@ The specific due dates for each group are listed below.
 - [Linear Regression Example MATLAB](https://drive.google.com/open?id=1eOS0lIQpyriTde-x_eN0lET-ya3I51Si)
 - [Additional Information on Op Amp impedance](https://www.electronics-notes.com/articles/analogue_circuits/operational-amplifier-op-amp/input-impedance.php)
 
-## Week 5: Temperature Measurements
+# Week 5: Temperature Measurements
 - [Temperature Measurements Videos](https://www.youtube.com/playlist?list=PLDA3QBjykWVycTireTaEG8Fim4GnFEBpz)
 - [Temperature Measurements Slides](https://drive.google.com/drive/folders/1xC09jM35sX2pIvMsqE0E8lO8F7CKePlt?usp=sharing)
 - [Nonlinear Regresssion Video](https://www.youtube.com/watch?v=aE4W-JYnGgQ)
 - [Steinhart-hart-fitting.m](https://drive.google.com/open?id=19N-lH7GH1XP0PHImxZM9N5_MRfb8FWuX)
 
-
-## Week 6: Underwater Acoustics (Group A) & Fluid Mechanics (Group B)
+# Week 6: Underwater Acoustics (Group A) & Fluid Mechanics (Group B)
 | Group A | Group B|
 |---------|--------|
 | [Underwater Acoustics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxF4HfyhYxnD4eD31wZkSvq) | [Fluid Mechanics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxFbfz1bAygXNHX5IJ4_vRi) |
 | [Slides](https://drive.google.com/drive/folders/1wlyxBH7Qco0LvU1Riqz3nqfAVviCSh8Q?usp=sharing) | [Slides](https://drive.google.com/open?id=1FSzWEEap-6UiNJplJt5-_KHzOAAomzfk) |
 
-## Week 7: Fluid Mechanics (Group A) & Underwater Acoustics (Group B)
+# Week 7: Fluid Mechanics (Group A) & Underwater Acoustics (Group B)
 | Group A | Group B|
 |---------|--------|
 | [Fluid Mechanics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxFbfz1bAygXNHX5IJ4_vRi) | [Underwater Acoustics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxF4HfyhYxnD4eD31wZkSvq) | 
 | [Slides](https://drive.google.com/open?id=1FSzWEEap-6UiNJplJt5-_KHzOAAomzfk) | [Slides](https://drive.google.com/drive/folders/1wlyxBH7Qco0LvU1Riqz3nqfAVviCSh8Q?usp=sharing) |
 
-## Project Jump Start: Autonomous Navigation
+# Project Kickoff Meeting
+- Slides
+- Proposal Template
+- Proposal Specifications
+
+# Project Jump Start: Autonomous Navigation
 - [Autonomous Navigation](https://www.youtube.com/playlist?list=PLDA3QBjykWVw9UDHYpLBnloHrAwpZyTbb)
 - [Autonomous Navigation Slides](https://drive.google.com/drive/folders/1yCA0z3uEAt4LO61vuYCOluFFPgQTbqYP?usp=sharing)
 - [Statistics of Integrals and Derivatives Video 1](https://www.youtube.com/watch?v=_0AcGK7asfM)
@@ -75,12 +76,6 @@ The specific due dates for each group are listed below.
 - [Statistics of Integrals and Derivatives Slides](/lectures/SLIDES20190117_01_TimeSeriesErrors.pdf)
 - [Statistics of Integrals and Derivatives Accelerometer MATLAB Example](https://drive.google.com/open?id=1-jiIeGnTGc0ZuzfWS1xRK-mnt1NesF_Q)
 - [Statistics of Integrals and Derivatives Numerical Derivation Statistics MATLAB Demo.](https://drive.google.com/open?id=1uA-uhLO4cLXOAFCiALvTtgRjT2nDUVXY)
-
-
-## Project Kickoff Meeting
-- Slides
-- Proposal Template
-- Proposal Specifications
 
 # Supplementary Information
 We have also included slides from topics covered in previous versions of E80 for additional reading if you are interested:

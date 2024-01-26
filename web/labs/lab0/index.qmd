@@ -32,6 +32,7 @@ Every member of the team should complete the following sections:
 - Soldering (though only one person can solder the Teensy, everyone should practice)
 - Github Desktop and Arduino IDE Setup
 - Arduino Practice
+- SD Card Reading
 - MATLAB Access
 - MATLAB On-ramp
 
@@ -209,6 +210,10 @@ Then try these tutorials if you have time.
 
 1. [Blinking lights on the Arduino board](https://www.pjrc.com/teensy/tutorial.html):  
 2. [Hooking up an external LED](https://www.pjrc.com/teensy/tutorial2.html) 
+
+## SD Card Reading
+
+Find a micro-SD card.  Make sure your computer can read it.
 
 ## MATLAB Access
 

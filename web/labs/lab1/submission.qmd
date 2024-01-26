@@ -8,7 +8,7 @@ format:
 
 Keep answers as short as possible while still meeting specifications. Submit as a PDF.
 
-## Acceleration Plots and Analysis
+## Provide acceleration plots and analysis
 
 This submission item will cover multiple questions from the "Motherboard Validation, IMU Calibration, and IMU Error Measurement" section:  
 
