@@ -10,7 +10,7 @@ Keep answers as short as possible while still meeting specifications. Submit as 
 
 ## What is one 'Teensy Unit'? 
 
-i.e.: How much has the Voltage input to the Teensy changed when the number reported by matlablogging.m increases by 1?  Include a graph of Teensy output vs. sample number, any other relevant measurement setup information or measurements, and calculations showing how you did your conversion from measured units to Teensy units.
+i.e.: How much has the Voltage input to the Teensy changed when the number reported by `matlablogging.m` increases by 1?  Include a graph of Teensy output vs. sample number, any other relevant information about your test setup or measurements, and calculations showing how you did your conversion from Voltage to Teensy units.
 
 Effort Specification:
 
@@ -28,12 +28,14 @@ Complete Specification:
 ## What is the sample rate of the Teensy running matlablogging.ino? 
 
 Effort Specification:
-1. Includes a graph of data sampled from the Teensy
-2. Includes information (an oscilloscope measurement or a detail of how the function generator is set up) that can be used to calibrate the horizontal scale of the Teensy graph.
-3. Some calculations present
+
+- [ ] Includes a graph of data sampled from the Teensy
+- [ ] Includes information (an oscilloscope measurement or a detail of how the function generator is set up) that can be used to calibrate the horizontal scale of the Teensy graph.
+- [ ] Some calculations present
 
 Complete Specification:
-1. Calculations are correct and yield the proper Teensy unit value.
+
+- [ ] Calculations are correct and yield the proper Teensy unit value.
 
 {{< pagebreak >}}
 ## Fill in this table of properties for voltage dividers
@@ -41,6 +43,7 @@ Complete Specification:
 Fill in only one of the "Measured Output Voltage" columns for each measurement, whichever is appropriate to the instrument that you are using to measure.  If you are using the "Measured Output Voltage (Vpp)" column, then also convert that measured voltage to an RMS value in the "Converted Output Voltage (Vrms)" column.
 
 Several column names have been abbreviated to make that table easier to fit on one page:
+
 - VOPI refers to "Predicted output Voltage with ideal components", which is the prediction you are able to make before the start of lab.
 - VOPC refers to "Prediction output Voltage with measured components", which refers to predictions of the output voltage that you make once you have measured your exact component values in lab.
 - VOM refers to "Measured output voltage".  There are two VOM columns, one in units of Vrms, and the other in units of Vpp.  Fill in only the column appropriate to the instrument you are using.
@@ -51,7 +54,7 @@ Several column names have been abbreviated to make that table easier to fit on o
 
 Provide example calculations showing how you calculated the predicted output voltage and the predicted uncertainty bounds of the case where Z1=10 M$\Omega$, Z2=20 M$\Omega$ and you measured the output with the multimeter.
 
-| Z1 & Z2 | Instrument | VOPI (Vrms) | VOPM (Vrms) | VOM (Vrms) | VOM (Vpp) | VOC (Vrms) | $\lambda$ (V) | ERRI (%) | ERRC (%) |
+| Z1 & Z2 | Instrument | VOPI (Vrms) | VOPC (Vrms) | VOM (Vrms) | VOM (Vpp) | VOC (Vrms) | $\lambda$ (V) | ERRI (%) | ERRC (%) |
 |---------|------------|-------------|-------------|------------|-----------|------------|---------------|----------|----------|
 | Z1=wire Z2=open | Multimeter | | | | | | | | 
 | Z1=wire Z2=open | 1x Scope Probe | | | | | | | | 
@@ -70,6 +73,7 @@ Provide example calculations showing how you calculated the predicted output vol
 | Z1=10 M$\Omega$ Z2=20 M$\Omega$ | Teensy | | | | | | | |
 
 Effort Specification:
+
 - [ ] At least half of the measurements are filled in with plausible values.
 - [ ] Measured values also have a corresponding predicted value that shows understanding of the divider equation.
 - [ ] Example calculation shows understanding of divider equations.
@@ -88,7 +92,7 @@ This table uses the same column abbreviation as the previous section.
 
 Provide example calculations showing how you calculated the predicted output voltage and the predicted uncertainty bounds for the case where there is an op-amp at the output.
 
-| Op-amp at | VOPI (Vrms) | VOPM (Vrms) | VOM (Vrms) | $\lambda$ (V) | ERRI (%) | ERRC (%) |
+| Op-amp at | VOPI (Vrms) | VOPC (Vrms) | VOM (Vrms) | $\lambda$ (V) | ERRI (%) | ERRC (%) |
 |-----------|-------------|-------------|------------|---------------|----------|----------|
 | input  | | | | | | 
 | output | | | | | | 
