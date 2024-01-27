@@ -1,9 +1,6 @@
 ---
 title: "Lab 5 Writing Assignment"
 subtitle: Mathematical Derivations
-format:
-  html: default
-  pdf: default
 permalink: writing/lab5/index.html
 ---
 

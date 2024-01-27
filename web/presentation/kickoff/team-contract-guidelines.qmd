@@ -1,8 +1,5 @@
 ---
 title: E80 Team Contract
-format:
-  html: default
-  pdf: default
 ---
 
 ## Team Contract Template

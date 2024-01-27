@@ -1,9 +1,6 @@
 ---
 title: "Lab 3 Writing Assignment"
 subtitle: Electrical Schematics and Mechanical Drawings
-format:
-  html: default
-  pdf: default
 permalink: writing/lab3/index.html
 ---
 

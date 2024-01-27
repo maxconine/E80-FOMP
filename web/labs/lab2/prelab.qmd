@@ -36,6 +36,7 @@ Think carefully about which group members you want to complete each section.  Ma
 - [ ] Do you know whether you'll get a RMS or peak-peak measurement for each experiment?
 - [ ] Lay out your breadboard ahead of time using a breadboard simulator like [fritzing](https://fritzing.org/)
 - [ ] Are you sure you understand and accounted for instrument loading? Consult the videos or a Prof. if you're not confident you got this right.
+- [ ] Are you clear on how to change a channel seting between 1x and 10x modes?
 - [ ] How are you going to quickly calculate your VOPC, ERRI and ERRC values in the lab?  Would making a spreadsheet or a Matlab script help?
 - [ ] How does error propagation work?
 - [ ] Are you accounting for error in every component in your experiment, including your instruments?

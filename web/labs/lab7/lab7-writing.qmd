@@ -1,9 +1,6 @@
 ---
 title: "Lab 7 Writing Assignment"
 subtitle: Abstracts
-format:
-  html: default
-  pdf: default
 permalink: writing/lab7/index.html
 ---
 

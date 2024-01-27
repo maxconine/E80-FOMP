@@ -1,9 +1,6 @@
 ---
 title: "Lab 4 Writing Assignment"
 subtitle: Introductions
-format:
-  html: default
-  pdf: default
 permalink: writing/lab4/index.html
 ---
 

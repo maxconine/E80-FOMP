@@ -1,9 +1,6 @@
 ---
 title: "Lab 6 Writing Assignment"
 subtitle: Technical Memos
-format:
-  html: default
-  pdf: default
 permalink: writing/lab6/index.html
 ---
 

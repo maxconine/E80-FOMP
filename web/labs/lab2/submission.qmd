@@ -86,7 +86,7 @@ Complete Specification:
 
 This table uses the same column abbreviation as the previous section.
 
-Provide example calculations showing how you calculated the predicted output voltage and the predicted uncertainty bounds for the case where there is an op-amp at the output, Z1=10 M$\Omega$, Z2=20 M$\Omega$ and you measured the output with the Multimeter.
+Provide example calculations showing how you calculated the predicted output voltage and the predicted uncertainty bounds for the case where there is an op-amp at the output.
 
 | Op-amp at | VOPI (Vrms) | VOPM (Vrms) | VOM (Vrms) | $\lambda$ (V) | ERRI (%) | ERRC (%) |
 |-----------|-------------|-------------|------------|---------------|----------|----------|

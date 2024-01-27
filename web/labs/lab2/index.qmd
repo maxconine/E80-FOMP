@@ -9,6 +9,7 @@ Submission Sheet: [html](/labs/lab2/submission.qmd) [Word](/labs/lab2/submission
 
 Prelab Help Sheet: [html](/labs/lab2/prelab.qmd)
 
+
 ## Introduction
 
 In this lab you review the use of electrical test equipment, calculate the uncertainty in a measurement based on its components, and apply equivalent circuit models to understand instrument loading and op-amp buffers.  Electrical instruments and op-amps are used in every lab in this course, so we are doing this lab to build your toolkit for making experimental measurements.   Another goal of the lab is for you to practice error analysis and propagation.
@@ -64,21 +65,22 @@ Serial.println("Waiting..."); }
 Answer the following questions about your first set of data,
 
 1. What is the sample rate achieved by `matlab_logging.ino`? 
-2. What is the relation between the values recorded by matlab_logging.ino and the voltage applied to the pin? (i.e.: how many volts is one "Teensy Unit"?)  
-3. What happens to the value recorded by the Teensy when the voltage on the Teensy pin is less than zero volts?
+2. What is the relation between the values recorded by `matlab_logging.ino` and the voltage applied to the pin? (i.e.: how many Volts is one "Teensy Unit"?)  
+3. What happens to the value recorded by the Teensy when the Voltage on the Teensy pin is less than zero Volts?
 
 Measure a second set of data,
 
 1. Change your input signal such that you are measuring a 175 kHz, 1 Vpp, +0.6 V offset signal. 
 2. Record data using `matlab_logging.ino` and `maltablogging.m`
 
-Finally, answer this question about your second set of data
+Finally, answer these questions about your second set of data
 
-1. What signal does your Teensy observe? Why? (Hint: you may need to think back to some parts of E79 to figure this one out.)
+1. What signal does your Teensy observe? 
+2. Why? (Hint: you may need to think back to some parts of E79 to figure this one out.)
 
 ## Resistor Dividers and Instrument Loading {#sec-dividers}
 
-This section is designed to give you practice on two skills: accounting for instrument loading (i.e.: source and load impedance), and calculating uncertainties using error propagation. @fig-divider and @tbl-experiment are essential for this section:
+This section is designed to give you practice on two skills: accounting for instrument loading (i.e.: source and load impedance), and calculating uncertainties using error propagation. You will do this by predicting and measuring the Voltage at the output of a series of resistor dividers specified by @fig-divider and @tbl-experiment:
 
 :::{#fig-divider}
 ![](/labs/lab2/img/voltagedividerwsiggen.png)
@@ -106,14 +108,16 @@ A voltage divider
 
 : Impedance values and measurement instruments for experiment {#tbl-experiment}
 
-You will be asked to build the circuits specified in the table and to measure the output voltage with the devices in the "Measure With" column, but some of the devices in the "Measure With" column may be unfamiliar to you.  The devices are described below, and datasheet links are provided for each of them.  To finish this section, you will need to read these datasheets to find the input impedance and the uncertainty of each device.
-- "Multimeter" refers to the multimeter chained to your desk. Our multimeters are the [Greenlee DM-210A Digital Multimeter](https://cdn.greenlee.com/resources/media?key=7fe82ac7-208f-4c14-910c-a522a2949b3c&languageCode=en&type=document). Since the $V_{out}$ node will very with time, you should be sure to measure it with your multimeter to AC mode.  The uncertainty listings for multimeters can use unusual units (e.g.: dgt and rdg), so don't forget about [this document on multimeter specifications](https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/) that we also link on the lectures page.
-- "1x scope probe" refers to using a BNC cable with hooks directly connected to an oscilloscope input.  BNC cables don't have datasheets worth reading for this lab because they're just wires, so they have a low series impedance.  However, the oscilloscope itself (an [Agilent 2024A](http://literature.cdn.keysight.com/litweb/pdf/75015-97045.pdf), which has this [datasheet](http://literature.cdn.keysight.com/litweb/pdf/5990-6618EN.pdf)) has an input impedance and accuracy that you will need to look up. You can also create a 1x probe by using an oscilloscope probe with a switch set to 1x mode, and it will behave the same way as a BNC cable.  When you are using a 1x probe, you must change the channel setting of the oscilloscope to be 1x.
-- "10x scope probe" refers to connecting a standard oscilloscope probe (set to 10x mode if there's a switch) to an oscilloscope input.  The gray scope probes in the lab are [Keysight N2842A](https://assets.testequity.com/te1/Documents/pdf/keysight/N28xxA-ds.pdf) probes, and the black scope probes in 10x mode have a similar input impedance.  Note that the input impedance of a scope probe is added _in series_ with that of the oscilloscope itself, so the datahsheet may report a total "terminated impedance" that includes the input impedance of the oscilloscope.
+You will be asked to measure the output Voltage with the devices in the "Measure With" column, but some of the devices in the "Measure With" column may be unfamiliar to you.  The devices are described below, and datasheet links are provided for each of them.  To finish this section, you will need to read these datasheets to find the input impedance and the measurement uncertainty of each device.
+
+- "Multimeter" refers to the multimeter chained to your desk. Our multimeters are the [Greenlee DM-210A Digital Multimeter](https://cdn.greenlee.com/resources/media?key=7fe82ac7-208f-4c14-910c-a522a2949b3c&languageCode=en&type=document). Since the $V_{out}$ node will very with time, you should be sure to measure it with your multimeter set to AC mode.  The uncertainty listings for multimeters can use unusual units (e.g.: dgt and rdg), so don't forget about [this document on multimeter specifications](https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/) that we also link on the lectures page.
+- "1x scope probe" refers to using a BNC cable with hooks directly connected to an oscilloscope input.  BNC cables don't have datasheets worth reading for this lab because they're just wires, so they have a low series impedance.  However, the oscilloscope itself (an [Agilent 2024A](http://literature.cdn.keysight.com/litweb/pdf/75015-97045.pdf), which has this [datasheet](http://literature.cdn.keysight.com/litweb/pdf/5990-6618EN.pdf)) has an input impedance and accuracy that you will need to look up. You can also create a 1x probe by using an oscilloscope probe with a switch set to 1x mode, and it will behave the same way as a BNC cable.  When you are using a 1x probe, you must change the channel setting of the oscilloscope to be 1x. Note that some scopes call the channel setting 1:1 instead of 1x.
+- "10x scope probe" refers to connecting a standard oscilloscope probe (set to 10x mode if there's a switch) to an oscilloscope input.  The gray scope probes in the lab are [Keysight N2842A](https://assets.testequity.com/te1/Documents/pdf/keysight/N28xxA-ds.pdf) probes, and the black scope probes in 10x mode have a similar input impedance.  Note that the input impedance of a scope probe is added _in series_ with that of the oscilloscope itself, so the datahsheet may report a total "terminated impedance" that includes the input impedance of the oscilloscope. When you are using a 10x probe, you must change the channel setting of the oscilloscope to be 10x.  Note that some scopes call the channel setting 10:1 instead of 10x.
 - "Teensy" refers to making an analog measurement with your Teensy. You made similar to the measurements in @sec-teensy-analog.  You made some calculations of the uncertainty of the Teensy, whcih arises from the size of the Teensy unit, in @sec-teensy-analog, and you can find infomation about Teensy input impedance in the videos.
 - Though this is not in the "Measure With" column, you will also need to find the output impedance and amplitude undertainty of your signal generator.  If you are using the scope-integrated WaveGen output, then you can infer the output impedance and find the uncertainty in the oscilloscope manual.  If you are, unusually, using a stand-alone function generators (an [HP33120A](https://www.keysight.com/us/en/assets/7018-06809/data-sheets/5968-0125.pdf)), you can find these values in the datasheet.
 
 Do the following
+
 1. For the circuit shown in @fig-divider, and for each of the values of Z1 and Z2 and the measuring instruments in @tbl-experiment, calculate the expected output voltages with confidence intervals accounting for uncertainty in both components and instruments. Assume the resistors are 5% resistors. Be sure to include the effects of instrument loading in your calculations. Note that these analytical calculations can be made during prelab.  
 2. Build several copies of the circuit in @fig-divider, one for each pair of Z1/Z2 values in @tbl-experiment.  These can all be built simultaneously on the same breadboard if you lay it out carefully.  Please trim your resistor leads so that they lie flat on the breadboard.
 3. Measure and record the value of each component used in your construction, then recalculate the output voltages using your measured component values. 
@@ -133,6 +137,7 @@ If you are having difficulty with the 10 M$\Omega$ / 20 M$\Omega$ experiments, t
 - Make sure all your equipment and circuits under test share the same ground.  Be particularly careful with oscilloscope ground clips, whcih are connected to earth ground, so you can't hook them up in the middle of a circuit.  Measure differences with the scope by using two probes, not by putting the ground clip on a non-ground node.
 :::
 
+
 ## Resistor Dividers with Op Amps
 
 Build the circuits in @fig-opamp-low-z and @fig-opamp-hi-z, and measure $V_{out}$ for both circuits with the multimeter. In both cases, power the op-amp with ±15 V.  Compare and contrast your results with equivalent cases (same Z1 & Z2, measured with multimeter) from @sec-dividers. What is the function of the op-amp in each of these measurements? 
@@ -148,6 +153,8 @@ An op-amp buffer connected to a low impedance divider.
 
 An op-amp buffer connected to a high impedance divider.
 :::
+
+Op-amp buffers for divider experiments.
 :::
 
 Because this is your first time building op-amps (look forward to many more in lab 3!), we provide this diagram that may help with wiring up your first OP07.  Each of the connections on the diagram is labeled wtih the OP07 pin number.  Don't forget that pin numbers start in the upper left of the chip and wrap around it counter-clockwise.  The capacitors, called decoupling capacitors, are important to include even if their purpose may seem unclear.  See the callout note below for more details.
@@ -205,7 +212,7 @@ Writeups for this extra credit section are not counted against the page limit of
 | 220 $\Omega$ | 1 $\mu$F     | 1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz |
 | 10 M$\Omega$ | 1000 pF      | 1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz |
 
-: Table of RC divider measurements {$tab-rc}
+: Table of RC divider measurements {$tbl-rc}
 
-Build the circuits in table @tab-rc in the same manner as the dividers in @sec-dividers, then repeat the predictions and measurements as in @sec-dividers. Vary the input frequency to each of the values listed in the "Test Frequencies" column as you perform these measurements. Use an input amplitude of 5Vpp and, if using the Teensy, be sure to offset the signal. Note that the multimeter can measure capacitance. Measure the output voltages with any appropriate equipment (justify your choice). Measure the phase difference between the input and output Voltages where possible. Explain the results of your measurements and possible function for each circuit. Consider carefully in what (graphical) format(s) you want to present your results. 
+Build the circuits in table @tbl-rc in the same manner as the dividers in @sec-dividers, then repeat the predictions and measurements as in @sec-dividers. Vary the input frequency to each of the values listed in the "Test Frequencies" column as you perform these measurements. Use an input amplitude of 5Vpp and, if using the Teensy, be sure to offset the signal. Note that the multimeter can measure capacitance. Measure the output voltages with any appropriate equipment (justify your choice). Measure the phase difference between the input and output Voltages where possible. Explain the results of your measurements and possible function for each circuit. Consider carefully in what (graphical) format(s) you want to present your results. 
 

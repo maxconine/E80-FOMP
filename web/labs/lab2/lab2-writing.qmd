@@ -1,9 +1,6 @@
 ---
 title: "Lab 2 Writing Assignment"
 subtitle: Methods, Results, Equations, and Tables
-format:
-  html: default
-  pdf: default
 permalink: writing/lab2/index.html
 ---
 
