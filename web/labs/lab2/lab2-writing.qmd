@@ -1,7 +1,6 @@
 ---
 title: "Lab 2 Writing Assignment"
 subtitle: Methods, Results, Equations, and Tables
-permalink: writing/lab2/index.html
 ---
 
 ## Writing Assignment

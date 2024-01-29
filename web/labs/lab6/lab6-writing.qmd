@@ -1,7 +1,6 @@
 ---
 title: "Lab 6 Writing Assignment"
 subtitle: Technical Memos
-permalink: writing/lab6/index.html
 ---
 
 ## Writing Assignment
