@@ -15,12 +15,18 @@ Prepare an example methods and results section of a technical memo.
 The **methods** section describes how you collected the data presented in the results section and should include any diagrams or figures needed to explain the data collection process.
 For this lab, the figures must include an electrical schematic of the voltage divider circuit and clearly show where the measurement was made.
 The figure should have a descriptive caption and follow the best practices outlined in the Lab 1 writing assignment.
-Your figure should include a short paragraph of 150-250 words describing the schematic and explaining how the measurement was made.
+Your figure should include 150-250 word section of text describing the schematic and explaining how the measurement was made.
 
 The **results** section should present the data you collected.
-For this lab, the results section will be a table presenting the measured and predicted output voltage values.
-The predicted values should be calculated using the appropriate model for the electrical measurement tools you used (i.e., your model should include the internal resistance of any measurement tool and the resultant loading effects.)
-A 150-250 word paragraph should be included beneath each table describing the results and what they mean, along with noting any particular notable features or discrepancies (e.g., if the measured value is outside of the 95% confidence interval).
+For this lab, the results section will be tables presenting the measured and predicted output voltage values.
+You should present one table which demonstrates the impact of measuring different resistance values with the same instrument (e.g., the multimeter).
+Another table should contains data to demonstrate the influence of different measurement devices used on the same circuit (e.g., comparing data from a set value of Z1 and Z2 across the multimeter, both oscilloscope probes, and Teensy)
+The predicted values should be calculated using the appropriate model for the electrical measurement tools you used and the appropriate error bounds (i.e., your model should include the internal resistance of any measurement tool and the resultant loading effects.)
+A 100-150 word section of text should be included beneath each table describing the results and what they mean, along with noting any particular notable features or discrepancies (e.g., if the measured value is outside of the 95% confidence interval).
+
+As usual in E80 writing assignments, these sections are going to be presented without an introduction, and therefore you need to exercise some caution in topic sentences to provide the barest introduction to the material.
+For example, don't lead by writing "The robot navigated the course". 
+Instead, write "This data describes a robot navigating an obstacle course in an underwater test tank."
 
 ## Learning Objectives
 
@@ -36,7 +42,7 @@ By the end of this writing assignment you will...
 ## Required Resources
 
 - [ ] Tables of measurement data from Lab 2
-- [ ] Schematics of measurement circuit
+- [ ] Source file for the schematics of measurement circuits used in lab 2.  This should be a diagrammatic format, not a breadboard layout.
 
 ## Specifications
 
@@ -65,14 +71,17 @@ By the end of this writing assignment you will...
 
 #### Results
 
-- [ ] States the main conclusion of the experiment
+- [ ] States the main conclusion of the experiment which we expect to how error bounds related to measure quantities and the influence of instrument loading.
 - [ ] States any shortcomings or outlier data for future exploration along with suggested mechanisms.
 
 #### Supporting Text
 
-- [ ] Refers to each table
-- [ ] Explains the contents of the table
-- [ ] Correct sentence mechanics like cohesion and coherence between sentences and no run-ons
-- [ ] Correct paragraph mechanics like topic sentences and placement at breaks between ideas
+- [ ] Refers to each table.
+- [ ] Explains the contents of the table.
+- [ ] Every sentence is clear about what it refers to.
+- [ ] No factually incorrect or vague statements.
+- [ ] Correct sentence mechanics like cohesion and coherence between sentences and no run-ons.
+- [ ] Correct paragraph mechanics like topic sentences and placement at breaks between ideas.
 - [ ] Language is not stilted and jargon is kept to a reasonable minimum.
 - [ ] Includes explanations of units of measurements representative of the data type, duration of the experiment, etc.
+- [ ] Written text is within the specified word count.
