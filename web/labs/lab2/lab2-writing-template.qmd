@@ -4,7 +4,6 @@ subtitle: Methods, Results, Equations, and Tables
 format:
   html: default
   docx: default
-tbl-cap-location: bottom
 ---
 
 Name:
@@ -14,39 +13,22 @@ Name:
 ::: {#fig-measurement-schematic}
 ![](./img/voltagedividerwsiggen.png)
 
-Insert the schematic used to make your measurements with the Teensy here. Note that your schematic should include any additional components needed to represent any output impedances of sources or input impedances of measurement devices.
-:::
+Insert the schematic used to make your measurements here.
+Note that your schematic should include any additional components needed to represent any output impedances of sources or input impedances of measurement devices.
 
-::: {#tbl-example1}
-| Z1, Nominal \[Ω\] | Z1, Measured \[Ω\] | Z2, Nominal \[Ω\] | Z2, Measured \[Ω\] | VOPI \[Vrms\] | VOPC \[Vrms\] | VOM \[Vrms\] | $\lambda$ \[V\] |
-|----------|----------|----------|----------|----------|----------|----------|-----------|
-| Wire              |                    | Open              |                    |               |               |              |                 |
-| 10 Ω              |                    | 20 Ω              |                    |               |               |              |                 |
-| 1 kΩ              |                    | 2 kΩ              |                    |               |               |              |                 |
-| 100 kΩ            |                    | 200 kΩ            |                    |               |               |              |                 |
-| 10 MΩ             |                    | 20 MΩ             |                    |               |               |              |                 |
+Insert table here containing measurements across different resistance values *with the same instrument*.
 
-Measurement results for Teensy across full resistance range.
-:::
-
-Text to explain what @tbl-example1 means. This paragraph should address and highlight:
+Text to explain what the table above means.
+The text should address and highlight:
 
 -   Trends in the data
 -   Unexpected results
 -   Conclusions to be drawn
 
-::: {#tbl-example2}
-| Instrument                  | VOPI \[Vrms\] | VOPC \[V\] | VOM \[Vrms\] |
-|-----------------------------|---------------|------------|--------------|
-| Multimeter                  |               |            |              |
-| Oscilloscope with 1⨉ Probe  |               |            |              |
-| Oscilloscope with 10⨉ Probe |               |            |              |
-| Teensy                      |               |            |              |
+Insert table here containing measurements across different instruments *with the same resistance values*.
 
-Measurement results for $Z1=10 \text{ MΩ}$ and $Z2=20 \text{ MΩ}$.
-:::
-
-Text to explain what @tbl-example2 means. This paragraph should address and highlight:
+Text to explain what the table above means.
+The text should address and highlight:
 
 -   Trends in the data
 -   Unexpected results
