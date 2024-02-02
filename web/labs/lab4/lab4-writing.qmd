@@ -1,7 +1,6 @@
 ---
 title: "Lab 4 Writing Assignment"
 subtitle: Introductions
-permalink: writing/lab4/index.html
 ---
 
 ## Writing Assignment

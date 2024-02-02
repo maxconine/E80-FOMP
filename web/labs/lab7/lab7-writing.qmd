@@ -1,7 +1,6 @@
 ---
 title: "Lab 7 Writing Assignment"
 subtitle: Abstracts
-permalink: writing/lab7/index.html
 ---
 
 ## Writing Assignment
