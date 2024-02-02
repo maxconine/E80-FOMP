@@ -84,7 +84,7 @@ Second, analyze the data from your accelerometer:
 
 1. Lay your board flat on its standoffs, then take ten seconds of accelerometer data. Determine the mean, the standard deviation, the standard error, and the 95% confidence bounds for a static acceleration measurement in the z direction.
 2. Figure out the value the accelerometer reports when it is experiencing zero acceleration on each axis. You may need to run your program a few times while holding the board in different orientations to make each axis zero.
-3. Use the acceleration due to gravity to figure out the size of one 'accelerometer unit' in your saved data: i.e.: if your accelerometer reports a value of 1, how many m/s^2 of acceleration is the accelerometer experiencing? 
+3. Use the acceleration due to gravity to figure out the size of one 'accelerometer unit' in your saved data: i.e.: if your accelerometer reports a value of 1, how many m/s^2 of acceleration is the accelerometer experiencing? Note that accelerometers usually report an unusual unit called "milli-g", thousandths of acceleration due to gravity, so you should expect one accelerometer unit to be some number of milli-g, which in turn you can represent as m/s^2.  (Milli-g is abbreviated mg, confusingly.)
 4. Use the Student's T Test to determine if the zero values on each of your axes are statistically different from one another.
 
 ## Penetrator and Motor Assembly

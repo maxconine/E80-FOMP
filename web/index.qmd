@@ -75,7 +75,7 @@ Almost all work in E80 is completed in teams.  Some details about teams are belo
 - Team assignments will be for the duration of the course.
 - If you're having problems on your team, talk to a professor or staff member *early* so we can try to help.
 
-Team assignments can be found [here](https://docs.google.com/spreadsheets/d/1ybzgz6GolW6FgcQ1pTlchQTeFiXQY2csQyqV71vN7dU/edit?pli=1#gid=0) and on the People tab in Canvas.
+Team assignments can be found on the [People tab on Cavnas](https://harveymuddcollege.instructure.com/courses/1097/users).
 
 ## Graded Submissions
 
@@ -94,6 +94,10 @@ Team assignments can be found [here](https://docs.google.com/spreadsheets/d/1ybz
 | [Participation](#participation)                  |   5%  |
 :::
 
+### Turn-In on Canvas
+
+All assignments that you need to complete, including links to quizzes, can be found in the [Modules tab on Cavnas](https://harveymuddcollege.instructure.com/courses/1097/modules).  You will always turn in assignments on Canvas or complete quizzes/surveys linked from Canvas.
+
 ### Specifications Grading
 
 The grading in E80 for submission sheets and writing assignments is based on whether or not your deliverables meet two different levels of specifications: **effort** and **completion**.
@@ -110,9 +114,9 @@ If the initial version of a submitted assignment does not meet specs, it may be 
 
 #### Lecture Quizzes
 
-- There are seven video lecture sets that you are expected to watch. Each of these video sets has an associated online quiz. You must take each of these quizzes individually.  You may not talk to other people in order to take the quiz, but they are open book, notes and internet.  The one exception to the 'no people' rule is that you may speak with a professor to clarify ideas before you open the quiz associated with the lecture set. 
+- There are seven video lecture sets that you are expected to watch. Each of these video sets has an associated online quiz. You must take each of these quizzes individually.  
 
-- These quizzes are completed on Canvas.
+- You may not talk to other people in order to take the quiz, but they are open book, notes and internet.  The one exception to the 'no people' rule is that you may speak with a professor to clarify ideas before you open the quiz associated with the lecture set. 
 
 #### Surveys and Team Check-Ins
 
@@ -120,39 +124,36 @@ If the initial version of a submitted assignment does not meet specs, it may be 
 
 - There are a total of 6 weekly check-ins (from weeks 2 through 7) and they are due each Friday at 3:30 pm.
 
+- These are individual assignments
+
 #### Laboratory Submission Sheets
 
 - There are a total of 8 labs in the class: Lab0 through Lab7. You must submit a submission sheet for each of the labs that contains data you collected during the lab. (Though note that in lab0 the Matlab on-ramp deliverable is the submission sheet.) This submission sheet will be evaluated for correctness: it's a way of assessing whether your experimental procedure was correct during the lab. Each submission sheet you provide will be worth 4% of your final grade.
 
-- These are group assignments and they are submitted on Canvas.  The Matlab onramp for lab 0 is an exception: it is an individual assignment.
+- These are group assignments, so there will be only one submission per team.  The Matlab onramp for lab 0 is an exception: it is an individual assignment.
 
 #### Laboratory Writing Assignments
 
 - You will be required to complete a writing assignment after labs 1-5. The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc. These assignments are completed entirely on Friday in the Writing and Reflection section. Each writing assignment will be worth 3% of your final grade, and you submit five assignments for a total of 15%.
 
-- These are individual assignments and are submitted on Canvas
+- These are individual assignments.  The team contract exercise in week 0 is an exception, there should be one team contract submission per team.
 
 #### Technical Memorandum
 
 - Each student will write an individual technical memorandum on material covered in Lab 6. See the [Lab 6](labs/lab6) page for more information.  
 
-- You must submit a tech memo to pass the class. 
-
-- Tech memos are submitted on Canvas.
+- You must submit a tech memo to pass the class.
 
 #### Final Presentation
 
 - Each team will make a final presentation during Presentation Days, on Wednesday, May 1st, 2024. A detailed schedule will be posted ASAP. The presentation is 15-minutes long followed by a 10-minute Q&A session. The Final Presentation guidelines and rubric are found on the [Final Project page](/labs/project).
 
-- Final presentations are submitted on Canvas
-
 #### Final Report
 
 - A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of [technical English](https://www.mit.edu/course/21/21.guide/). (see also [this article](https://www.mit.edu/course/21/21.guide/).). A rough draft of your final report is due at 11:59 PM on 4/26/24. The final draft is due at 11:59 PM on 5/1/2024. The Final Report guidelines are found on the Final Project page.
 
-- Final reports are submitted on Canvas.
-
 #### Participation
+
 - The instructors will assign you a participation grade which is determined by their in-lab observations, your peer evaluations, and your regular progress through the project checkoffs.
 
 ## End-of-Semester Grades
@@ -163,7 +164,7 @@ The professors reserve the right to award grades more leniently than this gradin
 
 A Google Sheet with the key dates and assignments in E80 can be found [here](https://docs.google.com/spreadsheets/d/1qR7HhVNWtqK8va9gGP6NGhX_NoIblt1x9VRRuFam1ng/edit?usp=sharing).
 
-You can also review the [syllabus on Cavnas](https://harveymuddcollege.instructure.com/courses/1097/assignments/syllabus) for a week-by-week breakdown of what's due with links to refernece material and where to turn stuff in.
+You can also review the [Modules tab on Cavnas](https://harveymuddcollege.instructure.com/courses/1097/modules) for a week-by-week breakdown of what's due with links to refernece material and where to turn stuff in.
 
 ## Course Policies
 

@@ -2,7 +2,7 @@
 title: Lab 2 Prelab Help Sheet
 ---
 
-This help sheet is not going to be as comprehensive as the prelab help sheet for lab 1, and next week will be even less thorough.  Part of the goal fo this class is for you to be able to devise prelab activities on your own.  So if you're running out of ideas for things to do, please review last week's help sheet.  
+This help sheet is not going to be as comprehensive as the prelab help sheet for lab 1, and next week will be even less thorough.  Part of the goal of this class is for you to be able to devise prelab activities on your own.  So if you're running out of ideas for things to do, please review last week's help sheet.  
 
 Think carefully about which group members you want to complete each section.  Many of the topics here are interconnected, so it often helps to make sure everyone does them (or, at minimum, that you meet and share out what you learned during prelab.)  We especially encourage everyone to do the reading and watch the videos.
 
@@ -32,11 +32,11 @@ Think carefully about which group members you want to complete each section.  Ma
 ## Divider Measurements
 
 - [ ] Look up all necessary impedance values and uncertainties.
-- [ ] Have you caluclated your expected output voltage for each entry in the table?
+- [ ] Have you calculated your expected output voltage for each entry in the table?
 - [ ] Do you know whether you'll get a RMS or peak-peak measurement for each experiment?
-- [ ] Lay out your breadboard ahead of time using a breadboard simulator like [fritzing](https://fritzing.org/)
+- [ ] Lay out your breadboard ahead of time using a breadboard simulator like [fritzing](https://fritzing.org/) or [Tinkercad](https://www.tinkercad.com/learn/overview/OPRHCXXL20FZS3N?type=circuits)
 - [ ] Are you sure you understand and accounted for instrument loading? Consult the videos or a Prof. if you're not confident you got this right.
-- [ ] Are you clear on how to change a channel seting between 1x and 10x modes?
+- [ ] Are you clear on how to change a channel setting between 1x and 10x modes?
 - [ ] How are you going to quickly calculate your VOPC, ERRI and ERRC values in the lab?  Would making a spreadsheet or a Matlab script help?
 - [ ] How does error propagation work?
 - [ ] Are you accounting for error in every component in your experiment, including your instruments?

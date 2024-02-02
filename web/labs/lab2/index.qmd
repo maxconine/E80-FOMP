@@ -26,7 +26,7 @@ After successful completion of this lab, you will be able to...
 - [ ] Explain how to relate RMS voltages and amplitudes of sinusoidal voltage signals.
 - [ ] Apply error propagation techniques to resistive voltage dividers to make uncertainty predictions in voltage measurements.
 
-This lab will be completed in sub-teams of two students.  Before the lab you must decide how you will split your team. Three other labs (labs 3, 4 and 5) will also be completed as sub-teams, and you must use a different sub-team for each of these labs (if possible).  Each sub-team will be responsible for its own submission sheet. Pre-lab work may still be carried out with your whole team, but be sure each sub-team is ready to tackle the in-lab work independently.  Even though your team will be split into two sub-teams, you will only have access to one motherboard/Teensy assembly.  Plan your work carefully so that you share it equitably.
+This lab will be completed in sub-teams of two students.  Before the lab you must decide how you will split your team. Two other labs (labs 3 and 4) will also be completed as sub-teams, and you must use a different sub-team for each of these labs.  Each sub-team will be responsible for its own submission sheet. Pre-lab work may still be carried out with your whole team, but be sure each sub-team is ready to tackle the in-lab work independently.  Even though your team will be split into two sub-teams, you will only have access to one motherboard/Teensy assembly.  Plan your work carefully so that you share it equitably.  You will let us know about your sub-team choices using a Canvas feature called "self-selected teams," so give yourself a little extra time to turn in your submission sheet and sort that feature out.
 
 
 ## Logging Analog Data with the Teensy {#sec-teensy-analog}
@@ -44,7 +44,7 @@ Set up the analog meaurement,
 
 Measure a first set of data
 
-1. Connect a  200 Hz, 1 Vpp, +0.4 V offset signal from a signal generator to the analog pin A0 and run the following sketch on your Teensy: `matlab_logging.ino`. 
+1. Connect a  200 Hz, 1 Vpp, +0.4 V offset sinussoidal wave from a signal generator to the analog pin A0 and run the following sketch on your Teensy: `matlab_logging.ino`. 
 2. While `matlab_logging.ino` is running and the Teensy is connected by USB, use `matlablogging.m` to receive a vector of data from the Teensy.  
 
 :::{.callout-note collapse="true"}
@@ -116,7 +116,7 @@ You will be asked to measure the output Voltage with the devices in the "Measure
 
 - "Multimeter" refers to the multimeter chained to your desk. Our multimeters are the [Greenlee DM-210A Digital Multimeter](https://cdn.greenlee.com/resources/media?key=7fe82ac7-208f-4c14-910c-a522a2949b3c&languageCode=en&type=document). Since the $V_{out}$ node will very with time, you should be sure to measure it with your multimeter set to AC mode.  The uncertainty listings for multimeters can use unusual units (e.g.: dgt and rdg), so don't forget about [this document on multimeter specifications](https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/) that we also link on the lectures page.
 - "1x scope probe" refers to using a BNC cable with hooks directly connected to an oscilloscope input.  BNC cables don't have datasheets worth reading for this lab because they're just wires, so they have a low series impedance.  However, the oscilloscope itself (an [Agilent 2024A](http://literature.cdn.keysight.com/litweb/pdf/75015-97045.pdf), which has this [datasheet](http://literature.cdn.keysight.com/litweb/pdf/5990-6618EN.pdf)) has an input impedance and accuracy that you will need to look up. You can also create a 1x probe by using an oscilloscope probe with a switch set to 1x mode, and it will behave the same way as a BNC cable.  When you are using a 1x probe, you must change the channel setting of the oscilloscope to be 1x. Note that some scopes call the channel setting 1:1 instead of 1x.
-- "10x scope probe" refers to connecting a standard oscilloscope probe (set to 10x mode if there's a switch) to an oscilloscope input.  The gray scope probes in the lab are [Keysight N2842A](https://assets.testequity.com/te1/Documents/pdf/keysight/N28xxA-ds.pdf) probes, and the black scope probes in 10x mode have a similar input impedance.  Note that the input impedance of a scope probe is added _in series_ with that of the oscilloscope itself, so the datahsheet may report a total "terminated impedance" that includes the input impedance of the oscilloscope. When you are using a 10x probe, you must change the channel setting of the oscilloscope to be 10x.  Note that some scopes call the channel setting 10:1 instead of 10x.
+- "10x scope probe" refers to connecting a standard oscilloscope probe (set to 10x mode if there's a switch) to an oscilloscope input.  The gray scope probes in the lab are [Keysight N2842A](https://assets.testequity.com/te1/Documents/pdf/keysight/N28xxA-ds.pdf) probes, and the black scope probes in 10x mode have a similar input impedance.  Note that the input impedance of a scope probe is added _in series_ with that of the oscilloscope itself, so the datasheet may report a total "terminated impedance" that includes the input impedance of the oscilloscope. When you are using a 10x probe, you must change the channel setting of the oscilloscope to be 10x.  Note that some scopes call the channel setting 10:1 instead of 10x.
 - "Teensy" refers to making an analog measurement with your Teensy. You made similar to the measurements in @sec-teensy-analog.  You made some calculations of the uncertainty of the Teensy, whcih arises from the size of the Teensy unit, in @sec-teensy-analog, and you can find infomation about Teensy input impedance in the videos.
 - Though this is not in the "Measure With" column, you will also need to find the output impedance and amplitude undertainty of your signal generator.  If you are using the scope-integrated WaveGen output, then you can infer the output impedance and find the uncertainty in the oscilloscope manual.  If you are, unusually, using a stand-alone function generators (an [HP33120A](https://www.keysight.com/us/en/assets/7018-06809/data-sheets/5968-0125.pdf)), you can find these values in the datasheet.
 
@@ -126,7 +126,7 @@ Do the following
 2. Build several copies of the circuit in @fig-divider, one for each pair of Z1/Z2 values in @tbl-experiment.  These can all be built simultaneously on the same breadboard if you lay it out carefully.  Please trim your resistor leads so that they lie flat on the breadboard.
 3. Measure and record the value of each component used in your construction, then recalculate the output voltages using your measured component values. 
 4. Drive the circuits using a signal generator and measure the output voltage with each of the instruments in the table. 
-6. Explain any differences between your measured voltages and your two sets of predicted voltages. Do the measured voltages lie within the predicted confidence intervals? Are there any lessons here on how to increase the accuracy of predicted measurements?
+6. Check whether or not the measured voltages lie within the predicted confidence intervals. Recall that you have two sets of predicted voltages, one based on nominal component values and one based on measured component values, so there are two sets of confidence intervals to check against.  Also look at the percent error between the predictions and the measurements.
 
 :::{.callout-note}
 If you are having difficulty with the 10 M$\Omega$ / 20 M$\Omega$ experiments, try pulling the resistors out of the breadboard and twisting them together in the air.  Leakage currents in the breadboard can cause issues with that measurement.
@@ -191,21 +191,19 @@ For dual supplies the capacitors run between V+ and ground, and V– and ground.
 
 ## Extra Credit 1
 
-Replace Z2 in Case (C) of Section 5 on your breadboard with a 100kΩ thermistor and derive a formula to calculate the temperature from Vin and Vout. Also determine the error specifications for all of the components in your system. Measure Vin and Vout with the 10x Scope and calculate the room temperature from the measured Vin and Vout complete with propagation of errors to calculate the uncertainty. 
+Build a divider in the stles of @sec-dividers where Z1 is 100kΩ and Z2 is a 100kΩ thermistor, then derive a formula to calculate the temperature from Vin and Vout. Determine the error specifications for all of the components in your system. Measure Vin and Vout with the 10x Scope probe and use your results to calculate the room temperature. Propagate errors to calculate the uncertainty in your temperature measurement. 
 
-Try to reduce your uncertainty by measuring the actual resistance of Z1 instead of using its printed value. Note that we're measuring Z1 because we are using the output voltage of the thermistor voltage divider to guess Z2. Repeat the measurement and calculation. How much did the uncertainty change? 
+Try to reduce your uncertainty by measuring the actual resistance of Z1 instead of using its printed value. Note that we're only measuring Z1 because we are using the output voltage of the thermistor voltage divider to guess Z2. Repeat the measurement and calculation. How much did the uncertainty change? 
 
-Compare your calculated temperatures with the room temperature measured by one of the digital thermometers. Do the measurements agree within the uncertainty of the measurements? Why would you use the voltage divider circuit with a Teensy instead of simply measuring the resistance of the thermistor? In your answer you may want to explain how the Elenco measures resistance. For your circuit explore how the measured temperature changes with Vin as you vary from 1 Vpp to the maximum the signal generator can generate. Why does it change? 
+Compare your calculated temperatures with the room temperature measured by one of the digital thermometers. Do the measurements agree within the uncertainty of the measurements? Explore how the measured temperature changes with Vin as you vary from 1 Vpp to the maximum the signal generator can generate. Why does it change? 
 
+Check Lynn's work on Canvas -> lab 2 top and agenda
 
 ## Extra Credit 2
 
-How do the accuracies of the Teensy and Elenco vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz,10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy's behavior in Section 1 and Section 3 when selecting the signal.  
+How do the accuracies of the Teensy and Elenco vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz,10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy's behavior in @sec-sec-teensy-analog and @sec-dividers when selecting the signal.  
 
 The definition of "accuracy" can be slippery here, so you should think carefully about it as you compose your answer. This is particularly true for the Teensy, which will return a sample to you that consists of many numbers. Will you consider the accuracy of a single data point (compared to what)? Of a single cycle? Or of some kind of aggregation of cycles that includes uncertainty? Consider carefully.
-
-Writeups for this extra credit section are not counted against the page limit of your report. You may submit this as an additional document labeled "Lab2 instrument frequency response extra credit addendum."
-
 
 ## Extra Credit 3
 

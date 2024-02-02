@@ -8,6 +8,10 @@ format:
 
 Keep answers as short as possible while still meeting specifications. Submit as a PDF.
 
+Team Number:
+
+Team Member Names: 
+
 ## Provide acceleration plots and analysis
 
 This submission item will cover multiple questions from the "Motherboard Validation, IMU Calibration, and IMU Error Measurement" section:  
@@ -30,9 +34,9 @@ Effort Specification:
 
 Complete Specification:
 
-- [ ] Calcuations that relate acceleration due to gravity to one Teensy unit are correct.
-- [ ] Take the mean of data to calculate the resting zero acceleration values. Report them clearly.
-- [ ] Includes description of how to calculate descriptive statistics and correct values.
+- [ ] Calcuations that relate acceleration due to gravity to one accelerometer unit are correct.
+- [ ] Take the mean of data to calculate the resting zero acceleration values. Report them clearly with appropriate uncertainty bounds.
+- [ ] Includes description of how to calculate statistics and correct values.
 - [ ] Includes description of how to calculate T tests and results of tests on data.
 
 {{< pagebreak >}}
