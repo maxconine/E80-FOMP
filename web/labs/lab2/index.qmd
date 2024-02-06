@@ -197,11 +197,9 @@ Try to reduce your uncertainty by measuring the actual resistance of Z1 instead 
 
 Compare your calculated temperatures with the room temperature measured by one of the digital thermometers. Do the measurements agree within the uncertainty of the measurements? Explore how the measured temperature changes with Vin as you vary from 1 Vpp to the maximum the signal generator can generate. Why does it change? 
 
-Check Lynn's work on Canvas -> lab 2 top and agenda
-
 ## Extra Credit 2
 
-How do the accuracies of the Teensy and Elenco vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz,10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy's behavior in @sec-sec-teensy-analog and @sec-dividers when selecting the signal.  
+How do the accuracies of the Teensy and Elenco vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz,10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy's behavior in @sec-teensy-analog and @sec-dividers when selecting the signal.  
 
 The definition of "accuracy" can be slippery here, so you should think carefully about it as you compose your answer. This is particularly true for the Teensy, which will return a sample to you that consists of many numbers. Will you consider the accuracy of a single data point (compared to what)? Of a single cycle? Or of some kind of aggregation of cycles that includes uncertainty? Consider carefully.
 
