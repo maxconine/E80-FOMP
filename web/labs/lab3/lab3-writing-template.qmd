@@ -1,0 +1,40 @@
+---
+title: "Lab 3 Writing Template"
+subtitle: Mechanical Drawings and Electrical Schematics
+format:
+  html: default
+  docx: default
+---
+
+Name:
+
+## Electrical Schematic
+
+::: {#fig-transimpedance-amplifier-schematic}
+![](./img/transimpedance_3.png)
+
+Schematic of transimpedance amplifier.
+:::
+
+Insert the schematic used for your transimpedance amplifier here.
+
+Text to explain what the schematic means.
+The text should address and highlight:
+
+-   What circuit does
+-   How the circuit works
+-   Choice of components and values
+
+::: {#fig-cuvette-holder}
+![](./img/cuvette-holder-bottom.png)
+
+Mechanical drawing of cuvette holder for turbidity meter.
+:::
+
+Text to explain what the mechanical drawing means.
+The text should address and highlight:
+
+-   General operation
+-   Key dimensions
+-   Particular specific notes relevant to using the design
+
