@@ -10,7 +10,8 @@ You'll then write text to describe the operation of the electrical system and th
 
 ## Statement of Work
 
-Prepare a high-quality electrical schematic and mechanical drawing to include in a methods section of a technical memo describing the operation of the transimpedance amplifier and turbidity meter you built in Lab 3.
+Prepare high-quality electrical schematics and a mechanical drawing to include in a methods section of a technical memo describing the operation of the turbidity meter you built in Lab 3.
+You should include a schematic for your 555 timer circuit and your transimpedance amplifier.
 The accompanying text should describe how the circuit and cuvette holder are used to build the turbidity meter.
 
 The electrical schematic describes the functional connection of the components in an electrical circuit.
@@ -83,3 +84,29 @@ By the end of this writing assignment you will...
 - [ ] Correct sentence mechanics like cohesion and coherence between sentences and no run-ons
 - [ ] Correct paragraph mechanics like topic sentences and placement at breaks between ideas
 - [ ] Language is not stilted and jargon is kept to a reasonable minimum.
+
+
+## Tools for Mechanical Drawings
+
+You may use whatever tool you are most comfortable with for preparing your mechanical drawings.
+[Solidworks](http://www.solidworks.com) is a good choice since you learn it in E4, but sometimes can be difficult to run on your personal computer.
+[Onshape](https://www.onshape.com) is a popular alternative which runs in your browser and has free education accounts.
+
+If you'd like to use Onshape, first create an account.
+Then, you can create a new workspace and import the `.sldprt` files for the cuvette holder.
+Alternatively, you may directly make a copy of [this Onshape document](https://cad.onshape.com/documents/4b648f31b2d8954d7686e422/w/f1213c6513c0b4fa8d754f46/e/3acd2f1f4f0c2c48650767d5) which has the parts already imported and a drawing made to which you can directly add relevant dimensions for your figure.
+
+
+The screenshots below in @fig-onshape-1 and @fig-onshape-2 show how to copy the workspace and add dimensions.
+
+::: {#fig-onshape-1}
+![](./img/onshape-copy-workspace.png)
+
+Use the dropdown menu to create a copy of the Onshape workspace.
+:::
+
+::: {#fig-onshape-2}
+![](./img/onshape-dimensioning.png)
+
+Use the Dimension tool in the Drawing tab to add dimensions to your drawing as you see fit.
+:::
