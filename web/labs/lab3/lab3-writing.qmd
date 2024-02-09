@@ -14,14 +14,14 @@ Prepare high-quality electrical schematics and a mechanical drawing to include i
 You should include a schematic for your 555 timer circuit and your transimpedance amplifier.
 The accompanying text should describe how the circuit and cuvette holder are used to build the turbidity meter.
 
-The electrical schematic describes the functional connection of the components in an electrical circuit.
+An electrical schematic describes the functional connection of the components in an electrical circuit.
 It **does not** directly represent the physical layout of the circuit in 3d-space on a breadboard or printed circuit board.
 However, there are certain conventions you should follow when drawing your schematic to allow it to be easily read and understood.
 These are detailed in the lab submission sheet and the specs below.
 
-For this assignment, draw a schematic of the transimpedance amplifier you developed for your turbidity meter.
-Ensure your schematic follows all the proper conventions as detailed in the specs below and in the lab manual.
-Include a 100-150 word section of text to describe the design and operation of the transimpedance amplifier.
+For this assignment, draw schematics for the 555 timer circuit and the transimpedance amplifier you developed for your turbidity meter.
+Ensure your schematics follow all the proper conventions as detailed in the specs below and in the lab manual.
+After each schematic, include a 100-150 word section of text to describe its design and operation.
 
 The mechanical drawing for this lab is a three-dimensional view of the 3d-printed cuvette holder for the turbidity meter.
 Your drawing should convey to the reader the key features of the design along with the most important dimensions needed to understand the scale of the design.
@@ -39,6 +39,7 @@ By the end of this writing assignment you will...
 
 ## Required Resources
 
+- [ ] Source code for a schematic of the 555 timer circuit used in lab.
 - [ ] Source code for a schematic of the transimpedance amplifier used in lab.
 - [ ] Source code for Solidworks drawing of the cuvette holder used in the turbidity meter.
 
@@ -81,8 +82,8 @@ By the end of this writing assignment you will...
 #### Supporting Text
 
 - [ ] Refers to each schematic/drawing.
-- [ ] Correct sentence mechanics like cohesion and coherence between sentences and no run-ons
-- [ ] Correct paragraph mechanics like topic sentences and placement at breaks between ideas
+- [ ] Correct sentence mechanics like cohesion and coherence between sentences and no run-ons.
+- [ ] Correct paragraph mechanics like topic sentences and placement at breaks between ideas.
 - [ ] Language is not stilted and jargon is kept to a reasonable minimum.
 
 
