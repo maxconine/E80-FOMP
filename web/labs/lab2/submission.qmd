@@ -88,7 +88,7 @@ Complete Specification:
 
 - [ ] All measurements are filled in with correct values that match theory.
 - [ ] Example calculation additionally shows understanding of loading effects and use correct instrument loads.
-- [ ] All theoretical calculations (inccluding the example calcualtion) correctly include loading effects and match measurements well. (i.e.: Predicted Output Voltage (Vrms) and Measured/Converted Output Voltage (Vrms) are within predicted error bounds of one another.)
+- [ ] All theoretical calculations (including the example calculation) correctly include loading effects and match measurements well. (i.e.: Predicted Output Voltage (Vrms) and Measured/Converted Output Voltage (Vrms) are within predicted error bounds of one another.)
 
 {{< pagebreak >}}
 ## Fill in this table of properties for voltage dividers with op-amp buffers

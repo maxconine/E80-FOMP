@@ -53,3 +53,8 @@ Think carefully about which group members you want to complete each section.  Ma
 - [ ] How do you calculate a line of best fit and appropriate uncertainty measures?  How do you report the uncertainty?
 - [ ] Write code or make a spreadsheet that can calculate a line of best fit and appropriate statistics from a set of x,y points.
 - [ ] Write code or make a spreadsheet that can plot a set of x,y points, a line of best fit, and appropriate uncertainty indicators.
+
+## Results
+
+- [ ] Make a plan for how your team will split its time in lab.
+- [ ] Write up parts of your submission sheet that you are able to, including pasting in appropriate schematics, so that you can just paste in results in lab.

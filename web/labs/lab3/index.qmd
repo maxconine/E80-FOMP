@@ -29,7 +29,7 @@ After successful completion of this lab, you will be able to
 - [ ] Build and test a complex design by thoughtfully testing and assembling individual parts
 - [ ] Use linear regression to extract slope, offset, and appropriate error measures from data
 
-This lab will be carried out as sub-teams of two.  Policies for sub-teams are discussed in [lab 2](/labs/lab2/index.qmd)
+This lab will be carried out as sub-teams of two.  Policies for sub-teams are discussed in [lab 2](/labs/lab2/index.qmd).
 
 This lab asks you to prepare solutions and handle chemicals. Though we aren't working with anything hazardous (or which can't be flushed down the drain), be sure to observe good chemical hygiene practices and use gloves and goggles when handling chemicals or sensitive equipment. Always use gloves when handling any glassware that will go into the turbidity meter.
 
@@ -163,14 +163,3 @@ Prepare an experimental setup that will allow you to measure the conductivity of
 Record a calibration curve for your sensor which plots the voltage output of your sensor against the concentration of your salt solution in units of grams per liter on logarithmic X and Y axes. Find a line of best fit including appropriate uncertainty measurements. Then use your sensor and your calibration curve to measure the salinity of the mystery salinity solution on the central table.
 
 Note: You may use [this](http://www.fivecreeks.org/monitor/sal.shtml) resource to convert from a measured conductivity to salinity and [this](https://www.hamzasreef.com/Contents/Calculators/SalinityConversion.php) resource to convert from salinity to conductivity.
-
-
-## Extra Credit 3. Pressure Measurement
-
-In this section you will replicate the pressure circuit on your E79 board to understand its operation.  After that you will modify the sensing circuit to optimize the range of the output voltage for the graduated cylinder test that we have used to test pressure sensor operation.
-
-Design an offset amplifier using an MCP601 with a 5V power supply to convert voltage from the [MPX5700](http://www.mouser.com/ds/2/302/MPX5700-783436.pdf) pressure sensor to the 0 V-3.3 V output range over a depth of 0-4 m.
-
-Create an experimental setup to vary the pressure on the sensor using a large graduated cylinder, water and plastic tubing.  Create a calibration curve relating your measured voltage to the applied pressure, and include appropriate measures of uncertainty.
-
-Return the pressure sensor to stock when you are done with it and be careful not to damage the pins while using it in your breadboard.
