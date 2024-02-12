@@ -100,7 +100,7 @@ Complete:
 
 - [ ] All table rows are filled in.
 - [ ] All uncertainties are included and correct.
-- [ ] Includes code showing how to 
+- [ ] Includes code showing how to calculate Steinhart-Hart coefficients.
 - [ ] Includes a plot of 1/T vs. R that shows measured points with uncertainty, fit based on datasheet equation, and fit based on extracted Steinhart-Hart coefficients.
 - [ ] Include plot of residuals from Steinhart-Hart fit.
 
@@ -152,3 +152,8 @@ Effort:
 Complete: 
 
 - [ ] Settling times are consistent with results from lecture.
+
+{{< pagebreak >}}
+## Extra Credit Writeups:
+
+We don't provide complete specifications for extra credit writeups, but they will be graded for effort and completeness like normal sections.  You need to provide a "mini-report" of <1 page for each extra credit section that you attempt. Put a page break between each extra credit mini-report.
