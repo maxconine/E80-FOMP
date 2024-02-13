@@ -54,8 +54,8 @@ Complete:
   - $\lambda$M is uncertainty in measured output Voltage
   - ERR is error between prediction and measurement
 - [ ] Predicted Voltages and measured voltages match to within uncertainty and are consistent with equations.
-- [ ] Predicted and measured Voltage at zero depth is close to 0.3 V.
-- [ ] Predicted Voltage at 1m depth is close to 3.0V
+- [ ] Predicted and measured Voltage at 0 m depth is close to 0.3 V or 3.0 V.
+- [ ] Predicted and measured Voltage at 40 cm depth is close to 0.3 V or 3.0 V (whichever is farthest from the 0 m measurement)
 
 | Depth (cm) | VOP (V) | $\lambda$V (V) | VOM (V) | $\lambda$M (V) | ERR (%) | 
 | -----------|---------|----------------|---------|----------------|---------|
@@ -68,7 +68,7 @@ Complete:
 Effort: 
 
 - [ ] Provides a picture of the thermistor interface circuit, including the pressure sensor
-- [ ] Provides a schematic of the thermistor interface circuit, including the pressure sensor
+- [ ] Provides a schematic of the thermistor interface circuit, including the thermistor divider.
 - [ ] Equation relating op-amp input Voltage to op-amp output Voltage is included.  May be incorrect if it looks like a good faith effort.
 
 Complete:
@@ -77,8 +77,8 @@ Complete:
 - [ ] Predicted and measured resistance values are reported with uncertainty for 0 °C and 20 °C temperatures.
 - [ ] Predicted and measured output voltages are reported with uncertainty for 0 °C and 20 °C temperatures.
 - [ ] Predicted Voltages and measured voltages match to within uncertainty and are consistent with equations.
-- [ ] Predicted and measured Voltage at 0 °C is close to 0.3 V.
-- [ ] Predicted and measured Voltage at 20 °C is close to 3.0 V.
+- [ ] Predicted and measured Voltage at 0 °C is close to 0.3 V or 3.0 V.
+- [ ] Predicted and measured Voltage at 20 °C is close to 0.3V or 3.0 V (whichever is farthest from the 0 °C measurement).
 
 {{< pagebreak >}}
 ## Report on Steinhart-Hart Fitting of Thermistor
