@@ -49,7 +49,7 @@ Water above 50 °C can cause scalds. Determine safety protocols for working with
 :::
 
 :::{.callout-note}
-The only constant-temperature bath in the lab is the 25 °C bath in the E80 lab (B171). Use your digital thermometer to monitor the temperatures of any other baths.
+The only constant-temperature bath in the lab is the 25 °C bath in the E80 lab (B171). Use your [digital thermometer](https://generaltools.com/deluxe-stem-thermometer) to monitor the temperatures of any other baths.
 :::
 
 ## Build a Pressure Sensor Interface Circuit

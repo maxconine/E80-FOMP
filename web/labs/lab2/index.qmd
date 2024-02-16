@@ -9,7 +9,6 @@ Submission Sheet: [html](/labs/lab2/submission.qmd) [Word](/labs/lab2/submission
 
 Prelab Help Sheet: [html](/labs/lab2/prelab.qmd)
 
-
 Writing Assignment: [html](/labs/lab2/lab2-writing.qmd)
 
 Writing Template: [html](/labs/lab2/lab2-writing-template.qmd) [Word](/labs/lab2/lab2-writing-template.docx)

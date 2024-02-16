@@ -7,7 +7,7 @@ Each week you will be expected to watch a set of videos and then take a multiple
 Links to the videos and supplemental material are provided below.  All quizzes can be found on Canvas.
 The slides for the two whole-class meetings are also provided.
 
-Note that in weeks 6 and 7, the order of Lectures/quiz/Lab are not the same for everyone. Odd numbered teams are in Group A and Even numbered teams are in Group B.
+Note that in weeks 6 and 7, the order of Lectures/quiz/Lab are not the same for everyone. 
 Please make sure prelab is done for the correct lab.
 
 Quizzes are due at noon (12 p.m.) on Mondays on Canvas during the first half of the semester.  See Canvas for the exact dates.
@@ -51,15 +51,15 @@ Quizzes are due at noon (12 p.m.) on Mondays on Canvas during the first half of 
 - [Nonlinear Regresssion Video](https://www.youtube.com/watch?v=aE4W-JYnGgQ)
 - [Steinhart-hart-fitting.m](https://drive.google.com/open?id=19N-lH7GH1XP0PHImxZM9N5_MRfb8FWuX)
 
-# Week 6: Underwater Acoustics (Group A) & Fluid Mechanics (Group B)
-| Group A | Group B|
-|---------|--------|
+# Week 6: Rotation Week 1
+| Odd Teams, e.g.: 21 | Even Teams, e.g.: 22 |
+|---------------------|----------------------|
 | [Underwater Acoustics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxF4HfyhYxnD4eD31wZkSvq) | [Fluid Mechanics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxFbfz1bAygXNHX5IJ4_vRi) |
 | [Slides](https://drive.google.com/drive/folders/1wlyxBH7Qco0LvU1Riqz3nqfAVviCSh8Q?usp=sharing) | [Slides](https://drive.google.com/open?id=1FSzWEEap-6UiNJplJt5-_KHzOAAomzfk) |
 
-# Week 7: Fluid Mechanics (Group A) & Underwater Acoustics (Group B)
-| Group A | Group B|
-|---------|--------|
+# Week 7: Rotation Week 2
+| Odd Teams, e.g.: 21 | Even Teams, e.g.: 22 |
+|---------------------|----------------------|
 | [Fluid Mechanics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxFbfz1bAygXNHX5IJ4_vRi) | [Underwater Acoustics](https://www.youtube.com/playlist?list=PLDA3QBjykWVxF4HfyhYxnD4eD31wZkSvq) | 
 | [Slides](https://drive.google.com/open?id=1FSzWEEap-6UiNJplJt5-_KHzOAAomzfk) | [Slides](https://drive.google.com/drive/folders/1wlyxBH7Qco0LvU1Riqz3nqfAVviCSh8Q?usp=sharing) |
 

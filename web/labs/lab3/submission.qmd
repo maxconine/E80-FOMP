@@ -46,8 +46,8 @@ All pictures of circuits in this report should adhere to the following specifica
 
 Effort: 
 
-- [ ] Provides a picture of the inverting amplifier
-- [ ] Provides a schematic of the inverting amplifier and stimulus
+- [ ] Provides a picture of the non-inverting amplifier
+- [ ] Provides a schematic of the non-inverting amplifier and stimulus
 
 Complete:
 
