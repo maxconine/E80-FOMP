@@ -103,7 +103,7 @@ In this subsection you will create a calibration curve that relates airspeed in 
    * is everyone wearing safety goggles?
    * is the test chamber free of loose debris?
 2. Power up the wind tunnel by pushing the green button labeled "START" on the gray box. 
-3. Adjust the fan speed with the knob on the RPM Controller while reading the RPM from the Fan Speed Display.  Adjust the fan speed from 15% to 55% of max fan speed (in increments of 10%). At each fan speed:   
+3. Adjust the fan speed with the knob on the RPM Controller while reading the RPM from the Fan Speed Display.  Adjust the fan speed from 15% to 55% of max fan speed (in increments of 5%). At each fan speed:   
     1. Measure the airspeed 
     2. Record the lift and drag forces exhibited by the force measurement stand at each RPM setting. These values represent a the lift and drag of the test apparatus, and should be subtracted from the measured lift and drag in future tests.
 4. Zero the speed in the wind tunnel and push the red button labeled "STOP" on the gray box.
