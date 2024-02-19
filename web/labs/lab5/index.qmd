@@ -114,14 +114,24 @@ Then carry out measurements in the tank
 We are using both benchtop electronics and water in this lab, and the two don't mix, so BE EXTREMELY CAREFUL when putting anything in the water, removing anything from the water or mounting anything near the water. Instructors will stop your experiments if they think they pose a water hazard to equipment.
 :::
 
+:::{.callout-note}
+Though this section shows that it's possible to measure a robot's position using power decay from a beacon, it's much more common and reliable to measure a robot's position using the time-of-flight of an acoustic pulse.  See @sec-tof for more details on how to use time-of-flight measurements for sounding.
+:::
 
 ## Sampling Audio with a Teensy
 
-This section requires that you use the [Teensy sampling rigs](https://drive.google.com/file/d/1E3q6aML1yzfEQCIf2IRF8aNnYXfuPZUK/view?usp=sharing)  that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output.  We provide software, [E80_Lab05_Teensy_Rig.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m) and [E80_Lab05_Teensy_Rig.ino](https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino) (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we're going to use that power to explore how sample rate affects real world data samples. 
+This section requires that you use the Teensy sampling rigs (shown in @fig-sampling-rig) that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output.  We provide software, [E80_Lab05_Teensy_Rig.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m) and [E80_Lab05_Teensy_Rig.ino](https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino) (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we're going to use that power to explore how sample rate affects real world data samples. 
 
-1. Connect your microphone to a Teensy sampling rig, 
-2. Connect the rig to your computer with a micro USB cable and then run [E80_Lab05_Teensy_Rig.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m).
-3. Use the software to measure vectors of sample data with sample rates of 10 kS/s and 100 kS/s (kilosamples per second).
+![Teensy sampling rig](img/teensy_sampling_rig.png){#fig-sampling-rig}
+
+1. Connect a tank microphone to a Teensy sampling rig, 
+2. Connect the rig to your computer with a micro USB cable
+3. Use the [E80_Lab05_Teensy_Rig.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m) software to measure vectors of sample data with sample rates of 10 kS/s and 100 kS/s (kilosamples per second).
+    1. Edit the Matlab script to set the COM port 
+    2. Edit the Matlab script to set the sampling frequency
+    3. Run the script
+    4. Your sampled data will be in the `micSignal` variable, so save that variable under another name. Note the sampling frequency and the number of samples.
+    5. Repeat steps 2, 3 and 4 for the second sampling frequency.
 4. Plot the magnitude of FFTs of the 10 kS/s and 100 kS/s sampled data. Describe any differences between the resulting graphs and explain what causes the differences.
 5. Plot the first 100 points of the time data for the 10 kS/s and 100 kS/s signals. Pay attention to the x axis of the signals.  Describe any differences in the measured data and explain why they are there.
 6. What is the minimum sampling rate you should use to measure signals in the tank? Prove it by sampling data at that frequency and presenting an FFT of that data.
@@ -134,7 +144,7 @@ Be sure to return electret microphones, power amplifier boards and speakers to t
 In this section, as always, we connect to your Teensy pins through the E80 motherboard, which has protection circuits designed to prevent damage to the Teensy.  
 :::
 
-## Extra Credit: Distance Measurement Based on Time-of-Flight Measurements
+## Extra Credit: Distance Measurement Based on Time-of-Flight Measurements {#sec-tof}
 
 Another common acoustic measurement is time-of-flight (ToF) range finding. ToF measurement relies on sending out a specially designed acoustic pulse from a speaker and measuring how long it takes for it to reach a microphone. Often the microphone is measuring reflections of your initial speaker pulse (eg. on a sounding vessel), but we'll get started by just sending our speaker pulse straight to our microphone.  
 

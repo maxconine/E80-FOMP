@@ -73,7 +73,7 @@ Quizzes are due at noon (12 p.m.) on Mondays on Canvas during the first half of 
 - [Autonomous Navigation Slides](https://drive.google.com/drive/folders/1yCA0z3uEAt4LO61vuYCOluFFPgQTbqYP?usp=sharing)
 - [Statistics of Integrals and Derivatives Video 1](https://www.youtube.com/watch?v=_0AcGK7asfM)
 - [Statistics of Integrals and Derivatives Video 2](https://www.youtube.com/watch?v=ej9O5ncO1iw)
-- [Statistics of Integrals and Derivatives Slides](/lectures/SLIDES20190117_01_TimeSeriesErrors.pdf)
+- [Statistics of Integrals and Derivatives Slides](/lectures/SLIDES_20190117_01_TimeSeriesErrors.pdf)
 - [Statistics of Integrals and Derivatives Accelerometer MATLAB Example](https://drive.google.com/open?id=1-jiIeGnTGc0ZuzfWS1xRK-mnt1NesF_Q)
 - [Statistics of Integrals and Derivatives Numerical Derivation Statistics MATLAB Demo.](https://drive.google.com/open?id=1uA-uhLO4cLXOAFCiALvTtgRjT2nDUVXY)
 

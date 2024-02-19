@@ -25,7 +25,10 @@ After successful completion of this lab, you will be able to:
 
 This lab will take place in the Engineering Computing Facility (ECF) in Parsons B178 and the wind tunnel room. E80 students should already have card access to Parsons B178. If you cannot access the room, please contact the Engineering Department Office. 
 
-You will be using COMSOL Multiphysics software in this lab. COMSOL is complicated software, and you will struggle to finish the lab if you do not read about its use and practice with it during prelab. You may practice using COMSOL and go through Granny Spark's COMSOL tutorials as part of prelab. However, you CANNOT run COMSOL simulations on LAB-RELATED objects outside of your designated lab time.  These objects include the cylindrical objects tested in the wind tunnel, the "flat plate wing" and the NACA 6412 wing. You also cannot use COMSOL during any other section's lab time slot because that can deprive students in lab of COMSOL licenses.
+You will be using COMSOL Multiphysics software in this lab. COMSOL is complicated software, and you will struggle to finish the lab if you do not read about its use and practiced with it during prelab. Here are the prelab rules for COMSOL:
+* You may practice using COMSOL and go through Granny Spark's COMSOL tutorials as part of prelab. 
+* You may not run COMSOL simulations on lab-related objects outside of your designated lab time.  These objects include the cylindrical objects tested in the wind tunnel, the "flat plate wing" and the NACA 6412 wing. 
+* You may not use COMSOL during any other section's lab time slot because that can deprive students in lab of COMSOL licenses.
 
 Each team will have exactly 60 minutes to use the wind tunnel to run experiments and collect data.  The order that teams are sent to the wind tunnel is random and determined at the start of the section, so be ready to go first! 
 
@@ -100,7 +103,7 @@ In this subsection you will create a calibration curve that relates airspeed in 
    * is everyone wearing safety goggles?
    * is the test chamber free of loose debris?
 2. Power up the wind tunnel by pushing the green button labeled "START" on the gray box. 
-3. Adjust the fan speed with the knob on the RPM Controller while reading the RPM from the Fan Speed Display.  Adjust the fan speed from 20% to 90% of max fan speed (in increments of 10%). At each fan speed:   
+3. Adjust the fan speed with the knob on the RPM Controller while reading the RPM from the Fan Speed Display.  Adjust the fan speed from 15% to 55% of max fan speed (in increments of 10%). At each fan speed:   
     1. Measure the airspeed 
     2. Record the lift and drag forces exhibited by the force measurement stand at each RPM setting. These values represent a the lift and drag of the test apparatus, and should be subtracted from the measured lift and drag in future tests.
 4. Zero the speed in the wind tunnel and push the red button labeled "STOP" on the gray box.
@@ -132,7 +135,7 @@ Using these tools or the card requires that you know:
    1. Install the nose on the cylinder.  **PLEASE BE GENTLE!** You can break the force measurement stand.  Ask for help if you think you are pushing hard.
    2. Safely power up the wind tunnel by performing the same checks as instruction 1 in @sec-calibrate.
    3. Record values for lift and drag shown on the LVDT box at zero flow velocity.  These are instrument offsets that must be subtracted from your future measurements.
-   4. Measure the drag force on the object from 20% to 90% of max fan speed (in increments of 10%).  
+   4. Measure the drag force on the object from 15% to 55% of max fan speed (in increments of 5%).  
    5. Bring the flow back down to zero and press the red "STOP" button.
 
 ### Measuring the Drag Forces on a Scale Robot Model 
@@ -140,7 +143,7 @@ Using these tools or the card requires that you know:
 1. Safely open the test chamber using the same steps as instruction 3 in @sec-know.
 2. Mount the 1/3 scale model of the robot in the wind tunnel chamber using a zip tie as shown in @fig-scaled. Pay attention to its orientation.  
 3. Safely power up the wind tunnel by performing the same checks as instruction 1 in @sec-calibrate.
-4. Record necessary calibration information, then record drag force on the object from 20%-90% of max fan speed (in increments of 10%).
+4. Record necessary calibration information, then record drag force on the object from 15%-55% of max fan speed (in increments of 5%).
 
 :::{#fig-scaled layout-ncol=3}
 ![](img/IMG_0319.png)
