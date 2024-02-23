@@ -11,7 +11,7 @@ website:
         text: Lectures
       - text: Labs
         menu:
-        - href: labs/lab_overview
+        - href: labs/overview
           text: Lab Overview
         - href: labs/lab0
           text: 'Lab 0: Tutorial & Skills Review'
@@ -27,12 +27,26 @@ website:
           text: 'Lab 5: Acoustics'
         - href: labs/lab6
           text: 'Lab 6: Fluids'
-        - href: labs/lab7
-          text: 'Lab 7: Navigation'
-      - href: project/
-        text: Project
-      - href: reference/
-        text: Reference Designs
+      - text: Project
+        menu: 
+        - href: project/overview
+          text: Overview
+        - href: project/proposal
+          text: Design and Proposal
+        - href: project/navigation
+          text: Navigation Jump Start
+        - href: project/build
+          text: Build and Integrate
+        - href: project/field
+          text: Field Deployment
+        - href: project/report
+          text: Present and Report
+      - text: References
+        menu:
+        - href: reference/inventory
+          text: Lab Inventory
+        - href: reference/design
+          text: Example Designs
       - href: history/
         text: History
     right:

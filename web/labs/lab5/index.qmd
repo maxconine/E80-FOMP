@@ -21,7 +21,7 @@ After successful completion of this lab, you will be able to:
 - [ ] Use the gain-bandwidth product of an op-amp to predict the achievable maximum gain.
 - [ ] Describe the effect of multipath on the amplitudes of acoustic measurements.
 
-This is a rotation lab, so not all teams will be working on this lab in the same week.  Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on [lab 6](lab6/index.qmd).  Even numbered teams  will do this lab in week 7, while Odd numbered teams work on lab 6.  Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!
+This is a rotation lab, so not all teams will be working on this lab in the same week.  Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on [lab 6](/labs/lab6/index.qmd).  Even numbered teams  will do this lab in week 7, while Odd numbered teams work on lab 6.  Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!
 
 ## Introduction to the FFT
 
@@ -94,7 +94,9 @@ You may need to solder leads to this electret microphone to plug it into your br
 
 ## Distance Measurement Based On Amplitude
 
-One way to locate your robot in the water is to listen to three acoustic beacons and calculate your distance to each of them based on the beacon power received at your robot. Three beacons are installed in the test tank and will be constantly emitting sine waves of approximately 9 kHz, 11 kHz and 13 kHz.   You will need to use the microphones in the tank room, which have long wires, to put a microphone into the tank and measure the signals coming out of these beacons.  Analyzing microphone data with the FFT will be essential because the signals of all of the beacons are present in the tank at the same time.
+One way to locate your robot in the water is to listen to three acoustic beacons and calculate your distance to each of them based on the beacon power received at your robot. Three beacons are installed in the test tank and will be constantly emitting sine waves of approximately 9 kHz, 11 kHz and 13 kHz, and that setup is pictured in @fig-tank.   You will need to use the microphones in the tank room, which have long wires, to put a microphone into the tank and measure the signals coming out of these beacons.  Analyzing microphone data with the FFT will be essential because the signals of all of the beacons are present in the tank at the same time.
+
+![Test tank with beacons and long microphones](img/tank_room_with_beacons.jpg){#fig-tank}
 
 Prepare for your experiment by making models of what you expect to see
 

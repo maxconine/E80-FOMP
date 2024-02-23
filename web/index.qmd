@@ -70,7 +70,7 @@ Almost all work in E80 is completed in teams.  Some details about teams are belo
 - Sometimes registration limits in a class will require teams of three or five members to be formed.
 - These teams are designated using a 2 digit number where the first is your section number and the second is your team's number (e.g. section 1's team 1 is 11).
 - You must report your team number on all assignments. 
-- For three of the labs (2, 3, and 5), you will need to split your team into 2 sub-teams.
+- For three of the labs (2, 3, and 4), you will need to split your team into 2 sub-teams.
 - A different sub-team must be used for each of these Labs.
 - Team assignments will be for the duration of the course.
 - If you're having problems on your team, talk to a professor or staff member *early* so we can try to help.
@@ -146,11 +146,11 @@ If the initial version of a submitted assignment does not meet specs, it may be 
 
 #### Final Presentation
 
-- Each team will make a final presentation during Presentation Days, on Wednesday, May 1st, 2024. A detailed schedule will be posted ASAP. The presentation is 15-minutes long followed by a 10-minute Q&A session. The Final Presentation guidelines and rubric are found on the [Final Project page](/labs/project).
+- Each team will make a final presentation during Presentation Days, on Wednesday, May 1st, 2024. A detailed schedule will be posted ASAP. The presentation is 15-minutes long followed by a 10-minute Q&A session. The Final Presentation guidelines and rubric are found on the [Final Project Report and Presentation page](/labs/project/report).
 
 #### Final Report
 
-- A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of [technical English](https://www.mit.edu/course/21/21.guide/). (see also [this article](https://www.mit.edu/course/21/21.guide/).). A rough draft of your final report is due at 11:59 PM on 4/26/24. The final draft is due at 11:59 PM on 5/1/2024. The Final Report guidelines are found on the Final Project page.
+- A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of [technical English](https://www.mit.edu/course/21/21.guide/). A rough draft of your final report is due at 11:59 PM on 4/26/24. The final draft is due at 11:59 PM on 5/1/2024. The Final Report guidelines are found on the Final Project page.
 
 #### Participation
 

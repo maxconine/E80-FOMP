@@ -32,7 +32,7 @@ You will be using COMSOL Multiphysics software in this lab. COMSOL is complicate
 
 Each team will have exactly 60 minutes to use the wind tunnel to run experiments and collect data.  The order that teams are sent to the wind tunnel is random and determined at the start of the section, so be ready to go first! 
 
-This is a rotation lab, so not all teams will be working on this lab in the same week.  Even numbered teams (12, 24, 36, etc.) will do this lab in week 6, while Odd numbered teams (12, 24, 36, etc.) work on [Lab 5](lab5/index.qmd).  Odd numbered teams will do this lab in week 7, while Even numbered teams work on lab 5.  Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!
+This is a rotation lab, so not all teams will be working on this lab in the same week.  Even numbered teams (12, 24, 36, etc.) will do this lab in week 6, while Odd numbered teams (12, 24, 36, etc.) work on [Lab 5](/labs/lab5/index.qmd).  Odd numbered teams will do this lab in week 7, while Even numbered teams work on lab 5.  Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!
 
 :::{.callout-warning}
 ## Safety Tips for the Wind Tunnel
