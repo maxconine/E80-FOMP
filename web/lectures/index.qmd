@@ -64,10 +64,10 @@ Quizzes are due at noon (12 p.m.) on Mondays on Canvas during the first half of 
 | [Slides](https://drive.google.com/open?id=1FSzWEEap-6UiNJplJt5-_KHzOAAomzfk) | [Slides](https://drive.google.com/drive/folders/1wlyxBH7Qco0LvU1Riqz3nqfAVviCSh8Q?usp=sharing) |
 
 # Project Kickoff Meeting
-- [Project Kickoff Slides](/web/presentation/project/project-presentation.qmd)
-- [Abstract Writing Assignment](/web/presentation/project/abstract-writing-assignment.qmd)
-- [Proposal Template](/web/project/proposal/template.qmd)
-- [Proposal Specifications](/web/project/proposal/submission.qmd)
+- [Project Kickoff Slides](/presentation/project/project-presentation.qmd)
+- [Abstract Writing Assignment](/presentation/project/abstract-writing-assignment.qmd)
+- [Proposal Template](/project/proposal/template.qmd)
+- [Proposal Specifications](/project/proposal/submission.qmd)
 
 # Project Jump Start: Autonomous Navigation
 - [Autonomous Navigation](https://www.youtube.com/playlist?list=PLDA3QBjykWVw9UDHYpLBnloHrAwpZyTbb)
