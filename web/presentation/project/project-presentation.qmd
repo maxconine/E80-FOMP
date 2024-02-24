@@ -8,7 +8,7 @@ format:
 ## Agenda for Today
 
 -   Logistics & Schedule
--   Resources
+-   Project Resources
 -   Project Requirements
 -   Design Activity
 -   Project Deliverables
@@ -134,6 +134,15 @@ You must collect data from your deployments for your final report.
 
 # Project Launch
 
+## Project Requirements {.smaller}
+
+-   Autonomous deployment for at least one minute with active position control.
+-   The deployment must end at a place where the robot can be recovered.
+-   Sensor package
+    -   Deployed on or from your AUV
+    -   Must use at least three sensors with at least two unique electrical interfaces.
+    -   The IMU, GPS, and motor current sensors don't count toward your three sensors.
+
 ## What we give you to start from
 
 Default Robot code base (under `/Default_Robot/` directory in the Git repository)
@@ -148,6 +157,8 @@ Some key pieces:
 
 ![](img/dana-point-map.png)
 
+Kayaks are also available to accompany your robot out into the center of the harbor.
+
 ## Resources: Staff Time
 
 -   Profs in lab hours
@@ -158,7 +169,7 @@ Some key pieces:
 ## Resources: Stuff
 
 -   Anything in lab – sign out expensive stuff & submit error reports for anything that breaks.
-    -   The main E80 main PCBs and protoboards
+    -   The E80 main PCBs and protoboards
     -   E80 frames, boxes and penetrator bolts
 -   Stuff outside lab: \$50 budget per team as long as you follow purchasing instructions
 
@@ -184,7 +195,8 @@ Some key pieces:
 
 ## Resources: Our Waterproof Boxes
 
-Can fit about 6 wires in a penetrator Drill on flat faces of box: need flat rubber washers on box surface.
+- Can fit about 6 wires in a penetrator bolt.
+- Drill on flat faces of box: need flat rubber washers on box surface.
 
 +:----------------------------:+:---------------------------:+:----------------------------:+
 | ![](img/penetrator-bolt.png) | ![](img/waterproof-box.png) | ![](img/step-drill-bits.png) |
@@ -212,7 +224,7 @@ Can fit about 6 wires in a penetrator Drill on flat faces of box: need flat rubb
 
 ## Resources: Our Protoboard
 
-Connect to motherboard with right angle header. Place below it.
+Protoboard connects to the motherboard with a right angle header and mounts above the main PCB.
 
 ::: columns
 ::: {.column width="50%"}
@@ -251,17 +263,8 @@ Connect to motherboard with right angle header. Place below it.
 +-----------------------+---------------------------------------+
 
 -   **Electronics:** Audio, Digital interfaces, Communication, Telemetry
--   **Software:** Time of flight Advanced navigation, Diving
+-   **Software:** Time of flight, Advanced navigation, Diving
 -   **Mechanical:** Shape, Sensor placement, Winch, Diving, Tethers
-
-## Project Requirements {.smaller}
-
--   Autonomous deployment for at least one minute with active position control.
--   The deployment must end at a place where the robot can be recovered.
--   Sensor package
-    -   Deployed on or from your AUV
-    -   Must use at least three sensors with at least two unique electrical interfaces.
-    -   The IMU, GPS, and motor current sensors don't count toward your three sensors.
 
 # Final Project Design Exercise
 
@@ -317,8 +320,8 @@ Recall the steps of the Engineering Design Process.
 ## Round 3: How do you want to measure it? {.smaller}
 
 -   What are your...
-    -   Independent variable(s): e.g., $y(t)$, $z(x,y)$
-    -   Dependent variable(s): e.g., $t$, $x$, $y$
+    -   Independent variable(s): e.g., $t$, $x$, $y$
+    -   Dependent variable(s): e.g., $y(t)$, $z(x,y)$
 -   Specify for each variable
     -   Units
     -   Expected ranges
