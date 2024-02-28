@@ -11,8 +11,6 @@ Prelab Help Sheet: None for this lab, but you've got this!  Review previous ones
 
 Writing Assignment: [html](./writing.qmd)
 
-Writing Template: [html](./writing-template.qmd) [docx](./writing-template.docx)
-
 ## Introduction
 
 In this lab you will work as a team of four to use acoustic measurements to find the position of your robot in the test tank.  The acoustic measurements will depend on listening to beacons at fixed locations in the tank, and guessing your position relative to them.  Because there will be many beacon signals in the tank at once, you will need to use Fourier analysis to understand the behavior of the signals. The purpose of this lab is to demonstrate the power of underwater acoustic measurements and to force you to wrangle early and often with Fourier analysis.
@@ -25,7 +23,7 @@ After successful completion of this lab, you will be able to:
 - [ ] Use the gain-bandwidth product of an op-amp to predict the achievable maximum gain.
 - [ ] Describe the effect of multipath on the amplitudes of acoustic measurements.
 
-This is a rotation lab, so not all teams will be working on this lab in the same week.  Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on [lab 6](/labs/lab6/index.qmd).  Even numbered teams  will do this lab in week 7, while Odd numbered teams work on lab 6.  Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!
+This is a rotation lab, so not all teams will be working on this lab in the same week.  Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on [Lab 6](../lab6/index.qmd).  Even numbered teams  will do this lab in week 7, while Odd numbered teams work on lab 6.  Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!
 
 ## Introduction to the FFT
 

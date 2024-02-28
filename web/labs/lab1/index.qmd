@@ -26,7 +26,7 @@ After successful completion of this lab, you will be able to...
 
 Lab 1 is completed in teams of 4. 
 
-Be sure to read the [Lab Overview](../lab_overview/index.qmd) to learn about safety requirements, expensive equipment handling and other rules.  You must review all SAFETY QUESTION boxes below as part of prelab.  If you ever reach a safety question box and either can't answer it or feel unsure, grab an instructor.
+Be sure to read the [Lab Overview](../overview/index.qmd) to learn about safety requirements, expensive equipment handling and other rules.  You must review all SAFETY QUESTION boxes below as part of prelab.  If you ever reach a safety question box and either can't answer it or feel unsure, grab an instructor.
 
 At the end of the lab, you need to submit a completed submission sheet (see links above) on Canvas.  Specifications for each part of the lab are included on the submission sheet.Recall that **no late work is accepted**, we will grade whatever is submitted before the deadlines. Since multiple submissions are allowed, you may want to submit a less-than-perfect draft early as insurance against missing the deadline.
 
