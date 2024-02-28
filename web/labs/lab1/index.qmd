@@ -5,11 +5,11 @@ number-sections: true
 
 Team size: 4
 
-Submission Sheet: [html](/labs/lab1/submission.qmd) [docx](/labs/lab1/submission.docx)
+Submission Sheet: [html](./submission.qmd) [docx](./submission.docx)
 
-Prelab Help Sheet: [html](/labs/lab1/prelab.qmd)
+Prelab Help Sheet: [html](./prelab.qmd)
 
-Writing Assignment: [html](/labs/lab1/lab1-writing.qmd)
+Writing Assignment: [html](./writing.qmd)
 
 ## Introduction
 

@@ -9,9 +9,9 @@ Submission Sheet: [html](./submission.qmd) [docx](./submission.docx)
 
 Prelab Help Sheet: [html](./prelab.qmd)
 
-Writing Assignment: [html](./lab4-writing.qmd)
+Writing Assignment: [html](./writing.qmd)
 
-Writing Template: [html](./lab4-writing-template.qmd) [Word](./lab4-writing-template.docx)
+Writing Template: [html](./writing-template.qmd) [docx](./writing-template.docx)
 
 
 ## Introduction

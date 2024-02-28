@@ -5,9 +5,13 @@ number-sections: true
 
 Team size: 4
 
-Submission Sheet: [html](/labs/lab5/submission.qmd) [Word](/labs/lab5/submission.docx)
+Submission Sheet: [html](./submission.qmd) [docx](./submission.docx)
 
 Prelab Help Sheet: None for this lab, but you've got this!  Review previous ones for ideas of how to prepare.
+
+Writing Assignment: [html](./writing.qmd)
+
+Writing Template: [html](./writing-template.qmd) [docx](./writing-template.docx)
 
 ## Introduction
 
