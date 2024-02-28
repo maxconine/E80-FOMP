@@ -26,9 +26,10 @@ After successful completion of this lab, you will be able to:
 This lab will take place in the Engineering Computing Facility (ECF) in Parsons B178 and the wind tunnel room. E80 students should already have card access to Parsons B178. If you cannot access the room, please contact the Engineering Department Office. 
 
 You will be using COMSOL Multiphysics software in this lab. COMSOL is complicated software, and you will struggle to finish the lab if you do not read about its use and practiced with it during prelab. Here are the prelab rules for COMSOL:
-* You may practice using COMSOL and go through Granny Spark's COMSOL tutorials as part of prelab. 
-* You may not run COMSOL simulations on lab-related objects outside of your designated lab time.  These objects include the cylindrical objects tested in the wind tunnel, the "flat plate wing" and the NACA 6412 wing. 
-* You may not use COMSOL during any other section's lab time slot because that can deprive students in lab of COMSOL licenses.
+
+- You may practice using COMSOL and go through Granny Spark's COMSOL tutorials as part of prelab. 
+- You may not run COMSOL simulations on lab-related objects outside of your designated lab time.  These objects include the cylindrical objects tested in the wind tunnel, the "flat plate wing" and the NACA 6412 wing. 
+- You may not use COMSOL during any other section's lab time slot because that can deprive students in lab of COMSOL licenses.
 
 Each team will have exactly 60 minutes to use the wind tunnel to run experiments and collect data.  The order that teams are sent to the wind tunnel is random and determined at the start of the section, so be ready to go first! 
 
