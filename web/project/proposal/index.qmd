@@ -61,6 +61,8 @@ Completing this budget will require you to name specific sensors and mechanical 
 :::{.callout-note}
 ## Caveat emptor! i.e.: Let the Buyer Beware
 
+* Surface mounted (SMT) parts are generally hard for students to work with.  You need to buy an adapter board for your part if you are buying something surface mounted.
+* If you use a part with a digital interface, be careful of I2C, UART and SPI.  Using any of these will require a bigger software effort than sampling an analog signal.
 * We have found that off the shelf ultrasound transducers don't perform well underwater.  Though it's hard, it's better to build your own out of our parts.
 :::
 
@@ -120,7 +122,7 @@ You may find the design files for the PCBs you will use helpful while coming up 
 * Protoboard 
     * [schematic](https://drive.google.com/open?id=1pDpDoSiCln73AbEeGSCm-o7L3ETTjlG9), 
     * [layout](https://drive.google.com/open?id=1VT_N11I8Alo8cQPUag5moUuXnGed80gd), 
-    * [CAD files](https://drive.google.com/open?id=1NZ2dgC0PsSTcEsx0r2AD4S_84Wv5dpuq))
+    * [CAD files](https://drive.google.com/open?id=1NZ2dgC0PsSTcEsx0r2AD4S_84Wv5dpuq)
 
 
 

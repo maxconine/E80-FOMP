@@ -119,7 +119,7 @@ We are using both benchtop electronics and water in this lab, and the two don't 
 :::
 
 :::{.callout-note}
-Though this section shows that it's possible to measure a robot's position using power decay from a beacon, it's much more common and reliable to measure a robot's position using the time-of-flight of an acoustic pulse.  See @sec-tof for more details on how to use time-of-flight measurements for sounding.
+Though this section shows that it's possible to measure a robot's position using power decay from a beacon, it's much more common and reliable to measure a robot's position using the time-of-flight of an acoustic pulse.  See the time-of-flight [reference design](/reference/design/) for more details on how to use time-of-flight measurements for sounding.
 :::
 
 ## Sampling Audio with a Teensy
@@ -147,65 +147,3 @@ Be sure to return electret microphones, power amplifier boards and speakers to t
 :::{.callout-note}
 In this section, as always, we connect to your Teensy pins through the E80 motherboard, which has protection circuits designed to prevent damage to the Teensy.  
 :::
-
-## Extra Credit: Distance Measurement Based on Time-of-Flight Measurements {#sec-tof}
-
-Another common acoustic measurement is time-of-flight (ToF) range finding. ToF measurement relies on sending out a specially designed acoustic pulse from a speaker and measuring how long it takes for it to reach a microphone. Often the microphone is measuring reflections of your initial speaker pulse (eg. on a sounding vessel), but we'll get started by just sending our speaker pulse straight to our microphone.  
-
-You need to be able to carefully control the signals being sent from your speaker in this section, and you need to be particularly careful to avoid broadcasting at any of the beacon frequencies. Tou will send a burst of sine waves, i.e.: a small number of sine wave cycles, at a frequency higher than 14 kHz. We can accomplish this by using internally triggered burst modulation, an advanced feature of the old signal generators (the [HP/Agilent 33120A](http://www.eng.hmc.edu/NewE80/PDFs/HP33120A_UserGuide.pdf)). This function is not available on the function generators in your oscilloscope. You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.
-
-* Turn burst modulation mode on: Shift + the ramp/burst button / The text 'burst' will be highlighted at the top of the screen.
-* Turn burst modulation mode off: Shift + the ramp/burst button / The text 'burst' will no longer be highlighted at the top of the screen.
-* Turn manual triggering on and internal triggering off: Shift + the TRIG button / The text 'trig' will be highlighted at the top of the screen
-* Turn manual triggering off and internal triggering on: Shift + the TRIG button / The text 'trig' will no longer be highlighted at the top of the screen
-* Change the number of cycles sent out in each burst or the burst repetition rate: 
-* Shift + Enter / Screen says "A: Mod Menu,"
-* v      / Screen says "AM Shape,"
-* >      / Screen says "AM Source,"
-* >      / Screen says "FM Shape,"
-* >      / Screen says "Burst CNT, "
-* v      / Screen says some number."         OR         > / "Burst Rate," and then V / "some number."
-* Edit the number you see and press enter to save the setting.
-
-You will be using Dayton [DAEX25W-8](https://drive.google.com/open?id=1Jrxe618k8KY_t4pc5sp_lyUTn6-bCDne) Audio Exciters as speakers to convert voltage signals into acoustic signals. These speakers, like most speakers, have very low input impedance. What is their impedance? Calculate the maximum power you could drive into them using one of the old [HP/Agilent 33120A](http://www.eng.hmc.edu/NewE80/PDFs/HP33120A_UserGuide.pdf) signal generators. You need to account for the output impedance of the signal generator in this calculation. Audio amplifiers, like the [LM384](http://www.ti.com/lit/ds/symlink/lm384.pdf), help us to bypass this problem. They are designed to drive large amounts of power through speakers. What is the maximum average power an LM384 can drive into a DAEX25W-8?  
-
-We have created a power amplifier board containing an LM384 to allow you to drive your speakers. Follow [these instructions](https://docs.google.com/document/d/1qWEORVg34CGcCEvArqbF1Zvz5JboWvJmLXS1v33wLos/edit?usp=sharing) to use the driver board. You only have access to one power supply in the tank room, so you'll need to power your microphone amplifier off the same rails as the LM384 amplifier board. Be careful not to provide too much voltage to the microphone amplifier.
-
-You are measuring in a noisy environment (beacons, other teams, etc), so measuring your received signal will also depend on carefully timing the snapshot that your oscilloscope takes. By gathering data that is synchronized with the signal you are sending and averaging over many samples, you can cancel out signals that are not at the same frequency as the burst repetition rate of your signal. This is called coherent averaging. Set this up using the following steps:
-
-
-
-* Use a second oscilloscope channel to probe the output of your function generator (or attach the trigger output of your function generator to your scope's trigger input) 
-* Trigger your oscilloscope on the channel attached to the output of the function generator (or on the trigger input)
-* Set your oscilloscope to normal mode acquisition (so that it will only capture a new screen of data when it receives a trigger) and adjust the horizontal position of your oscilloscope trigger so that you don't waste samples recording data before you send out a burst.   
-* Turn on averaging on your oscilloscope using the Acquisition/Mode button. 
-
-Affix your speaker to the wall and move your microphone to different distances away from it. Measure the time of flight to your receiver to create a calibration curve of distance vs. measured time of flight. Include an ideal analytical calculation of time-of-flight vs. distance on your calibration curve and compare it to your data. How long should a sound wave take to propagate from your speaker to the other side of the pool? How long for a round trip? A schematic of the test tank can be found [here](https://drive.google.com/file/d/0BwiB3SVueuOpY182bENDQmwwWU0/view?usp=sharing&resourcekey=0-_8rrYHgHU7tybj0cLFDteA). If you're feeling particularly bold, you can try putting your speaker next to your microphone to measure a reflection off of something.
-
-You may refer to [this picture](https://drive.google.com/file/d/1oBBkm4o01ZZupTHBEN3McYiGxioi8_sz/view?usp=sharing) of an example range finding setup. As mentioned in the introduction, it is extremely important that your electronics and the tank water are not mixed. [Use tape to hold electronics down](https://drive.google.com/file/d/1MLQDMKdA0Lh1eyxujIAGwgewM1vTXVeF/view?usp=sharing) so they can't fall into the tank, and [keep bench top equipment as far from the tank edge as possible](https://drive.google.com/file/d/1MLQDMKdA0Lh1eyxujIAGwgewM1vTXVeF/view?usp=sharing). Always dry your test apparatus with a towel as you remove it from the water and be mindful of nearby electrical setups. This is an opportunity for some careful mechanical design: a little PVC can go a long way towards making your setup work well. Include one to three pictures of your experimental setup on the table and pool edge in your submission sheet. These pictures will be graded on safety and quality of construction. 
-
-
-## Extra Credit: Velocity Detection from Doppler Shift
-
-It is possible to use more complex modulation of the signal that your speaker emits to learn more about your robot. In this section you will use a frequency modulated sine wave to measure the velocity of your robot by leveraging the Doppler effect. This type of measurement is called a frequency modulated continuous wave (FMCW) measurement because, unlike your time of flight experiment, you are not sending out bursts of signal.
-
-Use the signal generator to generate a triangle frequency modulated FMCW signal to drive into your speaker.  Instructions to do so can be found in the manual. Set the frequency deviation to fill your channel, the modulation frequency to 10 Hz, and the modulation shape to be a triangle.
-
-You will need a "true" measurement of velocity to compare against your Doppler measured velocity. We will record video of your robot and analyze it with frame tracking software. [VLC](http://www.videolan.org/vlc/index.html) works well as capture software, and we recommend [tracker](http://physlets.org/tracker/) for tracking software (though some students have used [video-physics](https://www.vernier.com/products/software/video-physics)). Attach one of the USB web cameras to your computer and build a PVC frame so that it has a top-down view of your robot.  Make sure a length reference like a meter stick is visible in the image that you capture. Attach a brightly colored piece of pool noodle to your robot so that it is visible above the water. This will enable you to use auto tracking features in the video analysis software. Test your image capture / velocity measurement system before deploying your robot to be sure that it is working.
-
-Use a claw hand or a piece of PVC to move your receiver through the water while driving the transmitter with your FMCW wave and recording the received audio. Also record video of the test using your image tracking system. It's easiest to carry out your recordings by taking a very long acquisition on the oscilloscope which you start manually by pressing the force trigger button.
-
-Use the instructions in [this](https://drive.google.com/file/d/0B7Ols9Km9Pa1Z205RDZ6SDczck0/view?usp=sharing) document to process your received audio and extract the velocity as a function of time from your received FMCW. Bear in mind that you need to isolate your velocity signal before doing any signal processing, so don't be afraid to take an FFT and filter out other channels before processing your data. Also extract velocity from your recorded video. Generate a plot comparing your Doppler velocity against the velocity measured using your image capture system.
-
-
-
-## Extra Credit: Self-Powered Velocity Measurements
-
-Affix your speaker and microphone to your AUV and take velocity measurements while it is driving under its own power as in lab 1. Compare logged accelerometer data, image capture system data and Doppler data.
-
-
-## A Note for the Project: 
-
-You won't be able to use our audio amplifier boards during the final project, but it's pretty easy to whip up your own LM384 on your protoboard. You can find the reference design for a typical 5 W amplifier in the LM384 datasheet. This reference design involves using a [potentiometer](http://www.resistorguide.com/potentiometer/) for volume control, which you can probably replace with a fixed divider or omit depending on your design. Place an extra 4.7 µF bypass capacitor on the supply rails (not the bypass pin) in addition to your normal bypassing. Your amplifier will be unstable without this extra capacitor, so it may be educational to remove the capacitor and observe the amplifier output to understand exactly what bypassing does for you.
-
-Notice this design has a capacitor in series with the speaker. This is done for two reasons: speakers can be damaged by DC current, and the audio response of the speaker is linked to relatively high frequency oscillations. The capacitor lets high frequencies through and stops DC. This technique of driving an output through a series capacitor is called AC coupling. You'll probably drive the input from a Teensy, but this input likes to have zero centered input signals, so we recommend AC coupling the input too.

@@ -45,8 +45,12 @@ website:
         menu:
         - href: reference/inventory
           text: Lab Inventory
+        - href: reference/equipment
+          text: Lab Equipment
+        - href: reference/boards
+          text: Board Information
         - href: reference/design
-          text: Example Designs
+          text: Reference Designs
       - href: history/
         text: History
     right:

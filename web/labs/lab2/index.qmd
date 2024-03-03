@@ -188,22 +188,4 @@ Standard practice recommends both a 10 µF electrolytic capacitor and a 0.1 µF 
 For dual supplies the capacitors run between V+ and ground, and V– and ground. For single-sided supplies, they run between V+ and ground. The circuit below shows a unity-gain buffer amp with dual power supplies and bypass capacitors.
 :::
 
-## Extra Credit 1
-
-How do the accuracies of the Teensy and multimeter vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz, 10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy's behavior in @sec-teensy-analog and @sec-dividers when selecting the signal.  
-
-The definition of "accuracy" can be slippery here, so you should think carefully about it as you compose your answer. This is particularly true for the Teensy, which will return a sample to you that consists of many numbers. Will you consider the accuracy of a single data point (compared to what)? Of a single cycle? Or of some kind of aggregation of cycles that includes uncertainty? Consider carefully.
-
-## Extra Credit 2
-
-| Z1           | Z2           | Test Frequencies |
-|--------------|--------------|------------------|
-| 10 k$\Omega$ | 0.47 $\mu$F  | 1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz | 
-| 0.47 $\mu$F  | 10 k$\Omega$ | 1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz |
-| 220 $\Omega$ | 1 $\mu$F     | 1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz |
-| 10 M$\Omega$ | 1000 pF      | 1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz |
-
-: Table of RC divider measurements {#tbl-rc}
-
-Build the circuits in table @tbl-rc in the same manner as the dividers in @sec-dividers, then repeat the predictions and measurements as in @sec-dividers. Vary the input frequency to each of the values listed in the "Test Frequencies" column as you perform these measurements. Use an input amplitude of 5Vpp and, if using the Teensy, be sure to offset the signal. Note that the multimeter can measure capacitance. Measure the output voltages with any appropriate equipment (justify your choice). Measure the phase difference between the input and output Voltages where possible. Explain the results of your measurements and possible function for each circuit. Consider carefully in what (graphical) format(s) you want to present your results. 
 

@@ -80,6 +80,6 @@ title: E80 Lab Inventory
 * Go Pro cameras - limited supply.  Must provide a very good design.
 * pH sensor - limited supply. Must provide a very good design.
 * USB cameras - limited supply. First come first served. (your phones are better)
-* DAEX25W Speaker ~ 6x available for prototyping but not for permanent installation.  Buy your own for your robot: unit price is ~$25.
+* DAEX25W Speaker ~ 6x available for prototyping but not for permanent installation.  Buy your own for your robot.
 
 

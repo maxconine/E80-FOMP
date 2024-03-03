@@ -23,7 +23,7 @@ This project is structured as a set of cumulative deliverables which will help y
 |  3   | [Soldered Protoboard Demo](/project/build)       | An ungraded, but highly recommended, demo of soldered circuits to a prof     | 
 |  4   | [Deploy Integrated Robot](/project/field)        | None, though deployment during your section at Phake Lake is the first chance to get data for your report.   | 
 |  5   | [Rebuild and Final Deployment](/project/field)   | None, though deployment *on Saturday* at Dana Point is the second and last chance to get data for your report. | 
-|  6   | [Analyze Data](/project/report)                  | Rough draft of your report. Submit on Canvas on Friday.                                                                |
+|  6   | [Analyze Data](/project/report)                  | Rough draft of your report. Submit on Canvas on Friday                       |
 |  7   | [Final Presentation and Report](/project/report) | Upload presentation slides and report to Canvas by 11:59PM the night before. |
 __________
 - **Saturday 4/20/2024**   <br>Relaunch at Dana Point<br>**ALL STUDENTS ARE EXPECTED TO ATTEND THE SATURDAY LAUNCH**

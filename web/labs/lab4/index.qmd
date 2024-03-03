@@ -29,15 +29,6 @@ After successful completion of this lab, you will be able to:
 
 This lab will be carried out as sub-teams of two.  Policies for sub-teams are discussed in [Lab 2](/labs/lab2/index.qmd).
 
-- [ ] Relate the resistance of a thermistor to its temperature using the Steinhart-Hart Equation.
-- [ ] Perform a fit to a non-linear function of data
-- [ ] Use NIST tables to interpret thermocouple Voltages
-- [ ] Use a multimeter to measure temperature with a thermocouple
-- [ ] Describe the basics of cold junction compensation
-- [ ] Comment on the relative speed of solid-state linear temperature sensors, thermistors and thermocouples.
-
-This lab will be carried out as sub-teams of two.  Policies for sub-teams are discussed in [Lab 2](/labs/lab2/index.qmd).
-
 **IT IS YOUR TEAM'S RESPONSIBILITY TO BRING ICE TO LAB.  THIS IS PART OF YOUR PRELAB!**  Hot water will be available from the water heater in the lab.
 
 :::{.callout-warning}
@@ -122,7 +113,7 @@ In this section we will give thermocouples the same attention we've just given t
 
 ## Compare Temperature Sensor Settling Times
 
-The response time of temperature sensors is critical to their performance.  We're going to race our temperature sensors to get a sense of their settling time.  To avoid building some amplifiers (see @sec-ad623 if you're curious), we're going to do this with the multimeter and a stopwatch instead of hooking everything up to the oscilloscope. 
+The response time of temperature sensors is critical to their performance.  We're going to race our temperature sensors to get a sense of their settling time.  To avoid building some amplifiers (see the thermocouple [reference design](/reference/design/index.qmd) if you're curious), we're going to do this with the multimeter and a stopwatch instead of hooking everything up to the oscilloscope. 
 
 We are going to round out our spread of temperature sensors by revisiting the  [MCP9701A](./assets/DS20001942G.pdf) temperature sensor from E79. This part is an example of an integrated linear circuit.  
 
@@ -135,29 +126,7 @@ We are going to round out our spread of temperature sensors by revisiting the  [
    4. Stop the stopwatch when the reading stabilizes in the hot bath.
 5. Comment on the relative speed of the sensors.
 
-## Resubmissions
 
-We think you may have some spare time in this lab to gather data for resubmissions.  Feel free to work towards that in place of extra credit.
-
-## Extra Credit 1 {#sec-ad623}
-
-Thermocouples generate very small voltages, which must normally be amplified to be read by an oscilloscope, although the DMM does have sufficient range. The easiest way to do the amplification is with an instrumentation amplifier. The one we have available is the Analog Devices AD623ANZ (data sheet [here](./assets/AD623.pdf)). In this section we'll measure a thermocouple with an AD623.
-
-Pay special attention to the AD623 voltage supply range. It can operate with a dual rail supply Voltage of ±2.5 V to ±6 V, or it can operate with a single rail supply voltage from 0V to 5-12V. If you exceed the voltage supply range, you will destroy the chip. The op-amp standard of ±15 V will destroy it immediately. Don't be tempted. 
-
-Figure 79 in the AD623 data sheet shows the basic circuit for connecting a thermocouple. Note that in Figure 79, the amplifier is powered with a dual rail supply. You should use a single rail supply because your AUV will be powered by a battery. However, when you use a single rail you must also offset your thermocouple Volage to mid-rail (e.g., if you supply with 0-to-5 V, your thermocouple should be offset to 2.5 V). The circuit shown below in @fig-AD623-circuit will accomplish that offset. Note that the offset utilizes a unity-gain, non-inverting op-amp to provide a low output impedance for the offset voltage.
-
-::: {#fig-AD623-circuit}
-![](./img/AD623-circuit.png)
-
-Schematic for AD623 thermocouple circuit.
+:::{.callout-note}
+Be sure to return type-K thermocouples to the electronics table.  
 :::
-
-You'll need a thermocouple to test this amplifier, and we have spare type-E thermocouple wire available (specifically, [Omega FF-E-24-SLE-200](https://www.omega.com/en-us/search/?text=FF-E-24-SLE-200)). The simplest way to construct a thermocouple for this task is to use one of the recycled ones. Otherwise, take a 1-foot length of thermocouple wire, strip the wires at one end and twist them firmly together so they make electrical contact. DO NOT USE SOLDER. It will not stick to the wires. 
-
-Design and build a circuit to read a thermocouple using the ice bath method discussed in lecture. (See Figure 6 of [this link,](https://it.omega.com/prodinfo/pdf/The-Thermocouple-Z-87-to-Z-92.pdf) or Figure 2 of [this link](http://circuitcellar.com/cc-blog/the-basics-of-thermocouples/), or click [here](https://drive.google.com/drive/folders/1xC09jM35sX2pIvMsqE0E8lO8F7CKePlt?usp=sharing) for lecture slides). DO NOT USE SOLDER. USE A GLASS BEAKER FOR YOUR ICE BATH. To get practice for your future data logger, design the circuit to have a gain of 200 and output voltages in the 0-to-5 V range. Provide a detailed diagram of your circuit.
-
-Test your circuit at several different temperatures and create a Temperature-Voltage curve.  How do your results compare to the Temperature-Voltage curve of the solid-state sensor and the thermistor? (As a reminder, you can look up the data necessary to find these two curves in datasheets. You don't need to measure temperature-voltage curves for the thermistor or solid-state sensor.)
-
-The AD623 is expensive ($7/chip), so return undamaged chips to stock.
-

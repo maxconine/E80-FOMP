@@ -128,38 +128,3 @@ Devices which measure only 90° scattering are called nephelometers, and devices
 [This link](https://www.lakesuperiorstreams.org/understanding/param_turbidity.html) has some additional information about turbidity, including a picture of some suspensions of different turbidity for visual reference.
 :::
 
-
-## Extra Credit 1. pH Measurement
-
-pH needs no introduction, but in oceanography it can be an important indicator of acidic runoff from the surface. The pH of the water also has a strong impact on the health of various plant and animal species, notably coral. You will build a circuit to interact with a pH sensor and calibrate it against buffer solutions.
-
-You will be using buffer solutions in this portion of the lab and they are relatively expensive chemicals. Use the smaller 50mL beakers to hold buffer solutions at your station and take pains not to spill any buffer solution when pouring it from the main supply. Buffer solutions may be rinsed down the sink when you are done with them. 
-
-Find a [Pasco pH electrode](https://www.pasco.com/prodCatalog/PS/PS-2102_pasport-ph-sensor/). These electrodes are generally used with interface boxes provided by Pasco (the Pasport system), but we are going to be hooking circuits directly to the BNC connector of the pH probe. The pH probes are delicate instruments, so be sure to always re-cap them in a bath of pH 7 buffer solution and never leave them sitting exposed to air. Rinse them in a bath of deionized water and shake off any excess droplets before returning them to buffer solution. 
-
-The probes need special care to make repeatable and accurate measurements, so a few experimental tips will help you to get consistent results: stir the probes gently when you first immerse them in a bath, be sure to wait for the probe voltage to stabilize when taking a measurement because their time constants are long, and keep your hands away from the probes during measurement because the unshielded connections are sensitive to noise that can couple in through your body.
-
-Measure the output voltage on the BNC connector in pH 4, 7 and 10 buffer solutions with a multimeter. What values do you observe?
-
-You are going to attempt to improve the voltage swing achieved with these measurements by using a circuit. Your choice of circuit depends on the output impedance of the pH probe, consult this [application note](http://www.ti.com/lit/an/snoa529a/snoa529a.pdf) to get a ballpark estimate for the output impedance and report it. Also, read [this](http://www.explainthatstuff.com/how-ph-meters-work.html) reference, a handy guide to the operation of pH sensors, and then describe the physical mechanism which explains the value of the output impedance for this sensor.
-
-Use a TL081 to interface with the pH sensor to achieve a voltage swing of at least 1V between pH 4 and pH 10. What circuit topology did you use and why? Describe your interface circuit.
-
-Measure the voltage your interface circuit produces when the pH sensor is immersed in pH 4, 7 and 10 buffer solutions. Use these measurements to make a calibration plot and add a line of best fit with appropriate quantification of uncertainty. Use your sensor and the line of best fit to determine the pH with confidence limits of the mystery solution in the middle of the room. There is only one small flask of mystery solution that should last for all teams in all sections. DO NOT pour the contents of the flask into another beaker! Rinse off your probe in distilled water. Uncap the mystery solution. Test the pH _in situ_. Remove the electrode and recap the solution. Rinse off your electrode and store it properly.
-
-
-## Extra Credit 2. Salinity Measurement
-
-Salinity is a measure of the total dissolved salt content of water. It is an extremely important and common measurement in oceanographic studies. Salinity measurements are used to track the flow of water and map the hydrological cycle, calibrate acoustic communication links, and understand biological phenomena like algal blooms. In this section you will build a sensor to measure salinity using an inverting operational amplifier. You will prove that it works by calibrating it against saline solutions with different salinity.
-
-In order to design your sensor, you need to know reasonable values for what you're trying to measure. Your sensor will measure conductivity and the measured value will be used to extract salinity. Find the salinity and conductivity of the ocean using any resource you choose. Note that the equivalent circuit model of a saline solution whose value depends on the separation of the probe electrodes and the salt concentration (why?) is a resistor in parallel with a capacitor. We will ignore the capacitor for this extra credit section, but it is critically important in a design for the final project. You may want to read [this](https://drive.google.com/file/d/1wtEeyfcI0ObH-54Jn9V4pzgGdI38T4-9/view) reference for further information.
-
-Design an inverting operational amplifier circuit using one or more TL081 op-amps which has an output voltage that is linear with the conductivity of your solution. Be sure to consider source and load impedances when designing your circuit. Ensure that the output voltage of this circuit will vary over a wide voltage range for the range of saline solutions that you plan to use for calibrating your circuit. This design depends on some of your experimental parameters including the separation of electrodes and the conductivities of the solutions you intend to measure. 
-
-One thing to be careful of when measuring salinity is that salt, water and electrons will undergo chemical reactions which can deposit metal salts on your electrodes. These salts can form non-conductive films which stop your conductivity measurements. What kind of waveform should you apply to your circuit in order to make a measurement stable over time? This chemistry can also cause your circuit to fail if the electrode area is too small or the voltage applied to the solution is too low.
-
-Prepare an experimental setup that will allow you to measure the conductivity of salt water. You have access to beakers, wire, electrical tape and digital thermometers. Prepare a set of saline solutions to be used with this setup which are sufficient to prove the sensor is linear. Graduated cylinders would usually be used to measure the volume of water in these solutions. Those are not available to you, so instead you will need to use the digital scales and the well-known relationship between the mass and volume of water. What is that relationship? 
-
-Record a calibration curve for your sensor which plots the voltage output of your sensor against the concentration of your salt solution in units of grams per liter on logarithmic X and Y axes. Find a line of best fit including appropriate uncertainty measurements. Then use your sensor and your calibration curve to measure the salinity of the mystery salinity solution on the central table.
-
-Note: You may use [this](http://www.fivecreeks.org/monitor/sal.shtml) resource to convert from a measured conductivity to salinity and [this](https://www.hamzasreef.com/Contents/Calculators/SalinityConversion.php) resource to convert from salinity to conductivity.
