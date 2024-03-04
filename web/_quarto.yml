@@ -47,7 +47,7 @@ website:
           text: Lab Inventory
         - href: reference/equipment
           text: Lab Equipment
-        - href: reference/boards
+        - href: reference/board
           text: Board Information
         - href: reference/design
           text: Reference Designs

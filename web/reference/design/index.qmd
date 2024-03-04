@@ -11,7 +11,7 @@ Phase shift oscillators produce sinusoidal outputs.  The oscillation frequency i
 
 ## 555 Sine Wave Generator
 
-![555 Square Wave Generator and LC Low Pass Filter](img/phase_shift_osc.png){#fig-555-osc}
+![555 Square Wave Generator and LC Low Pass Filter](img/555sine.png){#fig-555-osc}
 
 You can use 555 timers to produce sinusoidal outputs by attaching a low-pass filter to the output of a square wave generator.  If the frequency of the low-pass is low enough, then harmonics of the square wave will be attenuated.  We recommend a LC low-pass filter here because it's a second order filter instead of a first order filter.  This design has well-controlled frequency (see [lab 3](/labs/lab3/index.qmd) for setting the 555 frequency), and it's easy to control its amplitude (by setting VCC, perhaps with a voltage regulator).  However, it doesn't produce pure sine waves, it's sometimes tricky to control its offset, and it's very susceptible to power supply inductance: bypassing and careful layout are important to avoid intermittent errors with this design.
 
