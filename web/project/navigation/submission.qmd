@@ -96,12 +96,6 @@ Complete:
 {{< pagebreak >}}
 ## Surface Activity Only: Control Effort and Trajectory from Deployment
 
-EC2.1 Plot the logged paths of x, y points, (bonus points if plotted on top of an image of campus) for the experiment where the student is guided by printed U_R and U_L values
-EC2.2 Plot the angle error and control effort u as a function of time for the experiments where the student is guided by printed U_R and U_L values.
-EC2.3 Plot the logged paths of x, y points, (bonus points if plotted on top of an image of campus) for the experiment where the student is guided by motor rotation rates
-EC2.3 Plot the angle error and control effort u as a function of time for the experiments where the student is guided by motor rotation rates.
-
-
 Effort: 
 
 - [ ] Includes plot of logged paths of x,y points overlaid on ideal trajector and an image of campus.  X-axis is x measurement in meters.  Y axis is y measurement in meters.
