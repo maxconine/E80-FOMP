@@ -4,6 +4,12 @@ title: "Lab 0: Tutorial and Skills Review"
 
 Team size: 4
 
+Submission Sheet: Submit your Matlab on-ramp assignment on the E80 Canvas page
+
+Prelab Help Sheet: No prelab required this week
+
+Writing: No writing this week, just the kickoff lecture
+
 ## Introduction
 
 This lab is an opportunity for refreshing your skills and getting software and hardware setup for Labs 1 through 6 and the project Jump Start.

@@ -4,6 +4,10 @@ title: "E80 Project Field Deployments"
 
 **UNDER CONSTRUCTION**
 
+Checklists
+Ground truths
+Calibrations
+
 ## Week 4: First Field Deployment Data
 
 During the fourth week you need to demonstrate that your AUV is watertight and capable of autonomous operation by measuring field data with it. Because GPS reception in the tank room is poor we'll accept faked control loops or open loop control during tank room deployments. You are expected to test and (hopefully) launch your AUV at the pHake Lake at the Bernard Field Station during your regular section time. The main goal of these tests is to ensure that your sensors work in the field. The secondary goal is to evaluate your experimental data so you can make changes to ensure that you will be able to meet your experimental goals. Do not forget that seawater and lake water have very different salinities, conductivities, and densities. A neutrally buoyant AUV in pHake Lake will bob like a cork in the ocean.

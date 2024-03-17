@@ -110,19 +110,6 @@ Make a schematic that adheres to good practice (as outlined in [lab 3 specs](/la
 * Though we're not requiring simulations of your design here, having a working simulation of the design is a great idea.
 * Split this big schematic into multiple smaller ones if it makes it easier to read. (It may still make sense to submit one big schematic, but consider whether a big schematic or several small ones will serve you better.)
 
-All of your new electronics will be assembled on a new board called the protoboard.  We discuss the protoboard in greater details during the [build](/project/build), but its limited size should inform your circuit design.  The protoboard has the same number of rows as a standard breadboard, so don't pick designs that require more wires than would fit on a breadboard. 
-
-You may find the design files for the PCBs you will use helpful while coming up with your schematic, so they are linked below. The CAD files for each board are viewable using [KiCAD](http://kicad.org/). 
-
-* Motherboard 
-    * [schematic](https://drive.google.com/file/d/1pk_mORYsxhedKjjqzhMrxj9H5ZVH3zqp/view?usp=sharing), 
-    * [layout](https://drive.google.com/file/d/1pmm8xwpyAHAL5YvwMIQma4W8DuV-MP31/view?usp=sharing), 
-    * [CAD files](https://drive.google.com/file/d/1pi9WNW7WoIx80xgb_0LWSUyA-LMfp94Z/view?usp=sharing)
-    * [Introduction to the E80 Motherboard](https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing) document from lab 1.
-* Protoboard 
-    * [schematic](https://drive.google.com/open?id=1pDpDoSiCln73AbEeGSCm-o7L3ETTjlG9), 
-    * [layout](https://drive.google.com/open?id=1VT_N11I8Alo8cQPUag5moUuXnGed80gd), 
-    * [CAD files](https://drive.google.com/open?id=1NZ2dgC0PsSTcEsx0r2AD4S_84Wv5dpuq)
-
+All of your new electronics will be assembled on a new board called the [protoboard](https://drive.google.com/open?id=1VT_N11I8Alo8cQPUag5moUuXnGed80gd).  We discuss the protoboard in greater detail during the project [build](/project/build), but its limited size should inform your circuit design.  The protoboard has the same number of rows as a standard breadboard, so don't pick designs that require more wires than would fit on a breadboard. As a reminder, you can find the design details for all the PCBs you will use on the [boards](/reference/board) page, and those design details can help when planning out your final project. 
 
 

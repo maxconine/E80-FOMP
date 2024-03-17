@@ -103,7 +103,7 @@ The AD623 is expensive ($7/chip), so return undamaged chips to stock.
 
 You can measure the distance between a speaker and an object by launching a pulse of sound then measuring how long it takes to receive an echo.  This is called a time-of-flight (ToF) measurement. Implementing ToF on a robot requires a transmit (TX) circuit, a receive (RX) circuit and some special software.
 
-**For TX**, we recommend using the [LM384](http://www.ti.com/lit/ds/symlink/lm384.pdf) audio amplifier to drive the [DAEX25W-8](https://drive.google.com/open?id=1Jrxe618k8KY_t4pc5sp_lyUTn6-bCDne) speaker.  The "Typical 5 W Amplifier" reference circuit in the LM384 datasheet is a good design for our purposes, though we can make a few small changes to improve it by omitting the volume control resistor and adding some bypass and coupling capacitors.  These changes are illustrated below:
+**For TX**, we recommend using the [LM384](http://www.ti.com/lit/ds/symlink/lm384.pdf) audio amplifier to drive the [DAEX25W-8](https://drive.google.com/open?id=1Jrxe618k8KY_t4pc5sp_lyUTn6-bCDne) speaker.  The "Typical 5 W Amplifier" reference circuit in the LM384 datasheet is a good design for our purposes, though we can make a few small changes to improve it by omitting the volume control potentiometer and adding some bypass and coupling capacitors.  These changes are illustrated below:
 
 ![Acoustic time-of-flight transmit circuit.](img/tof_tx.png){#fig-tof-tx}
 
@@ -143,9 +143,9 @@ void setup() {
 :::{.callout-note collapse="true"}
 ## In-Lab Audio Tests
 
-**For Testing**, it's handy to be able to test your circuit from a function generator without getting all the TX Teensy code working.  The old function generators (the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf)) and some of our lab equipment can help with that.
+**For Testing**, it's handy to be able to test your circuit from a function generator without getting all the Teensy code working.  The old function generators (the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf)) and some of our lab equipment can help with that.
 
-You will send a burst of sine waves, i.e.: a small number of sine wave cycles, by using internally triggered burst modulation, an advanced feature of the old signal generators (the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf)). This function is not available on the function generators in your oscilloscope. You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.
+You can send a burst of sine waves, i.e.: a small number of sine wave cycles, by using internally triggered burst modulation, an advanced feature of the old signal generators (the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf)). This function is not available on the function generators in the oscilloscope. You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.
 
 * Turn burst modulation mode on: Shift + the ramp/burst button / The text 'burst' will be highlighted at the top of the screen.
 * Turn burst modulation mode off: Shift + the ramp/burst button / The text 'burst' will no longer be highlighted at the top of the screen.
@@ -160,9 +160,7 @@ You will send a burst of sine waves, i.e.: a small number of sine wave cycles, b
 * v      / Screen says some number."         OR         > / "Burst Rate," and then V / "some number."
 * Edit the number you see and press enter to save the setting.
 
-We have created a power amplifier board containing an LM384 to allow you to drive your speakers. Follow [these instructions](https://docs.google.com/document/d/1qWEORVg34CGcCEvArqbF1Zvz5JboWvJmLXS1v33wLos/edit?usp=sharing) to use the driver board. You only have access to one power supply in the tank room, so you'll need to power your microphone amplifier off the same rails as the LM384 amplifier board. Be careful not to provide too much voltage to the microphone amplifier.
-
-By gathering data that is synchronized with the signal you are sending and averaging over many samples, you can cancel out signals that are not at the same frequency as the burst repetition rate of your signal. This is called coherent averaging. Set this up using the following steps:
+Sometimes the tank room is noisy. By gathering data that is synchronized with the signal you are sending and averaging over many samples, you can cancel out signals that are not at the same frequency as the burst repetition rate of your signal. This is called coherent averaging. Set this up using the following steps:
 
 * Use a second oscilloscope channel to probe the output of your function generator (or attach the trigger output of your function generator to your scope's trigger input) 
 * Trigger your oscilloscope on the channel attached to the output of the function generator (or on the trigger input)
