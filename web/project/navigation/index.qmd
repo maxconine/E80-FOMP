@@ -208,7 +208,7 @@ While we're here, we have a little work to do to calculate yaw correctly. In thi
 
 1. To calculate `state.y`, use the relationship between the distance along an arc's edge, the radius of the arc, and the angle, (e.g. `state.y = R_earth*latitudeChange`). 
 2. To calculate `state.x`, note that it is a function of latitude, (e.g. `state.x=R_earth*longitudeChange*cos(latitude at origin)`).
-3. To calculate `state.yaw`, add an appropriate offset to `state.heading`.
+3. To calculate `state.yaw`, add an appropriate offset to `state.heading` and, if necessary, multiply some part of your expression by -1 to flip around a sign.
 
 :::{.callout-note collapse="true"}
 ## Latitude and Longitude Background
