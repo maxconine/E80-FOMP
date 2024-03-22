@@ -11,6 +11,7 @@ E80 uses several custom-build circuit boards.  This page collects all of the des
     * [Introduction to the E80 Motherboard](https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing) document from lab 1.
     * [Motherboard Assembly Document](https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&ouid=105511935419108795487&rtpof=true&sd=true) from lab 1
 * Protoboard (provides a platform to solder your final sensor designs during the final project)
+    * [picture](img/protoboard.jpg)
     * [schematic](https://drive.google.com/open?id=1pDpDoSiCln73AbEeGSCm-o7L3ETTjlG9), 
     * [layout](https://drive.google.com/open?id=1VT_N11I8Alo8cQPUag5moUuXnGed80gd), 
     * [KiCAD files](https://drive.google.com/open?id=1NZ2dgC0PsSTcEsx0r2AD4S_84Wv5dpuq)

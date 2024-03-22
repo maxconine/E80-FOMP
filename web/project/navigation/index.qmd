@@ -87,6 +87,10 @@ Finally, look at `TimingOffsets.h` to figure out how often your main loop runs, 
 You generally should not include calls to `Serial.println()` in your code, even though it's standard practice for Arduino, because it messes with our `printer` object.  The `printer` takes great pains to keep all the text easy to read as the robot spits out updates, and random print statements can cause it to jitter around.  Use `printer.printMessage()` for one time messages (see `DepthControl.cpp` for an example) and `printer.printValue()` to print recurring values (as seen in the `loop()` function of the E80 code).
 :::
 
+:::{.callout-tip}
+Be sure to read the `README` in the libraries folder because it contains a lot of information about the features and adjustable knobs in each file. The adjustments described in the `README` file are sufficient to cover most standard student projects, so you might not even need to write code.
+:::
+
 ::: {.callout-note collapse="true"}
 ## .cpp vs. .h vs. .ino
 
@@ -113,16 +117,16 @@ In this activity, you will design a P control loop that interacts with a pressur
 
 In order to implement closed loop depth control with your AUV, it first needs to be able to sense its current depth, which we will do by interpreting a pressure sensor. You have two options to make your pressure sensor: build the pressure sensor from your project proposal on a breadboard, or use one of our pre-made pressure sensor adapter PCBs ([picture](https://drive.google.com/open?id=1LEGhYjHPmEy7TEqDj1MgLXBuiTXaycc3), [schematic](https://drive.google.com/open?id=1KLr1kXQqwAI7urwtZSGdn_CvxM2G_UvH), [layout](https://drive.google.com/open?id=1L3BF7umlX180xhOMnQ9K8Ubop1LF_Auk), [KiCAD](https://drive.google.com/open?id=1JyV-FahVbUNkURrN65v0to_McqpwAE12)).  We recommend building your own design to get a start on your project [build](/project/build), but feel free to use our PCB if you're short on time.  (Do note that our PCB uses a weird op-amp circuit that you'll need to analyze on your own.)
 
-In a deviation from previous practice, you will measure the operation of this sensor using your Teensy.  By measuring your pressure directly in Teensy units, you can write code that interacts with your results in a direct way.  We will take advantage of the serial data
+In a deviation from previous practice, you will measure the operation of this sensor using your Teensy.  By measuring your pressure directly in the Teensy, you can write code that interacts with your results in a direct way.  We will take advantage of the serial data
 
 1. Attach your pressure sensor output to pin A0 on the Teensy.
 2. Add a line showing your current pressure measurement to your robot's serial report. Edit `updateState()` in `ZStateEstimator.cpp` by uncommenting the two lines of code below the calculation of the z position. 
-3. Run `E80_Lab_07_dive.ino`. The pressure sensor voltage should now appear in the serial monitor, and you will use that display to calibrate your pressure sensor.
+3. Run `E80_Lab_07_dive.ino`. The pressure sensor Voltage should now appear in the serial monitor, and you will use that display to calibrate your pressure sensor.
 4. Use a graduated cylinder and a meter stick with pressure tubing attached to make a calibration curve with at least seven points between depth and Teensy-reported Voltage.
 5. Modify `depthCal_slope` and `depthCal_intercept` in `ZStateEstimator.h` so your Teensy display reports the proper depth in meters.
 
 
-### Write a P Control Algorithm for Pressure and Test It
+### Write a P Control Algorithm for Depth
 
 Add a Proportional depth control system to your robot by modifying the `DepthControl.cpp file`. Add the following steps:
 
@@ -141,6 +145,8 @@ You usually need to declare variables in C++, but all the variables in these ins
 
 In the library file named `ZStateEstimator.cpp`, in the function called `ZStateEstimator::updateState()`, you can see that the z position (depth) of the robot is calculated using the function’s input `pressure_signal`. The main `loop()` of the Arduino code is where `z_state_estimator.updateState()` is called. By reviewing this `loop()`, you can see that this `pressure_signal` input is receiving the output of `analogRead(PRESSURE_PIN)`. `analogRead()` is an Arduino function that reads the value of a specified pin, and `PRESSURE_PIN` is a variable set in `Pinouts.h`, currently set to pin A0 (pin 14) of the Teensy. The `pressure_signal` input provides the pressure sensor signal in Teensy units. The `ZStateEstimator::updateState()` function then converts from Teensy units to Volts, then finally converts from Volts to depth [m] using the variables `depthCal_slope` and `depthCal_intercept`. This depth measurement is stored in `state.z`. 
 :::
+
+### Test the P Control Algorithm
 
 Test your depth P control using the meter stick with tubing and the graduated cylinder. 
 
@@ -165,7 +171,7 @@ Finally, once everything is tested and working, deploy the robot in the tank.
 
 1. Bring your robot to the tank room, run `E80_Lab_07_dive.ino`, and put the robot into the tank.  Watch out for splashes onto your computer or motherboard as you put the robot in.
 2. Let the robot go to the two depth waypoints at 0.5 m and 1 m while keeping an eye on the values and messages printed to the serial monitor. Be sure to log your data. 
-3. Plot the logged uV, depth and depth_des as a function of time.
+3. Plot the logged `uV`, `depth` and `depth_des` as a function of time.
 
 ::: {.callout-warning}
 Be careful with the umbilical because it may not have enough slack for the robot to go down to 1 meter. If that’s the case, you can change the depth waypoints in the `setup()` function of `E80_Lab_07.ino`. If your robot’s motor is too strong or too weak, you may need to change your `Kp` in `DepthControl.h`.
@@ -182,27 +188,31 @@ In this activity, you will design a P control loop that interacts with a magneto
 
 ### Magnetometer Calibration
 
-A magnetometer measures the earth's magnetic field, so it can be used as a compass to sense your robot's heading. Read [this](https://digilent.com/blog/how-to-convert-magnetometer-data-into-compass-heading/) article describing how it works. We have a magnetometer integrated into our IMU.  Every magnetometer has errors in its measurement, which can be byproducts of manufacturing or of local magnetic disturbances (eg: the magnetic declination is -10.52 degrees at Mudd). You need to calibrate those errors out before you can trust your magnetometer results. This [article on magnetometer calibration](https://github.com/kriswiner/MPU6050/wiki/Simple-and-Effective-Magnetometer-Calibration) is a good summary of the process.
+A magnetometer measures the earth's magnetic field, so it can be used as a compass to sense your robot's heading. Read [this](https://digilent.com/blog/how-to-convert-magnetometer-data-into-compass-heading/) article describing how it works. We have a magnetometer integrated into our IMU.  Every magnetometer has errors in its measurement, which can be byproducts of manufacturing or of local magnetic disturbances (eg: the magnetic declination is -10.52° at Mudd). You need to calibrate those errors out before you can trust your magnetometer results. This [article on magnetometer calibration](https://github.com/kriswiner/MPU6050/wiki/Simple-and-Effective-Magnetometer-Calibration) is a good summary of the process.
 
-1. Take your robot outside, far from buildings, and log your magnetometer data while your robot is held upright and you slowly (over ~10s) rotate 360 degrees while standing in place. Save the logged data from this exercise for later. 
+1. Take your robot outside, far from buildings, run `E80_Lab_07_surface.ino`, and log your magnetometer data while your robot is held upright and you slowly (over ~10s) rotate 360 degrees while standing in place. Save the logged data from this exercise for later. 
 2. Program your Teensy with our magnetic calibration software -- [Mag_Calibration.ino](https://github.com/HMC-E80/E80-SP2023/blob/main/Mag_Calibration/Mag_Calibration.ino) -- and use [Mag_Calibration.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/Mag_Calibration.m) to extract the hard and soft iron correction coefficients. You will need MATLAB version 2018b or later to run this code. Save the figure generated by `Mag_Calibration.m` to your submission sheet. 
-3. Update `SensorIMU.h` with the hard and soft iron coefficients. 
-4. Turn in a circle again outside and save your magnetometer readings again. 
+3. Update the `mag_offsets` and `mag_comp` variables in `SensorIMU.h` with the hard and soft iron coefficients you just measured. 
+4. Run `E80_Lab_07_surface.ino` and turn in a circle outside again. Also save these magnetometer readings. 
 5. Generate the following two plots: 
     1. A scatter plot of mx vs. my where your calibrated and uncalibrated data are superimposed. Find appropriate units for the axes in `Mag_Calibration.m`.
     2. A plot of heading vs. time for both your calibrated and uncalibrated data.   
 
-### Position Measurements via GPS
+### GPS Integration
 
-Integrate the [Adafruit Ultimate GPS](https://www.adafruit.com/product/746) into the board stack so that the Teensy has access to GPS measurements 
+Integrate the [Adafruit Ultimate GPS](https://www.adafruit.com/product/746) into the motherboard 
 
 1. Solder a 9x1 female header pin row onto the motherboard at the position labelled GPS (see [Lab 1](/labs/lab1/) for details). 
-2. Try to find an assembled GPS.  If you can't find one, then solder male header pins to the BOTTOM of the GPS breakout board. Be sure to get the orientation correct, (see image [here](https://drive.google.com/file/d/1lottcceJ83MBIgc4sj6F24H2B01YVizx/view?usp=sharing)). 
+2. Try to find an assembled GPS.  If you can't find one, then solder male header pins to the BOTTOM of the GPS breakout board. Be sure to get the orientation correct; @fig-gps-on-board shows the correct orientation. 
 3. Use screws, nuts, and standoffs to help secure the GPS breakout board to the motherboard.
+
+![A motherboard with a GPS attached. The GPS here doesn't have standoffs in the left two holes, but you should add those on your board.](img/mtb_v3.0_cropped.jpg){#fig-gps-on-board}
 
 Go outside the building and test your GPS Sensor integration by opening the serial monitor while `E80_Lab_07_surface.ino` is running. Make sure your battery is plugged into the motherboard because your GPS is powered off the battery (NOT off the USB connection that powers your Teensy). Make sure you achieve GPS lock and see >4 satellites.
 
-Modify the library file `XYStateEstimator.cpp` so that it calculates the x,y position (in meters) of the board board with respect to a Cartesian coordinate frame whose origin is at ( 34.106465°, -117.712488°). Consult the `XYStateEstimator.h` file to see what variables you have available. Design your coordinate frame so the X axis points due East and the Y axis points due North. The code to make this transformation should be placed in the function named `updateState()` in `XYStateEstimator.cpp`, and the calculated positions will be stored in the variables `state.x` and `state.y`. To do this, we will use a modified version of the [Forward Equirectangular Projection](https://en.wikipedia.org/wiki/Equirectangular_projection), where we multiply use the radius of curvature `R_earth` to scale latitude and longitude angles in order to calculate arc lengths on the Earth's surface. This conversion assumes that the earth is a sphere (which it is to within ±0.25%). 
+### Write Latitude and Longitude Software
+
+Modify the library file `XYStateEstimator.cpp` so that it calculates the x,y position (in meters) of the board with respect to a Cartesian coordinate frame whose origin is at ( 34.106465°, -117.712488°). Consult the `XYStateEstimator.h` file to see what variables you have available. Design your coordinate frame so the X axis points due East and the Y axis points due North. The code to make this transformation should be placed in the function named `updateState()` in `XYStateEstimator.cpp`, and the calculated positions will be stored in the variables `state.x` and `state.y`. To do this, we will use a modified version of the [Forward Equirectangular Projection](https://en.wikipedia.org/wiki/Equirectangular_projection), where we multiply use the radius of curvature `R_earth` to scale latitude and longitude angles in order to calculate arc lengths on the Earth's surface. This conversion assumes that the earth is a sphere (which it is to within ±0.25%). 
 
 While we're here, we have a little work to do to calculate yaw correctly. In this class we are using east-north-up [local tangent plane coordinates](https://en.wikipedia.org/wiki/Local_tangent_plane_coordinates). This means that you need to convert the heading from the IMU, which should have 0 degrees due North and positive angle in the CW direction, to yaw angles where 0 degrees points in the positive X direction (due East), and positive angles are in the CCW direction. If 0 degrees doesn't face perfectly East, (which is location dependent due to abnormalities in the Earth's magnetic field), you can add an offset angle to ensure it does. Put code to make this conversion in `XYStateEstimator.cpp` in the `updateState()` function. Store the result in `state.yaw`.
 
@@ -224,6 +234,8 @@ You usually need to declare variables in C++, but all the variables in these ins
 The most common programming mistakes that we see are messing up units (is this angle in degrees or radians?), and failing to re-map angles between -$\pi$ and $\pi$ after they are calculated. Letting an angle be $3\pi/2$ will crash a lot of your code unless you're very careful.
 :::
 
+### Position Measurements via GPS
+
 To test that your sketch is functioning well, log the x,y positions (they are logged by default in the sample code) as you walk from the coordinate system origin to Foothill Blvd. 
 
 1. Run `E80_Lab_07_surface.ino` outside and ensure that you achieve GPS lock and are logging reasonable GPS data. It takes time (sometimes a few minutes) before the GPS receiver gets a lock on the signals from the satellites.  The GPS lock LED can help you identify if your board has achieved lock.
@@ -232,13 +244,14 @@ To test that your sketch is functioning well, log the x,y positions (they are lo
     2. Walk along the sidewalk East towards Shanahan. 
     3. Walk South between Shanahan and Parsons. 
     4. Cut West back to Parson's building and end at the origin. 
-    5. The path is illustrated [here](https://drive.google.com/open?id=1rBsJs8E7wg4oA9Xmiy82D-S-YzqJeyOO). You may want to have the serial monitor open (and print x,y to the screen) when walking the course.  This will inform you if your conversion makes sense.  
+    5. The path is illustrated in @fig-gps-test. You may want to have the serial monitor open (and print x,y to the screen) when walking the course.  This will inform you if your conversion makes sense.  
 3. Using MATLAB, plot the logged x,y positions from the path. Only plot the x,y points for which the GPS has a lock on satellites.  Overlay these points on an image of campus using the `imread` and `image` Matlab commands in addition to normal plotting functions.  The `hold on` command may help.
 
+![A path to walk to test the GPS.](img/GPS_test_2.png){#fig-gps-test}
 
 ### Proportional Surface Control
 
-In this section you will implement a Proportional surface control system with your AUV using the GPS on your motherboard. Use `E80_Lab_07_surface.ino` as the starter code for this portion.  You will also interact with two new library files: SurfaceControl.cpp and SurfaceControl.h. 
+In this section you will implement a Proportional surface control system with your AUV using the GPS on your motherboard. Use `E80_Lab_07_surface.ino` as the starter code for this portion.  You will also interact with two new library files: `SurfaceControl.cpp` and `SurfaceControl.h`. 
 
 Add a Proportional surface control system to your robot by modifying the `SurfaceControl.cpp file`. Add the following steps:
 
@@ -257,9 +270,11 @@ As above, the header file (in this case, `SurfaceControl.h`) takes care of varia
 
 Test your P control by walking the campus while trying to obey the commands given by `uR` and `uL`. 
 
-1. Make sure the path defined is in the code to be the three x,y coordinates (125,-40), (150,-40), (125,-40). This should walk you 25 meters along the centerline of campus (see picture [here](https://drive.google.com/file/d/0BwiB3SVueuOpTUc5X3pWR3hZR3M/view?usp=sharing&resourcekey=0-COFjIscDDQXvc7NwLBZAuA)). 
+1. Make sure the path defined is in the code to be the three x,y coordinates (125,-40), (150,-40), (125,-40). This should walk you 25 meters along the centerline of campus (see @fig-p-path). 
 2. Go to the origin. 
 3. Walk at a slow speed, turning in response to the u_R and u_L values printed to the Serial monitor. If the the values are `uR=45` and `uL = 55`, then veer right to try to equalize `uR` and `uL`. Be sure to save your logged data.  
 4. Plot the logged path of x, y points on top of an image of campus. Also plot the angle error and control effort u as a function of time.
+
+![A path to walk to test GPS-based P control of robot angle.](img/ShanPControlPath.png){#fig-p-path}
 
 Finally, if you have time, attach motors to the Motor A and Motor B port and repeat the above experiment, this time obeying your observations of the motor's rotation rates rather than the printed u_R and u_L values.  Modify Kr and Kl if necessary to balance your motors. Pay special attention to how motors affect your yaw measurement: they give off powerful magnetic fields that are likely to interfere with your experiment if you don't handle them with care.  No plots are required for this extra activity, but it can give you insight into how your robot will perform during the project deployments.

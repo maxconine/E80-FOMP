@@ -12,7 +12,7 @@ website:
       - text: Labs
         menu:
         - href: labs/overview
-          text: Lab Overview
+          text: Overview and Safety
         - href: labs/lab0
           text: 'Lab 0: Tutorial & Skills Review'
         - href: labs/lab1
