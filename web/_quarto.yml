@@ -37,7 +37,7 @@ website:
           text: Navigation Jump Start
         - href: project/build
           text: Build and Integrate
-        - href: project/field
+        - href: project/deploy
           text: Field Deployment
         - href: project/report
           text: Present and Report

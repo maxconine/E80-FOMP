@@ -6,7 +6,7 @@ title: "Reference Designs"
 
 ![Phase Shift Oscillator](img/phase_shift_osc.png){#fig-phase-shift-osc}
 
-Phase shift oscillators produce sinusoidal outputs.  The oscillation frequency in Hz is given by $f_{osc} = \sqrt{3}/(2\pi RC)$. In order for this to operate, $R_1/R_2$ must be 8. The oscillation amplitude is hard to control, but we've seen ~ 1 Vpp in the past. The oscillation tends to be centered mid-rail.  Since this requires four op-amps, it's natural to implement it on one MCP6004.  
+Phase shift oscillators produce sinusoidal outputs.  The oscillation frequency in Hz is given by $f_{osc} = \sqrt{3}/(2\pi RC)$. In order for this to operate, $R_1/R_2$ must be 8, and it helps if $R_2$ is fairly large (>100 k$\Omega$). The oscillation amplitude is hard to control, but we've seen ~ 1 Vpp in the past. The oscillation tends to be centered mid-rail.  Since this requires four op-amps, it's natural to implement it on one MCP6004.  
 
 
 ## 555 Sine Wave Generator
@@ -143,9 +143,9 @@ void setup() {
 :::{.callout-note collapse="true"}
 ## In-Lab Audio Tests
 
-**For Testing**, it's handy to be able to test your circuit from a function generator without getting all the Teensy code working.  The old function generators (the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf)) and some of our lab equipment can help with that.
+**For Testing**, it's handy to be able to test your circuit from a function generator without getting all the Teensy code working.  The old function generators (the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf)) can help with that.  You can send a burst of sine waves, i.e.: a small number of sine wave cycles, by using internally triggered burst modulation on the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf). This function is not available on the function generators built into the oscilloscope. 
 
-You can send a burst of sine waves, i.e.: a small number of sine wave cycles, by using internally triggered burst modulation, an advanced feature of the old signal generators (the [HP/Agilent 33120A](https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf)). This function is not available on the function generators in the oscilloscope. You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.
+You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.
 
 * Turn burst modulation mode on: Shift + the ramp/burst button / The text 'burst' will be highlighted at the top of the screen.
 * Turn burst modulation mode off: Shift + the ramp/burst button / The text 'burst' will no longer be highlighted at the top of the screen.
@@ -182,7 +182,12 @@ An anemometer is used for measuring wind speed. It is useful for a surface vehic
 
 ## Weather Vane
 
-A weather vane is used for indicating wind direction relative to the local coordinates of a surface craft. It is not so useful for a submersible. There are two possible sensors for the weather vane. The first is the MLX90316. The instructions and procedure are [here](https://drive.google.com/open?id=1f8EBwjwC41yVn9NPL-A11Ml1rJ3tqBN0ptcQc6E8O4U). The second is the ACE128. The instructions and procedures are [here](https://drive.google.com/open?id=1nxSudsfMWcUmk4KY5xAjlgvL6IgpMP_TdypqefZIsCw). A zip file of the design files for both is [here](https://drive.google.com/open?id=10XoZwejIFrBTcVLfXJGrxdgBVczbB9Cn).
+A weather vane is used for indicating wind direction relative to the local coordinates of a surface craft. It is not so useful for a submersible. There are three possible sensors for the weather vane. 
+
+- The first is the MLX90316. The instructions and procedure are [here](https://drive.google.com/open?id=1f8EBwjwC41yVn9NPL-A11Ml1rJ3tqBN0ptcQc6E8O4U). 
+- The second is the ACE128. The instructions and procedures are [here](https://drive.google.com/open?id=1nxSudsfMWcUmk4KY5xAjlgvL6IgpMP_TdypqefZIsCw). 
+- For convenience, a zip file of the design files for both is [here](https://drive.google.com/open?id=10XoZwejIFrBTcVLfXJGrxdgBVczbB9Cn).  
+- The third is a simple potentiometer. If you attach the rotor to the weather vane, then as it rotates, the wiper output should produce a time varying analog voltage. This can run into issues with mechanical stiffness of the potentiometer, but the readout circuit is very easy (perhaps as simple as a unity gain buffer).
 
 
 ## Velocity Sensors

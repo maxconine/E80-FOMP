@@ -1,1 +1,14 @@
 github-url: https://github.com/HMC-E80/E80-SP2024
+
+dates:
+  kickoff: 2024-01-19
+  projkickoff: 2024-02-23
+  phake1: 2024-04-09
+  phake2: 2024-04-10
+  phake3: 2024-04-11
+  dana: 2024-04-20
+  present: 2024-05-01
+
+people:
+  purchasing: Prof. Brake
+  danafood: Lynn Kim

@@ -2,4 +2,27 @@
 title: "Lab Equipment"
 ---
 
-**UNDER CONSTRUCTION**
+| Name                     | Part Number & Datasheet | 
+---------------------------|-------------------------|
+| Oscilloscope             |                         | 
+| Function Generator       |                         | 
+| Old Function Generator   |                         | 
+| Power Supply             |                         | 
+| Multimeter               |                         | 
+
+
+## Mobile Lab Facility
+
+During field deployments the E80 staff sets up a mobile lab facility to enable students to prototype and debug. It has the following equipment available:
+
+- A set of work tables set up beneath shaded tents.  
+- A solar generator/battery sufficient to power the lab and charge a limited number of laptops. 
+- Power supplies 
+- Oscilloscopes 
+- Soldering irons 
+- Some electronics supplies ~ op-amps and resistors. 
+- Multimeters 
+- Common hand tools (wire strippers, diagonal cutters, screwdrivers, etc.)
+- Heat shrink
+- Glue
+- Hot air guns

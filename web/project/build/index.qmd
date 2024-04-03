@@ -30,7 +30,7 @@ This step usually takes one week of the build.  Try to demonstrate a working pro
 
 After you have tested all of your sensors and demonstrated that they work, you need to transfer them to the PCB that will go in your AUV. 
 
-We have designed PCBs called protoboards, pictured in @fig-protoboard, and they are usually the easiest way to mount your components for use in your AUV.  Protoboards are laid out like two halves of a breadboard side-by-side, so you can transfer your circuits from the breadboard prototype exactly onto them.  They also have an area at the top for a 5 Volt regulator (the L7805 section). They connect to the motherboard as pictured in @fig-fig-proto-connectors.
+We have designed PCBs called protoboards, pictured in @fig-protoboard, and they are usually the easiest way to mount your components for use in your AUV.  Protoboards are laid out like two halves of a breadboard side-by-side, so you can transfer your circuits from the breadboard prototype exactly onto them.  They also have an area at the top for a 5 Volt regulator (the L7805 section). They connect to the motherboard as pictured in @fig-proto-connectors.
 
 ![A protoboard for the E80 final project.](/reference/board/img/protoboard.jpg){#fig-protoboard}
 
@@ -82,6 +82,6 @@ As you finish your assembly, here are a set of questions you may want to complet
 - Can you fully operate your robot in a dry test? With the electronics in the box, powered from the battery, can you get signals from your sensors logged to your SD card?
 - What about in the tank?
 
-THis work should be done before the first deployment, which takes place roughly a week after your soldered demonstration.  The sooner the better, it's great to demonstrate mechanical integration and a soldered demonstration at the same time.  
+This work should be done before the first deployment, which takes place roughly a week after your soldered demonstration.  The sooner the better, it's great to demonstrate mechanical integration and a soldered demonstration at the same time.  
 
-You don't need to show your professors anything specific for this checkoff; we'll see your waterproofing inaction in the [deploymnet](/project/field/)
+You don't need to show your professors anything specific for this checkoff; we'll see your waterproofing in action in the [deployment](/project/field/)

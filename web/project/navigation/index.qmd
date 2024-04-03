@@ -89,6 +89,8 @@ You generally should not include calls to `Serial.println()` in your code, even 
 
 :::{.callout-tip}
 Be sure to read the `README` in the libraries folder because it contains a lot of information about the features and adjustable knobs in each file. The adjustments described in the `README` file are sufficient to cover most standard student projects, so you might not even need to write code.
+
+For instance, the README contains this important deep cut for the project: It is possible to increase the logging time of your robot by increasing the FILE_BLOCK_COUNT value in Logger.h. This can help you to log data during long deployments.
 :::
 
 ::: {.callout-note collapse="true"}

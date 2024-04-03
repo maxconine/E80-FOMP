@@ -37,10 +37,20 @@ There are two locations we can launch in Dana Point: the public beach and the Oc
 deployment off the pier over giving one team multiple deployments.  
 :::
 
+:::{.callout-note collapse="true"}
+## Dana Point Videos
+
+Videos have been recorded to give students a sense of the following environment characteristics:
+
+* [Water outside the harbor](https://drive.google.com/file/d/0BwiB3SVueuOpV05GVWgtaV9tMFk/view?usp=sharing&resourcekey=0-01dqmgvU3OkorvewX5pyyw). We do not allow you to operate a robot here.  Most AUVs will be trashed.
+* [Worst case currents close to docks](https://drive.google.com/file/d/0BwiB3SVueuOpUmVjWnM2RUZ6OWM/view?usp=sharing&resourcekey=0-Gw-EZ0-FcsKywoIa2LI3lA). No motors are turned on in this video.
+* [Normal AUV navigation in the harbor](https://drive.google.com/file/d/0BwiB3SVueuOpa2oyTURlUVFmVkk/view?usp=sharing&resourcekey=0-3BT_e71MRrCcpbY7x37i3w).
+* [Water clarity](https://drive.google.com/file/d/1D0d_-GQWR-jZdyS6DVEm35iIVWuAI0Vb/view?usp=sharing).
+:::
 
 ## Budget
 
-You must prepare a budget for your final project.  **You have $50 to spend** on the project, and you may not augment that amount with personal money, student project grants or any other source of funds.  Your budget only needs to include sensors and other parts (e.g.: motors), and it should exclude parts that you plan to use from our inventory, which is freely available to you.  
+You must prepare a budget for your final project.  **You have $50 to spend** on the project, and you may not augment that amount with personal money, student project grants or any other source of funds.  Your budget only needs to include sensors and other parts (e.g.: motors) that we don't have in stock, and it should exclude parts that you plan to use from our [inventory](/reference/inventory), which is freely available to you.  
 
 To capture your budget, prepare a spreadsheet that contains the following for each part you intend to purchase:
 
@@ -56,7 +66,7 @@ Common vendors include [Digikey](http://www.digikey.com/), [McMaster-Carr](https
 
 Completing this budget will require you to name specific sensors and mechanical parts and to report their prices.  Therefore, you are expected to have selected parts for your experiment before submitting the budget. When you select parts, be sure to qualify them for your mission: do they have the necessary signal input range? an acceptable electrical interface? etc.
 
-[Parts already in lab](/reference/inventory) are freely available to you, therefor this budget does not need to include parts that we already have in lab (since you won't buy them).  Some of the lab supplies, notably speakers and microphones, are not available for permanent installation, but they are available for temporary checkout for prototyping.  These supplies are cheap enough that we expect you to buy your own for permanent installation.
+Some of the lab supplies in our inventory, notably speakers and microphones, are not available for permanent installation, but they are available for temporary checkout for prototyping.  These supplies are cheap enough that we expect you to buy your own for permanent installation.
 
 :::{.callout-note}
 ## Caveat emptor! i.e.: Let the Buyer Beware
@@ -77,7 +87,7 @@ Once you have prepared your budget, you must check it off and then submit a purc
     - [New Purchase Order Request Form](https://www.hmc.edu/engineering/current-student-information/department-forms/)
     - Arrange for purchases to be shipped to the Engineering Department.
     - Include your team number and section number in a description field.
-    - List Professor Brake as the professor to approve the purchase request.
+    - List {{<var people.purchasing>}} as the professor to approve the purchase request.
 
 Purchases have a relatively long lead time, around a week.  However, if your proposal is approved before spring break, then that lead time will be hidden by the break.
 
