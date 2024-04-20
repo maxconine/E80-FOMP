@@ -47,7 +47,7 @@ Safety information:
 Food information and Dietary Restrictions:
 
 - Breakfast pastries will be provided before you board the bus.  If your dietary restrictions prevent eating breakfast pastries, please arrange for your own breakfast.
-- Contact {{<var people.danafood>}} as soon as possible if your dietary restrictions prevent eating pizza for lunch. We will arrange for an alternative. 
+- Contact {{<var people.dana_point_food>}} as soon as possible if your dietary restrictions prevent eating pizza for lunch. We will arrange for an alternative. 
 
 Resources information:
 

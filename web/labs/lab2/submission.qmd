@@ -112,8 +112,3 @@ Complete Specification:
 
 - [ ] All measurements and calculations are filled in with correct values
 - [ ] Example calculation additionally includes a 1-2 sentence explanation of how the op-amp is affecting the calculation and the measurement.  The explanation should make reference to appropriate op-amp input and output impedance properties.
-
-{{< pagebreak >}}
-## Extra Credit Writeups:
-
-We don't provide complete specifications for extra credit writeups, but they will be graded for effort and completeness like normal sections.  You need to provide a "mini-report" of <1 page for each extra credit section that you attempt. Put a page break between each extra credit mini-report.

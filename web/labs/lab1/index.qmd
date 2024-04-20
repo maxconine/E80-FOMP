@@ -32,14 +32,13 @@ At the end of the lab, you need to submit a completed submission sheet (see link
 
 ## Motherboard Assembly
 
-A motherboard has been designed to interface the major electrical components of your AUV. Familiarize yourself with the components on the motherboard by reading the [Introduction to the E80 Motherboard](https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing) document.  You will add some necessary components to a partially constructed mother board in Lab 1. Use this [motherboard assembly document](https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&ouid=105511935419108795487&rtpof=true&sd=true) as a guide and add the components.  For reference, the schematic for the motherboard is [here](https://drive.google.com/file/d/1pk_mORYsxhedKjjqzhMrxj9H5ZVH3zqp/view?usp=sharing) , the layout is [here](https://drive.google.com/file/d/1pmm8xwpyAHAL5YvwMIQma4W8DuV-MP31/view?usp=sharing) , and [KiCAD](https://www.kicad.org/) design files are  [here](https://drive.google.com/file/d/1pi9WNW7WoIx80xgb_0LWSUyA-LMfp94Z/view?usp=sharing).
+A motherboard has been designed to interface the major electrical components of your AUV. You will assemble it in this section. Familiarize yourself with the components on the motherboard by reading the [Introduction to the E80 Motherboard](https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing), and the [Motherboard Assembly Document](https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&ouid=105511935419108795487&rtpof=true&sd=true).
 
-There are two ways that **you can damage your motherboard irreparably** during this process, and you should take precautions against each of them. One is soldering components in the wrong position or orientation (e.g., screw terminals facing inward or header on the back side of the board), which is very difficult to rework. Double check that you are using the correct header and try fitting all the pieces together before soldering. The other is flipping power and ground by attaching your battery or power supply leads backwards or soldering the red and black wires to the incorrect terminals on the motherboard. Have an instructor or proctor check your battery connector, and make sure to heed the warnings in the assembly guide.
+:::{.callout-warning}
+There are two ways that **you can damage your motherboard irreparably** during this process, and you should take precautions against each of them. 
 
-:::{.callout-warning collapse="true"}
-## SAFETY QUESTION: What are the two ways I can damage my board in this section?
-
-Soldering components in the wrong position or orientation, and attaching battery or power supply leads backwards.
+1. Soldering components in the wrong position or orientation (e.g., screw terminals facing inward or header on the back side of the board), which is very difficult to rework. Double check that you are using the correct header and try fitting all the pieces together before soldering. 
+2. Flipping power and ground by attaching your battery or power supply leads backwards or soldering the red and black wires to the incorrect terminals on the motherboard. Have an instructor or proctor check your battery connector, and make sure to heed the warnings in the assembly guide.
 :::
 
 1. Find the parts you need for your motherboard in the parts rack on the supply table. There is set of parts racks in both B171 and B181.
@@ -50,6 +49,17 @@ Soldering components in the wrong position or orientation, and attaching battery
 4. Follow the instructions in the [Motherboard Assembly Document](https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&ouid=105511935419108795487&rtpof=true&sd=true) to build your Motherboard.
 5. Cover the back of your motherboard with insulating foam sheet using these [ instructions](https://drive.google.com/open?id=1x0CMBDFia2uY5qxPkWFfg_pN3FcR7Pth) to prevent inadvertent short circuits when you set it down. 
 6. Find a sharpie and color the GND side of your P.S. screw black, so that you don't forget the polarity of the connector.
+
+:::{.callout-note collapse="true"}
+## Additional Motherboard Reference Information
+
+* The schematic for the motherboard is [here](https://drive.google.com/file/d/1pk_mORYsxhedKjjqzhMrxj9H5ZVH3zqp/view?usp=sharing) , 
+* The layout for the motherboard is [here](https://drive.google.com/file/d/1pmm8xwpyAHAL5YvwMIQma4W8DuV-MP31/view?usp=sharing). 
+* [KiCAD](https://www.kicad.org/) design files are  [here](https://drive.google.com/file/d/1pi9WNW7WoIx80xgb_0LWSUyA-LMfp94Z/view?usp=sharing).
+
+
+You can find reference information for all of the E80 boards summarized on [this page](/reference/board)
+:::
 
 
 ## Motherboard Validation, IMU Calibration, and IMU Error Measurement
@@ -256,6 +266,6 @@ Thrust curve for E79 motor.
 This comparison is a good example of how E79 can be applied and a good example of how to compare experimental data to theory.  The comparison also can be affected by differences between your motors compared and this motor curve, and that variability makes another case for using closed loop control.
 :::
 
-:::{.callout-warning}
-**IMPORTANT CLEANUP**:  Please return the battery charger to the center table. These will be shared among the different lab sections. Also, put your ballast weights, board, Teensy, penetrator bolt (with motors), battery and robot frame in your labelled Tupperware container in the cupboard. Please return SD card and SD card reader to the proctor or Lynn.
+:::{.callout-note}
+**IMPORTANT CLEANUP**:  Please return the battery charger to the center table. These will be shared among the different lab sections. Also, put your ballast weights, board, Teensy, penetrator bolt (with motors), battery and robot frame in your labelled Tupperware container in the cupboard. Please return SD card and SD card reader to a proctor or instructor.
 :::

@@ -38,7 +38,7 @@ Each team will have exactly 60 minutes to use the wind tunnel to run experiments
 This is a rotation lab, so not all teams will be working on this lab in the same week.  Even numbered teams (12, 24, 36, etc.) will do this lab in week 6, while Odd numbered teams (12, 24, 36, etc.) work on [Lab 5](/labs/lab5/index.qmd).  Odd numbered teams will do this lab in week 7, while Even numbered teams work on lab 5.  Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!
 
 :::{.callout-warning}
-## Safety Tips for the Wind Tunnel
+Safety Tips for the Wind Tunnel
 
 * Follow the dress code for E80 Lab.  
 * Everyone must wear safety goggles during the test.  Hearing protection will be provided if needed.

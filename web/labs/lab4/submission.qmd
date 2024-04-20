@@ -154,8 +154,3 @@ Complete:
 
 - [ ] Settling times are consistent with results from lecture.
 - [ ] Brief (3-5 sentence) discussion about which sensors are appropriate for E80 robots and for cold-junction compensation sensors.
-
-{{< pagebreak >}}
-## Extra Credit Writeups:
-
-We don't provide complete specifications for extra credit writeups, but they will be graded for effort and completeness like normal sections.  You need to provide a "mini-report" of <1 page for each extra credit section that you attempt. Put a page break between each extra credit mini-report.

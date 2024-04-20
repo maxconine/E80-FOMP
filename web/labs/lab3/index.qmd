@@ -100,7 +100,7 @@ Note: Transimpedance amplifiers can be designed in many ways.  The design we are
 Now it is time to assemble and use the turbidity meter. You will prepare solutions of known turbidity using the [TU-2016](https://drive.google.com/file/d/1aRRGL3DGFiiZZP9Hb7o4LIQauYPwHxP3/view?usp=sharing) calibrated laboratory turbidity meter, illuminate them with the LED from @sec-led, then measure the transmitted and 90° scattered light using the transimpedance amplifiers from @sec-transimpedance.  Arranging all of these elements -- the sample cuvette holding your solutions, the LEDs and the photodiodes -- requires a little bit of mechanical finesse, so we provide a 3D printed fixture ([instructions](https://drive.google.com/open?id=1-pEcuCK1zzoU1dhB6DvrvpxaZKwmPZqh), [Solidworks for base](https://drive.google.com/open?id=1peSZif9B1dCVGjBPbByFevaRjnXc4YCT), [Solidworks for cover](https://drive.google.com/open?id=1zrdfRXLA9rLq4WYW_jSm_Pb-nRgdP9Iq)) for holding the cuvette, LED and photodiodes.
 
 :::{.callout-warning}
-## You can Damage the Turbidity Meter
+You can Damage the Turbidity Meter
 
 - DO NOT EVER OPEN THE CALIBRATION STANDARDS
 - Never touch the glass of the turbidity testing containers with your bare fingers.  Handling them with clean gloves is OK.

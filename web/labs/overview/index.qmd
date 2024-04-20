@@ -4,30 +4,30 @@ title: "Lab Overview"
 
 Put these crucial lab and project dates on your calendar!
 
-- Friday {{<var dates.kickoff>}}, 1:15PM-3:15PM: Kickoff lecture
-- Friday {{<var dates.projkickoff>}}, 1:15PM-3:15PM:  Project kickoff lecture
+- Friday {{<var dates.kickoff>}}, 1:15PM-3:15PM: Kickoff lecture in {{<var rooms.kickoff>}}
+- Friday {{<var dates.project_kickoff>}}, 1:15PM-3:15PM:  Project kickoff lecture in {{<var rooms.project_kickoff>}}
 - **Saturday** {{<var dates.dana>}}, 6:30AM-5:30PM:   Robot deployment *on Saturday*  at Dana Point. <br> **ALL STUDENTS ARE EXPECTED TO ATTEND THE SATURDAY LAUNCH**
 - Wednesday {{<var dates.present>}}, time TBD:   Project presentations for all groups during presentation days.
 
 ## Labs
 
-Lab manuals are linked here. Deliverables for each lab and the project are detailed on their individual pages.
+Lab manuals are linked here. Deliverables for each lab are detailed on their individual pages.
 
 Note that in weeks 6 and 7, the order of Lectures/quiz/Lab are not the same for everyone. Odd numbered teams (11, 23, etc.) do different work than Even numbered teams (12, 24, etc.). **Please make sure prelab is done for the correct lab.**
 
 A submission sheet is due at the end of each 4-hour lab period. The submission sheet must be uploaded before the end of your lab session at 5:15 pm. Note that only **ONE** member of each team should access and submit the submission sheet. It is the responsibility of that team member to add the rest of the team’s names to the submission sheet. 
 
-| Week             | (Odd numbered teams) | (Even numbered teams) |
-|------------------|----------------------|-----------------------|
-| **1** (1/16-1/19)|  [Lab 0:<br>Tutorial and Skill Review](/labs/lab0)     |  [Lab 0:<br>Tutorial and Skill Review](/labs/lab0)  |
-| **2** (1/22-1/26)|  [Lab 1:<br>Go Autonomous](/labs/lab1)                 |  [Lab 1:<br>Go Autonomous](/labs/lab1)  |
-| **3** (1/29-2/2) |  [Lab 2:<br>Basic Electrical Measurements](/labs/lab2) |  [Lab 2:<br>Basic Electrical Measurements](/labs/lab2)  |
-| **4** (2/5-2/9)  |  [Lab 3:<br>Op Amps and Marine Sensors](/labs/lab3)    |  [Lab 3:<br>Op Amps and Marine Sensors](/labs/lab3)  |
-| **5** (2/12-2/16)|  [Lab 4:<br>Temperature Sensors](/labs/lab4)           |  [Lab 4:<br>Temperature Sensors](/labs/lab4)  |
-| **6** (2/19-2/23)|  [Lab 5:<br>Underwater Acoustics](/labs/lab5)          |  [Lab 6:<br>Fluid Mechanics](/labs/lab6)  |
-| **7** (2/26-3/1) |  [Lab 6:<br>Fluid Mechanics](/labs/lab6)               |  [Lab 5:<br>Underwater Acoustics](/labs/lab5)  |
-| **8** (3/4-3/8)  |  [Project Proposal Week](/project/proposal)            | [Project Proposal Week](/project/proposal)  |
-| **9** (3/11-3/15)|  **Spring Break**  |  
+| Week | Lab                                                | Notes about Friday     | 
+|------|----------------------------------------------------|------------------------|
+| 1    | [Lab 0: Tutorial and Skill Review](/labs/lab0)     | Kickoff lecture        | 
+| 2    | [Lab 1: Go Autonomous](/labs/lab1)                 |                        |
+| 3    | [Lab 2: Basic Electrical Measurements](/labs/lab2) |                        |
+| 4    | [Lab 3: Op Amps and Marine Sensors](/labs/lab3)    |                        |
+| 5    | [Lab 4: Temperature Sensors](/labs/lab4)           |                        |
+| 6    | Odd Numbered Teams: [Lab 5: Underwater Acoustics](/labs/lab5) <br> Even Numbered Teams: [Lab 6: Fluid Mechanics](/labs/lab6) |                         |
+| 7    | Odd Numbered Teams: [Lab 6: Fluid Mechanics](/labs/lab6) <br> Even Numbered Teams: [Lab 5: Underwater Acoustics](/labs/lab5) | Project kickoff lecture | 
+| 8    | [Project Proposal Week](/project/proposal)         | Proposal and tech memo |
+| 9    | Spring Break                                       |                        |
 
 ## General rules
 - No eating or drinking in lab. If necessary you may leave lab, wash your hands, eat and/or drink something outside the lab, wash your hands, return to lab.
@@ -49,7 +49,10 @@ A submission sheet is due at the end of each 4-hour lab period. The submission s
   - Sunscreen
   - Hydration
 
-## Chemical safety: epoxies and CA (CyanoAcrylate aka superglue)
+## Chemical safety
+
+In this class, this primarily applies to epoxies and CyanoAcrylate (aka CA, aka superglue)
+
 - Safety goggles
 - Gloves
 - If procedure emits fumes, then must be done in a fume hood or out of doors away from buildings
@@ -63,5 +66,10 @@ A submission sheet is due at the end of each 4-hour lab period. The submission s
 ## Hardware checkout
 You will work with some expensive hardware in this class. Expensive hardware like motherboards and batteries must be explicitly checked out from a professor or proctor so that we can track where it is. If any hardware that you checked out breaks,  you will need to request a replacement from a professor. You make this request by filling out an [error report](https://drive.google.com/open?id=1FnHDzDSCuc3pAsEXzUg6BnTacfLF-ODs) (paper copies will be in lab). This report needs to be well thought out; professors will reject reports that don't represent sufficient testing or thought. You will keep this hardware with you throughout the semester in your storage box. 
 
-## SAFETY QUESTIONs
-Labs will include callout boxes labeled "SAFETY QUESTION: the question text".  ALL group members must be able to answer these questions before the lab.  Failing to understand the SAFETY QUESTIONs can damage equipment or harm lab users.  You should always feel empowered to stop work and grab an instructor if you find a safety question that makes you unsure.
+## Warning Callouts
+Labs will include warning callout boxes, an example of which is below, to indicate safety hazards.  All group members must understand the warning and associated safety precaution before lab.  Failing to carefully read warnings can damage equipment or harm lab users.  You should always feel empowered to stop work and grab an instructor if you find a warning that makes you unsure.
+
+:::{.callout-warning}
+
+This text would describe a way that you can injure yourself or damage equipment.
+:::
