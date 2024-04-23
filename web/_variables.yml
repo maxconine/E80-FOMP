@@ -1,7 +1,8 @@
 # Yearly website update process
 # 1. Update this file to change parts of the website that vary year-to-year
-# 2. Update the table of office hours in web/index.qmd
-# 3. Verify that the table in the web/labs/overview/index.qmd has correct Friday info
+# 2. Update the year in the "title: " field of _quarto.yml
+# 3. Update the table of office hours in web/index.qmd
+# 4. Verify that the table in the web/labs/overview/index.qmd has correct Friday info
 
 github-url: https://github.com/HMC-E80/E80-SP2024
 
