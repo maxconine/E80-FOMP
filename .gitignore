@@ -3,3 +3,6 @@ desktop.ini
 .quarto/
 web/_site
 .vscode/*
+
+# Ignore the libraries directory
+libraries/
