@@ -86,14 +86,27 @@ void loop() {
 
   // Go for 10 seconds across
   int acrossTime = 10000;
-  int acrossSpeed = 0.6 * 255;
+  int acrossSpeedLeft = 0.6 * 255;
+  int acrossSpeedRight = 0.6 * 255;
 
   // Go for 6 seconds back up at 70 % speed
   int upTime = 6000
   int upSpeed = 0.7 * -255;
 
-  if (currentTime > 4000 && currentTime <8000) {
-    motorDriver.drive(0,120,0);
+  if (currentTime > initPlacementTime && currentTime < (initPlacementTime + downTime) {
+    motorDriver.drive(0,0,downSpeed);
+  } else {
+    motorDriver.drive(0,0,0);
+  }
+
+  if (currentTime > (initPlacementTime + downTime) && currentTime < (initPlacementTime + downTime + acrossTime) {
+    motorDriver.drive(acrossSpeedLeft,acrossSpeedRight,0);
+  } else {
+    motorDriver.drive(0,0,0);
+  }
+
+  if (currentTime > (initPlacementTime + downTime + acrossTime) && currentTime < (initPlacementTime + downTime + acrossTime + upTime) {
+    motorDriver.drive(0,0,upSpeed);
   } else {
     motorDriver.drive(0,0,0);
   }
