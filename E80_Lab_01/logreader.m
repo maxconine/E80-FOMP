@@ -48,4 +48,5 @@ fclose(fid);
 %% Process your data here
 
 plot(accelX)
-
+xlabel('time (s)')
+ylabel('accelX')
