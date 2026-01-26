@@ -73,9 +73,22 @@ void loop() {
   // The motorDriver.drive function takes in 3 inputs arguments motorA_power, motorB_power, motorC_power: 
   //       void motorDriver.drive(int motorA_power,int motorB_power,int motorC_power); 
   // the value of motorX_power can range from -255 to 255, and sets the PWM applied to the motor 
-  // The following example will turn on motor B for four seconds between seconds 4 and 8 
+
+  // Turn on motor A for four seconds between seconds 4 and 8 
   if (currentTime > 4000 && currentTime <8000) {
+    motorDriver.drive(120,0,0);
+  } else {
+    motorDriver.drive(0,0,0);
+  }
+  // Turn on motor B for four seconds between seconds 8 and 12
+  if (currentTime > 8000 && currentTime <12000) {
     motorDriver.drive(0,120,0);
+  } else {
+    motorDriver.drive(0,0,0);
+  }
+  // Turn on motor C for four seconds between seconds 12 and 16
+  if (currentTime > 12000 && currentTime <16000) {
+    motorDriver.drive(0,0,120);
   } else {
     motorDriver.drive(0,0,0);
   }
