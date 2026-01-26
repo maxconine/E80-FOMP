@@ -46,6 +46,41 @@ end
 fclose(fid);
 
 %% Process your data here
+axis_length = 0.1*size(accelX,1);
+ymax = 2000;
+ymin = -500;
+time = linspace(0, axis_length, size(accelX,1)); %generate time axis
+
+% X Axis acceleration
+XFig = figure('Name', 'Accel-X');
+plot(time, accelX); %plot data
+axis([0 axis_length ymin ymax]); %format axis
+grid on
+title('X Acceleration Plot');
+xlabel('Time (Seconds)');
+ylabel('X-acceleration-axis');
+
+% Y Axis acceleration
+YFig = figure('Name', 'Accel-Y');
+plot(time, accelY); %plot data
+axis([0 axis_length ymin ymax]); %format axis
+grid on
+title('Y Acceleration Plot');
+xlabel('Time (Seconds)');
+ylabel('Y-acceleration-axis');
+
+% Z Axis acceleration
+ZFig = figure('Name', 'Accel-Z');
+plot(time, accelZ); %plot data
+axis([0 axis_length ymin ymax]); %format axis
+grid on
+title('Z Acceleration Plot');
+xlabel('Time (Seconds)');
+ylabel('Z-acceleration-axis');
+
+
+
+
 
 plot(accelX)
 
