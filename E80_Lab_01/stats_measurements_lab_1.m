@@ -6,59 +6,72 @@
 % set of readings from a voltmeter or mass readings from a scale would
 % qualify.
 
-A = importdata('test.csv')
+%accelX_filenumber.csv
+X = importdata('test.csv');d
 %import second data set
 
-B = importdata('test.csv')
+%accelX_filenumber.csv
+Y = importdata('test.csv');
 
-% The inputs consist of the data set and the desired confidence level.
-% The script calculates the following:
-%    1. The mean or average of the data
-%    2. The sample standard deviation of the data
-%    3. The count of the data
-%    4. The estimated standard error of the data
-%    5. The Student-t value
-%    6. The confidence interval
-% It plots a histogram of the data, with a fitted normal distribution, and
-% the 
-data1 = A % Replace these with your data set
-%second data set
-data2 = B
+%accelX_filenumber.csv
+Z = importdata('test.csv');
+
+data1 = X;
+data2 = Y;
+data3 = Z;
+
 confLev = 0.95;
-xbar = mean(data1) % Arithmetic mean
-S = std(data1) % Standard Deviation
-N = length(data1); % Count
-ESE = S/sqrt(N) % Estimated Standard Error
+
+%mean
+disp('means')
+xbarX = mean(data1) 
+xbarY = mean(data2)
+XbarZ = mean(data3)
+
+% Standard Deviation
+disp('standard deviation')
+SX = std(data1) 
+SY = std(data2)
+SZ = std(data3)
+
+%count
+N1 = length(data1);
+N2 = length(data2);
+N3 = length(data3);
+
+disp('esimated standard error')
+% Estimated Standard Error
+ESEX = SX/sqrt(N1) 
+ESEY = SY/sqrt(N2)
+ESEZ = SZ/sqrt(N3)
+
 % tinv is for 1-tailed, for 2-tailed we need to halve the range
-StdT = tinv((1-0.5*(1-confLev)),N-1); % The Student t value
-lambda = StdT*ESE;% 1/2 of the confidence interval ąlambda
-conf_interval = 2*lambda
+% The Student t value
+StdT1 = tinv((1-0.5*(1-confLev)),N1-1); 
+StdT2 = tinv((1-0.5*(1-confLev)),N2-1); 
+StdT3 = tinv((1-0.5*(1-confLev)),N3-1); 
+
+disp('confidence intervals')
+
+lambdaX = StdT1*ESEX;   % 1/2 of the confidence interval ąlambda
+conf_intervalX = 2*lambdaX
+
+lambdaY = StdT2*ESEY;   % 1/2 of the confidence interval ąlambda
+conf_intervalY = 2*lambdaY
+
+lambdaZ = StdT3*ESEZ;% 1/2 of the confidence interval ąlambda
+conf_intervalZ = 2*lambdaZ
+
 
 %two-sided t test
-[h,p,ci,stats] = ttest2(data1,data2)
+
+disp('comparing x axis and y axis zeroes')
+[h1,p1,ci1,stats1] = ttest2(data1,data2)
+
+disp('comparing x axis and z axis zeroes')
+[h2,p2,ci2,stats2] = ttest2(data1,data3)
+
+disp('comparing z axis and y axis zeroes')
+[h3,p3,ci3,stats3] = ttest2(data2,data3)
 
 
-h = histfit(data1); % Plot histogram and normal curve
-hold on
-bob = get(h(2)); % Get the normal curve data
-mx = max(h(2).YData); % Get the max in the normal curve data
-line([xbar xbar], [0 mx*1.05], 'LineWidth',3) % Plot a line for the mean
-line([xbar-S xbar-S], [0 mx*0.65], 'LineWidth',3) % Plot a line for 1 S
-                                                  % below the mean
-line([xbar+S xbar+S], [0 mx*0.65], 'LineWidth',3) % Plot a line for
-                                                  % 1 S above the mean
-line([xbar-lambda xbar+lambda], [mx*1.07 mx*1.07]) % Plot the conf. int.
-line([xbar-lambda xbar-lambda], [mx*1.02 mx*1.12])
-line([xbar+lambda xbar+lambda], [mx*1.02 mx*1.12])
-title('Histogram and Fitted Normal Distribution of Data')
-xlabel('Data Range')
-ylabel('Count')
-txt2 = '$\leftarrow \bar{x} + S$';
-text(xbar+S,mx*0.65,txt2,'Interpreter','latex')
-txt3 = '$\bar{x} - S \rightarrow$';
-text(xbar-S-0.55*S,mx*0.65,txt3,'Interpreter','latex')
-txt4 = '  Confidence Interval';
-text(xbar+lambda,mx*1.07,txt4)
-hold off
-
-Displaying FIGURE_20180724_01_CalculateStatsForDataSet.m.
