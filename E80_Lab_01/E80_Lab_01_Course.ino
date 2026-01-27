@@ -77,8 +77,8 @@ void loop() {
 
   // Motor A is left side, Motor B is right side, Motor C is up/down
   
-  // Wait 15 seconds for us to close the box and place the robot in the water
-  int initPlacementTime = 15000;
+  // Wait 20 seconds for us to close the box and place the robot in the water
+  int initPlacementTime = 20000;
 
   // Go for 4 seconds down at 60% speed
   int downTime = 4000;
