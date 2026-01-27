@@ -74,6 +74,8 @@ void loop() {
   //       void motorDriver.drive(int motorA_power,int motorB_power,int motorC_power); 
   // the value of motorX_power can range from -255 to 255, and sets the PWM applied to the motor 
 
+  // This code will turn on each of the motors for 4 seconds consecutively and print imu data to the serial
+
   // Turn on motor A for four seconds between seconds 4 and 8 
   if (currentTime > 4000 && currentTime <8000) {
     motorDriver.drive(120,0,0);
