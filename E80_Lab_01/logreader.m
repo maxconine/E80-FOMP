@@ -4,7 +4,7 @@
 clear;
 %clf;
 
-filenum = '002'; % file number for the data you want to read
+filenum = '013'; % file number for the data you want to read
 infofile = strcat('inf', filenum, '.txt');
 datafile = strcat('log', filenum, '.bin');
 
@@ -47,48 +47,48 @@ fclose(fid);
 
 %% Process your data here
 axis_length = 0.1*size(accelX,1);
-ymax = 1100;
-ymin = 800;
+ymax = 1500;
+ymin = -1500;
 % crop settings (seconds)
-xmin = 1; %4.7;
-xmax = length(accelX) / 10;
+xmin = 1400; %4.7;
+xmax = 1850; %length(accelX) / 10;
 time = linspace(0, axis_length, size(accelX,1)); %generate time axis
 
 % X Axis acceleration
 XFig = figure('Name', 'Accel-X');
-plot(time, accelX); %plot data
+plot(accelX); %plot data
 axis([0 axis_length ymin ymax]); %format axis
 xlim([xmin xmax])
 grid on
 title('X Acceleration Plot');
-xlabel('Time (Seconds)');
+xlabel('Sample #');
 ylabel('X-acceleration-axis');
 
 % Y Axis acceleration
 YFig = figure('Name', 'Accel-Y');
-plot(time, accelY); %plot data
+plot(accelY); %plot data
 axis([0 axis_length ymin ymax]); %format axis
 xlim([xmin xmax])
 grid on
 title('Y Acceleration Plot');
-xlabel('Time (Seconds)');
+xlabel('Sample #');
 ylabel('Y-acceleration-axis');
 
 % Z Axis acceleration
 ZFig = figure('Name', 'Accel-Z');
-plot(time, accelZ); %plot data
+plot(accelZ); %plot data
 axis([0 axis_length ymin ymax]); %format axis
 xlim([xmin xmax])
 grid on
 title('Z Acceleration Plot');
-xlabel('Time (Seconds)');
+xlabel('Sample #');
 ylabel('Z-acceleration-axis');
 
 % Crop data using xmin & xmax
-accelX = accelX(xmin : xmax*10);
-accelY = accelY(xmin : xmax*10);
-accelZ = accelZ(xmin : xmax*10);
-time = time(xmin : xmax*10);
+% accelX = accelX(xmin*10 : xmax*10);
+% accelY = accelY(xmin*10 : xmax*10);
+% accelZ = accelZ(xmin*10 : xmax*10);
+% time = time(xmin*10 : xmax*10);
 
 % Export each plot to a .csv for stats processing. 
 % Note that data is collected every 0.1 seconds.
