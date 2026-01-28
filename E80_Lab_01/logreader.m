@@ -4,9 +4,9 @@
 clear;
 %clf;
 
-filenum = '004'; % file number for the data you want to read
-infofile = strcat('INF', filenum, '.TXT');
-datafile = strcat('LOG', filenum, '.BIN');
+filenum = '003'; % file number for the data you want to read
+infofile = strcat('inf', filenum, '.txt');
+datafile = strcat('log', filenum, '.bin');
 
 %% map from datatype to length in bytes
 dataSizes.('float') = 4;
@@ -47,8 +47,8 @@ fclose(fid);
 
 %% Process your data here
 axis_length = 0.1*size(accelX,1);
-ymax = 2000;
-ymin = -500;
+ymax = 1500;
+ymin = -1500;
 % crop settings (seconds)
 xmin = 1;
 xmax = length(accelX) / 10;

@@ -73,40 +73,25 @@ void loop() {
   // The motorDriver.drive function takes in 3 inputs arguments motorA_power, motorB_power, motorC_power: 
   //       void motorDriver.drive(int motorA_power,int motorB_power,int motorC_power); 
   // the value of motorX_power can range from -255 to 255, and sets the PWM applied to the motor 
-  // The following example will turn on motor B for four seconds between seconds 4 and 8 
 
-  // Motor A is left side, Motor B is right side, Motor C is up/down
-  
-  // Wait 20 seconds for us to close the box and place the robot in the water
-  int initPlacementTime = 20000;
+  // This code will turn on each of the motors for 4 seconds consecutively and print imu data to the serial
+  // positive is down
 
-  // Go for 4 seconds down at 60% speed
-  int downTime = 4000;
-  int downSpeed = 0.6 * 255;
-
-  // Go for 10 seconds across
-  int acrossTime = 10000;
-  int acrossSpeedLeft = 0.6 * 255;
-  int acrossSpeedRight = 0.6 * 255;
-
-  // Go for 6 seconds back up at 70 % speed
-  int upTime = 6000
-  int upSpeed = 0.7 * -255;
-
-  if (currentTime > initPlacementTime && currentTime < (initPlacementTime + downTime) {
-    motorDriver.drive(0,0,downSpeed);
+  // Turn on motor A for four seconds between seconds 4 and 8 
+  if (currentTime > 4000 && currentTime <8000) {
+    motorDriver.drive(120,0,0);
   } else {
     motorDriver.drive(0,0,0);
   }
-
-  if (currentTime > (initPlacementTime + downTime) && currentTime < (initPlacementTime + downTime + acrossTime) {
-    motorDriver.drive(acrossSpeedLeft,acrossSpeedRight,0);
+  // Turn on motor B for four seconds between seconds 8 and 12
+  if (currentTime > 8000 && currentTime <12000) {
+    motorDriver.drive(0,120,0);
   } else {
     motorDriver.drive(0,0,0);
   }
-
-  if (currentTime > (initPlacementTime + downTime + acrossTime) && currentTime < (initPlacementTime + downTime + acrossTime + upTime) {
-    motorDriver.drive(0,0,upSpeed);
+  // Turn on motor C for four seconds between seconds 12 and 16
+  if (currentTime > 12000 && currentTime <16000) {
+    motorDriver.drive(0,0,120);
   } else {
     motorDriver.drive(0,0,0);
   }
