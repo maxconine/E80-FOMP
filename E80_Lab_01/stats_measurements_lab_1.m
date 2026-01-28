@@ -7,14 +7,16 @@
 % qualify.
 
 %accelX_filenumber.csv
-X = importdata('test.csv');d
-%import second data set
+X = importdata('accelX_filenumber.csv');
+
+%if we need to access just one column, change argument A:A
+%column_data = readmatrix('accelX_filenumber.csv', 'Range', 'A:A')
 
 %accelX_filenumber.csv
-Y = importdata('test.csv');
+Y = importdata('accelY_filenumber.csv');
 
 %accelX_filenumber.csv
-Z = importdata('test.csv');
+Z = importdata('accelZ_filenumber.csv');
 
 data1 = X;
 data2 = Y;
