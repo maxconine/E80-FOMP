@@ -7,25 +7,25 @@
 % qualify.
 
 %accelX_filenumber.csv
-% filenum = '005'; % file number for the data you want to read
-% X = importdata(['accelX_', filenum, '.csv']);
+ filenum = '006'; % file number for the data you want to read
+ X = importdata(['accelX_', filenum, '.csv']);
+ %import second data set
+ 
+% %accelY_filenumber.csv
+ Y = importdata(['accelY_', filenum, '.csv']);
+% 
+% %accelZ_filenumber.csv
+ Z = importdata(['accelZ_', filenum, '.csv']);
+
+% %accelX_filenumber.csv
+% X = importdata(['accelX_', '005', '.csv']);
 % %import second data set
 % 
 % %accelY_filenumber.csv
-% Y = importdata(['accelY_', filenum, '.csv']);
+% Y = importdata(['accelY_', '003', '.csv']);
 % 
 % %accelZ_filenumber.csv
-% Z = importdata(['accelZ_', filenum, '.csv']);
-
-%accelX_filenumber.csv
-X = importdata(['accelX_', '005', '.csv']);
-%import second data set
-
-%accelY_filenumber.csv
-Y = importdata(['accelY_', '003', '.csv']);
-
-%accelZ_filenumber.csv
-Z = importdata(['accelZ_', '002', '.csv']);
+% Z = importdata(['accelZ_', '002', '.csv']);
 
 data1 = abs(X);
 data2 = abs(Y);
