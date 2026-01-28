@@ -91,7 +91,7 @@ void loop() {
 
   // Go for 8 seconds back up at 70 % speed
   int upTime = 15000;
-  int upSpeed = 1 * -255;
+  int upSpeed = 0.95 * -255;
 
   if ((currentTime > initPlacementTime) && (currentTime < (initPlacementTime + downTime))) {
     motorDriver.drive(0,downSpeed,0);

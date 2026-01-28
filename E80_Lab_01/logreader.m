@@ -4,7 +4,7 @@
 clear;
 %clf;
 
-filenum = '003'; % file number for the data you want to read
+filenum = '002'; % file number for the data you want to read
 infofile = strcat('inf', filenum, '.txt');
 datafile = strcat('log', filenum, '.bin');
 
@@ -47,10 +47,10 @@ fclose(fid);
 
 %% Process your data here
 axis_length = 0.1*size(accelX,1);
-ymax = 1500;
-ymin = -1500;
+ymax = 1100;
+ymin = 800;
 % crop settings (seconds)
-xmin = 1;
+xmin = 1; %4.7;
 xmax = length(accelX) / 10;
 time = linspace(0, axis_length, size(accelX,1)); %generate time axis
 
