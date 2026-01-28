@@ -73,24 +73,40 @@ void loop() {
   // The motorDriver.drive function takes in 3 inputs arguments motorA_power, motorB_power, motorC_power: 
   //       void motorDriver.drive(int motorA_power,int motorB_power,int motorC_power); 
   // the value of motorX_power can range from -255 to 255, and sets the PWM applied to the motor 
+  // The following example will turn on motor B for four seconds between seconds 4 and 8 
 
-  // This code will turn on each of the motors for 4 seconds consecutively and print imu data to the serial
+  // Motor A is right side, Motor B is down side, Motor C is left looking at robot from behind
+  
+  // Wait 20 seconds for us to close the box and place the robot in the water
+  int initPlacementTime = 90000;
 
-  // Turn on motor A for four seconds between seconds 4 and 8 
-  if (currentTime > 4000 && currentTime <8000) {
-    motorDriver.drive(120,0,0);
+  // Go for 4 seconds down at 70% speed
+  int downTime = 10000;
+  int downSpeed = 0.9 * 255;
+
+  // Go for 10 seconds across
+  int acrossTime = 10000;
+  int acrossSpeedLeft = 0.8 * 255;
+  int acrossSpeedRight = 0.7 * 255;
+
+  // Go for 8 seconds back up at 70 % speed
+  int upTime = 15000;
+  int upSpeed = 1 * -255;
+
+  if ((currentTime > initPlacementTime) && (currentTime < (initPlacementTime + downTime))) {
+    motorDriver.drive(0,downSpeed,0);
   } else {
     motorDriver.drive(0,0,0);
   }
-  // Turn on motor B for four seconds between seconds 8 and 12
-  if (currentTime > 8000 && currentTime <12000) {
-    motorDriver.drive(0,120,0);
+
+  if ((currentTime > (initPlacementTime + downTime)) && (currentTime < (initPlacementTime + downTime + acrossTime))) {
+    motorDriver.drive(acrossSpeedRight,0.3*255,acrossSpeedLeft);
   } else {
     motorDriver.drive(0,0,0);
   }
-  // Turn on motor C for four seconds between seconds 12 and 16
-  if (currentTime > 12000 && currentTime <16000) {
-    motorDriver.drive(0,0,120);
+
+  if ((currentTime > (initPlacementTime + downTime + acrossTime)) && (currentTime < (initPlacementTime + downTime + acrossTime + upTime))) {
+    motorDriver.drive(0,upSpeed,0);
   } else {
     motorDriver.drive(0,0,0);
   }
