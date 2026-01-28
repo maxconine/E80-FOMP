@@ -7,7 +7,7 @@
 % qualify.
 
 %accelX_filenumber.csv
- filenum = '006'; % file number for the data you want to read
+filenum = '006'; % file number for the data you want to read
  X = importdata(['accelX_', filenum, '.csv']);
  %import second data set
  
