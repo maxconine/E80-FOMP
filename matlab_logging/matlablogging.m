@@ -1,5 +1,7 @@
 % matlablogging
 % reads from Teensy data stream
+% Team 23 -- Section 2
+% Max, Pierce, Octavia, Freja
 
 function teensyanalog=matlablogging(length)
     length = 5000;  % 5000 is hardcoded buffer size on Teensy
