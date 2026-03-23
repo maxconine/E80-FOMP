@@ -4,7 +4,7 @@
 clear;
 %clf;
 
-filenum = '013'; % file number for the data you want to read
+filenum = '016'; % file number for the data you want to read
 infofile = strcat('inf', filenum, '.txt');
 datafile = strcat('log', filenum, '.bin');
 
@@ -46,52 +46,46 @@ end
 fclose(fid);
 
 %% Process your data here
+
+% Acceleration conversion (From lab data)
+accelX = accelX;%* 0.01027254819;
+accelY = accelY;% * 0.009546516154;
+accelZ = accelZ;% * 0.009420916162;
+
 axis_length = 0.1*size(accelX,1);
-ymax = 1500;
-ymin = -1500;
-% crop settings (seconds)
-xmin = 1400; %4.7;
-xmax = 1850; %length(accelX) / 10;
-time = linspace(0, axis_length, size(accelX,1)); %generate time axis
+% crop settings 
+ymax = 16;
+ymin = -10;
+xmin = 1400; 
+xmax = 1850;
+time = linspace(0, axis_length, size(accelX,1)); %generate time axis (Not used)
 
 % X Axis acceleration
 XFig = figure('Name', 'Accel-X');
-plot(accelX); %plot data
+set(XFig, 'color', [1 1 1]);
+p1 = plot(accelX, 'r-'); %plot data
+
+axis([0 axis_length ymin ymax]); %format y axis
+xlim([xmin xmax]) % format x axis
+grid on
+title('XYZ Acceleration Plot');
+xlabel('Sample #');
+ylabel('Acceleration (m/s^2)');
+
+hold on; % make plots overlayed on same fig
+
+p2 = plot(accelY, 'g-'); %plot Y data
 axis([0 axis_length ymin ymax]); %format axis
 xlim([xmin xmax])
 grid on
-title('X Acceleration Plot');
-xlabel('Sample #');
-ylabel('X-acceleration-axis');
 
-% Y Axis acceleration
-YFig = figure('Name', 'Accel-Y');
-plot(accelY); %plot data
+p3 = plot(accelZ, 'b-'); %plot Z data
 axis([0 axis_length ymin ymax]); %format axis
 xlim([xmin xmax])
 grid on
-title('Y Acceleration Plot');
-xlabel('Sample #');
-ylabel('Y-acceleration-axis');
 
-% Z Axis acceleration
-ZFig = figure('Name', 'Accel-Z');
-plot(accelZ); %plot data
-axis([0 axis_length ymin ymax]); %format axis
-xlim([xmin xmax])
-grid on
-title('Z Acceleration Plot');
-xlabel('Sample #');
-ylabel('Z-acceleration-axis');
-
-% Crop data using xmin & xmax
-% accelX = accelX(xmin*10 : xmax*10);
-% accelY = accelY(xmin*10 : xmax*10);
-% accelZ = accelZ(xmin*10 : xmax*10);
-% time = time(xmin*10 : xmax*10);
-
-% Export each plot to a .csv for stats processing. 
-% Note that data is collected every 0.1 seconds.
-writematrix(accelX, ['accelX_', filenum, '.csv']);
-writematrix(accelY, ['accelY_', filenum, '.csv']);
-writematrix(accelZ, ['accelZ_', filenum, '.csv']);
+legend('acceleration in x-axis', 'acceleration in y-axis', 'acceleration in z-axis');
+% change width of lines
+p1.LineWidth = 2;
+p2.LineWidth = 2;
+p3.LineWidth = 2;
