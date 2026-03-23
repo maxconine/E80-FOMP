@@ -4,7 +4,7 @@
 clear;
 %clf;
 
-filenum = '004'; % file number for the data you want to read
+filenum = '015'; % file number for the data you want to read
 infofile = strcat('INF', filenum, '.TXT');
 datafile = strcat('LOG', filenum, '.BIN');
 
@@ -47,6 +47,22 @@ fclose(fid);
 
 %% Process your data here
 
-plot(accelX)
+% Export each plot to a .csv for stats processing.
+% Note that data is collected every 0.1 seconds.
+writematrix(accelX, ['accelX_', filenum, '.csv']); %
+writematrix(accelY, ['accelY_', filenum, '.csv']); %
+writematrix(accelZ, ['accelZ_', filenum, '.csv']);
+
+figure;
+fs = 10; % Sampling frequency (Hz)
+t = (0:length(accelZ)-1)/fs; % Time vector in seconds
+plot(t, accelZ)
+xmin = 0; 
+xmax = 10;
+xlim([xmin xmax]) % format x axis
 xlabel('time (s)')
-ylabel('accelX')
+ylabel('accelZ')
+
+avgZ = sum(accelZ)/length(accelZ)
+avgY = sum(accelY)/length(accelZ)
+avgZ = sum(accelZ)/length(accelZ)
