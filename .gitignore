@@ -5,4 +5,4 @@ web/_site
 .vscode/*
 
 # Ignore the libraries directory
-libraries/
+# libraries/
