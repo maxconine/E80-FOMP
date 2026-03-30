@@ -8,51 +8,75 @@
 % and velocity based on the standard deviation of the sensor and the
 % specified confidence level.
 
-dt = 0.01; % The sampling rate
+dt = 0.10; % The sampling rate
 t = 0:dt:20; % The time array (unsure, might have to be longer)
 %a = 1 + sin( pi*t -pi/2); % The modeled acceleration
 %la = length(a);
 %la2 = round(length(a)/5);
 %a([la2:end]) = 0; % We only want one cycle of the sine wave.
 
-accels = readtable("b12.csv");
-accels = accels';
-ax = accels(1,:);
-ay = accels (2,:);
+accels = readtable("output_data_028.csv");
+% accels = accels';
+ax = abs(accels{:,'Var1'}); %accels(1,:);
+ay = abs(accels{:,'Var2'}); %accels (2,:);
+% ax = ax';
+% ay = ay';
 lax = length(ax);
 lay = length (ay);
 
+%%
+% Create time vector matching data length
+t = (0:lax-1)' * dt; 
+
+% Integration for X
+sigma = .2;
+en_x = (sigma * randn(lax, 1)); % Column vector noise
+vx = cumtrapz(t, ax); 
+rx = cumtrapz(t, vx); 
+an_x = ax + en_x; % Corrected variable name
+vn_x = cumtrapz(t, an_x);
+rn_x = cumtrapz(t, vn_x);
+
+% Integration for Y
+en_y = (sigma * randn(lay, 1));
+vy = cumtrapz(t, ay);
+ry = cumtrapz(t, vy);
+an_y = ay + en_y;
+vn_y = cumtrapz(t, an_y);
+rn_y = cumtrapz(t, vn_y);
+
+%%
 sigma = .2; % The standard deviation of the noise in the accel.
 confLev = 0.95; % The confidence level for bounds
 preie = sqrt(2)*erfinv(confLev)*sigma*sqrt(dt); % the prefix to the sqrt(t)
 preiie = 2/3*preie; % The prefix to t^3/2a = 1 + sin( pi*t - pi/2);
 plusie=preie*t.^0.5; % The positive noise bound for one integration
 plusiie = preiie*t.^1.5; % The positive noise bound for double integration
-
-% for ax
-en_x = sigma*randn(1, lax); % Generate the noise
-vx = cumtrapz(t,ax); % Integrate the true acceleration to get the true velocity
-rx = cumtrapz(t,vx); % Integrate the true velocity to get the true position.
-an_x = ax + en; % Generate the noisy measured acceleration
-vn_x = cumtrapz(t,an_x); % Integrate the measured acceleration to get the velocity
-vnp_x = vn_x + plusie; % Velocity plus confidence bound
-vnm_x = vn_x - plusie; % Velocity minus confidence bound
-rn_x = cumtrapz(t,vn_x); % Integrate the velocity to get the position
-%rnp_x = rn_x + plusiie; % Position plus confidence bound
-%rnm_x = rn_x - plusiie; % Position minus confidence bound
-
-% for ay
-en_y = sigma*randn(1, lay); % Generate the noise
-vy = cumtrapz(t,ay); % Integrate the true acceleration to get the true velocity
-ry = cumtrapz(t,vy); % Integrate the true velocity to get the true position.
-an_y = ay + en_y; % Generate the noisy measured acceleration
-vn_y = cumtrapz(t,an_y); % Integrate the measured acceleration to get the velocity
-vnp_y = vn_y + plusie; % Velocity plus confidence bound
-vnm_y = vn_y - plusie; % Velocity minus confidence bound
-rn_y = cumtrapz(t,vn_y); % Integrate the velocity to get the position
-%rnp_y = rn_y + plusiie; % Position plus confidence bound
-%rnm_y = rn_y - plusiie; % Position minus confidence bound
-
+% 
+% % for ax
+% en_x = sigma*randn(1, lax); % Generate the noise
+% vx = cumtrapz(t,ax); % Integrate the true acceleration to get the true velocity
+% rx = cumtrapz(t,vx); % Integrate the true velocity to get the true position.
+% an_x = ax + en; % Generate the noisy measured acceleration
+% vn_x = cumtrapz(t,an_x); % Integrate the measured acceleration to get the velocity
+% vnp_x = vn_x + plusie; % Velocity plus confidence bound
+% vnm_x = vn_x - plusie; % Velocity minus confidence bound
+% rn_x = cumtrapz(t,vn_x); % Integrate the velocity to get the position
+% %rnp_x = rn_x + plusiie; % Position plus confidence bound
+% %rnm_x = rn_x - plusiie; % Position minus confidence bound
+% 
+% % for ay
+% en_y = sigma*randn(1, lay); % Generate the noise
+% vy = cumtrapz(t,ay); % Integrate the true acceleration to get the true velocity
+% ry = cumtrapz(t,vy); % Integrate the true velocity to get the true position.
+% an_y = ay + en_y; % Generate the noisy measured acceleration
+% vn_y = cumtrapz(t,an_y); % Integrate the measured acceleration to get the velocity
+% vnp_y = vn_y + plusie; % Velocity plus confidence bound
+% vnm_y = vn_y - plusie; % Velocity minus confidence bound
+% rn_y = cumtrapz(t,vn_y); % Integrate the velocity to get the position
+% %rnp_y = rn_y + plusiie; % Position plus confidence bound
+% %rnm_y = rn_y - plusiie; % Position minus confidence bound
+%%
 
 % linear regression for plotting x vs y position
 % Script for the linear fit of data. The independent values are
@@ -70,6 +94,9 @@ rn_y = cumtrapz(t,vn_y); % Integrate the velocity to get the position
 % After calculating these quantities, the script plots the original data,
 % the best fit line, and the upper and lower bounds for the confidence
 % interval on the best fit line.
+rn_x = rn_x(:); 
+rn_y = rn_y(:);
+
 N = length(rn_x); % The number of data points
 xbar = mean(rn_x);
 ybar = mean(rn_y);
@@ -99,7 +126,7 @@ Sy = Se*sqrt(1+1/N + (xplot - xbar).*(xplot - xbar)/Sxx);
 lambday = StdT*Sy;
 
 figure(1)
-plot(rn_x,rn_y,'rn_x')
+plot1Hooray = plot(rn_x,rn_y)
 hold on
 plot(xplot,yplot)
 plot(xplot,yplot+lambdayhat,'-.b',xplot,yplot-lambdayhat,'-.b')
@@ -107,6 +134,8 @@ plot(xplot,yplot+lambday,'--m',xplot,yplot-lambday,'--m')
 xlabel('x Position (m)')
 ylabel('y Position(m)')
 title('x vs y Robot Position')
+legend(plot1Hooray, 'X and Y position')
+
 %if beta1 > 0 % Fix this
 %    location = 'northwest';
 %else
@@ -147,15 +176,44 @@ lambdayhat = StdT*Syhat;
 Sy = Se*sqrt(1+1/N + (xplot - xbar).*(xplot - xbar)/Sxx);
 lambday = StdT*Sy;
 
+% figure(2)
+% plot(t,rn_y, 'r', t, rn_x, 'b')
+% plot(xplot,yplot)
+% 
+% plot(xplot,yplot+lambdayhat,'-.b',xplot,yplot-lambdayhat,'-.b')
+% plot(xplot,yplot+lambday,'--m',xplot,yplot-lambday,'--m')
+% legend('Position', 'Acceleration')
+% xlabel('Time (s)')
+% ylabel('y Position (m)')
+% title('Robot y Position Over Time')
+
+
 figure(2)
-plot(t,rn_y,'rn_y')
-hold on
-plot(xplot,yplot)
-plot(xplot,yplot+lambdayhat,'-.b',xplot,yplot-lambdayhat,'-.b')
-plot(xplot,yplot+lambday,'--m',xplot,yplot-lambday,'--m')
+% Plot 1
+h1 = plot(t,rn_y, 'r'); 
+hold on; % Keep this plot
+plot(t, rn_x, '-w'); % Add blue line
+
+% Plot 2
+plot(xplot,yplot);
+
+% Plot 3 (Upper bound)
+h2 = plot(xplot,yplot+lambdayhat,'-.w'); 
+plot(xplot,yplot-lambdayhat,'-.b');
+
+% Plot 4 (Lower bound - Example: not added to legend, but plotted)
+plot(xplot,yplot+lambday,'--m'); 
+plot(xplot,yplot-lambday,'--m');
+
+% Only label the handles you want
+legend(h1,'Y Position')
+
 xlabel('Time (s)')
 ylabel('y Position (m)')
 title('Robot y Position Over Time')
+hold off;
+
+
 %if beta1 > 0 % Fix this
 %    location = 'northwest';
 %else

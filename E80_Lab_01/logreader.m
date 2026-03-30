@@ -4,7 +4,7 @@
 clear;
 %clf;
 
-filenum = '016'; % file number for the data you want to read
+filenum = '053'; % file number for the data you want to read
 infofile = strcat('inf', filenum, '.txt');
 datafile = strcat('log', filenum, '.bin');
 
@@ -54,19 +54,20 @@ accelZ = accelZ;% * 0.009420916162;
 
 axis_length = 0.1*size(accelX,1);
 % crop settings 
-ymax = 16;
-ymin = -10;
-xmin = 1400; 
-xmax = 1850;
+% ymax = 16;
+% ymin = -10;
+% xmin = 1400; 
+% xmax = 1850;
 time = linspace(0, axis_length, size(accelX,1)); %generate time axis (Not used)
 
 % X Axis acceleration
 XFig = figure('Name', 'Accel-X');
 set(XFig, 'color', [1 1 1]);
 p1 = plot(accelX, 'r-'); %plot data
+axis("tight");
 
-axis([0 axis_length ymin ymax]); %format y axis
-xlim([xmin xmax]) % format x axis
+% axis([0 axis_length ymin ymax]); %format y axis
+% xlim([xmin xmax]) % format x axis
 grid on
 title('XYZ Acceleration Plot');
 xlabel('Sample #');
@@ -75,13 +76,15 @@ ylabel('Acceleration (m/s^2)');
 hold on; % make plots overlayed on same fig
 
 p2 = plot(accelY, 'g-'); %plot Y data
-axis([0 axis_length ymin ymax]); %format axis
-xlim([xmin xmax])
+% axis([0 axis_length ymin ymax]); %format axis
+% xlim([xmin xmax])
+axis("tight");
 grid on
 
 p3 = plot(accelZ, 'b-'); %plot Z data
-axis([0 axis_length ymin ymax]); %format axis
-xlim([xmin xmax])
+% axis([0 axis_length ymin ymax]); %format axis
+axis("tight");
+% xlim([xmin xmax])
 grid on
 
 legend('acceleration in x-axis', 'acceleration in y-axis', 'acceleration in z-axis');
@@ -89,3 +92,17 @@ legend('acceleration in x-axis', 'acceleration in y-axis', 'acceleration in z-ax
 p1.LineWidth = 2;
 p2.LineWidth = 2;
 p3.LineWidth = 2;
+
+data_matrix = [accelX*0.0094, accelY*0.0094];
+
+% Define the filename
+filename = strcat('output_data_', filenum, '.csv');
+
+% Write the matrix to the CSV file
+writematrix(data_matrix, filename);
+
+disp(['Data successfully written to ' filename]);
+
+data = [uV,depth,depth_des];
+filename2 = strcat('output_depth_data_', filenum, '.csv');
+writematrix(data, filename2);

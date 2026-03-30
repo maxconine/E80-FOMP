@@ -74,7 +74,7 @@ void setup() {
   motor_driver.init();
   led.init();
 
-  int diveDelay = 0; // how long robot will stay at depth waypoint before continuing (ms)
+  int diveDelay = 6000; // how long robot will stay at depth waypoint before continuing (ms)
 
   const int num_depth_waypoints = 2;
   double depth_waypoints [] = { 0.5, 1 };  // listed as z0,z1,... etc.
@@ -107,7 +107,8 @@ void loop() {
   if ( currentTime-printer.lastExecutionTime > LOOP_PERIOD ) {
     printer.lastExecutionTime = currentTime;
     printer.printValue(0,adc.printSample());
-    printer.printValue(1,ef.printStates());
+    // printer.printValue(1,ef.printStates());
+    printer.printValue(1,button_sampler.printState());
     printer.printValue(2,logger.printState());
     printer.printValue(3,gps.printState());   
     printer.printValue(4,xy_state_estimator.printState());  
@@ -132,17 +133,19 @@ void loop() {
         depth_control.diveState = false; 
         depth_control.surfaceState = true;
       }
-      motor_driver.drive(0,0,depth_control.uV);
+      //motor_driver.drive(depth_control.uV,0,0);
     }
-    if ( depth_control.surfaceState ) {     // SURFACE STATE //
-      if ( !depth_control.atSurface ) { 
-        depth_control.surface(&z_state_estimator.state);
-      }
-      else if ( depth_control.complete ) { 
-        delete[] depth_control.wayPoints;   // destroy depth waypoint array from the Heap
-      }
-      motor_driver.drive(0,0,depth_control.uV);
-    }
+    // if ( depth_control.surfaceState ) {     // SURFACE STATE //
+    //   if ( !depth_control.atSurface ) { 
+    //     depth_control.surface(&z_state_estimator.state);
+    //   }
+    //   else if ( depth_control.complete ) { 
+    //     delete[] depth_control.wayPoints;   // destroy depth waypoint array from the Heap
+    //   }
+    //   motor_driver.drive(depth_control.uV,depth_control.uV,depth_control.uV);
+    // }
+
+    motor_driver.drive(depth_control.uV,depth_control.uV,depth_control.uV);
   }
   
   if ( currentTime-adc.lastExecutionTime > LOOP_PERIOD ) {
