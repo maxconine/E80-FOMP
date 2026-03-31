@@ -5,60 +5,39 @@
 extern Printer printer;
 
 ErrorFlagSampler::ErrorFlagSampler(void) 
-  : DataSource("ErrorFlagA,ErrorFlagB,ErrorFlagC","bool,bool,bool") // from DataSource
+  // column names for the SD card log
+  : DataSource("Err_Pressure,Err_Thermistor,Err_Spectral","bool,bool,bool") 
 {}
 
-void ErrorFlagSampler::init(void)
+void ErrorFlagSampler::init(void){}
+
+void ErrorFlagSampler::updateStates(bool Pressure_State, bool Thermistor_State, bool Spectral_State)
 {
-  for (int i=0; i<NUM_FLAGS; i++){
-    pinMode(pinMap[i],INPUT);
-  }
+  // 1 means error detected
+  flagStates[0] = Pressure_State;
+  flagStates[1] = Thermistor_State;
+  flagStates[2] = Spectral_State;
 }
 
-void ErrorFlagSampler::updateStates(bool EFA_State, bool EFB_State, bool EFC_State)
-{
-  flagStates[0] = !EFA_State;
-  flagStates[1] = !EFB_State;
-  flagStates[2] = !EFC_State;
-
-  //delay(5);
-  //detachInterrupt(digitalPinToInterrupt(ERROR_FLAG_A));
-  //detachInterrupt(digitalPinToInterrupt(ERROR_FLAG_B));
-  //detachInterrupt(digitalPinToInterrupt(ERROR_FLAG_C));
-  // for (int i=0; i<NUM_FLAGS; i++){
-  //  flagStates[i] = !EF_States[i];
-  //  EF_States[i] = 0;
-  //}
-}
-/*
-void ErrorFlagSampler::EFA_Detected(void){
-  EF_States[0] = 0;
-}
-
-void ErrorFlagSampler::EFB_Detected(void){
-  EF_States[1] = 0;
-}
-
-void ErrorFlagSampler::EFC_Detected(void){
-  EF_States[2] = 0;
-}
-*/
 String ErrorFlagSampler::printStates(void)
 {
-  String motorNamesList [NUM_FLAGS] = {"MotorA: "," MotorB: "," MotorC: "};
-  String printString = "Error Flags: ";
-  for (int i=0; i<NUM_FLAGS; i++) {
-    printString += motorNamesList [i];
+  // Updated names for the real-time Serial monitor
+  String errorNamesList [NUM_FLAGS] = {"Pressure_Err: ", " Thermistor_Err: ", " Spectral_Err: "};
+  String printString = "Errors -> ";
+  
+  for (int i = 0; i < NUM_FLAGS; i++) {
+    printString += errorNamesList[i];
     printString += String(flagStates[i]);
   }
+  
   return printString;
 }
 
 size_t ErrorFlagSampler::writeDataBytes(unsigned char * buffer, size_t idx)
 {
   bool * data_slot = (bool *) &buffer[idx];
-  for (int i=0; i<NUM_FLAGS; i++) {
+  for (int i = 0; i < NUM_FLAGS; i++) {
     data_slot[i] = flagStates[i];
   }
-  return idx + NUM_FLAGS*sizeof(bool);
+  return idx + NUM_FLAGS * sizeof(bool);
 }
