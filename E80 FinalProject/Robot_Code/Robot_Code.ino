@@ -221,15 +221,3 @@ void loop() {
 	}
   }
 }
-
-void EFA_Detected(void){
-  EF_States[0] = 0;
-}
-
-void EFB_Detected(void){
-  EF_States[1] = 0;
-}
-
-void EFC_Detected(void){
-  EF_States[2] = 0;
-}
