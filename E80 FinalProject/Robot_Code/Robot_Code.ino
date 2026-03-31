@@ -78,8 +78,15 @@ void setup() {
   status_leds.init(RED_LED_PIN, GREEN_LED_PIN, WHITE_LED_PIN);
 
   int diveDelay = 6000; // how long robot will stay at depth waypoint before continuing (ms)
-  const int num_depth_waypoints = 2;
-  double depth_waypoints [] = { 0.5, 1 };  // listed as z0,z1,... etc.
+
+   // 15 / 0.25 = 60
+   double depth_waypoints[60]; 
+   double current_depth = 0.25;
+
+	for (int i = 0; i < 60; i++) {
+		depth_waypoints[i] = current_depth;
+		current_depth += 0.25;
+	}
 
   depth_control.init(num_depth_waypoints, depth_waypoints, diveDelay);
   
