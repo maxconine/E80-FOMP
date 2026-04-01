@@ -102,6 +102,31 @@ if num_depths > 1
 end
 
 
+%plot of magnitude on y axis vs wavelength on x axis with each line at a
+%different depth
+
+figure(3)
+legend = cell(num_depths,1);
+if num_depths > 1
+    for i = 1:num_depths
+        plot(default_wavelengths, intensities(i,:), 'Display Name', sprintf('%.2f m', Depth(d)));
+    end
+    ytitle('Relative intensity')
+    xtitle('Wavelength [nm]')
+    title('Intensity vs wavelength at various depths')
+end
+
+%plot of magnitude on y axis vs depth on x axis qith each line at a
+%different wavelength
+figure(4)
+if num_depths > 3
+for d = 1:num_channels
+    plot(Depth, intensities(:,c), 'DisplayName', sprintf('%d nm', default_wavelengths(c)));
+end
+title('Intensity by Depth for Each Wavelength');
+xlabel('Depth [m]');
+ylabel('Relative Intensity');
+end
 
 
 
