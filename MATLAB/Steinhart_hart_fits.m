@@ -5,10 +5,10 @@
 %  and R or ln(R) as x. 
 
 % Insert 6 digital thermometer temperatures here
-T = [0 15 30 45 60 70 80];
+T = [5 8 11 14 17 20];
 
 % Insert 6 resistance values here
-R = [29510 15710 8777 4543 2200 750 250];
+R = [2.86 2.37 1.85 1.32 0.78 0.23];
 
 
 confLev = 0.95; % We set the confidence level for the data fits here.
