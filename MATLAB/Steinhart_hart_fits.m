@@ -5,10 +5,10 @@
 %  and R or ln(R) as x. 
 
 % Insert 6 digital thermometer temperatures here
-T = [5 8 11 14 17 20];
+T = [3.3 8 8.4 10.8 15.2 18.1];
 
 % Insert 6 resistance values here
-R = [2.86 2.37 1.85 1.32 0.78 0.23];
+R = [2.98 2.12 2.18 1.73 1 0.49];
 
 
 confLev = 0.95; % We set the confidence level for the data fits here.
@@ -18,7 +18,7 @@ confLev = 0.95; % We set the confidence level for the data fits here.
 % the data to the correct forms and do linear and polynomial fits with
 % them.
 ooT = 1./T;
-lnR = log(R);
+lnR =  log(R);
 
 
 %We need starting guess for the steinhart fit, so run a polynomial fit
