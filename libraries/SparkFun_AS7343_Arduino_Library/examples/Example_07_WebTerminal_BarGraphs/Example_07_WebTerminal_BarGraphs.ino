@@ -37,7 +37,10 @@ void setup()
     };
     Serial.println("AS7343 Example 07 - Web Terminal Bar Graphs");
 
+    // Wire.setSDA(17); // Move SDA to Pin 17 (which is also A3)
+    // Wire.setSCL(16); // Move SCL to Pin 16 (which is also A2)
     Wire.begin();
+
 
     // Initialize sensor and run default setup.
     if (mySensor.begin() == false)

@@ -4,6 +4,8 @@
 #include <Arduino.h>
 #include <SparkFun_AS7343.h>
 #include "DataSource.h"
+// note for port 16=19 which is the clock A2
+// note port 17=18 which is the data A3
 
 class SensorAS7343 : public DataSource {
 public:

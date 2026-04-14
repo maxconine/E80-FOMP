@@ -32,11 +32,14 @@ void setup()
         delay(100);
     };
     Serial.println("AS7343 Example 01 - Basic Readings");
-
-    Wire.begin();
+    
+    // Wire1.setSDA(17); 
+    // Wire1.setSCL(16); 
+    Wire1.begin();
+    //Wire1.setClock(100000); // 100kHz (Standard)
 
     // Initialize sensor and run default setup.
-    if (mySensor.begin() == false)
+    if (mySensor.begin(kAS7343Addr, Wire1) == false)
     {
         Serial.println("Sensor failed to begin. Please check your wiring!");
         Serial.println("Halting...");

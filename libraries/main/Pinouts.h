@@ -39,6 +39,11 @@
 #define MIC_PIN 23
 
 // Depth Control
-#define PRESSURE_PIN 16 // Teensy pin A00
+#define PRESSURE_PIN 14 // Teensy pin A00
+
+#define RED_LED_PIN   20
+#define GREEN_LED_PIN 21
+#define WHITE_LED_PIN 22
+#define THERMISTOR_PIN 16
 
 #endif
