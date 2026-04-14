@@ -18,16 +18,13 @@
 #include <Printer.h>
 #include <DepthControl.h>
 #include <SensorAS7343.h>
-#include <StatusLEDs.h>
+// #include <StatusLEDs.h>
 #include <SensorThermistor.h>
 
 // LED Pins  			// TODO CHANGE THESE
-#define RED_LED_PIN   20
-#define GREEN_LED_PIN 21
-#define WHITE_LED_PIN 22
-#define THERMISTOR_PIN 15 
 
-StatusLEDs status_leds;
+
+// StatusLEDs status_leds;
 
 /////////////////////////* Global Variables *////////////////////////
 
@@ -48,7 +45,7 @@ uint32_t loopStartTime;
 uint32_t currentTime;
 volatile bool EF_States[NUM_FLAGS] = {1,1,1};
 
-const uint32_t DEPLOY_DELAY_MS = 120000; // 2 minutes in milliseconds
+const uint32_t DEPLOY_DELAY_MS = 0; //120000; // 2 minutes in milliseconds
 uint32_t deploymentStartTime = 0;
 
 ////////////////////////* Setup *////////////////////////////////
@@ -75,18 +72,21 @@ void setup() {
   thermistor.init(THERMISTOR_PIN);
 
   // Initialize the LEDs
-  status_leds.init(RED_LED_PIN, GREEN_LED_PIN, WHITE_LED_PIN);
+//   status_leds.init(RED_LED_PIN, GREEN_LED_PIN, WHITE_LED_PIN);
 
   int diveDelay = 6000; // how long robot will stay at depth waypoint before continuing (ms)
 
    // 15 / 0.25 = 60
-   double depth_waypoints[60]; 
-   double current_depth = 0.25;
+  //  double depth_waypoints[60]; 
+  //  double current_depth = 0.25;
 
-	for (int i = 0; i < 60; i++) {
-		depth_waypoints[i] = current_depth;
-		current_depth += 0.25;
-	}
+	// for (int i = 0; i < 60; i++) {
+	// 	depth_waypoints[i] = current_depth;
+	// 	current_depth += 0.25;
+	// }
+	// num_depth_waypoints = 60;
+	int num_depth_waypoints = 2;
+	double depth_waypoints[] = {0.5,1};
 
   depth_control.init(num_depth_waypoints, depth_waypoints, diveDelay);
   
@@ -103,7 +103,7 @@ void setup() {
   depth_control.lastExecutionTime      = loopStartTime - LOOP_PERIOD + DEPTH_CONTROL_LOOP_OFFSET;
   logger.lastExecutionTime             = loopStartTime - LOOP_PERIOD + LOGGER_LOOP_OFFSET;
   spectral_sensor.lastExecutionTime    = loopStartTime - LOOP_PERIOD + SPECTRAL_LOOP_OFFSET;
-  status_leds.lastExecutionTime 	   = loopStartTime - LOOP_PERIOD + LED_LOOP_OFFSET;
+//   status_leds.lastExecutionTime 	   = loopStartTime - LOOP_PERIOD + LED_LOOP_OFFSET;
   thermistor.lastExecutionTime  	   = loopStartTime - LOOP_PERIOD + THERMISTOR_LOOP_OFFSET;
 
   // Set the timer for 2 minutes from when setup finishes
@@ -123,10 +123,10 @@ void loop() {
   // -----------------------------------------------
 
   // Update LEDs
-  if ( currentTime - status_leds.lastExecutionTime > LOOP_PERIOD ) {
-    status_leds.lastExecutionTime = currentTime;
-    status_leds.update(currentTime, hasError, isDelayPhase, timeUntilStart);
-  }
+//   if ( currentTime - status_leds.lastExecutionTime > LOOP_PERIOD ) {
+//     status_leds.lastExecutionTime = currentTime;
+//     status_leds.update(currentTime, hasError, isDelayPhase, timeUntilStart);
+//   }
     
   if ( currentTime - printer.lastExecutionTime > LOOP_PERIOD ) {
     printer.lastExecutionTime = currentTime;
@@ -141,7 +141,8 @@ void loop() {
     printer.printValue(7, imu.printRollPitchHeading());        
     printer.printValue(8, imu.printAccels());
     printer.printValue(9, spectral_sensor.printState());
-	printer.printValue(10, thermistor.printState());
+	  printer.printValue(10, thermistor.printState());
+		printer.printValue(11, ef.printStates());
     printer.printToSerial();  // To stop printing, just comment this line out
   }
 
@@ -172,7 +173,7 @@ void loop() {
 		int pressureVal = analogRead(PRESSURE_PIN);
 		if (pressureVal <= 5 || pressureVal >= 1018) {
 		EF_States[0] = 1; // 1 means ERROR
-		Serial.println("ERROR: Pressure Sensor voltage railed or disconnected!");
+		// Serial.println("ERROR: Pressure Sensor voltage railed or disconnected!");
 		} else {
 		EF_States[0] = 0;
 		}
@@ -180,7 +181,7 @@ void loop() {
 		// Check Thermistor
 		if (thermistor.errorStatus == true) {
 		EF_States[1] = 1;
-		Serial.println("ERROR: Thermistor voltage railed or disconnected!");
+		// Serial.println("ERROR: Thermistor voltage railed or disconnected!");
 		} else {
 		EF_States[1] = 0;
 		}
@@ -188,7 +189,7 @@ void loop() {
 		// Check Spectral Sensor
 		if (spectral_sensor.errorStatus == true) {
 		EF_States[2] = 1;
-		Serial.println("ERROR: Spectral Sensor failed to init or read!");
+		// Serial.println("ERROR: Spectral Sensor failed to init or read!");
 		} else {
 		EF_States[2] = 0;
 		}
