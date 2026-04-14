@@ -16,6 +16,9 @@ SensorAS7343::SensorAS7343() :
 
 void SensorAS7343::init(void) {
     Wire.begin();
+	Wire.setSDA(17); // Move SDA to Pin 17 (which is also A3)
+  	Wire.setSCL(16); // Move SCL to Pin 16 (which is also A2)
+	
 	errorStatus = false;
     
     if (sensor.begin() == false) {

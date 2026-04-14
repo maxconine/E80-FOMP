@@ -3,6 +3,15 @@
 
 #include <Arduino.h>
 #include "DataSource.h"
+// Define your circuit parameters
+const float VCC = 3.3;
+const float R_SERIES = 10000.0; // Replace with your actual series resistor value in Ohms
+
+// Define your Steinhart-Hart coefficients
+const float A_COEF = -554;
+const float B_COEF = 175.2;
+const float C_COEF = -20.64;
+const float D_COEF = 19.4;
 
 class SensorThermistor : public DataSource {
 public:
@@ -19,10 +28,10 @@ public:
     size_t writeDataBytes(unsigned char * buffer, size_t idx);
 
     // Data storage
-    uint16_t rawValue;
-    float temperatureC;
+    float rawValue;
+    float temperature;
 	bool errorStatus;
-
+	float resistance;
 
 private:
     int pin;

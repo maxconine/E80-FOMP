@@ -15,23 +15,48 @@ void SensorThermistor::init(int analogPin) {
 }
 
 void SensorThermistor::read(void) {
-    // read the raw analog value
-    rawValue = analogRead(pin);
-	if (rawValue <= 5 || rawValue >= 1018) { // if railing out, error.
+    // 1. Read the raw analog voltage
+    // Note: Use 1023.0 to ensure floating-point division
+    rawValue = analogRead(pin) * VCC / 1023.0;
+
+    // 2. Error Checking
+    // Since rawValue is now in Volts (0 to 3.3), we adjust the rail checks
+    if (rawValue <= 0.01 || rawValue >= 3.28) { 
         errorStatus = true;
         return;
     } else {
         errorStatus = false;
     }
+
+    // 3. Convert Voltage to Resistance (R)
+    // ASSUMPTION: Thermistor is connected between Analog Pin and Ground (Pull-up configuration)
+    // If your thermistor is connected between Analog Pin and VCC, use: 
+    // resistance = R_SERIES * (rawValue / (VCC - rawValue));
+    resistance = R_SERIES * ((VCC / rawValue) - 1.0);
+
+    // 4. Apply Steinhart-Hart Equation
+    // In C++, log() computes the natural logarithm (ln)
+    float logR = log(resistance); 
+    
+    // Calculate the temperature based on your specific polynomial fit
+    temperature = 1.0 / (A_COEF + 
+                         B_COEF * logR + 
+                         C_COEF * pow(logR, 2) + 
+                         D_COEF * pow(logR, 3));
+
+    // NOTE: Standard Steinhart-Hart equations yield temperature in Kelvin. 
+    // If your specific coefficients were generated to output Kelvin, uncomment the line below:
+    // temperature = temperature - 273.15; 
 }
 
 String SensorThermistor::printState(void) {
-	if (errorStatus) {
-        return "Therm: ERROR (Raw: " + String(rawValue) + ")";
+    if (errorStatus) {
+        return "Therm: ERROR (Raw Volts: " + String(rawValue, 4) + "V)";
     }
-	else{
-    	return "Therm rawValue: " + String(rawValue);
-	}
+    else {
+        // Prints Temperature and Raw Voltage, limited to 2 decimal places for cleaner output
+        return "Therm Temp: " + String(temperature, 2) + " (Raw: " + String(rawValue, 2) + "V)";
+    }
 }
 
 size_t SensorThermistor::writeDataBytes(unsigned char * buffer, size_t idx) {

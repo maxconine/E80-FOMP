@@ -4,17 +4,22 @@
 clear;
 %clf;
 
-filenum = '019'; % file number for the data you want to read
+filenum = '101'; % file number for the data you want to read
 infofile = strcat('INF', filenum, '.TXT');
 datafile = strcat('LOG', filenum, '.BIN');
 
+%% map from datatype to length in bytes
 %% map from datatype to length in bytes
 dataSizes.('float') = 4;
 dataSizes.('ulong') = 4;
 dataSizes.('int') = 4;
 dataSizes.('int32') = 4;
+dataSizes.('int32_t') = 4;    % Added
+dataSizes.('uint32_t') = 4;   % Added
 dataSizes.('uint8') = 1;
+dataSizes.('uint8_t') = 1;    % Added
 dataSizes.('uint16') = 2;
+dataSizes.('uint16_t') = 2;   % Added this to fix your error
 dataSizes.('char') = 1;
 dataSizes.('bool') = 1;
 
@@ -26,6 +31,7 @@ fclose(fileID);
 ncols = ncols/2;
 varNames = items{1}(1:ncols)';
 varTypes = items{1}(ncols+1:end)';
+varTypes = strrep(varTypes, '_t', '');
 varLengths = zeros(size(varTypes));
 colLength = 256;
 for i = 1:numel(varTypes)
@@ -50,3 +56,9 @@ fclose(fid);
 plot(accelX)
 xlabel('time (s)')
 ylabel('accelX')
+
+figure(2);
+plot(depth)
+
+hold on;
+plot(depth_des);

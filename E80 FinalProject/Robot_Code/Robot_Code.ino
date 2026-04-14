@@ -48,6 +48,10 @@ volatile bool EF_States[NUM_FLAGS] = {1,1,1};
 const uint32_t DEPLOY_DELAY_MS = 0; //120000; // 2 minutes in milliseconds
 uint32_t deploymentStartTime = 0;
 
+const float MotorAMultiplier = 1.0; // 1.0 means no change, <1.0 reduces power, >1.0 increases power
+const float MotorBMultiplier = 1.0; // 1.0 means no change, <1.0 reduces power, >1.0 increases power
+const float MotorCMultiplier = 1.0; // 1.0 means no change, <1.0 reduces power, >1.0 increases power
+
 ////////////////////////* Setup *////////////////////////////////
 
 void setup() {
@@ -74,7 +78,7 @@ void setup() {
   // Initialize the LEDs
 //   status_leds.init(RED_LED_PIN, GREEN_LED_PIN, WHITE_LED_PIN);
 
-  int diveDelay = 6000; // how long robot will stay at depth waypoint before continuing (ms)
+  int diveDelay = 15000; //15000; // how long robot will stay at depth waypoint before continuing (ms)
 
    // 15 / 0.25 = 60
   //  double depth_waypoints[60]; 
@@ -85,8 +89,8 @@ void setup() {
 	// 	current_depth += 0.25;
 	// }
 	// num_depth_waypoints = 60;
-	int num_depth_waypoints = 2;
-	double depth_waypoints[] = {0.5,1};
+	int num_depth_waypoints = 6;
+	double depth_waypoints[] = {0.6, 0.65, 0.6, 0.65, 0.6, 0.65};
 
   depth_control.init(num_depth_waypoints, depth_waypoints, diveDelay);
   
