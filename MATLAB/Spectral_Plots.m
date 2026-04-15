@@ -45,8 +45,8 @@ channel_names = {
 default_wavelengths = [405 425 450 475 515 550 555 600 640 690 745 855];
 
 file_pairs = {
-    'inf100.txt', 'log100.bin', 0;
-    'inf079.txt', 'log079.bin', 5;
+    'inf105.txt', 'log105.bin', 0;
+    'inf106.txt', 'log106.bin', 5;
     % add more rows here
 };
 
