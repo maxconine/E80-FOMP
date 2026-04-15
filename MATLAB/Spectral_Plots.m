@@ -23,36 +23,38 @@ typeMap = containers.Map(...
      'uint8','uint16','uint32','int8','int16','int32'});
 
 %% Configuration
-default_wavelengths = [405 425 450 475 515 550 555 600 640 690 745 855];
 
-% FIX: updated to match exact INF field names
+
+% Correct channel-to-wavelength mapping for SparkFun AS7343 library
+%  channels are NOT in wavelength order
 channel_names = {
-    'AS7343_CH0',   ... % 405 nm
-    'AS7343_CH1',   ... % 425 nm
-    'AS7343_CH2',   ... % 450 nm
-    'AS7343_CH3',   ... % 475 nm
-    'AS7343_CH4',   ... % 515 nm
-    'AS7343_CH5',   ... % 550 nm
-    'AS7343_CH6',   ... % 555 nm
-    'AS7343_CH7',   ... % 600 nm
-    'AS7343_CH8',   ... % 640 nm
-    'AS7343_CH9',   ... % 690 nm
-    'AS7343_CH10',  ... % 745 nm
-    'AS7343_CH11',  ... % 855 nm
+    'AS7343_CH12',  ... % 405 nm  (F1  - violet)
+    'AS7343_CH6',   ... % 425 nm  (F2  - deep blue)
+    'AS7343_CH0',   ... % 450 nm  (FZ  - blue, wide)
+    'AS7343_CH7',   ... % 475 nm  (F3  - sky blue)
+    'AS7343_CH8',   ... % 515 nm  (F4  - cyan-green)
+    'AS7343_CH15',  ... % 550 nm  (F5  - green, narrow)
+    'AS7343_CH1',   ... % 555 nm  (FY  - green, very wide)
+    'AS7343_CH2',   ... % 600 nm  (FXL - orange, wide)
+    'AS7343_CH9',   ... % 640 nm  (F6  - red-orange)
+    'AS7343_CH13',  ... % 690 nm  (F7  - deep red)
+    'AS7343_CH14',  ... % 745 nm  (F8  - near-IR edge)
+    'AS7343_CH3',   ... % 855 nm  (NIR)
 };
 
+default_wavelengths = [405 425 450 475 515 550 555 600 640 690 745 855];
+
 file_pairs = {
-    'inf080.txt', 'log080.bin', 0;
+    'inf100.txt', 'log100.bin', 0;
     'inf079.txt', 'log079.bin', 5;
     % add more rows here
 };
 
 num_depths   = size(file_pairs, 1);
 num_channels = numel(channel_names);
-Depth        = cell2mat(file_pairs(:,3)) .* 0.3048;
+Depth        = cell2mat(file_pairs(:,3));
 intensities  = nan(num_depths, num_channels); % FIX: was zeros, use nan
 
-%% Read all files
 %% Read all files
 for d = 1:num_depths
     infofile = file_pairs{d,1};
@@ -94,7 +96,7 @@ end
 d = 1;
 figure(1); clf;
 plot(default_wavelengths, intensities(d,:));
-% FIX: title() doesn't take sprintf-style args directly, wrap in sprintf
+
 title(sprintf('Intensity by Wavelength at %.2f m', Depth(d)));
 ylabel('Relative Intensity');
 xlabel('Wavelength [nm]');
@@ -117,13 +119,10 @@ end
 %% Plot 3: All spectra overlaid, one line per depth
 if num_depths > 1
     figure(3); clf; hold on;
-    % FIX: legend is a built-in MATLAB function, don't use it as variable name
-    % FIX: 'Display Name' had a space (invalid), use 'DisplayName'
-    % FIX: loop used d as index but Depth(d) should be Depth(i)
-    % FIX: ytitle/xtitle don't exist in MATLAB, use ylabel/xlabel
-    for i = 1:num_depths
-        plot(default_wavelengths, intensities(i,:), 'DisplayName', sprintf('%.2f m', Depth(i)));
-    end
+colors = jet(num_depths);
+for i = 1:num_depths
+    plot(default_wavelengths, intensities(i,:), 'Color', colors(i,:), 'DisplayName', sprintf('%.2f m', Depth(i)));
+end
     hold off;
     legend('Location','best');
     title('Intensity vs Wavelength at Various Depths');
@@ -134,16 +133,13 @@ end
 %% Plot 4: All channels vs depth, one line per wavelength
 if num_depths > 1
     figure(4); clf; hold on;
-    % FIX: loop variable was d but indexing used c, standardized to c
     for c = 1:num_channels
         plot(Depth, intensities(:,c), 'o-', 'DisplayName', sprintf('%d nm', default_wavelengths(c)));
     end
+    
     hold off;
     legend('Location','best');
     title('Intensity by Depth for Each Wavelength');
     xlabel('Depth [m]');
     ylabel('Relative Intensity');
 end
-
-disp('Intensities matrix:')
-disp(intensities)
