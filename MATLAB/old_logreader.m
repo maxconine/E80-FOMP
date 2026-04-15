@@ -2,9 +2,9 @@
 % Use this script to read data from your micro SD card
 
 clear;
-%clf;
+clf;
 
-filenum = '101'; % file number for the data you want to read
+filenum = '112'; % file number for the data you want to read
 infofile = strcat('INF', filenum, '.TXT');
 datafile = strcat('LOG', filenum, '.BIN');
 
@@ -53,12 +53,50 @@ fclose(fid);
 
 %% Process your data here
 
+% acceleration x vs tim
 plot(accelX)
 xlabel('time (s)')
 ylabel('accelX')
 
+% depth and depth desired
 figure(2);
 plot(depth)
-
+xlabel('time (s)')
+ylabel('depth (m)')
 hold on;
 plot(depth_des);
+
+%
+figure(3);
+plot(depth, Therm_Raw);
+xlabel('depth (m)')
+ylabel('therm_raw (v)')
+
+figure(4)
+plot(Therm_Raw);
+
+
+figure(5);
+plot(AS7343_CH1);
+
+figure(6);
+plot(depth, AS7343_CH6, 'b');
+hold on;
+plot(depth, AS7343_CH2, 'y');
+
+%  channels are NOT in wavelength order
+% channel_names = {
+%     'AS7343_CH12',  ... % 405 nm  (F1  - violet)
+%     'AS7343_CH6',   ... % 425 nm  (F2  - deep blue)
+%     'AS7343_CH0',   ... % 450 nm  (FZ  - blue, wide)
+%     'AS7343_CH7',   ... % 475 nm  (F3  - sky blue)
+%     'AS7343_CH8',   ... % 515 nm  (F4  - cyan-green)
+%     'AS7343_CH15',  ... % 550 nm  (F5  - green, narrow)
+%     'AS7343_CH1',   ... % 555 nm  (FY  - green, very wide)
+%     'AS7343_CH2',   ... % 600 nm  (FXL - orange, wide)
+%     'AS7343_CH9',   ... % 640 nm  (F6  - red-orange)
+%     'AS7343_CH13',  ... % 690 nm  (F7  - deep red)
+%     'AS7343_CH14',  ... % 745 nm  (F8  - near-IR edge)
+%     'AS7343_CH3',   ... % 855 nm  (NIR)
+% };
+
