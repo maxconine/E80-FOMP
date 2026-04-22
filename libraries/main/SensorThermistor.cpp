@@ -28,25 +28,9 @@ void SensorThermistor::read(void) {
         errorStatus = false;
     }
 
-    // 3. Convert Voltage to Resistance (R)
-    // ASSUMPTION: Thermistor is connected between Analog Pin and Ground (Pull-up configuration)
-    // If your thermistor is connected between Analog Pin and VCC, use: 
-    // resistance = R_SERIES * (rawValue / (VCC - rawValue));
-    resistance = R_SERIES * ((VCC / rawValue) - 1.0);
+	// linear fit
+	temperature = -5.94* rawValue + 21.2
 
-    // 4. Apply Steinhart-Hart Equation
-    // In C++, log() computes the natural logarithm (ln)
-    float logR = log(resistance); 
-    
-    // Calculate the temperature based on your specific polynomial fit
-    temperature = 1.0 / (A_COEF + 
-                         B_COEF * logR + 
-                         C_COEF * pow(logR, 2) + 
-                         D_COEF * pow(logR, 3));
-
-    // NOTE: Standard Steinhart-Hart equations yield temperature in Kelvin. 
-    // If your specific coefficients were generated to output Kelvin, uncomment the line below:
-    // temperature = temperature - 273.15; 
 }
 
 String SensorThermistor::printState(void) {
