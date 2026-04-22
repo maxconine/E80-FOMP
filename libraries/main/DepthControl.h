@@ -43,6 +43,7 @@ public:
   bool atDepth;
   bool atSurface;
   bool complete = 0;
+  bool delayed = 0;
 
   int totalWayPoints;
   double * wayPoints;
@@ -57,7 +58,7 @@ private:
   int diveDelay;
   int delayStartTime = 0;
   int currentTime;
-  bool delayed;
+
 };
 
 #endif
