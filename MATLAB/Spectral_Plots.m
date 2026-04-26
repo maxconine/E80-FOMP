@@ -62,8 +62,8 @@ wavelength_colors = [
 depth_bin_size = 0.5; % meters
 
 %% File input here
-infofile = 'inf112.txt';
-datafile = 'log112.bin';
+infofile = 'inf126.txt';
+datafile = 'log126.bin';
 
 % Read info file
 fileID = fopen(infofile);

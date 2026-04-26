@@ -4,7 +4,7 @@
 clear;
 clf;
 
-filenum = '112'; % file number for the data you want to read
+filenum = '012'; % file number for the data you want to read
 infofile = strcat('INF', filenum, '.TXT');
 datafile = strcat('LOG', filenum, '.BIN');
 
@@ -53,36 +53,48 @@ fclose(fid);
 
 %% Process your data here
 
-% acceleration x vs tim
-plot(accelX)
-xlabel('time (s)')
-ylabel('accelX')
+% figure;
+% % acceleration x vs tim
+% plot(accelX)
+% xlabel('time (s)')
+% ylabel('accelX')
+% title("accel x")
 
 % depth and depth desired
-figure(2);
+figure(1);
 plot(depth)
 xlabel('time (s)')
 ylabel('depth (m)')
 hold on;
 plot(depth_des);
+title('depth vs depth des')
+hold off;
 
-%
-figure(3);
-plot(depth, Therm_Raw);
+% 	temperature = -5.94* rawValue + 21.2;
+figure(2);
+temp = -5.94*Therm_Raw+21.2;
+plot(Therm_Raw);
 xlabel('depth (m)')
 ylabel('therm_raw (v)')
-
-figure(4)
-plot(Therm_Raw);
-
-
-figure(5);
-plot(AS7343_CH1);
-
-figure(6);
-plot(depth, AS7343_CH6, 'b');
+title('temp')
 hold on;
-plot(depth, AS7343_CH2, 'y');
+ plot(motorA)
+ hold off;
+title('temp')
+
+% 
+% figure(4)
+% plot(Therm_Raw);
+% 
+
+figure(3);
+plot(AS7343_CH6);
+title('ch1 spectral')
+% 
+% figure(6);
+% plot(depth, AS7343_CH6, 'b');
+% hold on;
+% plot(depth, AS7343_CH2, 'y');
 
 %  channels are NOT in wavelength order
 % channel_names = {

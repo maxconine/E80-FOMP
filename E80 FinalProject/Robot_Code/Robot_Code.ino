@@ -45,7 +45,7 @@ uint32_t loopStartTime;
 uint32_t currentTime;
 volatile bool EF_States[NUM_FLAGS] = {1,1,1};
 
-const uint32_t DEPLOY_DELAY_MS = 15000; //120000; // 2 minutes in milliseconds
+const uint32_t DEPLOY_DELAY_MS = 10000; //120000; // 2 minutes in milliseconds
 uint32_t deploymentStartTime = 0;
 const double depth_margin = 0.1; // how close robot needs to be to depth waypoint to be considered "at" the waypoint (m)
 
@@ -91,8 +91,8 @@ void setup() {
 	// 	current_depth += 0.25;
 	// }
 	// num_depth_waypoints = 60;
-	int num_depth_waypoints = 14;
-	double depth_waypoints[] = {0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 0, 0};
+	int num_depth_waypoints = 22;
+	double depth_waypoints[] = {0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 4.75, 5.0, 0, 0};
 
   depth_control.init(num_depth_waypoints, depth_waypoints, diveDelay);
   
@@ -168,7 +168,7 @@ void loop() {
 			motor_driver.drive(0, 0, 0);
 		}
 		else{
-			motor_driver.drive(depth_control.uV, depth_control.uV, depth_control.uV);
+			// motor_driver.drive(depth_control.uV, depth_control.uV, depth_control.uV);
 		}
 	}
 	

@@ -2,10 +2,11 @@
 
 // Define the names and types for the python script to unpack
 SensorThermistor::SensorThermistor() : 
-    DataSource("Therm_Raw", "float") 
+    DataSource("Therm_Raw,Therm_Temp", "float,float")
 {
     lastExecutionTime = -1;
     rawValue = 0;
+	temperature = 0;
 	errorStatus = false; // Initialize to no error
 }
 
@@ -17,11 +18,12 @@ void SensorThermistor::init(int analogPin) {
 void SensorThermistor::read(void) {
     // 1. Read the raw analog voltage
     // Note: Use 1023.0 to ensure floating-point division
+	analogRead(pin); // Dummy read
     rawValue = analogRead(pin) * VCC / 1023.0;
 
     // 2. Error Checking
     // Since rawValue is now in Volts (0 to 3.3), we adjust the rail checks
-    if (rawValue <= 0.01 || rawValue >= 3.28) { 
+    if (rawValue <= 0.001 || rawValue >= 3.33) { 
         errorStatus = true;
         return;
     } else {
@@ -29,7 +31,7 @@ void SensorThermistor::read(void) {
     }
 
 	// linear fit
-	temperature = -5.94* rawValue + 21.2
+	temperature = -5.94* rawValue + 21.2;
 
 }
 
@@ -44,11 +46,11 @@ String SensorThermistor::printState(void) {
 }
 
 size_t SensorThermistor::writeDataBytes(unsigned char * buffer, size_t idx) {
-    // write the 16-bit raw integer
-    uint16_t * raw_slot = (uint16_t *) &buffer[idx];
-    raw_slot[0] = rawValue;
-    idx += sizeof(uint16_t); // Move index forward by 2 bytes
+    float * data_slot = (float *) &buffer[idx];
     
-    // Return the updated index so the next sensor writes to the correct spot
-    return idx; 
+    data_slot[0] = (float)rawValue;    // Index: idx to idx+3
+    data_slot[1] = (float)temperature; // Index: idx+4 to idx+7
+    
+    // Return updated index (moved 8 bytes forward)
+    return idx + (2 * sizeof(float)); 
 }
