@@ -67,20 +67,20 @@ xlabel('time (s)')
 ylabel('depth (m)')
 hold on;
 plot(depth_des);
-title('depth vs depth des')
+title('Depth vs Depth Desired')
+legend('depth (m)', 'depth desired (m)')
 hold off;
 
 % 	temperature = -5.94* rawValue + 21.2;
 figure(2);
 temp = -5.94*Therm_Raw+21.2;
-plot(Therm_Raw);
+plot(depth, temp);
 xlabel('depth (m)')
-ylabel('therm_raw (v)')
-title('temp')
-hold on;
- plot(motorA)
- hold off;
-title('temp')
+ylabel('temperature (C)')
+% hold on;
+%  plot(motorA)
+%  hold off;
+title('Temperature vs Depth')
 
 % 
 % figure(4)
@@ -111,4 +111,5 @@ title('ch1 spectral')
 %     'AS7343_CH14',  ... % 745 nm  (F8  - near-IR edge)
 %     'AS7343_CH3',   ... % 855 nm  (NIR)
 % };
+
 

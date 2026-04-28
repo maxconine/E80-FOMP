@@ -1,0 +1,489 @@
+%% Datatype sizes
+dataSizes.('float')    = 4;
+dataSizes.('ulong')    = 4;
+dataSizes.('int')      = 4;
+dataSizes.('int32')    = 4;
+dataSizes.('uint8')    = 1;
+dataSizes.('uint16')   = 2;
+dataSizes.('char')     = 1;
+dataSizes.('bool')     = 1;
+dataSizes.('uint8_t')  = 1;
+dataSizes.('uint16_t') = 2;
+dataSizes.('uint32_t') = 4;
+dataSizes.('int8_t')   = 1;
+dataSizes.('int16_t')  = 2;
+dataSizes.('int32_t')  = 4;
+
+typeMap = containers.Map(...
+    {'float','ulong','int','int32','uint8','uint16','char','bool',...
+     'uint8_t','uint16_t','uint32_t','int8_t','int16_t','int32_t'},...
+    {'float','uint32','int32','int32','uint8','uint16','uchar','uint8',...
+     'uint8','uint16','uint32','int8','int16','int32'});
+
+%% Configuration
+% channel-to-wavelength mapping
+channel_names = {
+    'AS7343_CH12',  ... % 405 nm  (F1  - violet)
+    'AS7343_CH6',   ... % 425 nm  (F2  - deep blue)
+    'AS7343_CH0',   ... % 450 nm  (FZ  - blue, wide)
+    'AS7343_CH7',   ... % 475 nm  (F3  - sky blue)
+    'AS7343_CH8',   ... % 515 nm  (F4  - cyan-green)
+    'AS7343_CH15',  ... % 550 nm  (F5  - green, narrow)
+    'AS7343_CH1',   ... % 555 nm  (FY  - green, very wide)
+    'AS7343_CH2',   ... % 600 nm  (FXL - orange, wide)
+    'AS7343_CH9',   ... % 640 nm  (F6  - red-orange)
+    'AS7343_CH13',  ... % 690 nm  (F7  - deep red)
+    'AS7343_CH14',  ... % 745 nm  (F8  - near-IR edge)
+    'AS7343_CH3',   ... % 855 nm  (NIR)
+};
+
+default_wavelengths = [405 425 450 475 515 550 555 600 640 690 745 855];
+
+wavelength_colors = [
+    0.55, 0.00, 0.85;   % 405 nm
+    0.25, 0.00, 1.00;   % 425 nm
+    0.00, 0.20, 1.00;   % 450 nm
+    0.00, 0.60, 1.00;   % 475 nm
+    0.00, 0.90, 0.20;   % 515 nm
+    0.60, 1.00, 0.00;   % 550 nm
+    0.65, 1.00, 0.00;   % 555 nm
+    1.00, 0.50, 0.00;   % 600 nm
+    1.00, 0.10, 0.00;   % 640 nm
+    0.85, 0.00, 0.00;   % 690 nm
+    0.55, 0.00, 0.00;   % 745 nm
+    0.25, 0.00, 0.00;   % 855 nm
+];
+
+%% File Input
+infofile = 'inf126.txt';
+datafile = 'log126.bin';
+
+% Read info file
+fileID = fopen(infofile);
+items  = textscan(fileID, '%s', 'Delimiter', ',', 'EndOfLine', '\r\n');
+fclose(fileID);
+
+ncols    = numel(items{1}) / 2;
+varNames = items{1}(1:ncols)';
+varTypes = items{1}(ncols+1:end)';
+varTypes = strrep(varTypes, '_t', ''); 
+
+varLengths = zeros(size(varTypes));
+for i = 1:numel(varTypes)
+    varLengths(i) = dataSizes.(varTypes{i});
+end
+colLength = 256;
+
+%% Read binary data file
+fid = fopen(datafile, 'rb');
+sensorData = struct();
+for i = 1:numel(varTypes)
+    fseek(fid, sum(varLengths(1:i-1)), 'bof');
+    matlabType = typeMap(varTypes{i});
+    sensorData.(varNames{i}) = single(fread(fid, Inf, ['*' matlabType], colLength - varLengths(i)));
+end
+fclose(fid);
+
+%% Process Raw Data
+depth_raw = double(sensorData.('depth'));
+num_channels = numel(channel_names);
+
+% Extract spectral channels
+channel_data = cell(num_channels, 1);
+for c = 1:num_channels
+    if isfield(sensorData, channel_names{c})
+        channel_data{c} = double(sensorData.(channel_names{c}));
+    else
+        channel_data{c} = [];
+    end
+end
+
+% Truncate to shortest vector
+all_lengths = [numel(depth_raw); cellfun(@numel, channel_data)];
+num_samples = min(all_lengths);
+
+depth_raw = depth_raw(1:num_samples);
+spectral_raw = nan(num_samples, num_channels);
+for c = 1:num_channels
+    if ~isempty(channel_data{c})
+        spectral_raw(:, c) = channel_data{c}(1:num_samples);
+    end
+end
+
+%% FILTER: Only when motors are off and bin at 0.25m
+% motorA == 0 logic
+motor_off_mask = sensorData.motorA(1:num_samples) == 0;
+
+depth_filtered = depth_raw(motor_off_mask);
+spectral_filtered = spectral_raw(motor_off_mask, :);
+
+% Define 0.25 m increments
+depth_bin_size = 0.25; 
+depth_min = floor(min(depth_filtered) / depth_bin_size) * depth_bin_size;
+depth_max = ceil(max(depth_filtered) / depth_bin_size) * depth_bin_size;
+depth_edges = depth_min : depth_bin_size : depth_max;
+depth_bins = depth_edges(1:end-1) + depth_bin_size/2;
+
+num_bins = numel(depth_bins);
+intensities = nan(num_bins, num_channels);
+
+for b = 1:num_bins
+    in_bin = depth_filtered >= depth_edges(b) & depth_filtered < depth_edges(b+1);
+    if any(in_bin)
+        intensities(b, :) = mean(spectral_filtered(in_bin, :), 1, 'omitnan');
+    end
+end
+
+% Remove bins with no data for clean interpolation
+valid_bins = ~any(isnan(intensities), 2);
+clean_depths = depth_bins(valid_bins);
+clean_intensities = intensities(valid_bins, :);
+
+%% INTERPOLATE: Produce smoothed data
+% Create a fine grid for plotting
+interp_depths = linspace(min(clean_depths), max(clean_depths), 300);
+smoothed_intensities = nan(length(interp_depths), num_channels);
+
+for c = 1:num_channels
+    % Using Piecewise Cubic Hermite Interpolating Polynomial (pchip)
+    % It preserves monotonicity and avoids overshooting compared to 'spline'
+    smoothed_intensities(:, c) = interp1(clean_depths, clean_intensities(:, c), interp_depths, 'pchip');
+end
+
+%% PLOT: Spectral Light Penetration - Stacked wavelength strips
+figure(1); clf;
+ax = gca;
+hold on;
+
+% Invert sensor data (1000 = dark, lower = brighter)
+baseline = 1000;
+light_intensities = max(baseline - smoothed_intensities, 0);
+
+% Normalize each channel to its own peak
+norm_intensities = zeros(size(light_intensities));
+for c = 1:num_channels
+    col_max = max(light_intensities(:, c));
+    if col_max > 0
+        norm_intensities(:, c) = light_intensities(:, c) / col_max;
+    end
+end
+
+% Each channel gets an equal horizontal strip width
+strip_width = 1.0 / num_channels;  % normalized 0-1 x axis
+
+% For each channel, draw thin depth-slice patches that fade to black
+for c = 1:num_channels
+    x_left  = (c-1) * strip_width;
+    x_right = c     * strip_width;
+    base_color = wavelength_colors(c, :);
+    
+    for d = 1:length(interp_depths)-1
+        d1 = interp_depths(d);
+        d2 = interp_depths(d+1);
+        
+        % Brightness = average normalized intensity across the two rows
+        brightness = (norm_intensities(d, c) + norm_intensities(d+1, c)) / 2;
+        
+        % Color fades from full wavelength color → black as light attenuates
+        face_color = base_color * brightness + (1 - brightness);  % blend toward white
+        face_color = min(max(face_color, 0), 1);
+        
+        patch([x_left, x_right, x_right, x_left], ...
+              [d1, d1, d2, d2], ...
+              face_color, 'EdgeColor', 'none');
+    end
+end
+
+% --- Styling ---
+set(ax, 'Color', 'w', 'XColor', 'k', 'YColor', 'k');
+set(gcf, 'Color', 'w');
+set(ax, 'YDir', 'reverse');
+ylim([max(0, min(interp_depths)), max(interp_depths)]);
+xlim([0, 1]);
+
+% Replace x-axis ticks with wavelength labels
+tick_positions = ((0:num_channels-1) + 0.5) * strip_width;
+set(ax, 'XTick', tick_positions, ...
+    'XTickLabel', arrayfun(@(w) sprintf('%d nm', w), default_wavelengths, 'UniformOutput', false), ...
+    'XTickLabelRotation', 45);
+
+ylabel('Depth [m]', 'Color', 'k');
+title('Spectral Light Penetration vs Depth (Motors Off)', 'Color', 'k', 'FontWeight', 'bold');
+grid off;
+hold off;
+
+%% PLOT 2: Zoomed in 0-1 meter
+figure(2); clf;
+ax2 = gca;
+hold on;
+
+zoom_mask = interp_depths >= 0 & interp_depths <= 1;
+zoom_depths = interp_depths(zoom_mask);
+zoom_norm   = norm_intensities(zoom_mask, :);
+
+for c = 1:num_channels
+    x_left  = (c-1) * strip_width;
+    x_right = c     * strip_width;
+    base_color = wavelength_colors(c, :);
+
+    for d = 1:length(zoom_depths)-1
+        d1 = zoom_depths(d);
+        d2 = zoom_depths(d+1);
+
+        brightness = (zoom_norm(d, c) + zoom_norm(d+1, c)) / 2;
+        face_color = base_color * brightness + (1 - brightness);
+        face_color = min(max(face_color, 0), 1);
+
+        patch([x_left, x_right, x_right, x_left], ...
+              [d1, d1, d2, d2], ...
+              face_color, 'EdgeColor', 'none');
+    end
+end
+
+set(ax2, 'Color', 'w', 'XColor', 'k', 'YColor', 'k');
+set(gcf, 'Color', 'w');
+set(ax2, 'YDir', 'reverse');
+ylim([0, 1]);
+xlim([0, 1]);
+
+tick_positions = ((0:num_channels-1) + 0.5) * strip_width;
+set(ax2, 'XTick', tick_positions, ...
+    'XTickLabel', arrayfun(@(w) sprintf('%d nm', w), default_wavelengths, 'UniformOutput', false), ...
+    'XTickLabelRotation', 45);
+
+ylabel('Depth [m]');
+title('Spectral Light Penetration vs Depth (0–1 m Zoomed in)', 'FontWeight', 'bold');
+grid off;
+hold off;
+
+%% plot gopro
+
+%% GoPro Spectral Estimation - Same visualization as AS7343
+
+videofile = 'log126Video.MOV';  % update this
+gopro_depth = depth_filtered;   % reuse same depth array from binary data pipeline
+% OR if you have a separate depth source for the video, define it here
+
+%% Step 1: Define GoPro spectral sensitivity curves
+% Approximate RGB spectral sensitivities at each of our 12 wavelengths
+% Based on typical GoPro/Bayer CMOS sensor response curves
+% Each row = [R_sensitivity, G_sensitivity, B_sensitivity] at that wavelength
+gopro_sensitivity = [
+    % wavelength  R      G      B
+    % 405 nm
+               0.02,  0.05,  0.80;
+    % 425 nm
+               0.03,  0.08,  0.95;
+    % 450 nm
+               0.05,  0.15,  1.00;
+    % 475 nm
+               0.08,  0.30,  0.85;
+    % 515 nm
+               0.10,  0.75,  0.40;
+    % 550 nm
+               0.20,  1.00,  0.10;
+    % 555 nm
+               0.25,  1.00,  0.08;
+    % 600 nm
+               0.80,  0.60,  0.03;
+    % 640 nm
+               1.00,  0.25,  0.01;
+    % 690 nm
+               0.85,  0.10,  0.00;
+    % 745 nm
+               0.40,  0.04,  0.00;
+    % 855 nm  (NIR - GoPro has some sensitivity here)
+               0.15,  0.02,  0.00;
+];
+% gopro_sensitivity is 12 x 3
+
+%% Step 2: Read video and extract mean RGB per frame
+vr = VideoReader(videofile);
+num_frames = floor(vr.Duration * vr.FrameRate);
+
+frame_rgb = nan(num_frames, 3);  % mean R, G, B per frame
+frame_time = nan(num_frames, 1);
+
+fprintf('Reading video frames...\n');
+f = 0;
+while hasFrame(vr)
+    f = f + 1;
+    frame = readFrame(vr);
+    frame_time(f) = vr.CurrentTime;
+    
+    % Crop center region to avoid edge effects / lens vignetting
+    [h, w, ~] = size(frame);
+    margin_h = round(h * 0.25);
+    margin_w = round(w * 0.25);
+    center = frame(margin_h:h-margin_h, margin_w:w-margin_w, :);
+    
+    frame_rgb(f, 1) = mean(double(center(:,:,1)), 'all');  % R
+    frame_rgb(f, 2) = mean(double(center(:,:,2)), 'all');  % G
+    frame_rgb(f, 3) = mean(double(center(:,:,3)), 'all');  % B
+end
+frame_rgb  = frame_rgb(1:f, :);
+frame_time = frame_time(1:f);
+fprintf('Done. %d frames read.\n', f);
+
+%% Step 3: Map frame timestamps → depth
+% You need to align video time to your depth time series
+% Assumes video started at the same time as your binary log
+% If there's an offset, adjust: video_time_offset = X; frame_time += X;
+video_time_offset = 0;  % seconds — adjust if needed
+adjusted_time = frame_time + video_time_offset;
+
+% Interpolate depth onto video frame timestamps
+% Requires a time vector from your binary log — build one assuming constant sample rate
+num_log_samples = numel(depth_filtered);
+% Estimate sample rate from your data (adjust if you know the actual rate)
+sample_rate_hz = 10;  % Hz — update to match your logger
+log_time = (0:num_log_samples-1)' / sample_rate_hz;
+
+% Interpolate depth to frame times
+frame_depth = interp1(log_time, gopro_depth, adjusted_time, 'linear', nan);
+
+%% REVISED Step 4: Account for auto-exposure by using SURFACE as reference
+
+% Use top 5% shallowest frames as the "full light" surface reference
+frame_total = sum(frame_rgb, 2);  % total brightness per frame
+frame_rgb_normalized = frame_rgb ./ frame_total;  % relative R/G/B fractions
+
+% Recompute spectral_est using normalized RGB
+for c = 1:num_channels
+    sens = gopro_sensitivity(c, :);
+    sens_norm = sens / sum(sens);
+    spectral_est(:, c) = frame_rgb_normalized * sens_norm';
+end
+
+% Now subtract surface reference
+surface_mask = frame_depth <= prctile(frame_depth(~isnan(frame_depth)), 5);
+for c = 1:num_channels
+    surface_ref = mean(spectral_est(surface_mask, c), 'omitnan');
+    spectral_est(:, c) = surface_ref - spectral_est(:, c);
+end
+spectral_est = max(spectral_est, 0);
+
+% OPTION B: Also normalize out the auto-exposure trend by detrending with
+% the mean across all channels (removes global brightness drift)
+% mean_across_channels = mean(spectral_est, 2);  % num_frames x 1
+% for c = 1:num_channels
+%     spectral_est(:, c) = spectral_est(:, c) - mean_across_channels * 0.5;
+% end
+% spectral_est = max(spectral_est, 0);
+
+%% Step 5: Bin by depth (same 0.25m bins as before)
+[~, max_depth_idx] = max(frame_depth);
+
+% Use only descent frames
+descent_mask = (1:f)' <= max_depth_idx & ~isnan(frame_depth);
+
+frame_depth_use    = frame_depth(descent_mask);
+spectral_est_use   = spectral_est(descent_mask, :);
+
+% Re-bin using only descent data
+depth_bin_size = 0.25;
+depth_min_v = floor(min(frame_depth_use) / depth_bin_size) * depth_bin_size;
+depth_max_v = ceil(max(frame_depth_use)  / depth_bin_size) * depth_bin_size;
+depth_edges_v = depth_min_v : depth_bin_size : depth_max_v;
+depth_bins_v  = depth_edges_v(1:end-1) + depth_bin_size/2;
+
+num_bins_v = numel(depth_bins_v);
+intensities_v = nan(num_bins_v, num_channels);
+
+for b = 1:num_bins_v
+    in_bin = frame_depth_use >= depth_edges_v(b) & frame_depth_use < depth_edges_v(b+1);
+    if any(in_bin)
+        intensities_v(b, :) = mean(spectral_est_use(in_bin, :), 1, 'omitnan');
+    end
+end
+
+valid_bins_v = ~any(isnan(intensities_v), 2);
+clean_depths_v     = depth_bins_v(valid_bins_v);
+clean_intensities_v = intensities_v(valid_bins_v, :);
+
+%% Step 6: Interpolate to smooth grid
+interp_depths_v = linspace(min(clean_depths_v), max(clean_depths_v), 300);
+smoothed_v = nan(length(interp_depths_v), num_channels);
+for c = 1:num_channels
+    smoothed_v(:, c) = interp1(clean_depths_v, clean_intensities_v(:, c), interp_depths_v, 'pchip');
+end
+
+%% Step 7: Normalize (already positive, just normalize to peak)
+norm_v = zeros(size(smoothed_v));
+for c = 1:num_channels
+    col_max = max(smoothed_v(:, c));
+    if col_max > 0
+        norm_v(:, c) = smoothed_v(:, c) / col_max;
+    end
+end
+
+%% Step 8: Plot - full depth
+strip_width = 1.0 / num_channels;
+
+figure(3); clf;
+ax3 = gca;
+hold on;
+
+for c = 1:num_channels
+    x_left  = (c-1) * strip_width;
+    x_right = c     * strip_width;
+    base_color = wavelength_colors(c, :);
+    for d = 1:length(interp_depths_v)-1
+        d1 = interp_depths_v(d);
+        d2 = interp_depths_v(d+1);
+        brightness = (norm_v(d, c) + norm_v(d+1, c)) / 2;
+        face_color = base_color * brightness + (1 - brightness);
+        face_color = min(max(face_color, 0), 1);
+        patch([x_left, x_right, x_right, x_left], [d1, d1, d2, d2], ...
+            face_color, 'EdgeColor', 'none');
+    end
+end
+
+set(ax3, 'Color', 'w', 'XColor', 'k', 'YColor', 'k');
+set(gcf,  'Color', 'w');
+set(ax3, 'YDir', 'reverse');
+ylim([max(0, min(interp_depths_v)), max(interp_depths_v)]);
+xlim([0, 1]);
+tick_positions = ((0:num_channels-1) + 0.5) * strip_width;
+set(ax3, 'XTick', tick_positions, ...
+    'XTickLabel', arrayfun(@(w) sprintf('%d nm', w), default_wavelengths, 'UniformOutput', false), ...
+    'XTickLabelRotation', 45);
+ylabel('Depth [m]');
+title('GoPro-Estimated Spectral Penetration vs Depth', 'FontWeight', 'bold');
+grid off; hold off;
+
+%% Step 9: Zoomed 0-1 m
+figure(4); clf;
+ax4 = gca;
+hold on;
+
+zoom_mask_v = interp_depths_v >= 0 & interp_depths_v <= 1;
+zoom_depths_v = interp_depths_v(zoom_mask_v);
+zoom_norm_v   = norm_v(zoom_mask_v, :);
+
+for c = 1:num_channels
+    x_left  = (c-1) * strip_width;
+    x_right = c     * strip_width;
+    base_color = wavelength_colors(c, :);
+    for d = 1:length(zoom_depths_v)-1
+        d1 = zoom_depths_v(d);
+        d2 = zoom_depths_v(d+1);
+        brightness = (zoom_norm_v(d, c) + zoom_norm_v(d+1, c)) / 2;
+        face_color = base_color * brightness + (1 - brightness);
+        face_color = min(max(face_color, 0), 1);
+        patch([x_left, x_right, x_right, x_left], [d1, d1, d2, d2], ...
+            face_color, 'EdgeColor', 'none');
+    end
+end
+
+set(ax4, 'Color', 'w', 'XColor', 'k', 'YColor', 'k');
+set(gcf,  'Color', 'w');
+set(ax4, 'YDir', 'reverse');
+ylim([0, 1]);
+xlim([0, 1]);
+set(ax4, 'XTick', tick_positions, ...
+    'XTickLabel', arrayfun(@(w) sprintf('%d nm', w), default_wavelengths, 'UniformOutput', false), ...
+    'XTickLabelRotation', 45);
+ylabel('Depth [m]');
+title('GoPro-Estimated Spectral Penetration vs Depth (0–1 m Zoom)', 'FontWeight', 'bold');
+grid off; hold off;
